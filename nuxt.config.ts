@@ -11,9 +11,10 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  imports: {
-    autoImport: true,
-  },
+  css: [
+    "~/assets/css/main.css",
+  ],
+  imports: {autoImport: true},
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",

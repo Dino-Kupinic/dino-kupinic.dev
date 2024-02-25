@@ -71,6 +71,7 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: -apple-system, "Inter", "Segoe UI", "Arial", "sans-serif";
   }
   body {
     @apply bg-background text-foreground;
