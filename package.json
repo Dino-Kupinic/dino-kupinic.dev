@@ -10,8 +10,27 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "nuxt": "^3.10.3",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@formkit/auto-animate": "^0.8.1",
+    "@nuxt/content": "^2.12.0",
+    "@nuxthq/studio": "^1.0.11",
+    "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxtjs/i18n": "^8.1.1",
+    "@nuxtjs/seo": "2.0.0-rc.8",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@types/node": "^18.17.5",
+    "@vueuse/nuxt": "^10.8.0",
+    "nuxt-csurf": "^1.4.2",
+    "nuxt-icon": "^0.6.8",
+    "nuxt-typed-router": "^3.6.1",
+    "nuxt-viewport": "^2.1.4"
   }
 }
