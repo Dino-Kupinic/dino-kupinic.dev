@@ -28,8 +28,9 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "nuxt-icon",
     "nuxt-viewport",
-    "shadcn-nuxt",
     // "@nuxtjs/seo"
+    "shadcn-nuxt",
+    "@nuxt/image",
   ],
   shadcn: {
     prefix: "",
