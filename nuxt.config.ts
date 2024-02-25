@@ -28,6 +28,6 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "nuxt-viewport",
     "@nuxthq/studio",
-    "@nuxtjs/seo"
+    // "@nuxtjs/seo"
   ]
 })
