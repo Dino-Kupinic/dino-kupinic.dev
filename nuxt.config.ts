@@ -16,18 +16,23 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxtjs/tailwindcss",
-    "@pinia/nuxt",
-    "@nuxtjs/i18n",
-    "@vueuse/nuxt",
     "@nuxtjs/color-mode",
-    "@formkit/auto-animate",
-    "nuxt-icon",
+    "@nuxtjs/i18n",
+    "@nuxthq/studio",
     "@nuxt/content",
+    "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
+    "@vueuse/nuxt",
+    "@formkit/auto-animate",
     "nuxt-csurf",
     "nuxt-typed-router",
+    "nuxt-icon",
     "nuxt-viewport",
-    "@nuxthq/studio",
+    "shadcn-nuxt",
     // "@nuxtjs/seo"
-  ]
+  ],
+  shadcn: {
+    prefix: "",
+    componentDir: "./components/ui",
+  },
 })
