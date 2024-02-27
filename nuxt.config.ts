@@ -11,10 +11,17 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+    },
+  },
   css: [
     "~/assets/css/main.css",
   ],
-  imports: {autoImport: true},
+  imports: {
+    autoImport: true,
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
@@ -26,6 +33,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@formkit/auto-animate",
     "nuxt-csurf",
+    "nuxt-security",
     "nuxt-typed-router",
     "nuxt-icon",
     "nuxt-viewport",
