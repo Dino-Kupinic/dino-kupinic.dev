@@ -9,11 +9,10 @@ useSeoMeta({
 
 <template>
   <div class="relative h-screen w-screen">
-    <NuxtImg class="absolute inset-0 h-full w-full bg-no-repeat bg-cover" src="/images/background.jpg" />
     <main class="absolute inset-0 flex items-center justify-center">
       <Card class="w-[400px] h-[225px]">
         <CardHeader>
-          <CardTitle>🚀 in development</CardTitle>
+          <CardTitle>in development</CardTitle>
           <CardDescription>Any questions?</CardDescription>
         </CardHeader>
         <CardContent>
