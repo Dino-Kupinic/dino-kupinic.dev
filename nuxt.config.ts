@@ -5,6 +5,10 @@ export default defineNuxtConfig({
       title: "Dino Kupinic",
     },
   },
+  site: {
+    url: "https://www.dino-kupinic.dev",
+    name: "Dino Kupinic",
+  },
   devtools: {
     enabled: true,
     timeline: {
@@ -26,8 +30,10 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@nuxtjs/i18n",
+    "@nuxtjs/seo",
     "@nuxthq/studio",
     "@nuxt/content",
+    "@nuxt/image",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "@vueuse/nuxt",
@@ -37,9 +43,7 @@ export default defineNuxtConfig({
     "nuxt-typed-router",
     "nuxt-icon",
     "nuxt-viewport",
-    // "@nuxtjs/seo"
     "shadcn-nuxt",
-    "@nuxt/image",
   ],
   shadcn: {
     prefix: "",
