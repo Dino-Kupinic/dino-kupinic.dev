@@ -1,0 +1,11 @@
+{
+  "aria": {
+    "toggle-theme": "Toggle theme"
+  },
+  "nav": {
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact"
+  }
+}
