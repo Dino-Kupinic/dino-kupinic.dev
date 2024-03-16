@@ -8,5 +8,6 @@ useSeoMeta({
 </script>
 
 <template>
-
+  <p>Dino Kupinic</p>
 </template>
+
