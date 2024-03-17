@@ -1,0 +1,7 @@
+version: 2
+updates:
+  - package-ecosystem: "pnpm" 
+    directory: "/"
+    target-branch: "develop"
+    schedule:
+      interval: "weekly"
