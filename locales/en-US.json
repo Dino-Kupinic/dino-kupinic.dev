@@ -4,6 +4,8 @@
   },
   "nav": {
     "menu": "Menu",
+    "search": "Search",
+    "searchPress": "Press",
     "projects": "Projects",
     "blog": "Blog",
     "about": "About",
