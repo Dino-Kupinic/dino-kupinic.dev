@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     "@formkit/auto-animate",
     "nuxt-csurf",
     "nuxt-security",
-    "nuxt-typed-router",
     "nuxt-icon",
     "nuxt-viewport",
     "shadcn-nuxt",
