@@ -3,6 +3,7 @@
     "toggle-theme": "Toggle theme"
   },
   "nav": {
+    "menu": "Menu",
     "projects": "Projects",
     "blog": "Blog",
     "about": "About",
