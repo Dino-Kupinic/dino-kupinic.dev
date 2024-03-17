@@ -9,6 +9,7 @@
       <div class="flex items-center space-x-3">
         <NavDivider/>
         <Skeleton class="w-10 h-10" />
+        <Skeleton class="w-10 h-10" />
       </div>
       <Skeleton class="w-24 h-10"/>
     </div>

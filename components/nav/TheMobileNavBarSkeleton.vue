@@ -4,6 +4,7 @@
     <div class="flex gap-3">
       <Skeleton class="w-10 h-10"/>
       <Skeleton class="w-10 h-10"/>
+      <Skeleton class="w-10 h-10"/>
     </div>
   </NavContainer>
 </template>

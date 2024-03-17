@@ -17,6 +17,7 @@ const isOpen = ref<boolean>(false)
     </div>
     <div class="flex items-center gap-2">
       <NavBarThemeToggle/>
+      <NavCommand/>
       <DropdownMenu v-model:open="isOpen">
         <DropdownMenuTrigger>
           <NavBurgerMenu :open="isOpen"/>
