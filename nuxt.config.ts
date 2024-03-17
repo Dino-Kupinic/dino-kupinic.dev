@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import {currentLocales} from "./config/i18n"
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -15,17 +16,6 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  security: {
-    headers: {
-      crossOriginEmbedderPolicy: process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
-    },
-  },
-  css: [
-    "~/assets/css/main.css",
-  ],
-  imports: {
-    autoImport: true,
-  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
@@ -40,11 +30,48 @@ export default defineNuxtConfig({
     "@formkit/auto-animate",
     "nuxt-csurf",
     "nuxt-security",
-    "nuxt-typed-router",
     "nuxt-icon",
     "nuxt-viewport",
     "shadcn-nuxt",
+    "@nuxtjs/device",
   ],
+  typescript: {
+    typeCheck: true,
+    strict: true
+  },
+  imports: {
+    autoImport: true,
+  },
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
+  colorMode: {
+    classSuffix: "",
+    preference: "system",
+    fallback: "light",
+  },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+    },
+  },
+  css: [
+    "~/assets/css/main.css",
+    "~/assets/css/tailwind.css",
+  ],
+  tailwindcss: {
+    exposeConfig: true
+  },
+  i18n: {
+    locales: currentLocales,
+    detectBrowserLanguage: false,
+    langDir: "locales",
+    defaultLocale: "en-US",
+    vueI18n: "~/config/i18n.config.ts",
+  },
   shadcn: {
     prefix: "",
     componentDir: "./components/ui",
