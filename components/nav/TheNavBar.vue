@@ -1,54 +1,34 @@
 <script setup lang="ts">
-import {navigationMenuTriggerStyle} from "~/components/ui/navigation-menu"
+import type {NavigationItem} from "~/types/nav"
 
-type NavigationItem = {
-  title: string,
-  href: string
-}
+const {t, locale} = useI18n()
+const navigationItems = ref<NavigationItem[]>([])
 
-const {t} = useI18n()
-const navigationItems = ref<NavigationItem[]>([
-  {
-    title: t("nav.projects"),
-    href: "/projects",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
-])
+watch(locale, () => {
+  navigationItems.value = [
+    {
+      title: t("nav.projects"),
+      href: "/projects",
+    },
+    {
+      title: t("nav.blog"),
+      href: "/blog",
+    },
+    {
+      title: t("nav.about"),
+      href: "/about",
+    },
+    {
+      title: t("nav.contact"),
+      href: "/contact",
+    },
+  ]
+}, {immediate: true})
+
+const viewport = useViewport()
 </script>
 
 <template>
-  <NavContainer>
-    <div class="flex items-center ml-3 cursor-pointer">
-      <NuxtLink to="/">
-        <NavLogo/>
-      </NuxtLink>
-    </div>
-    <NavigationMenu class="mr-2">
-      <NavigationMenuList>
-        <NavItem v-for="item in navigationItems" :key="item.title">
-          <template #main>
-            <NavigationMenuLink :href="item.href" :class="navigationMenuTriggerStyle()">
-              {{ item.title }}
-            </NavigationMenuLink>
-          </template>
-        </NavItem>
-        <div class="flex items-center space-x-3">
-          <NavDivider/>
-          <NavBarThemeToggle/>
-          <NavLanguageSelection/>
-        </div>
-      </NavigationMenuList>
-    </NavigationMenu>
-  </NavContainer>
+  <TheMobileNavBar :items="navigationItems" v-if="viewport.isLessThan('tablet')"/>
+  <TheDesktopNavbar :items="navigationItems" v-else/>
 </template>
