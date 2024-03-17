@@ -21,12 +21,11 @@ function updateColors() {
     mainColor.value = fontColor.value = theme.colors.foreground
   } else {
     mainColor.value = theme.colors.background
-    fontColor.value = "#000000" // TODO: fix
+    fontColor.value = "#0A0A0A"
   }
 }
 
-onMounted(updateColors)
-watch(mode, updateColors)
+watch(mode, updateColors, {immediate: true})
 </script>
 
 <template>

@@ -1,7 +1,9 @@
 <script setup lang="ts">
-const {locale, locales, localeProperties, setLocale} = useI18n()
+const {locale, locales, localeProperties} = useI18n()
+const localeCookie = useCookie("locale")
+
 watch(locale, () => {
-  setLocale(locale.value)
+  localeCookie.value = locale.value
 })
 </script>
 
