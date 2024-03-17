@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "nuxt-viewport",
     "shadcn-nuxt",
+    "@nuxtjs/device",
   ],
   typescript: {
     typeCheck: true,
