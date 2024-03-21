@@ -65,6 +65,12 @@ export default defineNuxtConfig({
   tailwindcss: {
     exposeConfig: true
   },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   i18n: {
     locales: currentLocales,
     detectBrowserLanguage: false,

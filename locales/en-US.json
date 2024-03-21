@@ -10,5 +10,8 @@
     "blog": "Blog",
     "about": "About",
     "contact": "Contact"
+  },
+  "hero": {
+    "profession": "Software Developer"
   }
 }
