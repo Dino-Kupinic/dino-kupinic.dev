@@ -13,6 +13,7 @@
   },
   "hero": {
     "profession": "Software Developer",
-    "projects": "Projects"
+    "projects": "Projects",
+    "allProjects": "All Projects"
   }
 }
