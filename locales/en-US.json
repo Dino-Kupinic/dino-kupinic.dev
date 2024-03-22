@@ -12,6 +12,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "profession": "Software Developer"
+    "profession": "Software Developer",
+    "projects": "Projects"
   }
 }

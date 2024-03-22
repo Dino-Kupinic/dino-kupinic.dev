@@ -1,11 +1,6 @@
 import {currentLocales} from "./config/i18n"
 
 export default defineNuxtConfig({
-  app: {
-    head: {
-      title: "Dino Kupinic",
-    },
-  },
   site: {
     url: "https://www.dino-kupinic.dev",
     name: "Dino Kupinic",
@@ -34,6 +29,7 @@ export default defineNuxtConfig({
     "nuxt-viewport",
     "shadcn-nuxt",
     "@nuxtjs/device",
+    "@nuxt/fonts",
   ],
   typescript: {
     typeCheck: true,
@@ -67,6 +63,8 @@ export default defineNuxtConfig({
   },
   postcss: {
     plugins: {
+      "postcss-import": {},
+      "tailwindcss/nesting": {},
       tailwindcss: {},
       autoprefixer: {},
     },

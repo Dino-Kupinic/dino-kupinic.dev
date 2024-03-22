@@ -26,6 +26,7 @@
   "devDependencies": {
     "@formkit/auto-animate": "^0.8.1",
     "@nuxt/content": "^2.12.0",
+    "@nuxt/fonts": "^0.4.0",
     "@nuxt/image": "^1.3.0",
     "@nuxthq/studio": "^1.0.11",
     "@nuxtjs/color-mode": "^3.3.2",
@@ -39,7 +40,8 @@
     "@vueuse/nuxt": "^10.8.0",
     "autoprefixer": "^10.4.19",
     "nuxt": "^3.11.0",
-    "nuxt-csurf": "^1.4.2",
+    "nuxt-clarity-analytics": "^0.0.6",
+    "nuxt-csurf": "^1.5.1",
     "nuxt-icon": "^0.6.8",
     "nuxt-security": "^1.2.1",
     "nuxt-viewport": "^2.1.4",
