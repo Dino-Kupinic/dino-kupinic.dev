@@ -2,15 +2,12 @@
 import Autoplay from "embla-carousel-autoplay"
 
 const plugin = Autoplay({
-  delay: 2000,
+  delay: 3000,
   stopOnMouseEnter: true,
   stopOnInteraction: false,
 })
 
-const projects = ref(15)
-// :plugins="[plugin]"
-// @mouseenter="plugin.stop"
-// @mouseleave="[plugin.reset(), plugin.play()]"
+const projects = ref(8)
 </script>
 
 <template>
@@ -18,8 +15,11 @@ const projects = ref(15)
     class="relative w-full max-w-[960px]"
     :opts="{
       align: 'start',
+      loop: true
     }"
-
+    :plugins="[plugin]"
+    @mouseenter="plugin.stop"
+    @mouseleave="[plugin.reset(), plugin.play()]"
   >
     <CarouselContent class="-ml-1">
       <CarouselItem v-for="project in projects" :key="project" class="pl-1 basis-1/2 md:basis-1/3">
