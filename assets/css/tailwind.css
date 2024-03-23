@@ -42,8 +42,10 @@
       width: 100vw;
       position: fixed;
       background:
-        linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
-        linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+        linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin /
+          10vmin 10vmin,
+        linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin
+          10vmin;
       mask: linear-gradient(-15deg, transparent 30%, #232222);
       top: 0;
       z-index: -1;
@@ -88,8 +90,10 @@
       width: 100vw;
       position: fixed;
       background:
-        linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin,
-        linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+        linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin /
+          10vmin 10vmin,
+        linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin
+          10vmin;
       mask: linear-gradient(-15deg, transparent 30%, white);
       top: 0;
       z-index: -1;

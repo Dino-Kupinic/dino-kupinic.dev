@@ -2,14 +2,16 @@
 import ProjectItemDescription from "~/components/project/ProjectItemDescription.vue"
 
 defineProps<{
-  title: string,
+  title: string
   description: string
 }>()
 </script>
 
 <template>
   <Card>
-    <CardHeader class="flex items-center justify-center p-2 sm:p-3 pb-1 sm:pb-2">
+    <CardHeader
+      class="flex items-center justify-center p-2 sm:p-3 pb-1 sm:pb-2"
+    >
       <ProjectItemHeader>
         <Icon name="i-simple-icons-nuxtdotjs" class="h-16 w-16" />
       </ProjectItemHeader>

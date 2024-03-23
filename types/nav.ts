@@ -1,4 +1,4 @@
 export type NavigationItem = {
-  title: string,
+  title: string
   href: string
 }

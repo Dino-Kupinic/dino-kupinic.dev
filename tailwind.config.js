@@ -1,8 +1,8 @@
-import animate from "tailwindcss-animate";
+import animate from "tailwindcss-animate"
 
 /** @type {import("tailwindcss").Config} */
-export const darkMode = ["class"];
-export const safelist = ["dark"];
+export const darkMode = ["class"]
+export const safelist = ["dark"]
 export const theme = {
   container: {
     center: true,
@@ -55,20 +55,20 @@ export const theme = {
     },
     keyframes: {
       "accordion-down": {
-        from: {height: 0},
-        to: {height: "var(--radix-accordion-content-height)"},
+        from: { height: 0 },
+        to: { height: "var(--radix-accordion-content-height)" },
       },
       "accordion-up": {
-        from: {height: "var(--radix-accordion-content-height)"},
-        to: {height: 0},
+        from: { height: "var(--radix-accordion-content-height)" },
+        to: { height: 0 },
       },
       "collapsible-down": {
-        from: {height: 0},
-        to: {height: "var(--radix-collapsible-content-height)"},
+        from: { height: 0 },
+        to: { height: "var(--radix-collapsible-content-height)" },
       },
       "collapsible-up": {
-        from: {height: "var(--radix-collapsible-content-height)"},
-        to: {height: 0},
+        from: { height: "var(--radix-collapsible-content-height)" },
+        to: { height: 0 },
       },
     },
     animation: {
@@ -78,5 +78,5 @@ export const theme = {
       "collapsible-up": "collapsible-up 0.2s ease-in-out",
     },
   },
-};
-export const plugins = [animate];
+}
+export const plugins = [animate]

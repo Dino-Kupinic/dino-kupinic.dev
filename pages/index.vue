@@ -7,8 +7,7 @@ definePageMeta({
 
 <template>
   <main>
-    <TheHeroSection/>
-    <TheProjectsSection/>
+    <TheHeroSection />
+    <TheProjectsSection />
   </main>
 </template>
-

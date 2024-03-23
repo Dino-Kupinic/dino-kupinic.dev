@@ -2,12 +2,11 @@
   <NavigationMenuItem>
     <slot name="main">
       <NavigationMenuTrigger>
-        <slot name="trigger"/>
+        <slot name="trigger" />
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <slot name="content"/>
+        <slot name="content" />
       </NavigationMenuContent>
     </slot>
   </NavigationMenuItem>
 </template>
-

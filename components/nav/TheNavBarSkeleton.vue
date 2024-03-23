@@ -3,6 +3,6 @@ const viewport = useViewport()
 </script>
 
 <template>
-  <TheMobileNavBarSkeleton v-if="viewport.isLessThan('tablet')"/>
-  <TheDesktopNavBarSkeleton v-else/>
+  <TheMobileNavBarSkeleton v-if="viewport.isLessThan('tablet')" />
+  <TheDesktopNavBarSkeleton v-else />
 </template>

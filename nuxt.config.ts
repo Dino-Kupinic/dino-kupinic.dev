@@ -1,4 +1,4 @@
-import {currentLocales} from "./config/i18n"
+import { currentLocales } from "./config/i18n"
 
 export default defineNuxtConfig({
   site: {
@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "@nuxt/content",
     "@nuxt/image",
-    '@nuxt/eslint',
+    "@nuxt/eslint",
     "@nuxt/fonts",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
@@ -34,11 +34,9 @@ export default defineNuxtConfig({
   ],
   typescript: {
     typeCheck: true,
-    strict: true
+    strict: true,
   },
-  eslint: {
-
-  },
+  eslint: {},
   imports: {
     autoImport: true,
   },
@@ -55,15 +53,13 @@ export default defineNuxtConfig({
   },
   security: {
     headers: {
-      crossOriginEmbedderPolicy: process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+      crossOriginEmbedderPolicy:
+        process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
     },
   },
-  css: [
-    "~/assets/css/main.css",
-    "~/assets/css/tailwind.css",
-  ],
+  css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
   tailwindcss: {
-    exposeConfig: true
+    exposeConfig: true,
   },
   postcss: {
     plugins: {
