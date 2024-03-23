@@ -25,7 +25,7 @@ const isOpen = ref<boolean>(false)
         <DropdownMenuContent class="mr-4 w-44">
           <DropdownMenuLabel class="text-lg">{{ $t("nav.menu") }}</DropdownMenuLabel>
           <DropdownMenuSeparator/>
-          <DropdownMenuItem v-for="item in items" class="text-lg">
+          <DropdownMenuItem v-for="item in items" :key="item.href" class="text-lg">
             <NuxtLink :to="item.href">
               {{ item.title }}
             </NuxtLink>

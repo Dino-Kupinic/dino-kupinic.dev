@@ -26,7 +26,7 @@ function handleOpenChange() {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <Button @click="handleOpenChange" variant="outline" size="icon">
+          <Button variant="outline" size="icon" @click="handleOpenChange">
             <Icon name="i-mi-search"/>
           </Button>
         </TooltipTrigger>

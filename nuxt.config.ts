@@ -12,13 +12,16 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    "@nuxthq/studio",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@nuxtjs/i18n",
     "@nuxtjs/seo",
-    "@nuxthq/studio",
+    "@nuxtjs/device",
     "@nuxt/content",
     "@nuxt/image",
+    '@nuxt/eslint',
+    "@nuxt/fonts",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "@vueuse/nuxt",
@@ -28,12 +31,13 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "nuxt-viewport",
     "shadcn-nuxt",
-    "@nuxtjs/device",
-    "@nuxt/fonts",
   ],
   typescript: {
     typeCheck: true,
     strict: true
+  },
+  eslint: {
+
   },
   imports: {
     autoImport: true,

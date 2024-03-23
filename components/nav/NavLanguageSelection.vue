@@ -15,8 +15,8 @@ watch(locale, () => {
       </SelectValue>
     </SelectTrigger>
     <SelectContent>
-      <SelectItem v-for="locale in locales" :value="locale.code">
-        {{ locale.name }}
+      <SelectItem v-for="loc in locales" :key="loc.code" :value="loc.code">
+        {{ loc.name }}
       </SelectItem>
     </SelectContent>
   </Select>

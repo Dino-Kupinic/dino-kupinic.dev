@@ -29,6 +29,6 @@ const viewport = useViewport()
 </script>
 
 <template>
-  <TheMobileNavBar :items="navigationItems" v-if="viewport.isLessThan('tablet')"/>
-  <TheDesktopNavbar :items="navigationItems" v-else/>
+  <TheMobileNavBar v-if="viewport.isLessThan('tablet')" :items="navigationItems"/>
+  <TheDesktopNavbar v-else :items="navigationItems"/>
 </template>
