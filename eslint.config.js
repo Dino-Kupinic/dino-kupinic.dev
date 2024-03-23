@@ -7,6 +7,9 @@ export default withNuxt(
     rules: {
       "no-console": "off",
     },
+    parser: "@typescript-eslint/parser",
+    extends: "plugin:drizzle/recommended",
+    plugins: ["drizzle"],
   },
   {
     ignores: ["**/components/ui", "**/lib"],

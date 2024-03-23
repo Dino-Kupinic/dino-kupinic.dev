@@ -4,12 +4,12 @@ const viewport = useViewport()
 
 <template>
   <ClientOnly>
-    <section class="p-3 mt-16 sm:mt-40">
-      <SectionHeading class="max-w-[960px] m-auto pl-8">{{
+    <section class="mt-16 px-5 sm:mt-40 sm:p-0">
+      <SectionHeading class="m-auto max-w-[960px] pl-2 sm:pl-4">{{
         $t("hero.projects")
       }}</SectionHeading>
-      <ProjectCarousel class="m-auto my-2 sm:my-5 px-7" />
-      <div class="max-w-[960px] m-auto px-8">
+      <ProjectCarousel class="m-auto my-3 sm:my-5" />
+      <div class="m-auto max-w-[960px] pl-2 sm:px-4">
         <Button
           variant="gradient"
           :size="viewport.isGreaterThan('mobileWide') ? 'default' : 'xs'"

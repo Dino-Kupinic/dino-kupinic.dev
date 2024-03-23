@@ -35,7 +35,8 @@ const viewport = useViewport()
 <template>
   <TheMobileNavBar
     v-if="viewport.isLessThan('tablet')"
+    class="sticky top-3 z-50"
     :items="navigationItems"
   />
-  <TheDesktopNavbar v-else :items="navigationItems" />
+  <TheDesktopNavbar v-else :items="navigationItems" class="sticky top-0 z-50" />
 </template>

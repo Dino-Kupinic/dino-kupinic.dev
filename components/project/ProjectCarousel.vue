@@ -8,6 +8,7 @@ const plugin = Autoplay({
 })
 
 const projects = ref(8)
+const viewport = useViewport()
 </script>
 
 <template>
@@ -25,9 +26,9 @@ const projects = ref(8)
       <CarouselItem
         v-for="project in projects"
         :key="project"
-        class="pl-1 basis-1/2 md:basis-1/3"
+        class="basis-1/2 pl-3 sm:pl-5 md:basis-1/3"
       >
-        <div class="p-1">
+        <div>
           <ProjectItem
             title="Schulbuchaktion"
             description="versatile integration for the untis education platform"
@@ -35,7 +36,9 @@ const projects = ref(8)
         </div>
       </CarouselItem>
     </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext />
+    <template v-if="viewport.isGreaterThan('tablet')">
+      <CarouselPrevious />
+      <CarouselNext />
+    </template>
   </Carousel>
 </template>

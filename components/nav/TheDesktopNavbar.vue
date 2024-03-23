@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <NavContainer>
-    <div class="flex items-center ml-3 cursor-pointer">
+    <div class="ml-3 flex cursor-pointer items-center">
       <NuxtLink to="/">
         <NavLogo />
       </NuxtLink>

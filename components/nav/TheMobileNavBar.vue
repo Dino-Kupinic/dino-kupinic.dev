@@ -10,7 +10,7 @@ const isOpen = ref<boolean>(false)
 
 <template>
   <NavContainer>
-    <div class="flex items-center ml-1 cursor-pointer">
+    <div class="ml-1 flex cursor-pointer items-center">
       <NuxtLink to="/">
         <NavLogo />
       </NuxtLink>

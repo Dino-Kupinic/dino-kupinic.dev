@@ -9,5 +9,6 @@ definePageMeta({
   <main>
     <TheHeroSection />
     <TheProjectsSection />
+    <TheBlogSection />
   </main>
 </template>
