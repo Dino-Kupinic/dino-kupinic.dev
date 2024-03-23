@@ -3,7 +3,7 @@
 <template>
   <NuxtLink
     to="/projects"
-    class="text-sm font-medium text-foreground sm:text-xl"
+    class="text-sm font-medium text-foreground sm:text-lg"
   >
     <slot />
   </NuxtLink>

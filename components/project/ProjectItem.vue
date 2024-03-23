@@ -11,7 +11,10 @@ defineProps<{
       class="flex items-center justify-center p-2 pb-1 sm:p-3 sm:pb-2"
     >
       <ProjectItemHeader>
-        <Icon name="i-simple-icons-nuxtdotjs" class="h-8 w-8 sm:h-16 sm:w-16" />
+        <Icon
+          name="i-simple-icons-nuxtdotjs"
+          class="h-8 w-8 text-foreground sm:h-16 sm:w-16"
+        />
       </ProjectItemHeader>
     </CardHeader>
     <CardContent class="px-2 py-0 sm:px-3">
