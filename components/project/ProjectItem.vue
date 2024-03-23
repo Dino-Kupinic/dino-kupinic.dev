@@ -10,7 +10,9 @@ defineProps<{
 <template>
   <Card>
     <CardHeader class="flex items-center justify-center p-2 sm:p-3 pb-1 sm:pb-2">
-      <ProjectItemHeader></ProjectItemHeader>
+      <ProjectItemHeader>
+        <Icon name="i-simple-icons-nuxtdotjs" class="h-16 w-16" />
+      </ProjectItemHeader>
     </CardHeader>
     <CardContent class="px-2 sm:px-3 py-0">
       <ProjectItemTitle>{{ title }}</ProjectItemTitle>
