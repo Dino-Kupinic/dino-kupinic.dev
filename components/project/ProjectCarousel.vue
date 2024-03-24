@@ -12,7 +12,7 @@ const viewport = useViewport()
 </script>
 
 <template>
-  <div class="relative w-full max-w-[960px]">
+  <div class="relative w-full">
     <Carousel
       :opts="{
         align: 'start',
@@ -22,7 +22,7 @@ const viewport = useViewport()
       @mouseenter="plugin.stop"
       @mouseleave="[plugin.reset(), plugin.play()]"
     >
-      <CarouselContent class="-ml-1">
+      <CarouselContent class="-ml-3 sm:-ml-5">
         <CarouselItem
           v-for="project in projects"
           :key="project"

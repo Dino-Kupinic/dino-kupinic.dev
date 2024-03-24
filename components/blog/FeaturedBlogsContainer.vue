@@ -47,7 +47,7 @@ const blogs = ref([
 
 <template>
   <div
-    class="grid h-auto max-w-[960px] grid-cols-1 grid-rows-9 gap-5 sm:h-[700px] sm:grid-cols-3"
+    class="grid h-auto grid-cols-1 grid-rows-9 gap-5 sm:h-[700px] sm:grid-cols-3"
   >
     <BlogItem
       v-for="(blog, index) in blogs"

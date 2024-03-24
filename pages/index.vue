@@ -6,7 +6,7 @@ definePageMeta({
 </script>
 
 <template>
-  <main>
+  <main class="mx-auto max-w-[1024px] p-5 sm:p-0 md:p-3">
     <TheHeroSection />
     <TheProjectsSection />
     <TheBlogSection />
