@@ -13,6 +13,8 @@
     "lint:fix": "eslint . --fix",
     "format": "npx prettier . --check",
     "format:write": "npx prettier . --write",
+    "turso:local": "turso dev --db-file local.db",
+    "drizzle:studio": "turso dev --db-file local.db",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -38,7 +40,8 @@
     "tailwindcss-animate": "^1.0.7",
     "unhead": "^1.8.10",
     "vue": "^3.4.19",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@formkit/auto-animate": "^0.8.1",
@@ -52,6 +55,7 @@
     "@nuxtjs/i18n": "^8.1.1",
     "@nuxtjs/seo": "2.0.0-rc.8",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@nuxtjs/web-vitals": "^0.2.6",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@pinia/nuxt": "^0.5.1",
     "@types/node": "^18.17.5",

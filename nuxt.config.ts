@@ -11,6 +11,12 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  nitro: {
+    imports: {
+      dirs: ["./server/db/**"],
+      imports: [{ from: "zod", name: "z" }],
+    },
+  },
   modules: [
     "@nuxthq/studio",
     "@nuxtjs/tailwindcss",
@@ -18,6 +24,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/seo",
     "@nuxtjs/device",
+    "@nuxtjs/web-vitals",
     "@nuxt/content",
     "@nuxt/image",
     "@nuxt/eslint",

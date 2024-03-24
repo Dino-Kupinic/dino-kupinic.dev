@@ -1,7 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const data = await useFetch("/api/v1/test")
+const data2 = await useFetch("/api/v1/user")
+</script>
 
 <template>
-  <h1>Hello World</h1>
+  <div>
+    <pre>{{ data }}</pre>
+    <pre>{{ data2 }}</pre>
+  </div>
 </template>
 
 <style scoped></style>
