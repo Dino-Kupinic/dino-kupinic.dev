@@ -24,7 +24,7 @@
       :views="30000"
       :date="new Date()"
       author="Dino Kupinic"
-      class="row-span-6"
+      class="row-span-5"
     />
     <BlogItem
       title="How to get rich"
@@ -40,7 +40,7 @@
       :views="30000"
       :date="new Date()"
       author="Dino Kupinic"
-      class="row-span-3"
+      class="row-span-4"
     />
   </div>
 </template>
