@@ -9,23 +9,27 @@ defineProps<{
 </script>
 
 <template>
-  <Card>
+  <Card class="flex h-[300px] flex-col sm:h-auto">
     <CardHeader
-      class="flex h-[50%] items-center justify-center p-2 pb-1 sm:p-3 sm:pb-2"
+      class="flex-auto items-center justify-center object-cover p-2 pb-1 sm:p-3 sm:pb-2"
     >
       <BlogItemHeader />
     </CardHeader>
-    <CardContent class="px-3 py-0 sm:px-3">
-      <ProjectItemTitle>{{ title }}</ProjectItemTitle>
-      <div class="flex space-x-3">
-        <BlogLikes>1000</BlogLikes>
-        <BlogViews>20000</BlogViews>
+    <CardContent class="flex-none px-3 py-0 sm:px-3">
+      <BlogItemTitle>
+        <p class="line-clamp-2">
+          {{ title }}
+        </p>
+      </BlogItemTitle>
+      <div class="mt-1 flex space-x-3">
+        <BlogLikes>{{ likes }}</BlogLikes>
+        <BlogViews>{{ views }}</BlogViews>
       </div>
     </CardContent>
     <CardFooter class="mt-4 p-2 pt-1 sm:p-3 sm:pt-1.5">
       <div class="flex w-full justify-between space-x-3">
-        <BlogItemAuthor>Dino Kupinic</BlogItemAuthor>
-        <BlogItemDate>2rd March 2023</BlogItemDate>
+        <BlogItemAuthor>{{ author }}</BlogItemAuthor>
+        <BlogItemDate>{{ date.toLocaleDateString() }}</BlogItemDate>
       </div>
     </CardFooter>
   </Card>

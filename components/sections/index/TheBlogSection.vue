@@ -8,7 +8,7 @@ const viewport = useViewport()
       <SectionHeading class="m-auto max-w-[960px] pl-2 sm:pl-4">
         {{ $t("hero.blog") }}
       </SectionHeading>
-      <BlogsContainer class="m-auto my-3 pl-2 sm:my-5 sm:pl-4" />
+      <FeaturedBlogsContainer class="m-auto my-3 pl-2 sm:my-5 sm:pl-4" />
       <div class="m-auto max-w-[960px] pl-2 sm:px-4">
         <Button
           variant="gradient"

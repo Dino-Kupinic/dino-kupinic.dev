@@ -12,33 +12,34 @@ const viewport = useViewport()
 </script>
 
 <template>
-  <Carousel
-    class="relative w-full max-w-[960px]"
-    :opts="{
-      align: 'start',
-      loop: true,
-    }"
-    :plugins="[plugin]"
-    @mouseenter="plugin.stop"
-    @mouseleave="[plugin.reset(), plugin.play()]"
-  >
-    <CarouselContent class="-ml-1">
-      <CarouselItem
-        v-for="project in projects"
-        :key="project"
-        class="basis-1/2 pl-3 sm:pl-5 md:basis-1/3"
-      >
-        <div>
-          <ProjectItem
-            title="Schulbuchaktion"
-            description="versatile integration for the untis education platform"
-          />
-        </div>
-      </CarouselItem>
-    </CarouselContent>
-    <template v-if="viewport.isGreaterThan('tablet')">
-      <CarouselPrevious />
-      <CarouselNext />
-    </template>
-  </Carousel>
+  <div class="relative w-full max-w-[960px]">
+    <Carousel
+      :opts="{
+        align: 'start',
+        loop: true,
+      }"
+      :plugins="[plugin]"
+      @mouseenter="plugin.stop"
+      @mouseleave="[plugin.reset(), plugin.play()]"
+    >
+      <CarouselContent class="-ml-1">
+        <CarouselItem
+          v-for="project in projects"
+          :key="project"
+          class="basis-1/2 pl-3 sm:pl-5 md:basis-1/3"
+        >
+          <div>
+            <ProjectItem
+              title="Schulbuchaktion"
+              description="versatile integration for the untis education platform"
+            />
+          </div>
+        </CarouselItem>
+      </CarouselContent>
+      <template v-if="viewport.isGreaterThan('tablet')">
+        <CarouselPrevious />
+        <CarouselNext />
+      </template>
+    </Carousel>
+  </div>
 </template>

@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <Card>
+  <Card class="h-[200px] sm:h-auto">
     <CardHeader
       class="flex items-center justify-center p-2 pb-1 sm:p-3 sm:pb-2"
     >
