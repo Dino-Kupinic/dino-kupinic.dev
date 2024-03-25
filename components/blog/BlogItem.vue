@@ -11,7 +11,7 @@ const img = useImage()
 
 <template>
   <Card
-    class="relative flex h-[220px] flex-col overflow-hidden after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-t after:from-black after:to-transparent after:transition-opacity after:duration-200 after:content-[''] sm:h-auto"
+    class="relative flex h-[220px] flex-col overflow-hidden after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-t after:from-white after:to-transparent after:transition-opacity after:duration-200 after:content-[''] dark:after:from-black sm:h-auto"
   >
     <NuxtImg
       class="absolute left-0 top-0 h-full w-full overflow-clip object-cover object-top"
