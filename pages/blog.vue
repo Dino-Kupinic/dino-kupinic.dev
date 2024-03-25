@@ -7,6 +7,8 @@ const data2 = await useFetch("/api/v1/user")
   <div>
     <pre>{{ data }}</pre>
     <pre>{{ data2 }}</pre>
+    <NuxtLink to="/api/login" external> Sign in </NuxtLink>
+    <NuxtLink to="/api/register" external> Sign up </NuxtLink>
   </div>
 </template>
 

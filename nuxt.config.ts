@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/device",
     "@nuxtjs/web-vitals",
+    "@nuxtjs/kinde",
     "@nuxt/content",
     "@nuxt/image",
     "@nuxt/eslint",
