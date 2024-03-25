@@ -24,7 +24,6 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/seo",
     "@nuxtjs/device",
-    "@nuxtjs/web-vitals",
     "@nuxtjs/kinde",
     "@nuxt/content",
     "@nuxt/image",
