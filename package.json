@@ -14,7 +14,7 @@
     "format": "npx prettier . --check",
     "format:write": "npx prettier . --write",
     "turso:local": "turso dev --db-file local.db",
-    "drizzle:studio": "turso dev --db-file local.db",
+    "drizzle:studio": "drizzle-kit studio",
     "prepare": "husky"
   },
   "lint-staged": {
