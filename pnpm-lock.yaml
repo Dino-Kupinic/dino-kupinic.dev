@@ -106,9 +106,6 @@ devDependencies:
   '@nuxtjs/tailwindcss':
     specifier: ^6.11.4
     version: 6.11.4(rollup@4.13.0)
-  '@nuxtjs/web-vitals':
-    specifier: ^0.2.6
-    version: 0.2.6(rollup@4.13.0)
   '@pinia-plugin-persistedstate/nuxt':
     specifier: ^1.2.0
     version: 1.2.0(@pinia/nuxt@0.5.1)(pinia@2.1.7)(rollup@4.13.0)
@@ -2852,19 +2849,6 @@ packages:
       - supports-color
       - ts-node
       - uWebSockets.js
-    dev: true
-
-  /@nuxtjs/web-vitals@0.2.6(rollup@4.13.0):
-    resolution: {integrity: sha512-hoLo/Lcl63rDEm1gR/VN3sSG7mO4UKzJF69lyKjm+cSWtnSinSQo4n/8V0qmDqVgC3GPfvC1X/IqZx5FaRSS/g==}
-    dependencies:
-      '@nuxt/kit': 3.11.1(rollup@4.13.0)
-      defu: 6.1.4
-      pathe: 1.1.2
-      ufo: 1.5.3
-      web-vitals: 3.5.2
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: true
 
   /@oxc-parser/binding-darwin-arm64@0.2.0:
@@ -13207,10 +13191,6 @@ packages:
   /web-streams-polyfill@3.3.3:
     resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
     engines: {node: '>= 8'}
-
-  /web-vitals@3.5.2:
-    resolution: {integrity: sha512-c0rhqNcHXRkY/ogGDJQxZ9Im9D19hDihbzSQJrsioex+KnFgmMzBiy57Z1EjkhX/+OjyBpclDCzz2ITtjokFmg==}
-    dev: true
 
   /webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
