@@ -30,6 +30,7 @@
     "@vueuse/core": "^10.9.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "cobe": "^0.6.3",
     "drizzle-orm": "^0.29.4",
     "embla-carousel": "^8.0.0",
     "embla-carousel-autoplay": "^8.0.0",
