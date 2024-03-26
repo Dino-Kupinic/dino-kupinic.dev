@@ -6,14 +6,14 @@ defineProps<{
 </script>
 
 <template>
-  <Card class="h-[200px] sm:h-auto">
+  <Card class="h-[220px] sm:h-auto">
     <CardHeader
       class="flex items-center justify-center p-2 pb-1 sm:p-3 sm:pb-2"
     >
       <ProjectItemHeader>
         <Icon
           name="i-simple-icons-nuxtdotjs"
-          class="h-8 w-8 text-foreground sm:h-16 sm:w-16"
+          class="h-10 w-10 text-foreground sm:h-16 sm:w-16"
         />
       </ProjectItemHeader>
     </CardHeader>

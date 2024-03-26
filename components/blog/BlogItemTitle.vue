@@ -1,10 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <NuxtLink
-    to="/blog"
-    class="w-full text-lg font-medium text-foreground sm:text-xl"
-  >
+  <h3 class="w-full text-xl font-medium text-foreground">
     <slot />
-  </NuxtLink>
+  </h3>
 </template>
