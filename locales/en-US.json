@@ -18,5 +18,15 @@
     "blog": "Featured Blogs",
     "readMore": "Read more",
     "aboutMe": "About me"
+  },
+  "about": {
+    "country": "Austria",
+    "age": "Age",
+    "socials": "Socials",
+    "stacks": "Stacks",
+    "song": "Favourite Song",
+    "game": "Favourite Game",
+    "quote": "Favourite Quote",
+    "artist": "Favourite Artist"
   }
 }

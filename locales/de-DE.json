@@ -18,5 +18,15 @@
     "blog": "Vorgestellte Blogs",
     "readMore": "Mehr Lesen",
     "aboutMe": "Über mich"
+  },
+  "about": {
+    "country": "Österreich",
+    "age": "Alter",
+    "socials": "Social-Media",
+    "stacks": "Technologien",
+    "song": "Lieblingssong",
+    "game": "Lieblingsspiel",
+    "quote": "Lieblingszitat",
+    "artist": "Lieblingskünstler"
   }
 }

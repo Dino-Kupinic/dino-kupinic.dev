@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <AboutItem icon="i-material-symbols-location-on">
-    <template #header> Austria </template>
+  <AboutItem icon="i-ic-baseline-location-on">
+    <template #header>{{ $t("about.country") }}</template>
     <template #content>
       <AboutLocationGlobe />
     </template>
