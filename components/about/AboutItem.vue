@@ -9,7 +9,7 @@ defineProps<{
     <AboutItemHeader :icon="icon">
       <slot name="header" />
     </AboutItemHeader>
-    <div>
+    <div class="grow">
       <slot name="content" />
     </div>
   </div>

@@ -5,7 +5,7 @@
     <AboutFavouriteQuoteItem class="col-span-2 row-span-2" />
     <AboutFavouriteSongItem class="col-span-1 row-span-3" />
     <AboutFavouriteArtistItem class="col-span-1 row-span-5" />
-    <AboutFavouriteGameItem class="col-span-1 row-span-2" />
+    <AboutFavouriteHobbiesItem class="col-span-1 row-span-2" />
   </div>
 </template>
 
