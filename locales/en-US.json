@@ -2,6 +2,10 @@
   "aria": {
     "toggle-theme": "Toggle theme"
   },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light"
+  },
   "nav": {
     "menu": "Menu",
     "search": "Search",

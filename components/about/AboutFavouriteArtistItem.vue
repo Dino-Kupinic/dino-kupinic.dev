@@ -76,7 +76,6 @@ const artists: Artist[] = [
           v-for="artist in artists"
           :key="artist.name"
           :to="artist.link"
-          class="decoration-1 hover:underline"
         >
           <AboutFavouriteArtistName :color="artist.backgroundColor">
             {{ artist.name }}

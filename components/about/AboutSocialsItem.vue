@@ -4,6 +4,7 @@ type SocialItem = {
   name: string
   link: string
 }
+
 const socialItems: SocialItem[] = [
   {
     icon: "i-mdi-github",
@@ -13,8 +14,7 @@ const socialItems: SocialItem[] = [
   {
     icon: "i-ic-baseline-discord",
     name: "Discord",
-    // TODO: change
-    link: "https://github.com/Dino-Kupinic",
+    link: "https://discord.gg/y3DeWTBEGR",
   },
   {
     icon: "i-mdi-instagram",
@@ -24,8 +24,7 @@ const socialItems: SocialItem[] = [
   {
     icon: "i-mdi-youtube",
     name: "YouTube",
-    // TODO: change
-    link: "https://github.com/Dino-Kupinic",
+    link: "https://www.youtube.com/channel/UCeO73z_5j_7U92xByZv3VtA",
   },
 ]
 </script>
@@ -40,7 +39,7 @@ const socialItems: SocialItem[] = [
             v-for="item in socialItems"
             :key="item.name"
             :to="item.link"
-            class="decoration-1 hover:underline"
+            class="decoration-1 hover:text-primary hover:underline"
             target="_blank"
             rel="noopener"
           >

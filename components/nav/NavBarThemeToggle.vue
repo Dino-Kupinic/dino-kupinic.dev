@@ -3,7 +3,7 @@ const selected = ref<boolean>(false)
 const colorMode = useColorMode()
 
 onMounted(() => {
-  if (!colorMode.preference) colorMode.preference = "system"
+  if (!colorMode.preference) colorMode.preference = "dark"
 
   const currentMode = colorMode.value
   selected.value = currentMode === "dark"

@@ -16,6 +16,8 @@ watch([Meta_J, Ctrl_J], (v) => {
 function handleOpenChange() {
   open.value = !open.value
 }
+
+const viewport = useViewport()
 </script>
 
 <template>
@@ -23,8 +25,15 @@ function handleOpenChange() {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <Button variant="outline" size="icon" @click="handleOpenChange">
+          <Button
+            variant="outline"
+            :size="viewport.isGreaterThan('mobileWide') ? 'icon' : 'default'"
+            @click="handleOpenChange"
+          >
             <Icon name="i-mi-search" />
+            <span v-if="viewport.isLessThan('tablet')" class="ml-2"
+              >Search</span
+            >
           </Button>
         </TooltipTrigger>
         <TooltipContent>

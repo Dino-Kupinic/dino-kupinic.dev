@@ -33,6 +33,7 @@
     "cobe": "^0.6.3",
     "drizzle-orm": "^0.29.4",
     "embla-carousel": "^8.0.0",
+    "embla-carousel-auto-scroll": "^8.0.0",
     "embla-carousel-autoplay": "^8.0.0",
     "embla-carousel-vue": "^8.0.0",
     "eslint-plugin-drizzle": "^0.2.3",

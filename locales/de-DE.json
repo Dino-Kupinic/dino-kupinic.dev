@@ -2,6 +2,10 @@
   "aria": {
     "toggle-theme": "Thematik ändern"
   },
+  "theme": {
+    "dark": "Dunkel",
+    "light": "Hell"
+  },
   "nav": {
     "menu": "Menü",
     "search": "Suchen",

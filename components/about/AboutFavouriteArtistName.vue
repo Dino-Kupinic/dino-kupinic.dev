@@ -37,21 +37,21 @@ const getGradientColorClass = () => {
 const getTextColorClass = () => {
   switch (props.color) {
     case "red":
-      return "text-red-500"
+      return "text-red-600"
     case "orange":
-      return "text-orange-500"
+      return "text-orange-600"
     case "yellow":
-      return "text-yellow-500"
+      return "text-yellow-600"
     case "green":
-      return "text-green-500"
+      return "text-green-600"
     case "blue":
-      return "text-blue-500"
+      return "text-blue-600"
     case "pink":
-      return "text-pink-500"
+      return "text-pink-600"
     case "purple":
-      return "text-purple-500"
+      return "text-purple-600"
     case "teal":
-      return "text-teal-500"
+      return "text-teal-600"
     default:
       return ""
   }

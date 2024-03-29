@@ -6,7 +6,7 @@ import AboutFavouriteSongArtist from "~/components/about/AboutFavouriteSongArtis
   <AboutItem icon="i-ph-music-notes-simple-fill">
     <template #header>{{ $t("about.song") }}</template>
     <template #content>
-      <div class="flex h-full flex-col justify-evenly pt-2">
+      <div class="flex h-full flex-col justify-between pt-2">
         <div>
           <AboutFavouriteSongTitle color="red">
             TRAINING SEASON
