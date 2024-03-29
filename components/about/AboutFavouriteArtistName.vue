@@ -1,14 +1,72 @@
 <script setup lang="ts">
-defineProps<{
-  color: "red" | "orange" | "yellow" | "green" | "blue" | "pink" | "purple"
+const props = defineProps<{
+  color:
+    | "red"
+    | "orange"
+    | "yellow"
+    | "green"
+    | "blue"
+    | "pink"
+    | "purple"
+    | "teal"
 }>()
+
+const getGradientColorClass = () => {
+  switch (props.color) {
+    case "red":
+      return "to-red-700"
+    case "orange":
+      return " to-orange-700"
+    case "yellow":
+      return "to-yellow-700"
+    case "green":
+      return "to-green-700"
+    case "blue":
+      return "to-blue-700"
+    case "pink":
+      return "to-pink-700"
+    case "purple":
+      return "to-purple-700"
+    case "teal":
+      return "to-teal-700"
+    default:
+      return ""
+  }
+}
+
+const getTextColorClass = () => {
+  switch (props.color) {
+    case "red":
+      return "text-red-500"
+    case "orange":
+      return "text-orange-500"
+    case "yellow":
+      return "text-yellow-500"
+    case "green":
+      return "text-green-500"
+    case "blue":
+      return "text-blue-500"
+    case "pink":
+      return "text-pink-500"
+    case "purple":
+      return "text-purple-500"
+    case "teal":
+      return "text-teal-500"
+    default:
+      return ""
+  }
+}
 </script>
 
 <template>
   <div
-    class="flex h-10 w-full items-center rounded-lg bg-gradient-to-r from-background to-red-800 pl-2 dark:from-15%"
+    class="flex h-10 w-full items-center rounded-lg pl-2 dark:from-15%"
+    :class="[
+      'flex h-10 w-full items-center rounded-lg bg-gradient-to-r from-background pl-2',
+      getGradientColorClass(),
+    ]"
   >
-    <span class="text-red-500">
+    <span :class="[getTextColorClass()]">
       <slot />
     </span>
   </div>
