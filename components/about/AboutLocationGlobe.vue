@@ -16,13 +16,12 @@ onMounted(() => {
     mapSamples: 16000,
     mapBrightness: 6,
     baseColor: [0.3, 0.3, 0.3],
-    markerColor: [0.1, 0.8, 1],
+    markerColor: [255, 0, 0],
     glowColor: [1, 1, 1],
-    markers: [{ location: [47.5162, -14.5501], size: 0.03 }],
+    markers: [{ location: [47.5162, 14.5501], size: 0.07 }],
     onRender: (state) => {
-      // Called on every animation frame.
-      // `State` will be an empty object, return updated params.
       state.phi = phi.value
+      phi.value += 0.007
     },
   })
 })
