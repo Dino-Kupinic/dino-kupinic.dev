@@ -14,21 +14,21 @@ const props = defineProps<{
 const getGradientColorClass = () => {
   switch (props.color) {
     case "red":
-      return "to-red-700"
+      return "to-red-500 dark:to-red-700"
     case "orange":
-      return " to-orange-700"
+      return "to-orange-500 dark:to-orange-700"
     case "yellow":
-      return "to-yellow-700"
+      return "to-yellow-500 dark:to-yellow-700"
     case "green":
-      return "to-green-700"
+      return "to-green-500 dark:to-green-700"
     case "blue":
-      return "to-blue-700"
+      return "to-blue-500 dark:to-blue-700"
     case "pink":
-      return "to-pink-700"
+      return "to-pink-500 dark:to-pink-700"
     case "purple":
-      return "to-purple-700"
+      return "to-purple-500 dark:to-purple-700"
     case "teal":
-      return "to-teal-700"
+      return "to-teal-500 dark:to-teal-700"
     default:
       return ""
   }
@@ -60,9 +60,8 @@ const getTextColorClass = () => {
 
 <template>
   <div
-    class="flex h-10 w-full items-center rounded-lg pl-2 dark:from-15%"
     :class="[
-      'flex h-10 w-full items-center rounded-lg bg-gradient-to-r from-background pl-2',
+      'flex h-10 w-full items-center rounded-lg bg-gradient-to-r from-background pl-2 dark:from-10%',
       getGradientColorClass(),
     ]"
   >

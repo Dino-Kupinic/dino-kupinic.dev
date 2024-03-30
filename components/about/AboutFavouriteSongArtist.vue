@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <span class="text text-md leading-5">
+  <span class="text sm:text-md text-lg leading-7">
     <slot />
   </span>
 </template>

@@ -22,11 +22,11 @@ const viewport = useViewport()
       @mouseenter="plugin.stop"
       @mouseleave="[plugin.reset(), plugin.play()]"
     >
-      <CarouselContent class="-ml-3 sm:-ml-5">
+      <CarouselContent class="-ml-4 sm:-ml-5">
         <CarouselItem
           v-for="project in projects"
           :key="project"
-          class="basis-1/2 pl-3 sm:pl-5 md:basis-1/3"
+          class="basis-1/2 pl-4 sm:pl-5 md:basis-1/3"
         >
           <div>
             <ProjectItem

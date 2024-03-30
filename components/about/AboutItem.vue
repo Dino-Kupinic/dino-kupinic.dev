@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col rounded-lg border bg-background p-3">
+  <div class="flex flex-col rounded-lg border bg-background p-3 drop-shadow-sm">
     <AboutItemHeader :icon="icon">
       <slot name="header" />
     </AboutItemHeader>

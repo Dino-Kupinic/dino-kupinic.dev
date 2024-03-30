@@ -50,11 +50,6 @@ const artists: Artist[] = [
     backgroundColor: "pink",
   },
   {
-    name: "Boney M.",
-    link: "https://www.youtube.com/@boneym.official/videos",
-    backgroundColor: "red",
-  },
-  {
     name: "Bonnie Tyler",
     link: "https://www.youtube.com/@BonnieTylerOfficial/videos",
     backgroundColor: "yellow",
@@ -63,6 +58,11 @@ const artists: Artist[] = [
     name: "Ado",
     link: "https://www.youtube.com/@Ado1024/videos",
     backgroundColor: "teal",
+  },
+  {
+    name: "Boney M.",
+    link: "https://www.youtube.com/@boneym.official/videos",
+    backgroundColor: "red",
   },
 ]
 </script>

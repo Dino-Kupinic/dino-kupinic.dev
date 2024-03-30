@@ -10,5 +10,3 @@
     </IndexSection>
   </ClientOnly>
 </template>
-
-<style scoped></style>
