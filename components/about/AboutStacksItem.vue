@@ -192,6 +192,7 @@ const mix: StackItem[] = [...frameworks, ...libraries, ...databases, ...etc]
             v-for="language in languages"
             :key="language.tooltip"
             :icon="language.icon"
+            :aria="language.tooltip + ' Logo'"
           >
             {{ language.tooltip }}
           </AboutStacksCarouselItem>
@@ -201,6 +202,7 @@ const mix: StackItem[] = [...frameworks, ...libraries, ...databases, ...etc]
             v-for="m in mix"
             :key="m.tooltip"
             :icon="m.icon"
+            :aria="m.tooltip + 'Logo'"
           >
             {{ m.tooltip }}
           </AboutStacksCarouselItem>

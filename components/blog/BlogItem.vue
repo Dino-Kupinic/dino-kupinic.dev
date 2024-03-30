@@ -34,5 +34,3 @@ defineProps<{
     </div>
   </BlogItemContainer>
 </template>
-
-<style scoped></style>

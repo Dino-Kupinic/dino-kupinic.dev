@@ -15,5 +15,3 @@
     </template>
   </AboutItem>
 </template>
-
-<style scoped></style>

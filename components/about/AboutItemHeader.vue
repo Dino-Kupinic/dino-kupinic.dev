@@ -12,5 +12,3 @@ defineProps<{
     </h3>
   </div>
 </template>
-
-<style scoped></style>

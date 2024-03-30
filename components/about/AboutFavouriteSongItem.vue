@@ -16,7 +16,9 @@ import AboutFavouriteSongArtist from "~/components/about/AboutFavouriteSongArtis
         <div>
           <NuxtImg
             class="overflow-hidden rounded-lg"
-            src="/images/index/trainingseason.png"
+            src="/images/index/trainingseason.webp"
+            sizes="215"
+            alt="Training Season Dua Lipa"
           />
         </div>
       </div>

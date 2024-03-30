@@ -42,6 +42,7 @@ const socialItems: SocialItem[] = [
             class="decoration-1 hover:text-primary hover:underline"
             target="_blank"
             rel="noopener"
+            external
           >
             <div class="flex w-full items-center space-x-2">
               <Icon :name="item.icon" />

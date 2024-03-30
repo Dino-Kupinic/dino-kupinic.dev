@@ -4,11 +4,11 @@ const props = defineProps<{
 }>()
 
 const pathDark = computed(() => {
-  return `/images/${props.imgName}-dark.jpg`
+  return `/images/${props.imgName}-dark.webp`
 })
 
 const pathLight = computed(() => {
-  return `/images/${props.imgName}-light.jpg`
+  return `/images/${props.imgName}-light.webp`
 })
 
 const path = computed(() => {

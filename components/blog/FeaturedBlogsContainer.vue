@@ -61,5 +61,3 @@ const blogs = ref([
     />
   </div>
 </template>
-
-<style scoped></style>

@@ -37,8 +37,8 @@ const viewport = useViewport()
         </CarouselItem>
       </CarouselContent>
       <template v-if="viewport.isGreaterThan('tablet')">
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious aria-label="Carousel Previous Item" />
+        <CarouselNext aria-label="Carousel Next Item" />
       </template>
     </Carousel>
   </div>

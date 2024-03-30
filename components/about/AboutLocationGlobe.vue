@@ -7,8 +7,8 @@ const phi = ref(0)
 onMounted(() => {
   const globe = createGlobe(el.value, {
     devicePixelRatio: 2,
-    width: 300 * 2,
-    height: 300 * 2,
+    width: 275 * 2,
+    height: 275 * 2,
     phi: 0,
     theta: 0,
     dark: 1,
@@ -28,7 +28,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas ref="el" class="h-[300px] w-[300px]"></canvas>
+  <canvas ref="el" class="h-[275px] w-[275px]"></canvas>
 </template>
-
-<style scoped></style>

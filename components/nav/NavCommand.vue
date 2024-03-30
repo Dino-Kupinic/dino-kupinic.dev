@@ -28,6 +28,7 @@ const viewport = useViewport()
           <Button
             variant="outline"
             :size="viewport.isGreaterThan('mobileWide') ? 'icon' : 'default'"
+            aria-label="Search Button"
             @click="handleOpenChange"
           >
             <Icon name="i-mi-search" />

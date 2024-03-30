@@ -60,8 +60,8 @@ const artists: Artist[] = [
     backgroundColor: "yellow",
   },
   {
-    name: "Troye Sivan",
-    link: "https://www.youtube.com/@troyesivan/videos",
+    name: "Ado",
+    link: "https://www.youtube.com/@Ado1024/videos",
     backgroundColor: "teal",
   },
 ]

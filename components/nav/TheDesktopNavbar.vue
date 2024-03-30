@@ -11,7 +11,7 @@ defineProps<{
   <NavContainer>
     <div class="ml-3 flex cursor-pointer items-center">
       <NuxtLink to="/">
-        <NavLogo />
+        <NavLogo aria-label="Logo" />
       </NuxtLink>
     </div>
     <NavigationMenu class="mr-2">

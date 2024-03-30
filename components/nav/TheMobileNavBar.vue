@@ -12,7 +12,7 @@ const isOpen = ref<boolean>(false)
   <NavContainer>
     <div class="ml-1 flex cursor-pointer items-center gap-2">
       <NuxtLink to="/">
-        <NavLogo />
+        <NavLogo aria-label="Logo" />
       </NuxtLink>
     </div>
     <div class="flex items-center gap-2">

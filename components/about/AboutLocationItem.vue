@@ -4,9 +4,9 @@
   <AboutItem icon="i-ic-baseline-location-on">
     <template #header>{{ $t("about.country") }}</template>
     <template #content>
-      <AboutLocationGlobe />
+      <div class="flex justify-center">
+        <AboutLocationGlobe />
+      </div>
     </template>
   </AboutItem>
 </template>
-
-<style scoped></style>

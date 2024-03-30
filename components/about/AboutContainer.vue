@@ -6,5 +6,3 @@
     <AboutFavouriteContainer class="w-full" />
   </div>
 </template>
-
-<style scoped></style>

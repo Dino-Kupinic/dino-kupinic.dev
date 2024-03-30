@@ -9,5 +9,3 @@
     <slot />
   </span>
 </template>
-
-<style scoped></style>
