@@ -4,7 +4,7 @@ const viewport = useViewport()
 
 <template>
   <ClientOnly>
-    <section class="mt-16 sm:mt-36 sm:p-0">
+    <IndexSection>
       <SectionHeading class="m-auto">{{ $t("hero.projects") }}</SectionHeading>
       <ProjectCarousel class="m-auto my-4 sm:my-5" />
       <div class="m-auto">
@@ -16,6 +16,6 @@ const viewport = useViewport()
           {{ $t("hero.allProjects") }}
         </Button>
       </div>
-    </section>
+    </IndexSection>
   </ClientOnly>
 </template>

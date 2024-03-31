@@ -109,7 +109,7 @@ const libraries: StackItem[] = [
   },
   {
     tooltip: "Vite",
-    icon: "i-simple-icons-vite",
+    icon: "i-file-icons-vite",
   },
   {
     tooltip: "Vitest",
@@ -167,7 +167,7 @@ const etc: StackItem[] = [
   },
   {
     tooltip: "Git",
-    icon: "i-mdi-git",
+    icon: "i-bx-bxl-git",
   },
   {
     tooltip: "Figma",

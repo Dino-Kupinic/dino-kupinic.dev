@@ -16,6 +16,9 @@ export default defineNuxtConfig({
       dirs: ["./server/db/**"],
       imports: [{ from: "zod", name: "z" }],
     },
+    experimental: {
+      tasks: true,
+    },
   },
   modules: [
     "@nuxthq/studio",

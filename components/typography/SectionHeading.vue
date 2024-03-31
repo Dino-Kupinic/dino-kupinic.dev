@@ -1,11 +1,29 @@
+<script setup lang="ts">
+const props = withDefaults(
+  defineProps<{
+    size: "default" | "md" | "lg"
+  }>(),
+  {
+    size: "default",
+  },
+)
+
+const getSize = () => {
+  switch (props.size) {
+    case "default":
+      return "text-2xl sm:text-3xl"
+    case "md":
+      return "text-3xl sm:text-4xl"
+    case "lg":
+      return "text-4xl sm:text-5xl"
+  }
+}
+</script>
+
 <template>
-  <h3 class="text-2xl font-medium tracking-wide sm:text-3xl">
+  <h3 :class="['font-special font-medium tracking-wide', getSize()]">
     <slot />
   </h3>
 </template>
 
-<style scoped>
-h3 {
-  font-family: "MonaSans", sans-serif;
-}
-</style>
+<style scoped></style>

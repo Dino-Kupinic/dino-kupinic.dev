@@ -11,7 +11,7 @@
     "search": "Search",
     "searchPress": "Press",
     "projects": "Projects",
-    "blog": "Blog",
+    "blogs": "Blog",
     "about": "About",
     "contact": "Contact"
   },
@@ -29,8 +29,11 @@
     "socials": "Socials",
     "stacks": "Stacks",
     "song": "Favourite Song",
-    "hobbies": "Favourite Hobbies",
+    "framework": "Favourite Framework",
     "quote": "Favourite Quote",
     "artist": "Favourite Artists"
+  },
+  "blog": {
+    "pageTitle": "Blogs"
   }
 }

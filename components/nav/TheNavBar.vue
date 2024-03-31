@@ -13,7 +13,7 @@ watch(
         href: "/projects",
       },
       {
-        title: t("nav.blog"),
+        title: t("nav.blogs"),
         href: "/blog",
       },
       {

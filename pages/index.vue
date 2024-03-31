@@ -6,10 +6,10 @@ definePageMeta({
 </script>
 
 <template>
-  <main class="mx-auto max-w-[1024px] p-5 sm:p-3 lg:p-0">
+  <GenericLayoutWrapper>
     <TheHeroSection />
     <TheProjectsSection />
     <TheBlogSection />
     <TheAboutMeSection />
-  </main>
+  </GenericLayoutWrapper>
 </template>

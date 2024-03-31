@@ -1,3 +1,3 @@
 export default defineEventHandler(async () => {
-  return database.select().from(posts)
+  return { hello: "API2" }
 })

@@ -2,7 +2,7 @@
 
 <template>
   <NuxtLink
-    to="/blog"
+    to="/blogs/test"
     class="rounded-lg border bg-card text-card-foreground shadow-sm"
   >
     <slot />

@@ -4,7 +4,7 @@ const viewport = useViewport()
 
 <template>
   <ClientOnly>
-    <section class="mt-16 sm:mt-36 sm:p-0">
+    <IndexSection>
       <SectionHeading class="m-auto">
         {{ $t("hero.blog") }}
       </SectionHeading>
@@ -18,6 +18,6 @@ const viewport = useViewport()
           {{ $t("hero.readMore") }}
         </Button>
       </div>
-    </section>
+    </IndexSection>
   </ClientOnly>
 </template>

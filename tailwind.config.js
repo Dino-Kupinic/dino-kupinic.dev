@@ -1,8 +1,8 @@
 import animate from "tailwindcss-animate"
 
-/** @type {import("tailwindcss").Config} */
 export const darkMode = ["class"]
 export const safelist = ["dark"]
+/** @type {import("tailwindcss").Config} */
 export const theme = {
   container: {
     center: true,
@@ -10,6 +10,9 @@ export const theme = {
     screens: {
       "2xl": "1400px",
     },
+  },
+  fontFamily: {
+    special: "MonaSans, Helvetica, sans-serif",
   },
   extend: {
     colors: {
