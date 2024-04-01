@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="relative w-full items-center sm:max-w-sm">
+  <div class="relative flex w-full items-center sm:max-w-sm">
     <Input
       id="search"
       type="text"
