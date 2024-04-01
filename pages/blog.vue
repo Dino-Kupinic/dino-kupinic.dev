@@ -3,6 +3,7 @@
 <template>
   <GenericLayoutWrapper>
     <TheBlogPageHeaderSection />
+    <TheBlogPageMainSection />
   </GenericLayoutWrapper>
 </template>
 

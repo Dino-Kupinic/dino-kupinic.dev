@@ -12,7 +12,15 @@ export const theme = {
     },
   },
   fontFamily: {
-    special: "MonaSans, Helvetica, sans-serif",
+    serif: [
+      "ui-serif",
+      "Georgia",
+      "Cambria",
+      "Times New Roman",
+      "Times",
+      "serif",
+    ],
+    heading: "MonaSans, sans-serif",
   },
   extend: {
     colors: {

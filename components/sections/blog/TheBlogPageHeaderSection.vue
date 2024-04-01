@@ -1,10 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="mt-8 sm:mt-12">
-    <div class="flex">
-      <SectionHeading size="lg">{{ $t("blog.pageTitle") }}</SectionHeading>
+  <section class="my-8 sm:my-12">
+    <div
+      class="flex flex-col items-center justify-between space-y-3 sm:flex-row"
+    >
+      <SectionHeading class="w-full text-left" size="md">
+        {{ $t("blog.pageTitle") }}
+      </SectionHeading>
+      <BlogSearch />
     </div>
+    <BlogCategories />
   </section>
 </template>
 

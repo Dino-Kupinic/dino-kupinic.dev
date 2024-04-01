@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    size: "default" | "md" | "lg"
+    size?: "default" | "md" | "lg"
   }>(),
   {
     size: "default",
@@ -21,9 +21,7 @@ const getSize = () => {
 </script>
 
 <template>
-  <h3 :class="['font-special font-medium tracking-wide', getSize()]">
+  <h3 :class="['font-heading font-medium tracking-wide', getSize()]">
     <slot />
   </h3>
 </template>
-
-<style scoped></style>

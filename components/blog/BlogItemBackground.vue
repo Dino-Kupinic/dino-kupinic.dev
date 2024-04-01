@@ -25,7 +25,7 @@ const mode = useColorMode()
     :src="path.value"
     alt="blog-background"
     loading="lazy"
-    :placeholder="img(path.value, { h: 10, f: 'png', blur: 2, q: 50 })"
+    :placeholder="img(path.value, { h: 10, f: 'webp', blur: 2, q: 50 })"
   />
 </template>
 
