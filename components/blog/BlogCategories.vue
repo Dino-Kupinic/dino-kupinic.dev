@@ -1,13 +1,26 @@
 <script setup lang="ts">
-const { data: categories } = await useFetch("/api/v1/categories")
-const route = useRoute()
+import type { Category } from "~/types/category"
+
+const { data: categories, pending } = useLazyFetch("/api/v1/categories")
 
 const viewport = useViewport()
+const route = useRoute()
+
+const isCurrentCategory = (categoryText: string) => {
+  return route.params.text === categoryText.toLowerCase()
+}
+
+const generateLinks = (category: Category) => {
+  return category.text !== "All Blogs"
+    ? "/blog/category/" + category.text.toLowerCase()
+    : "/blog"
+}
 </script>
 
 <template>
-  <div class="flex py-2">
-    <Drawer v-if="viewport.isLessThan('tablet')">
+  <div class="py-2">
+    <div v-if="pending">Loading...</div>
+    <Drawer v-else-if="viewport.isLessThan('tablet')">
       <DrawerTrigger>
         <Button variant="outline" class="flex items-center space-x-2">
           <Icon name="i-ic-twotone-filter-list" />
@@ -27,41 +40,24 @@ const viewport = useViewport()
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-    <Button
-      v-for="category in categories"
-      v-else
-      :key="category.id"
-      variant="link"
-      class="relative block pl-0 pr-8 font-normal text-neutral-600 hover:text-primary hover:no-underline dark:text-foreground"
-    >
-      <NuxtLink
-        :to="
-          category.text !== 'All Blogs'
-            ? '/blog/category/' + category.text.toLowerCase()
-            : '/blog'
-        "
-      >
-        <span
-          class="before:absolute before:inset-0 before:ml-2 before:h-[2px] before:w-full before:translate-y-3 before:bg-foreground before:content-['']"
+    <ul v-else class="flex grow gap-8">
+      <li v-for="category in categories" :key="category.id">
+        <CategoryFilter
+          :to="generateLinks(category)"
+          :class="{
+            'text-neutral-900': isCurrentCategory(category.text),
+            active: isCurrentCategory(category.text),
+          }"
+          class="relative h-auto font-normal text-neutral-600 hover:text-primary dark:text-foreground"
         >
+          <span
+            v-if="isCurrentCategory(category.text)"
+            class="before:absolute before:inset-0 before:h-[2px] before:w-full before:translate-y-10 before:bg-foreground before:content-['']"
+          ></span>
           {{ category.text }}
-        </span>
-      </NuxtLink>
-    </Button>
-    <ClientOnly>
-      <div class="flex w-full grow justify-end">
-        <Popover>
-          <PopoverTrigger>
-            <Button variant="destructive" size="icon">
-              <Icon name="i-jam-triangle-danger" />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent>
-            <p>Categories are currently only in English.</p>
-          </PopoverContent>
-        </Popover>
-      </div>
-    </ClientOnly>
+        </CategoryFilter>
+      </li>
+    </ul>
   </div>
 </template>
 
