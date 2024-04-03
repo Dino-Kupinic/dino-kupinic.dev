@@ -1,18 +1,26 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   title: string
   likes: number
   views: number
   date: Date
   author: string
 }>()
+
+const formattedDate = new Intl.DateTimeFormat("en-US", {
+  month: "2-digit",
+  day: "2-digit",
+  year: "numeric",
+}).format(props.date)
 </script>
 
 <template>
   <BlogItemContainer
     class="relative flex h-[200px] flex-col overflow-hidden drop-shadow-sm after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-t after:from-white after:from-25% after:to-transparent after:transition-opacity after:duration-500 after:content-[''] after:hover:from-10% dark:after:from-black sm:h-auto"
   >
-    <BlogItemBackground img-name="blog1" />
+    <ClientOnly>
+      <BlogItemBackground img-name="blog1" />
+    </ClientOnly>
     <div class="z-10 flex h-full w-full flex-col justify-end p-4">
       <CardContent class="flex-none p-0">
         <BlogItemTitle>
@@ -28,7 +36,7 @@ defineProps<{
       <CardFooter class="mt-2 p-0">
         <div class="flex w-full justify-between space-x-3">
           <BlogItemAuthor class="truncate">{{ author }}</BlogItemAuthor>
-          <BlogItemDate>{{ date.toLocaleDateString() }}</BlogItemDate>
+          <BlogItemDate>{{ formattedDate }}</BlogItemDate>
         </div>
       </CardFooter>
     </div>

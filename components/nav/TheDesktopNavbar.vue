@@ -11,7 +11,12 @@ defineProps<{
   <NavContainer>
     <div class="ml-3 flex cursor-pointer items-center">
       <NuxtLink to="/">
-        <NavLogo aria-label="Logo" />
+        <ClientOnly>
+          <NavLogo aria-label="Logo" />
+          <template #fallback>
+            <Skeleton class="h-10 w-20" />
+          </template>
+        </ClientOnly>
       </NuxtLink>
     </div>
     <NavigationMenu class="mr-2">
@@ -28,8 +33,14 @@ defineProps<{
         </NavItem>
         <div class="flex items-center space-x-3">
           <NavDivider />
-          <NavBarThemeToggle />
-          <NavCommand />
+          <ClientOnly>
+            <NavBarThemeToggle />
+            <NavCommand />
+            <template #fallback>
+              <Skeleton class="h-10 w-10" />
+              <Skeleton class="h-10 w-10" />
+            </template>
+          </ClientOnly>
           <NavLanguageSelection />
         </div>
       </NavigationMenuList>

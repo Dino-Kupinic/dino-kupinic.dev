@@ -5,12 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 <template>
   <div>
     <SpeedInsights />
-    <ClientOnly>
-      <TheNavBar />
-      <template #fallback>
-        <TheNavBarSkeleton />
-      </template>
-    </ClientOnly>
+    <TheNavBar />
     <slot />
   </div>
 </template>
