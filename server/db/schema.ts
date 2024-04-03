@@ -24,6 +24,7 @@ export const selectBlogSchema = createSelectSchema(blogs)
 export const categories = sqliteTable("categories", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   text: text("title").notNull(),
+  icon: text("icon").notNull(),
 })
 export const insertCategorySchema = createInsertSchema(categories)
 export const selectCategorySchema = createSelectSchema(categories)

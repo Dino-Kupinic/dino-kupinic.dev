@@ -18,9 +18,11 @@ const generateLinks = (category: Category) => {
 </script>
 
 <template>
-  <div class="py-2">
-    <div v-if="pending">Loading...</div>
-    <Drawer v-else-if="viewport.isLessThan('tablet')">
+  <div v-if="pending">
+    <p>Loading...</p>
+  </div>
+  <div v-else>
+    <Drawer v-if="viewport.isLessThan('tablet')">
       <DrawerTrigger>
         <Button variant="outline" class="flex items-center space-x-2">
           <Icon name="i-ic-twotone-filter-list" />
@@ -28,14 +30,28 @@ const generateLinks = (category: Category) => {
         </Button>
       </DrawerTrigger>
       <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-          <DrawerDescription>This action cannot be undone.</DrawerDescription>
+        <DrawerHeader class="pb-0 pt-8">
+          <DrawerTitle class="font-heading text-xl tracking-wide"
+            >Category</DrawerTitle
+          >
         </DrawerHeader>
         <DrawerFooter>
-          <Button>Submit</Button>
           <DrawerClose>
-            <Button variant="outline"> Cancel </Button>
+            <div class="mb-6 flex flex-col gap-3">
+              <Button
+                v-for="category in categories"
+                :key="category.id"
+                variant="link"
+              >
+                <CategoryFilter
+                  :to="generateLinks(category)"
+                  class="flex w-full items-center gap-2 text-left text-lg"
+                >
+                  <Icon :name="category.icon" class="h-6 w-6" />
+                  {{ category.text }}
+                </CategoryFilter>
+              </Button>
+            </div>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
@@ -60,5 +76,3 @@ const generateLinks = (category: Category) => {
     </ul>
   </div>
 </template>
-
-<style scoped></style>

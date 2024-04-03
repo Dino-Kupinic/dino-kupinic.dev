@@ -14,7 +14,8 @@ CREATE TABLE `blogs` (
 --> statement-breakpoint
 CREATE TABLE `categories` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	`title` text NOT NULL
+	`title` text NOT NULL,
+	`icon` text NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE `comments` (

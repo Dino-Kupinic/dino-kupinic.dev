@@ -5,6 +5,7 @@ export default defineEventHandler(async () => {
     const response: Category[] | null = await database
       .select()
       .from(categories)
+      .orderBy(categories.text)
       .all()
     return response
   } catch (err: unknown) {

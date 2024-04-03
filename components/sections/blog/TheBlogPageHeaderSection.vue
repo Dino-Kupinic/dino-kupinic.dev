@@ -5,7 +5,7 @@ const title = ref<string>("")
 const { t } = useI18n()
 watch(
   () => route.params.text,
-  (newText, oldText) => {
+  (newText) => {
     if (newText !== undefined) {
       const text = newText as string
       title.value = text.charAt(0).toUpperCase() + text.slice(1)
@@ -27,7 +27,7 @@ watch(
       </SectionHeading>
       <BlogSearch />
     </div>
-    <BlogCategories />
+    <BlogCategories class="py-2" />
   </section>
 </template>
 
