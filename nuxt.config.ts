@@ -11,6 +11,9 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  experimental: {
+    typedPages: true,
+  },
   nitro: {
     imports: {
       dirs: ["./server/db/**"],
@@ -56,13 +59,10 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  content: {
-    contentHead: false,
-  },
   colorMode: {
     classSuffix: "",
     preference: "system",
-    fallback: "light",
+    fallback: "dark",
   },
   security: {
     headers: {
