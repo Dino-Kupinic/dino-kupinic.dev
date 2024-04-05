@@ -1,13 +1,1 @@
-{
-  "version": "5",
-  "dialect": "sqlite",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "5",
-      "when": 1712133905007,
-      "tag": "0000_cool_tigra",
-      "breakpoints": true
-    }
-  ]
-}
+{"version":"5","dialect":"mysql","entries":[]}

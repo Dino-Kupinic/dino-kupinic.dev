@@ -1,12 +1,6 @@
-import type { Category } from "~/types/category"
-
 export default defineEventHandler(async (event) => {
   try {
-    const response: Category[] | null = await database
-      .select()
-      .from(categories)
-      .orderBy(categories.text)
-      .all()
+    const response = await database.select().from(blogs).all()
 
     setResponseStatus(event, 200, "success")
     return response

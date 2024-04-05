@@ -7,7 +7,7 @@ export const blogs = sqliteTable("blogs", {
   title: text("title").notNull(),
   description: text("description").notNull(),
   imagePath: text("image_path").notNull(),
-  authorId: text("author_id").notNull(),
+  authorId: text("author_id").references(() => authors.id),
   likes: integer("likes").default(0).notNull(),
   views: integer("views").default(0).notNull(),
   categoryId: integer("category_id").references(() => categories.id),
@@ -28,6 +28,13 @@ export const categories = sqliteTable("categories", {
 })
 export const insertCategorySchema = createInsertSchema(categories)
 export const selectCategorySchema = createSelectSchema(categories)
+
+export const authors = sqliteTable("authors", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  text: text("name").notNull(),
+})
+export const insertAuthorsSchema = createInsertSchema(authors)
+export const selectAuthorsSchema = createSelectSchema(authors)
 
 export const comments = sqliteTable("comments", {
   id: integer("id").primaryKey({ autoIncrement: true }),

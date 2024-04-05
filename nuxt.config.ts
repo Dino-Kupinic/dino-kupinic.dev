@@ -56,6 +56,9 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  content: {
+    contentHead: false,
+  },
   colorMode: {
     classSuffix: "",
     preference: "system",

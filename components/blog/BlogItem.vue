@@ -21,7 +21,7 @@ const formattedDate = new Intl.DateTimeFormat("en-US", {
     <ClientOnly>
       <BlogItemBackground img-name="blog1" />
     </ClientOnly>
-    <div class="z-10 flex h-full w-full flex-col justify-end p-4">
+    <div class="z-10 flex h-full w-full flex-col justify-end p-4 sm:gap-2">
       <CardContent class="flex-none p-0">
         <BlogItemTitle>
           <p class="line-clamp-2">
