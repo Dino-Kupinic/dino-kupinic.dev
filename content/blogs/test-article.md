@@ -8,11 +8,13 @@ authors:
 date: 2024-04-05T00:00:00.000Z
 ---
 
-I hope this will allow us to continue to innovate and experiment with new features without sacrificing the stability and maintainability.
-
-In particular, look for active development on the following:
-
 # Introduction:
+
+## Introduction:
+
+[Link](www.google.com)
+
+> Block quote
 
 In the realm of modern web development, frameworks and libraries play a pivotal role in simplifying the process of
 building dynamic and interactive user interfaces. Among the plethora of options available, Vue.js stands out as a
@@ -28,10 +30,6 @@ export default defineNuxtConfig({
     },
   },
 })
-```
-
-```vue [components/SomeComponent.server.vue]
-<p></p>
 ```
 
 ### Understanding Vue.js:

@@ -17,33 +17,32 @@ if (!blogContent.value) {
 const title = blogContent.value.title
 const description = blogContent.value?.description
 
-const { data: blog, pending } = await useLazyFetch<Blog>(
-  `/api/v1/blogs/${blogContent.value._path}`,
-)
-if (!pending && !blog.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: "Blog not found",
-    fatal: true,
-  })
-}
-
-useSeoMeta({
-  title: title,
-  description: description,
-})
+// const { data: blog, pending } = await useLazyFetch<Blog>(
+//   `/api/v1${blogContent.value._path}`,
+// )
+// if (!pending && !blog.value) {
+//   throw createError({
+//     statusCode: 404,
+//     statusMessage: "Blog not found",
+//     fatal: true,
+//   })
+// }
+//
+// useSeoMeta({
+//   title: title,
+//   description: description,
+// })
 </script>
 
 <template>
   <GenericLayoutWrapper>
     <div class="flex flex-col sm:flex-row">
       <div class="pr-10 sm:border-r">
-        <p v-if="pending">Loading...</p>
-        <ContentDoc v-slot="{ doc }">
-          <article>
-            <ContentRenderer :value="doc" />
-          </article>
-        </ContentDoc>
+        <!--        <p v-if="pending">Loading...</p>-->
+        <!--        <div v-else>-->
+        <ContentDoc />
+        <!--        <pre>{{ blog?.path }}</pre>-->
+        <!--        </div>-->
       </div>
       <SideBarContainer>
         <div class="w-full">Hallo</div>

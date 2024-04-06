@@ -1,4 +1,5 @@
 import { drizzle } from "drizzle-orm/libsql"
+import * as schema from "./schema"
 import { createClient } from "@libsql/client"
 
 const client = createClient({
@@ -6,4 +7,4 @@ const client = createClient({
   authToken: process.env.TURSO_AUTH_TOKEN!,
 })
 
-export const database = drizzle(client)
+export const database = drizzle(client, { schema })
