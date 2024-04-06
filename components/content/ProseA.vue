@@ -17,7 +17,11 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :href="href" :target="target">
+  <NuxtLink
+    :href="href"
+    :target="target"
+    class="text-blue-500 underline-offset-4 hover:underline hover:decoration-0"
+  >
     <slot />
   </NuxtLink>
 </template>

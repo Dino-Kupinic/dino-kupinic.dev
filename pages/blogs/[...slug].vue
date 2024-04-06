@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Blog, BlogContent } from "~/types/blog"
+import BlogTitle from "~/components/typography/BlogTitle.vue"
 
 const route = useRoute()
 
@@ -36,8 +37,12 @@ const description = blogContent.value?.description
 
 <template>
   <GenericLayoutWrapper>
+    <BlogHeader>
+      <BlogTitle>{{ blogContent?.title }}</BlogTitle>
+      <BlogSubtitle>{{ blogContent?.description }}</BlogSubtitle>
+    </BlogHeader>
     <div class="flex flex-col sm:flex-row">
-      <div class="pr-10 sm:border-r">
+      <div class="sm:border-r sm:pr-12">
         <!--        <p v-if="pending">Loading...</p>-->
         <!--        <div v-else>-->
         <ContentDoc />
@@ -45,7 +50,9 @@ const description = blogContent.value?.description
         <!--        </div>-->
       </div>
       <SideBarContainer>
-        <div class="w-full">Hallo</div>
+        <div class="w-full">
+          <BlogTableOfContents />
+        </div>
       </SideBarContainer>
     </div>
   </GenericLayoutWrapper>

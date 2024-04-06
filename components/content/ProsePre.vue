@@ -28,7 +28,10 @@ defineProps({
 </script>
 
 <template>
-  <pre :class="$props.class"><slot /></pre>
+  <pre
+    :class="$props.class"
+    class="my-6 text-wrap rounded-lg border bg-background p-3 font-mono text-sm"
+  ><slot /></pre>
 </template>
 
 <style>

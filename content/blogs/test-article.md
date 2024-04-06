@@ -1,6 +1,6 @@
 ---
-title: "Vue.js: A Beginner's Guide"
-description: "Test desc"
+title: "Sed lectus nulla, condimentum vestibulum dui viverra, viverra"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
 image: /assets/blog1-dark.webp
 authors:
   - name: Dino Kupinic
@@ -8,28 +8,52 @@ authors:
 date: 2024-04-05T00:00:00.000Z
 ---
 
-# Introduction:
+In the realm of modern web development, frameworks and libraries play a pivotal role in simplifying the process of
+building dynamic and interactive user interfaces.
 
-## Introduction:
+Among the plethora of options available, Vue.js stands out as a
+versatile and approachable JavaScript framework that empowers developers to create robust single-page applications with
+ease.
 
 [Link](www.google.com)
 
 > Block quote
 
-In the realm of modern web development, frameworks and libraries play a pivotal role in simplifying the process of
-building dynamic and interactive user interfaces. Among the plethora of options available, Vue.js stands out as a
-versatile and approachable JavaScript framework that empowers developers to create robust single-page applications with
-ease. In this article, we'll embark on a journey to explore the fundamentals of Vue.js, understand its key features, and
+# Delve into why it's gaining traction
+
+In this article, we'll embark on a journey to explore the fundamentals of Vue.js, understand its key features, and
 delve into why it's gaining traction among developers worldwide.
 
-```ts
-export default defineNuxtConfig({
-  experimental: {
-    componentIslands: {
-      selectiveClient: true,
-    },
-  },
-})
+# Delve into why it's gaining traction among developers worldwide.
+
+```html
+<script setup lang="ts">
+  const selected = ref<boolean>(false)
+  const colorMode = useColorMode()
+
+  onMounted(() => {
+    if (!colorMode.preference) colorMode.preference = "dark"
+
+    const currentMode = colorMode.value
+    selected.value = currentMode === "dark"
+  })
+
+  watch(selected, () => {
+    colorMode.preference = selected.value ? "dark" : "light"
+  })
+</script>
+
+<template>
+  <Toggle
+    v-model:pressed="selected"
+    :show-active="false"
+    size="sm"
+    :aria-label="$t('aria.toggle-theme')"
+  >
+    <Icon v-if="selected" name="i-heroicons-moon-16-solid" />
+    <Icon v-else name="i-heroicons-sun-16-solid" />
+  </Toggle>
+</template>
 ```
 
 ### Understanding Vue.js:

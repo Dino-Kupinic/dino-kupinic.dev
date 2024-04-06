@@ -12,6 +12,7 @@ export const theme = {
     },
   },
   fontFamily: {
+    sans: ["-apple-system", "Inter", "Segoe UI", "Arial", "sans-serif"],
     serif: [
       "ui-serif",
       "Georgia",
@@ -19,6 +20,16 @@ export const theme = {
       "Times New Roman",
       "Times",
       "serif",
+    ],
+    mono: [
+      "ui-monospace",
+      "SFMono-Regular",
+      "Menlo",
+      "Monaco",
+      "Consolas",
+      "Liberation Mono",
+      "Courier New",
+      "monospace",
     ],
     heading: "MonaSans, sans-serif",
   },

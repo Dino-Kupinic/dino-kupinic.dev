@@ -59,6 +59,14 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  content: {
+    highlight: {
+      theme: {
+        default: "github-light",
+        dark: "github-dark",
+      },
+    },
+  },
   colorMode: {
     classSuffix: "",
     preference: "system",
