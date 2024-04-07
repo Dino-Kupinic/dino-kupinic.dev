@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   },
   experimental: {
     typedPages: true,
+    viewTransition: true,
   },
   nitro: {
     imports: {
@@ -73,9 +74,18 @@ export default defineNuxtConfig({
     fallback: "dark",
   },
   security: {
+    // TODO: fix github icons not loading in prod
     headers: {
       crossOriginEmbedderPolicy:
         process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+      contentSecurityPolicy: {
+        "img-src": [
+          "'self'",
+          "data:",
+          "https://github.com",
+          "https://avatars.githubusercontent.com",
+        ],
+      },
     },
   },
   css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
