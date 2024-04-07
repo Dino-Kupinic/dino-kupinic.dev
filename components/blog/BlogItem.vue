@@ -1,17 +1,11 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   title: string
   likes: number
   views: number
   date: Date
   author: string
 }>()
-
-const formattedDate = new Intl.DateTimeFormat("en-US", {
-  month: "2-digit",
-  day: "2-digit",
-  year: "numeric",
-}).format(props.date)
 </script>
 
 <template>
@@ -36,7 +30,7 @@ const formattedDate = new Intl.DateTimeFormat("en-US", {
       <CardFooter class="mt-2 p-0">
         <div class="flex w-full justify-between space-x-3">
           <BlogItemAuthor class="truncate">{{ author }}</BlogItemAuthor>
-          <BlogItemDate>{{ formattedDate }}</BlogItemDate>
+          <BlogDate :date="date" :short="true" />
         </div>
       </CardFooter>
     </div>

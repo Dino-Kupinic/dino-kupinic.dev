@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <span>On this page</span>
+    <span>Table of Contents</span>
     <ul>
       <li v-for="x in 5" :key="x">{{ x }} point</li>
     </ul>
