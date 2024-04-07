@@ -5,6 +5,13 @@ image: /assets/blog1-dark.webp
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
+    handle: "@Dino-Kupinic"
+  - name: Jannick Angerer
+    avatar: https://github.com/Neuery17.png
+    handle: "@neuery-17"
+  - name: Michael Ploier
+    avatar: https://github.com/mploier.png
+    handle: "@SaurusRex"
 date: 2024-04-05T00:00:00.000Z
 ---
 
@@ -17,6 +24,35 @@ ease.
 
 [Link](www.google.com)
 
+| Key | Type      | Description |
+| --- | --------- | ----------- |
+| 1   | Wonderful | Table       |
+| 2   | Wonderful | Data        |
+| 3   | Wonderful | Website     |
+
+_Just an italic paragraph._
+
+**Just a strong paragraph.**
+
+1. Foo
+2. Bar
+3. Baz
+
+---
+
+- Just
+- An
+- Unordered
+- List
+
+- List
+
+![A Cool Image](/images/blog1-dark.webp)
+
+`code inline`
+
+`const codeInline: string = 'highlighted code inline'`
+
 > Block quote
 
 # Delve into why it's gaining traction
@@ -26,23 +62,23 @@ delve into why it's gaining traction among developers worldwide.
 
 # Delve into why it's gaining traction among developers worldwide.
 
+```ts [file.js]{4-6,7} meta-info=val
+const selected = ref<boolean>(false)
+const colorMode = useColorMode()
+
+onMounted(() => {
+  if (!colorMode.preference) colorMode.preference = "dark"
+
+  const currentMode = colorMode.value
+  selected.value = currentMode === "dark"
+})
+
+watch(selected, () => {
+  colorMode.preference = selected.value ? "dark" : "light"
+})
+```
+
 ```html
-<script setup lang="ts">
-  const selected = ref<boolean>(false)
-  const colorMode = useColorMode()
-
-  onMounted(() => {
-    if (!colorMode.preference) colorMode.preference = "dark"
-
-    const currentMode = colorMode.value
-    selected.value = currentMode === "dark"
-  })
-
-  watch(selected, () => {
-    colorMode.preference = selected.value ? "dark" : "light"
-  })
-</script>
-
 <template>
   <Toggle
     v-model:pressed="selected"
