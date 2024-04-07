@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Blog, BlogContent } from "~/types/blog"
-import BlogTitle from "~/components/typography/BlogTitle.vue"
 
 const route = useRoute()
 
@@ -17,43 +16,55 @@ if (!blogContent.value) {
 
 const title = blogContent.value.title
 const description = blogContent.value?.description
+const date = new Date(blogContent?.value.date)
 
-// const { data: blog, pending } = await useLazyFetch<Blog>(
-//   `/api/v1${blogContent.value._path}`,
-// )
-// if (!pending && !blog.value) {
-//   throw createError({
-//     statusCode: 404,
-//     statusMessage: "Blog not found",
-//     fatal: true,
-//   })
-// }
-//
-// useSeoMeta({
-//   title: title,
-//   description: description,
-// })
+const { data: blog, pending } = await useLazyFetch<Blog>(
+  `/api/v1${blogContent.value._path}`,
+)
+if (!pending && !blog.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Blog not found",
+    fatal: true,
+  })
+}
+
+useSeoMeta({
+  title: title,
+  description: description,
+})
 </script>
 
 <template>
   <GenericLayoutWrapper>
     <BlogHeader>
+      <div class="my-4 flex items-center gap-3">
+        <Category text="Programming" to="/blog/category/programming" />
+        <BlogDate :date />
+      </div>
       <BlogTitle>{{ blogContent?.title }}</BlogTitle>
       <BlogSubtitle>{{ blogContent?.description }}</BlogSubtitle>
-    </BlogHeader>
-    <div class="flex flex-col sm:flex-row">
-      <div class="sm:border-r sm:pr-12">
-        <!--        <p v-if="pending">Loading...</p>-->
-        <!--        <div v-else>-->
-        <ContentDoc />
-        <!--        <pre>{{ blog?.path }}</pre>-->
-        <!--        </div>-->
+      <div class="flex gap-3">
+        <BlogViews>2000</BlogViews>
+        <BlogLikes>452</BlogLikes>
       </div>
-      <SideBarContainer>
-        <div class="w-full">
-          <BlogTableOfContents />
-        </div>
-      </SideBarContainer>
-    </div>
+      <BlogAuthorContainer>
+        <BlogAuthor
+          v-for="author in blogContent?.authors"
+          :key="author.name"
+          :avatar-src="author.avatar"
+        >
+          <BlogAuthorName :name="author.name" :handle="author.handle" />
+        </BlogAuthor>
+      </BlogAuthorContainer>
+    </BlogHeader>
+    <BlogContent>
+      <template #main>
+        <ContentDoc />
+      </template>
+      <template #sidebar>
+        <BlogTableOfContents />
+      </template>
+    </BlogContent>
   </GenericLayoutWrapper>
 </template>
