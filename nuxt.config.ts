@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/device",
     "@nuxtjs/kinde",
+    "nuxt-content-twoslash", // this needs to be before `@nuxt/content`
     "@nuxt/content",
     "@nuxt/image",
     "@nuxt/eslint",
@@ -67,7 +68,14 @@ export default defineNuxtConfig({
         dark: "github-dark",
       },
     },
+    markdown: {
+      anchorLinks: {
+        depth: 3,
+        exclude: [1],
+      },
+    },
   },
+  twoslash: {},
   colorMode: {
     classSuffix: "",
     preference: "system",

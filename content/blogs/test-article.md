@@ -22,6 +22,8 @@ Among the plethora of options available, Vue.js stands out as a
 versatile and approachable JavaScript framework that empowers developers to create robust single-page applications with
 ease.
 
+## Introduction
+
 [Link](www.google.com)
 
 | Key | Type      | Description |
@@ -47,7 +49,7 @@ _Just an italic paragraph._
 
 - List
 
-![A Cool Image](/images/blog1-dark.webp)
+[//]: # "![A Cool Image](/images/blog1-dark.webp)"
 
 `code inline`
 
@@ -55,15 +57,18 @@ _Just an italic paragraph._
 
 > Block quote
 
-# Delve into why it's gaining traction
+## Delve into why
 
 In this article, we'll embark on a journey to explore the fundamentals of Vue.js, understand its key features, and
 delve into why it's gaining traction among developers worldwide.
 
-# Delve into why it's gaining traction among developers worldwide.
+## Delve into why it's gaining traction among developers worldwide.
 
-```ts [file.js]{4-6,7} meta-info=val
-const selected = ref<boolean>(false)
+<!-- TODO: look into twoslash -->
+
+```vue
+<script setup>
+const selected = ref < boolean > false
 const colorMode = useColorMode()
 
 onMounted(() => {
@@ -76,9 +81,8 @@ onMounted(() => {
 watch(selected, () => {
   colorMode.preference = selected.value ? "dark" : "light"
 })
-```
+</script>
 
-```html
 <template>
   <Toggle
     v-model:pressed="selected"
@@ -92,16 +96,38 @@ watch(selected, () => {
 </template>
 ```
 
-### Understanding Vue.js:
+### sam ihna c sie wissns eh warum denn auch nicht
+
+### halloo
+
+<!-- TODO: look into twoslash -->
+
+```vue
+<script setup>
+import { ref } from "vue"
+// Reactive state.
+const count = ref(0)
+</script>
+
+<template>
+  <button>Count is: {{ count }}</button>
+</template>
+```
+
+## Understanding Vue.js
 
 Vue.js, pronounced as "view," is an open-source JavaScript framework for building user interfaces. Developed by Evan
 You, Vue.js is designed from the ground up to be incrementally adoptable, meaning you can integrate it into existing
 projects or start fresh. At its core, Vue.js focuses on the view layer of an application, providing a streamlined
 approach to building reactive and component-based UIs.
 
-Key Features of Vue.js:
+## Key Features of Vue.js
 
-Reactivity: Vue.js utilizes a reactive data-binding mechanism, allowing the UI to automatically update when the
+samc
+
+## Reactivity
+
+Vue.js utilizes a reactive data-binding mechanism, allowing the UI to automatically update when the
 underlying data changes. This simplifies state management and enhances the user experience by keeping the interface in
 sync with the application's data.
 

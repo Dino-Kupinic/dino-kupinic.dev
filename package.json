@@ -38,6 +38,7 @@
     "embla-carousel-vue": "^8.0.1",
     "eslint-plugin-drizzle": "^0.2.3",
     "lucide-vue-next": "^0.340.0",
+    "nuxt-content-twoslash": "^0.0.10",
     "radix-vue": "^1.6.2",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
