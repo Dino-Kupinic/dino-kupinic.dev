@@ -1,9 +1,13 @@
+<script setup lang="ts">
+const viewport = useViewport()
+</script>
+
 <template>
   <div class="flex flex-col sm:flex-row">
-    <div class="sm:border-r sm:pr-12">
+    <div class="md:border-r md:pr-12">
       <slot name="main" />
     </div>
-    <SideBarContainer>
+    <SideBarContainer v-if="viewport.isGreaterThan('tablet')">
       <slot name="sidebar" />
     </SideBarContainer>
   </div>
