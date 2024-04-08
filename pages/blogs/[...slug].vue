@@ -44,10 +44,6 @@ useSeoMeta({
       </div>
       <BlogTitle>{{ blogContent?.title }}</BlogTitle>
       <BlogSubtitle>{{ blogContent?.description }}</BlogSubtitle>
-      <div class="flex gap-3">
-        <BlogViews>2000</BlogViews>
-        <BlogLikes>452</BlogLikes>
-      </div>
       <BlogAuthorContainer>
         <BlogAuthor
           v-for="author in blogContent?.authors"
@@ -63,8 +59,19 @@ useSeoMeta({
         <ContentDoc />
       </template>
       <template #sidebar>
-        <BlogTableOfContents />
+        <BlogTableOfContents
+          v-if="blogContent?.body && blogContent.body.toc"
+          :links="blogContent.body.toc.links"
+        />
+        <DividerHorizontal />
+        <BlogLinks />
+        <DividerHorizontal />
+        <div class="flex gap-3">
+          <BlogLikeButton class="w-full">452</BlogLikeButton>
+          <BlogsViewButton class="w-full">2000</BlogsViewButton>
+        </div>
       </template>
     </BlogContent>
+    <!--    <pre>{{ blogContent }}</pre>-->
   </GenericLayoutWrapper>
 </template>
