@@ -1,6 +1,6 @@
 ---
-title: "Sed lectus nulla, condimentum vestibulum dui viverra, viverra"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+title: "Exploring Vue.js Composition API"
+description: "Vue's new Composition API makes for an interesting and joyful developer experience."
 image: /assets/blog1-dark.webp
 authors:
   - name: Dino Kupinic
@@ -15,16 +15,45 @@ authors:
 date: 2024-04-05T00:00:00.000Z
 ---
 
-In the realm of modern web development, frameworks and libraries play a pivotal role in simplifying the process of
-building dynamic and interactive user interfaces.
+[Vue.js](https://www.vuejs.org) has been evolving rapidly, introducing new features and improvements to make web development smoother and more
+efficient.
 
-Among the plethora of options available, Vue.js stands out as a
-versatile and approachable JavaScript framework that empowers developers to create robust single-page applications with
-ease.
+One of the most significant additions to Vue.js is the Composition API, which offers a more flexible and
+scalable way to organize and reuse code in Vue components.
 
-## Introduction
+## What is the Composition API
 
-[Link](www.google.com)
+The Composition API is an alternative API for creating Vue components that provides more flexibility and organization
+compared to the Options API.
+
+It allows developers to encapsulate logic into reusable functions called "composition
+functions" and compose these functions within components. This approach promotes better code organization, reusability,
+and readability, especially for complex components.
+
+## Getting Started with the Composition API
+
+Let's dive into the basics of the Composition API with some code examples. We'll start by creating a simple Vue
+component that fetches and displays data from an API using the Composition API.
+
+```vue
+<script setup>
+import { ref } from "vue"
+// Reactive state.
+const count = ref(0)
+</script>
+
+<template>
+  <button>Count is: {{ count }}</button>
+</template>
+```
+
+## Reactivity and Computed Properties
+
+One of the key features of Vue.js is its reactivity system, which enables automatic updates to the DOM when data
+changes.
+
+The Composition API provides **reactive utilities** like `ref` and `computed` for managing reactive data and computed
+properties.
 
 | Key | Type      | Description |
 | --- | --------- | ----------- |
@@ -47,6 +76,8 @@ _Just an italic paragraph._
 - Unordered
 - List
 
+samc
+
 - List
 
 [//]: # "![A Cool Image](/images/blog1-dark.webp)"
@@ -56,89 +87,3 @@ _Just an italic paragraph._
 `const codeInline: string = 'highlighted code inline'`
 
 > Block quote
-
-## Delve into why
-
-In this article, we'll embark on a journey to explore the fundamentals of Vue.js, understand its key features, and
-delve into why it's gaining traction among developers worldwide.
-
-## Delve into why it's gaining traction among developers worldwide.
-
-<!-- TODO: look into twoslash -->
-
-```vue
-<script setup>
-const selected = ref < boolean > false
-const colorMode = useColorMode()
-
-onMounted(() => {
-  if (!colorMode.preference) colorMode.preference = "dark"
-
-  const currentMode = colorMode.value
-  selected.value = currentMode === "dark"
-})
-
-watch(selected, () => {
-  colorMode.preference = selected.value ? "dark" : "light"
-})
-</script>
-
-<template>
-  <Toggle
-    v-model:pressed="selected"
-    :show-active="false"
-    size="sm"
-    :aria-label="$t('aria.toggle-theme')"
-  >
-    <Icon v-if="selected" name="i-heroicons-moon-16-solid" />
-    <Icon v-else name="i-heroicons-sun-16-solid" />
-  </Toggle>
-</template>
-```
-
-### sam ihna c sie wissns eh warum denn auch nicht
-
-### halloo
-
-<!-- TODO: look into twoslash -->
-
-```vue
-<script setup>
-import { ref } from "vue"
-// Reactive state.
-const count = ref(0)
-</script>
-
-<template>
-  <button>Count is: {{ count }}</button>
-</template>
-```
-
-## Understanding Vue.js
-
-Vue.js, pronounced as "view," is an open-source JavaScript framework for building user interfaces. Developed by Evan
-You, Vue.js is designed from the ground up to be incrementally adoptable, meaning you can integrate it into existing
-projects or start fresh. At its core, Vue.js focuses on the view layer of an application, providing a streamlined
-approach to building reactive and component-based UIs.
-
-## Key Features of Vue.js
-
-samc
-
-## Reactivity
-
-Vue.js utilizes a reactive data-binding mechanism, allowing the UI to automatically update when the
-underlying data changes. This simplifies state management and enhances the user experience by keeping the interface in
-sync with the application's data.
-
-Component-Based Architecture: Vue.js embraces a component-based architecture, where UIs are composed of reusable and
-encapsulated components. This modular approach promotes code reusability, maintainability, and scalability, making it
-easier to manage complex applications.
-
-Virtual DOM: Similar to other modern frameworks like React, Vue.js employs a virtual DOM to optimize rendering
-performance. The virtual DOM acts as a lightweight representation of the actual DOM, enabling Vue.js to efficiently
-update only the components that have changed, rather than re-rendering the entire page.
-
-Vue Router: Vue.js comes with an official routing library called Vue Router, which enables developers to implement
-client-side routing in their applications. With Vue Router, you can define navigation routes, handle dynamic route
-parameters, and create nested route structures effortlessly.

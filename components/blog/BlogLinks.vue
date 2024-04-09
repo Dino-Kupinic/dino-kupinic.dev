@@ -7,14 +7,14 @@ type BlogItem = {
 
 const items: BlogItem[] = [
   {
-    icon: "i-ph-shooting-star-fill",
-    text: "Star on GitHub",
-    link: "https://github.com/Dino-Kupinic/dinokupinic",
-  },
-  {
     icon: "i-ic-baseline-discord",
     text: "Chat on Discord",
     link: "https://discord.gg/y3DeWTBEGR",
+  },
+  {
+    icon: "i-ph-shooting-star-fill",
+    text: "Star on GitHub",
+    link: "https://github.com/Dino-Kupinic/dinokupinic",
   },
   {
     icon: "i-ph-hand-heart-fill",

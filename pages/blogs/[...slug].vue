@@ -66,6 +66,8 @@ useSeoMeta({
         <DividerHorizontal />
         <BlogLinks />
         <DividerHorizontal />
+        <BlogRelatedBlogs></BlogRelatedBlogs>
+        <DividerHorizontal />
         <div class="flex gap-3">
           <BlogLikeButton class="w-full">452</BlogLikeButton>
           <BlogsViewButton class="w-full">2000</BlogsViewButton>

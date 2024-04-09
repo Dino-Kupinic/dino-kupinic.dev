@@ -9,7 +9,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="pb-6">
+  <div>
     <p class="text-lg font-semibold">Table of Contents</p>
     <ul class="mt-3">
       <NuxtLink
