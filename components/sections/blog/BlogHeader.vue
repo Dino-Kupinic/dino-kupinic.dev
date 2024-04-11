@@ -8,7 +8,7 @@
           variant="link"
           class="pl-0 font-light text-primary hover:no-underline dark:text-secondary dark:hover:text-foreground"
         >
-          <Icon name="i-basil-arrow-left-outline" class="mr-1" />
+          <Icon name="i-iconamoon-arrow-left-2-thin" class="mr-1" />
           <span class="text-base tracking-wide sm:text-sm"> Back to Blog </span>
         </Button>
       </NuxtLink>

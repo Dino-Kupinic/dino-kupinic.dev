@@ -1,6 +1,13 @@
 export default defineEventHandler(async (event) => {
   try {
-    const response = await database.select().from(blogs).all()
+    const response = await database.query.blogs.findMany()
+
+    if (!response) {
+      return createError({
+        statusCode: 404,
+        statusMessage: "No blogs found",
+      })
+    }
 
     setResponseStatus(event, 200, "success")
     return response

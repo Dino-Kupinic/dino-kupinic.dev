@@ -2,7 +2,6 @@
 const { data } = await useAsyncData("blogs", () =>
   queryContent("/blogs").find(),
 )
-console.log(data)
 const blogs = ref([
   {
     title: "Why Nuxt v4 might be the biggest release in software history",

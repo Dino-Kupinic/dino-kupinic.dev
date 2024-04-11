@@ -6,6 +6,7 @@ const route = useRoute()
 const { data: blogContent } = await useAsyncData(route.path, () =>
   queryContent<BlogContent>(route.path).findOne(),
 )
+
 if (!blogContent.value) {
   throw createError({
     statusCode: 404,
@@ -16,10 +17,11 @@ if (!blogContent.value) {
 
 const title = blogContent.value.title
 const description = blogContent.value?.description
+const image = blogContent.value?.image
 const date = new Date(blogContent?.value.date)
 
 const { data: blog, pending } = await useLazyFetch<Blog>(
-  `/api/v1${blogContent.value._path}`,
+  `/api/v1/${route.path}`,
 )
 if (!pending && !blog.value) {
   throw createError({
@@ -32,6 +34,8 @@ if (!pending && !blog.value) {
 useSeoMeta({
   title: title,
   description: description,
+  ogImage: image,
+  ogTitle: title,
 })
 </script>
 
@@ -42,8 +46,10 @@ useSeoMeta({
         <Category text="Programming" to="/blog/category/programming" />
         <BlogDate :date />
       </div>
-      <BlogTitle>{{ blogContent?.title }}</BlogTitle>
-      <BlogSubtitle>{{ blogContent?.description }}</BlogSubtitle>
+      <BlogTitle class="max-w-[760px]">{{ blogContent?.title }}</BlogTitle>
+      <BlogSubtitle class="max-w-[600px]">
+        {{ blogContent?.description }}
+      </BlogSubtitle>
       <BlogAuthorContainer>
         <BlogAuthor
           v-for="author in blogContent?.authors"
@@ -69,11 +75,16 @@ useSeoMeta({
         <BlogRelatedBlogs></BlogRelatedBlogs>
         <DividerHorizontal />
         <div class="flex gap-3">
-          <BlogLikeButton class="w-full">452</BlogLikeButton>
-          <BlogsViewButton class="w-full">2000</BlogsViewButton>
+          <div v-if="pending">
+            <Skeleton />
+            <Skeleton />
+          </div>
+          <template v-else>
+            <BlogLikeButton class="w-full">{{ blog?.likes }}</BlogLikeButton>
+            <BlogsViewButton class="w-full">{{ blog?.views }}</BlogsViewButton>
+          </template>
         </div>
       </template>
     </BlogContent>
-    <!--    <pre>{{ blogContent }}</pre>-->
   </GenericLayoutWrapper>
 </template>

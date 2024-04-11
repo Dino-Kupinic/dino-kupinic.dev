@@ -11,8 +11,15 @@ export default defineEventHandler(async (event) => {
     }
 
     const response = await database.query.blogs.findFirst({
-      where: eq(blogs.path, p),
+      where: eq(blogs.path, `/blogs/${p}`),
     })
+
+    if (!response) {
+      return createError({
+        statusCode: 404,
+        statusMessage: "blog not found",
+      })
+    }
 
     setResponseStatus(event, 200, "success")
     return response
