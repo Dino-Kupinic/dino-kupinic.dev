@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.5.6
     version: 0.5.6
   '@nuxtjs/kinde':
-    specifier: ^0.1.9
-    version: 0.1.9(rollup@4.14.1)
+    specifier: ^0.1.10
+    version: 0.1.10(rollup@4.14.1)
   '@vercel/analytics':
     specifier: ^1.2.2
     version: 1.2.2
@@ -2721,8 +2721,8 @@ packages:
       - vue-i18n-bridge
     dev: true
 
-  /@nuxtjs/kinde@0.1.9(rollup@4.14.1):
-    resolution: {integrity: sha512-vRgNMLC230vnUdW/DhSo8yZOBm0j6QGQ78F1sgn/1OCDDXCEux+ETs7GLR+X0yIu22tro8nWFyl0pXCTeK0ZWQ==}
+  /@nuxtjs/kinde@0.1.10(rollup@4.14.1):
+    resolution: {integrity: sha512-BL0MLEqX74DmsdBTiSE8xyMW8XkjNBmJrm+kvDaRE7oFQZy3Hc0YkXcZeI/fR1yviz74Mnp+MmO60h9m3JBkfQ==}
     dependencies:
       '@kinde-oss/kinde-typescript-sdk': 2.8.0
       '@nuxt/kit': 3.11.2(rollup@4.14.1)
