@@ -1,5 +1,5 @@
 <template>
-  <strong class="font-medium">
+  <strong class="font-semibold">
     <slot />
   </strong>
 </template>

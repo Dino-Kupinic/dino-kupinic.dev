@@ -20,9 +20,7 @@ const description = blogContent.value?.description
 const image = blogContent.value?.image
 const date = new Date(blogContent?.value.date)
 
-const { data: blog, pending } = await useLazyFetch<Blog>(
-  `/api/v1/${route.path}`,
-)
+const { data: blog, pending } = await useLazyFetch<Blog>(`/api/v1${route.path}`)
 if (!pending && !blog.value) {
   throw createError({
     statusCode: 404,
