@@ -36,7 +36,7 @@
     --radius: 0.5rem;
 
     body::before {
-      --line: hsla(0, 0%, 8%, 0.1);
+      --line: hsla(0, 0%, 8%, 0.09);
       content: "";
       height: 100vh;
       width: 100vw;
@@ -84,7 +84,7 @@
     --ring: 0 0% 83.1%;
 
     body::before {
-      --line: hsl(0 0% 95% / 0.1);
+      --line: hsl(0 0% 95% / 0.08);
       content: "";
       height: 100vh;
       width: 100vw;

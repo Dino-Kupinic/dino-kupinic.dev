@@ -9,12 +9,10 @@ defineProps<{
   <div>
     <NuxtLink :to>
       <Button variant="gradient" size="xs" class="rounded-full">
-        <span class="mx-1.5 text-sm font-normal">
+        <span class="mx-1.5 text-sm font-semibold">
           {{ text }}
         </span>
       </Button>
     </NuxtLink>
   </div>
 </template>
-
-<style scoped></style>

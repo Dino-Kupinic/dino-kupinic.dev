@@ -4,7 +4,7 @@ const viewport = useViewport()
 
 <template>
   <div class="flex flex-col sm:flex-row">
-    <div class="md:border-r md:pr-12">
+    <div class="md:border-r md:pb-24 md:pr-12">
       <slot name="main" />
     </div>
     <SideBarContainer v-if="viewport.isGreaterThan('tablet')">

@@ -41,7 +41,7 @@ useSeoMeta({
   <GenericLayoutWrapper>
     <BlogHeader>
       <div class="my-4 flex items-center gap-3">
-        <Category text="Programming" to="/blog/category/programming" />
+        <CategoryDisplay text="Programming" to="/blog/category/programming" />
         <BlogDate :date />
       </div>
       <BlogTitle class="max-w-[760px]">{{ blogContent?.title }}</BlogTitle>
@@ -84,5 +84,6 @@ useSeoMeta({
         </div>
       </template>
     </BlogContent>
+    <BlogFooter />
   </GenericLayoutWrapper>
 </template>
