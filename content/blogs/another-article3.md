@@ -1,12 +1,12 @@
 ---
-title: "anet propior dixerunt quaeque, nulla modo, pio"
-description: "emque medii procul pectore. Arcus At "
+title: "prodsadasnulla modo, pio"
+description: "emqui procul pectore. Arcus At "
 image: /assets/blog1-dark.webp
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
     handle: "@Dino-Kupinic"
-date: 2024-04-05T00:00:00.000Z
+date: 2024-07-05T00:00:00.000Z
 related:
   - path: "/blogs/test-article"
 ---

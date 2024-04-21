@@ -12,6 +12,9 @@ authors:
   - name: Michael Ploier
     avatar: https://github.com/mploier.png
     handle: "@SaurusRex"
+related:
+  - path: "/blogs/another-article"
+  - path: "/blogs/third-article"
 date: 2024-04-05T00:00:00.000Z
 ---
 
