@@ -1,5 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  icon: string
+  to: string
+}>()
+</script>
 
-<template></template>
-
-<style scoped></style>
+<template>
+  <NuxtLink :to target="_blank">
+    <Button variant="outline" size="icon">
+      <Icon :name="icon" />
+    </Button>
+  </NuxtLink>
+</template>

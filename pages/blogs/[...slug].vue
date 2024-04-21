@@ -49,6 +49,22 @@ useSeoMeta({
   ogImage: image,
   ogTitle: title,
 })
+
+type SocialLink = {
+  icon: string
+  to: string
+}
+
+const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
+  {
+    icon: "i-simple-icons-x",
+    to: `https://twitter.com/intent/tweet?text=https://dino-kupinic.dev${blogContent.value?._path}`,
+  },
+  {
+    icon: "i-simple-icons-linkedin",
+    to: `https://www.linkedin.com/sharing/share-offsite/?url=https://dino-kupinic.dev${blogContent.value?._path}`,
+  },
+])
 </script>
 
 <template>
@@ -110,8 +126,14 @@ useSeoMeta({
     <BlogFooter>
       <div class="flex justify-between">
         <BlogBackButton />
-        <div class="flex space-x-4">
+        <div class="flex items-center space-x-2">
           <BlogCopyButton :link="route.path" />
+          <SocialShare
+            v-for="social in socialLinks"
+            :key="social.to"
+            :icon="social.icon"
+            :to="social.to"
+          />
         </div>
       </div>
     </BlogFooter>
