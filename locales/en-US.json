@@ -33,6 +33,10 @@
     "quote": "Favourite Quote",
     "artist": "Favourite Artists"
   },
+  "clipboard": {
+    "copy": "Copied to clipboard",
+    "unsupported": "Your browser does not support Clipboard API"
+  },
   "blog": {
     "pageTitle": "All Blogs",
     "copy": "Copy URL",

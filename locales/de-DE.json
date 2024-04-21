@@ -33,6 +33,10 @@
     "quote": "Lieblingszitat",
     "artist": "Lieblingskünstler"
   },
+  "clipboard": {
+    "copy": "In die Zwischenablage kopiert",
+    "unsupported": "Ihr Browser unterstützt die Clipboard API nicht."
+  },
   "blog": {
     "pageTitle": "Alle Blogs",
     "copy": "URL kopieren",
