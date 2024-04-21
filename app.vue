@@ -30,6 +30,7 @@ onMounted(() => {
   <div>
     <NuxtLayout>
       <NuxtPage />
+      <Toaster />
     </NuxtLayout>
   </div>
 </template>

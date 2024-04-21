@@ -1,51 +1,54 @@
 <script setup lang="ts">
+import type { Blog } from "~/types/blog"
+
 const { data } = await useAsyncData("blogs", () =>
   queryContent("/blogs").find(),
 )
-const blogs = ref([
-  {
-    title: "Why Nuxt v4 might be the biggest release in software history",
-    likes: 33333333,
-    views: 30000,
-    date: new Date(),
-    author: "Dino Kupinic",
-    class: "row-span-9",
-  },
-  {
-    title:
-      "Why Nuxt v4 might be the biggest release in software history and why you should care aswell",
-    likes: 1,
-    views: 33333333,
-    date: new Date(),
-    author: "Dino Kupinic",
-    class: "row-span-4",
-  },
-  {
-    title: "How to get rich and shut up",
-    likes: 1000,
-    views: 30000,
-    date: new Date(),
-    author: "Dino Kupinic",
-    class: "row-span-5",
-  },
-  {
-    title: "elon musks neuralink looks quite exciting",
-    likes: 1000,
-    views: 30000,
-    date: new Date(),
-    author: "Dino Kupinic",
-    class: "row-span-5",
-  },
-  {
-    title:
-      "Why Nuxt v4 might be the biggest release in software history and why you should care aswell",
-    likes: 1000,
-    views: 30000,
-    date: new Date(),
-    author: "Dino Kupinic",
-    class: "row-span-4",
-  },
-])
+
+if (!data.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "No Blogs found",
+    fatal: true,
+  })
+}
+
+type BlogDisplay = {
+  title: string
+  author: string
+  date: Date
+  likes: number
+  views: number
+  class: string
+}
+
+const classes: string[] = [
+  "row-span-9",
+  "row-span-4",
+  "row-span-5",
+  "row-span-5",
+  "row-span-4",
+]
+
+const blogs = ref<BlogDisplay[]>([])
+for (const [index, blog] of data.value?.entries()) {
+  const { data: b, pending } = await useLazyFetch<Blog>(`/api/v1${blog._path}`)
+  if (!pending && !b.value) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Blog not found",
+    })
+  }
+  blogs.value.push({
+    title: blog.title as string,
+    author: blog.author as string,
+    date: new Date(blog.date),
+    likes: b.value?.likes as number,
+    views: b.value?.views as number,
+    class: classes[index],
+  })
+}
+console.log(blogs.value)
 </script>
 
 <template>

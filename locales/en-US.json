@@ -34,6 +34,15 @@
     "artist": "Favourite Artists"
   },
   "blog": {
-    "pageTitle": "All Blogs"
+    "pageTitle": "All Blogs",
+    "copy": "Copy URL",
+    "back": "Back to Blog",
+    "toc": "Table of Contents",
+    "links": {
+      "chat": "Chat on Discord",
+      "star": "Star on GitHub",
+      "support": "Support me"
+    },
+    "related": "Related"
   }
 }

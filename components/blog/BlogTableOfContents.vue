@@ -10,7 +10,7 @@ const route = useRoute()
 
 <template>
   <div>
-    <p class="text-lg font-semibold">Table of Contents</p>
+    <p class="text-lg font-semibold">{{ $t("blog.toc") }}</p>
     <ul class="mt-3">
       <NuxtLink
         v-for="link in links"

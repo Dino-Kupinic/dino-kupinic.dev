@@ -9,7 +9,9 @@
           class="pl-0 font-light text-primary hover:no-underline dark:text-secondary dark:hover:text-foreground"
         >
           <Icon name="i-iconamoon-arrow-left-2-thin" class="mr-1" />
-          <span class="text-base tracking-wide sm:text-sm"> Back to Blog </span>
+          <span class="text-base tracking-wide sm:text-sm">
+            {{ $t("blog.back") }}
+          </span>
         </Button>
       </NuxtLink>
     </div>

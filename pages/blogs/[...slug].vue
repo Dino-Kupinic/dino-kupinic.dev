@@ -2,7 +2,6 @@
 import type { Blog, BlogContent } from "~/types/blog"
 
 const route = useRoute()
-
 const { data: blogContent } = await useAsyncData(route.path, () =>
   queryContent<BlogContent>(route.path).findOne(),
 )
@@ -18,7 +17,22 @@ if (!blogContent.value) {
 const title = blogContent.value.title
 const description = blogContent.value?.description
 const image = blogContent.value?.image
+const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
+
+const relatedBlogs = ref<BlogContent[]>([])
+
+if (related) {
+  for (const relatedBlog of related) {
+    const { data: relatedBlogData } = await useAsyncData(relatedBlog.path, () =>
+      queryContent<BlogContent>(relatedBlog.path).findOne(),
+    )
+    if (!relatedBlogData.value) {
+      continue
+    }
+    relatedBlogs.value.push(relatedBlogData.value)
+  }
+}
 
 const { data: blog, pending } = await useLazyFetch<Blog>(`/api/v1${route.path}`)
 if (!pending && !blog.value) {
@@ -69,8 +83,17 @@ useSeoMeta({
         />
         <DividerHorizontal />
         <BlogLinks />
-        <DividerHorizontal />
-        <BlogRelatedBlogs></BlogRelatedBlogs>
+        <template v-if="relatedBlogs.length">
+          <DividerHorizontal />
+          <BlogRelatedBlogs>
+            <BlogRelatedBlog
+              v-for="relatedBlog in relatedBlogs"
+              :key="relatedBlog.title"
+              :title="relatedBlog.title as string"
+              :to="relatedBlog._path as string"
+            />
+          </BlogRelatedBlogs>
+        </template>
         <DividerHorizontal />
         <div class="flex gap-3">
           <div v-if="pending">
@@ -84,6 +107,13 @@ useSeoMeta({
         </div>
       </template>
     </BlogContent>
-    <BlogFooter />
+    <BlogFooter>
+      <div class="flex justify-between">
+        <BlogBackButton />
+        <div class="flex space-x-4">
+          <BlogCopyButton :link="route.path" />
+        </div>
+      </div>
+    </BlogFooter>
   </GenericLayoutWrapper>
 </template>

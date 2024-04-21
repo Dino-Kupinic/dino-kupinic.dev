@@ -5,23 +5,32 @@ type BlogItem = {
   link: string
 }
 
-const items: BlogItem[] = [
-  {
-    icon: "i-ic-baseline-discord",
-    text: "Chat on Discord",
-    link: "https://discord.gg/y3DeWTBEGR",
+const { t, locale } = useI18n()
+const items = ref<BlogItem[]>([])
+
+watch(
+  locale,
+  () => {
+    items.value = [
+      {
+        icon: "i-ic-baseline-discord",
+        text: t("blog.links.chat"),
+        link: "https://discord.gg/y3DeWTBEGR",
+      },
+      {
+        icon: "i-ph-shooting-star-fill",
+        text: t("blog.links.star"),
+        link: "https://github.com/Dino-Kupinic/dinokupinic",
+      },
+      {
+        icon: "i-ph-hand-heart-fill",
+        text: t("blog.links.support"),
+        link: "https://ko-fi.com/dinokupinic",
+      },
+    ]
   },
-  {
-    icon: "i-ph-shooting-star-fill",
-    text: "Star on GitHub",
-    link: "https://github.com/Dino-Kupinic/dinokupinic",
-  },
-  {
-    icon: "i-ph-hand-heart-fill",
-    text: "Support me",
-    link: "https://ko-fi.com/dinokupinic",
-  },
-]
+  { immediate: true },
+)
 </script>
 
 <template>

@@ -34,6 +34,15 @@
     "artist": "Lieblingskünstler"
   },
   "blog": {
-    "pageTitle": "Alle Blogs"
+    "pageTitle": "Alle Blogs",
+    "copy": "URL kopieren",
+    "back": "Zurück zu Blogs",
+    "toc": "Inhaltsverzeichnis",
+    "links": {
+      "chat": "Auf Discord chatten",
+      "star": "Stern vergeben",
+      "support": "Unterstütze mich"
+    },
+    "related": "Ähnliches"
   }
 }

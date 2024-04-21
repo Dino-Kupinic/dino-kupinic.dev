@@ -10,6 +10,13 @@ useSeoMeta({
 </script>
 
 <template>
-  <h1>{{ error }}</h1>
-  <NuxtLink to="/"> Go home </NuxtLink>
+  <div class="m-3 flex flex-col space-y-2">
+    <SectionHeading>An Error occured ⚠️</SectionHeading>
+    <div class="rounded-lg border bg-background p-3">
+      <pre class="overflow-hidden">{{ error }}</pre>
+    </div>
+    <NuxtLink to="/">
+      <Button> Go home </Button>
+    </NuxtLink>
+  </div>
 </template>
