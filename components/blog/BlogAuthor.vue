@@ -12,7 +12,7 @@ defineProps<{
   >
     <Avatar size="sm" class="mr-2">
       <AvatarImage :src="avatarSrc" alt="author avatar" />
-      <AvatarFallback class="text-base">DK</AvatarFallback>
+      <AvatarFallback class="text-base">?</AvatarFallback>
     </Avatar>
     <slot />
   </Button>

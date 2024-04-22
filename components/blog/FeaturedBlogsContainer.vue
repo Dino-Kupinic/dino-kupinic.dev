@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Blog } from "~/types/blog"
+import type { Blog, BlogDisplay } from "~/types/blog"
 
 const { data } = await useAsyncData("blogs", () =>
   queryContent("/blogs").find(),
@@ -11,15 +11,6 @@ if (!data.value) {
     statusMessage: "No Blogs found",
     fatal: true,
   })
-}
-
-type BlogDisplay = {
-  title: string
-  author: string
-  date: Date
-  likes: number
-  views: number
-  class: string
 }
 
 const classes: string[] = [
@@ -45,10 +36,10 @@ for (const [index, blog] of data.value?.entries()) {
     date: new Date(blog.date),
     likes: b.value?.likes as number,
     views: b.value?.views as number,
+    image: blog.image,
     class: classes[index],
   })
 }
-console.log(blogs.value)
 </script>
 
 <template>
@@ -58,11 +49,7 @@ console.log(blogs.value)
     <BlogItem
       v-for="(blog, index) in blogs"
       :key="index"
-      :title="blog.title"
-      :likes="blog.likes"
-      :views="blog.views"
-      :date="blog.date"
-      :author="blog.author"
+      :blog
       :class="blog.class"
     />
   </div>
