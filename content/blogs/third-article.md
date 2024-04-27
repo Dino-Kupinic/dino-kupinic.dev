@@ -1,7 +1,8 @@
 ---
 title: "Amazing Websites you didn't know about"
 description: "Vue's new Composition API makes for an interesting and joyful developer experience."
-image: /images/blog1-dark.webp
+image_dark: /images/blog1-dark.webp
+image_light: /images/blog1-light.webp
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png

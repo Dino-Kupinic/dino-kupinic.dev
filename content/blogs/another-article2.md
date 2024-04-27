@@ -1,11 +1,15 @@
 ---
 title: "adsadsadasdasdaso"
 description: "emque medii procul pectore. Arcus At "
-image: /images/blog1-dark.webp
+image_dark: /images/blog1-dark.webp
+image_light: /images/blog1-light.webp
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
     handle: "@Dino-Kupinic"
+  - name: Michael Ploier
+    avatar: https://github.com/mploier.png
+    handle: "@SaurusRex"
 date: 2024-12-05T00:00:00.000Z
 related:
   - path: "/blogs/test-article"

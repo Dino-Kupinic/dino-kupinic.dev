@@ -1,7 +1,8 @@
 ---
 title: "prodsadasnulla modo, pio"
 description: "emqui procul pectore. Arcus At "
-image: /images/blog1-dark.webp
+image_dark: /images/blog1-dark.webp
+image_light: /images/blog1-light.webp
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png

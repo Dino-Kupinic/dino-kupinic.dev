@@ -16,7 +16,7 @@ if (!blogContent.value) {
 
 const title = blogContent.value.title
 const description = blogContent.value?.description
-const image = blogContent.value?.image
+const image = blogContent.value?.imageDark
 const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
 
@@ -107,6 +107,7 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
               :key="relatedBlog.title"
               :title="relatedBlog.title as string"
               :to="relatedBlog._path as string"
+              :author="relatedBlog.authors"
             />
           </BlogRelatedBlogs>
         </template>

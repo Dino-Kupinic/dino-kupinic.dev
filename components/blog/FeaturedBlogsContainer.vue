@@ -15,16 +15,18 @@ if (!data.value) {
 
 const classes: string[] = [
   "row-span-9",
-  "row-span-4",
   "row-span-5",
+  "row-span-4",
   "row-span-5",
   "row-span-4",
 ]
 
 const blogs = ref<BlogDisplay[]>([])
-for (const [index, blog] of data.value?.entries()) {
-  const { data: b, pending } = await useLazyFetch<Blog>(`/api/v1${blog._path}`)
-  if (!pending && !b.value) {
+for (const [index, blog] of data.value.entries()) {
+  const { data: db_blog, pending } = await useLazyFetch<Blog>(
+    `/api/v1${blog._path}`,
+  )
+  if (!pending && !db_blog.value) {
     throw createError({
       statusCode: 404,
       statusMessage: "Blog not found",
@@ -32,11 +34,15 @@ for (const [index, blog] of data.value?.entries()) {
   }
   blogs.value.push({
     title: blog.title as string,
-    author: blog.author as string,
+    author: blog.authors,
     date: new Date(blog.date),
-    likes: b.value?.likes as number,
-    views: b.value?.views as number,
-    image: blog.image,
+    likes: db_blog.value?.likes as number,
+    views: db_blog.value?.views as number,
+    path: blog._path as string,
+    image: {
+      dark: blog.image_dark,
+      light: blog.image_light,
+    },
     class: classes[index],
   })
 }
@@ -49,8 +55,8 @@ for (const [index, blog] of data.value?.entries()) {
     <BlogItem
       v-for="(blog, index) in blogs"
       :key="index"
-      :blog
       :class="blog.class"
+      :blog
     />
   </div>
 </template>
