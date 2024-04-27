@@ -12,7 +12,7 @@ export const theme = {
     },
   },
   fontFamily: {
-    sans: ["-apple-system", "Inter", "Segoe UI", "Arial", "sans-serif"],
+    sans: ["Geist", "-apple-system", "Segoe UI", "Arial", "sans-serif"],
     serif: [
       "ui-serif",
       "Georgia",
@@ -22,6 +22,7 @@ export const theme = {
       "serif",
     ],
     mono: [
+      "Geist Mono",
       "ui-monospace",
       "SFMono-Regular",
       "Menlo",
