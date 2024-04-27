@@ -8,7 +8,7 @@ const age = ~~((Date.now() - birthday) / 31557600000)
     <template #header>{{ $t("about.age") }}</template>
     <template #content>
       <div class="flex h-full items-center justify-center">
-        <span class="text-9xl font-bold tracking-wider">
+        <span class="text-9xl font-bold tracking-tighter">
           {{ age }}
         </span>
       </div>
