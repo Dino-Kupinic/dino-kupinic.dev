@@ -6,7 +6,7 @@
       id="search"
       type="text"
       placeholder="Search blogs..."
-      class="pl-10 font-heading tracking-wide"
+      class="pl-10 tracking-wide"
     />
     <span
       class="absolute inset-y-0 start-0 flex h-10 items-center justify-center px-3"
