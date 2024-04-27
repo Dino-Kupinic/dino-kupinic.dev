@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     "@nuxtjs/kinde",
     "nuxt-content-twoslash", // this needs to be before `@nuxt/content`
     "@nuxt/content",
+    "@nuxtjs/mdc",
     "@nuxt/image",
     "@nuxt/eslint",
     "@nuxt/fonts",
