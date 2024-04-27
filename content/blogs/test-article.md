@@ -1,8 +1,8 @@
 ---
 title: "Exploring Vue.js Composition API"
 description: "Vue's new Composition API makes for an interesting and joyful developer experience."
-image: /images/blog1-dark.webp
-light_image: /images/blog1-light.webp
+image_dark: /images/blog1-dark.webp
+image_light: /images/blog1-light.webp
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
@@ -14,8 +14,8 @@ authors:
     avatar: https://github.com/mploier.png
     handle: "@SaurusRex"
 related:
-  - path: "/blogs/another-article"
-  - path: "/blogs/third-article"
+  - path: "/blogs/another-article2"
+  - path: "/blogs/test-article"
 date: 2024-04-05T00:00:00.000Z
 ---
 
