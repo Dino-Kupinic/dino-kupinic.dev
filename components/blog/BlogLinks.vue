@@ -23,7 +23,7 @@ watch(
         link: "https://github.com/Dino-Kupinic/dinokupinic",
       },
       {
-        icon: "i-ph-hand-heart-fill",
+        icon: "i-ic-round-favorite",
         text: t("blog.links.support"),
         link: "https://ko-fi.com/dinokupinic",
       },

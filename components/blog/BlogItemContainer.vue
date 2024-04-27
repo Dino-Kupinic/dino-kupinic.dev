@@ -1,12 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  to: string
+}>()
+</script>
 
 <template>
   <NuxtLink
-    to="/blogs/test-article"
+    :to
     class="rounded-lg border bg-card text-card-foreground shadow-sm"
   >
     <slot />
   </NuxtLink>
 </template>
-
-<style scoped></style>
