@@ -2,7 +2,7 @@
 
 <template>
   <SectionHeading>{{ $t("comments.title") }}</SectionHeading>
-  <!--  <CommentContainer />-->
+  <CommentInputContainer />
 </template>
 
 <style scoped></style>

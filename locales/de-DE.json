@@ -53,6 +53,7 @@
     "title": "Kommentare",
     "write": "Schreiben",
     "preview": "Vorschau",
-    "placeholder": "Schreibe hier deinen Kommentar. Sei nett."
+    "placeholder": "Schreibe hier deinen Kommentar. Sei nett.",
+    "submit": "Kommentieren"
   }
 }

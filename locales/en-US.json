@@ -53,6 +53,7 @@
     "title": "Comments",
     "write": "Write",
     "preview": "Preview",
-    "placeholder": "Write your comment here. Be kind."
+    "placeholder": "Write your comment here. Be kind.",
+    "submit": "Comment"
   }
 }
