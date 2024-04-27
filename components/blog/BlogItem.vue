@@ -11,7 +11,7 @@ defineProps<{
     class="relative flex h-[200px] flex-col overflow-hidden drop-shadow-sm after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-gradient-to-t after:from-white after:from-25% after:to-transparent after:transition-opacity after:duration-500 after:content-[''] after:hover:from-10% dark:after:from-black sm:h-auto"
   >
     <ClientOnly>
-      <BlogItemBackground :img-name="blog.image" />
+      <BlogItemBackground :img-dark="blog.image" :img-light="blog.image" />
     </ClientOnly>
     <div class="z-10 flex h-full w-full flex-col justify-end p-4 sm:gap-2">
       <CardContent class="flex-none p-0">

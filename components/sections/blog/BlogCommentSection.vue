@@ -1,5 +1,8 @@
 <script setup lang="ts"></script>
 
-<template></template>
+<template>
+  <SectionHeading>{{ $t("comments.title") }}</SectionHeading>
+  <!--  <CommentContainer />-->
+</template>
 
 <style scoped></style>

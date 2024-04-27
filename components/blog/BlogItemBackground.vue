@@ -1,31 +1,23 @@
 <script setup lang="ts">
 const props = defineProps<{
-  imgName: string
+  imgDark: string
+  imgLight: string
 }>()
 
-const pathDark = computed(() => {
-  return `/images/${props.imgName}-dark.webp`
-})
-
-const pathLight = computed(() => {
-  return `/images/${props.imgName}-light.webp`
-})
-
-const path = computed(() => {
-  return mode.value == "dark" ? pathDark : pathLight
-})
-
-const img = useImage()
 const mode = useColorMode()
+const img = useImage()
+const path = computed(() => {
+  return mode.value == "dark" ? props.imgDark : props.imgLight
+})
 </script>
 
 <template>
   <NuxtImg
     class="absolute left-0 top-0 h-full w-full overflow-clip object-cover object-top"
-    :src="path.value"
+    :src="path"
     alt="blog-background"
     loading="lazy"
-    :placeholder="img(path.value, { h: 10, f: 'webp', blur: 2, q: 50 })"
+    :placeholder="img(path, { h: 10, f: 'webp', blur: 2, q: 50 })"
   />
 </template>
 

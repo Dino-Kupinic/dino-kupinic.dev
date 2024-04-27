@@ -1,7 +1,7 @@
 ---
 title: "anet propior dixerunt quaeque, nulla modo, pio"
 description: "emque medii procul pectore. Arcus At "
-image: /assets/blog1-dark.webp
+image: /images/blog1-dark.webp
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png

@@ -137,5 +137,6 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
         </div>
       </div>
     </BlogFooter>
+    <BlogCommentSection />
   </GenericLayoutWrapper>
 </template>
