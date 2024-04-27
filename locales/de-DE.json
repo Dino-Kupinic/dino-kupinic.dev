@@ -48,5 +48,11 @@
       "support": "Unterstütze mich"
     },
     "related": "Ähnliches"
+  },
+  "comments": {
+    "title": "Kommentare",
+    "write": "Schreiben",
+    "preview": "Vorschau",
+    "placeholder": "Schreibe hier deinen Kommentar. Sei nett."
   }
 }
