@@ -13,6 +13,9 @@ authors:
   - name: Michael Ploier
     avatar: https://github.com/mploier.png
     handle: "@SaurusRex"
+  - name: Daniel Samhaber
+    avatar: https://github.com/dsamhabe.png
+    handle: "@dsamhabe"
 related:
   - path: "/blogs/another-article2"
   - path: "/blogs/test-article"
