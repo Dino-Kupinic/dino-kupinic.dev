@@ -57,6 +57,10 @@ export const theme = {
         DEFAULT: "hsl(var(--muted))",
         foreground: "hsl(var(--muted-foreground))",
       },
+      tertiary: {
+        DEFAULT: "hsl(var(--tertiary))",
+        foreground: "hsl(var(--tertiary-foreground))",
+      },
       accent: {
         DEFAULT: "hsl(var(--accent))",
         foreground: "hsl(var(--accent-foreground))",
