@@ -6,6 +6,10 @@
     "dark": "Dark",
     "light": "Light"
   },
+  "error": {
+    "title": "An Error occurred",
+    "home": "Go home"
+  },
   "nav": {
     "menu": "Menu",
     "search": "Search",
@@ -47,7 +51,9 @@
       "star": "Star on GitHub",
       "support": "Support me"
     },
-    "related": "Related"
+    "related": "Related",
+    "latest": "Latest",
+    "loadMore": "Load more"
   },
   "comments": {
     "title": "Comments",

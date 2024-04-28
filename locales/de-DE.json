@@ -6,6 +6,10 @@
     "dark": "Dunkel",
     "light": "Hell"
   },
+  "error": {
+    "title": "Ein Fehler ist aufgetreten",
+    "home": "Zurück zur Startseite"
+  },
   "nav": {
     "menu": "Menü",
     "search": "Suchen",
@@ -47,7 +51,9 @@
       "star": "Stern vergeben",
       "support": "Unterstütze mich"
     },
-    "related": "Ähnliches"
+    "related": "Ähnliches",
+    "latest": "Aktuelles",
+    "loadMore": "Mehr laden"
   },
   "comments": {
     "title": "Kommentare",
