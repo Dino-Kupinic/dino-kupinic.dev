@@ -92,8 +92,8 @@ devDependencies:
     specifier: ^2.12.1
     version: 2.12.1(nuxt@3.11.2)(rollup@4.17.0)(vue@3.4.25)
   '@nuxt/eslint':
-    specifier: 0.3.4
-    version: 0.3.4(eslint@8.57.0)(nuxt@3.11.2)(rollup@4.17.0)(typescript@5.4.5)(vite@5.2.10)
+    specifier: 0.3.10
+    version: 0.3.10(eslint@8.57.0)(nuxt@3.11.2)(rollup@4.17.0)(typescript@5.4.5)(vite@5.2.10)
   '@nuxt/fonts':
     specifier: ^0.4.0
     version: 0.4.0(nuxt@3.11.2)(rollup@4.17.0)(vite@5.2.10)
@@ -112,9 +112,6 @@ devDependencies:
   '@nuxtjs/i18n':
     specifier: ^8.3.1
     version: 8.3.1(rollup@4.17.0)(vue@3.4.25)
-  '@nuxtjs/mdc':
-    specifier: ^0.7.0
-    version: 0.7.0(rollup@4.17.0)
   '@nuxtjs/seo':
     specifier: 2.0.0-rc.8
     version: 2.0.0-rc.8(@lezer/common@1.2.1)(@nuxt/devtools@1.2.0)(@unhead/shared@1.9.7)(@vue/compiler-core@3.4.25)(h3@1.11.1)(nuxt@3.11.2)(postcss@8.4.38)(rollup@4.17.0)(unhead@1.9.7)(vite@5.2.10)(vue@3.4.25)(webpack@5.91.0)
@@ -2333,13 +2330,13 @@ packages:
       - vue
     dev: true
 
-  /@nuxt/eslint-config@0.3.4(eslint@8.57.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-O5Tpf4znp3n/GRP/8nBiHgdecJewdsweiat0OAkbcItxiioogQJ+VgUSNOsq5EHznJkX7umLQCeEOXd1YeKgvg==}
+  /@nuxt/eslint-config@0.3.10(eslint@8.57.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-Hv1ncp0AzRSPD2FYjPW4r1ViSysXjZ2YFFBcfAdKtJtXrch+35B4H1+JXzHQa2P6M1nxMt3riPVSMibS9HkflQ==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
     dependencies:
       '@eslint/js': 9.1.1
-      '@nuxt/eslint-plugin': 0.3.4(eslint@8.57.0)(typescript@5.4.5)
+      '@nuxt/eslint-plugin': 0.3.10(eslint@8.57.0)(typescript@5.4.5)
       '@rushstack/eslint-patch': 1.10.2
       '@stylistic/eslint-plugin': 1.7.2(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/eslint-plugin': 7.7.1(@typescript-eslint/parser@7.7.1)(eslint@8.57.0)(typescript@5.4.5)
@@ -2360,8 +2357,8 @@ packages:
       - typescript
     dev: true
 
-  /@nuxt/eslint-plugin@0.3.4(eslint@8.57.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-WqGnD7aJCS43dMlnhKfTKoJrglLz+vIFfSUmCrdRXHXnhHV/o6YGvm18VHjshZNFXVm2x3/NqYn2vPrj5AGjuA==}
+  /@nuxt/eslint-plugin@0.3.10(eslint@8.57.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-eV9TIpQK6UUN9wZCEuunG0vYXt4yz8RrfvvYC1mwq075kSOQevGWNCQKFE1SKr0YDl4PIIy8wDjchYIwT3gfNg==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
     dependencies:
@@ -2373,8 +2370,8 @@ packages:
       - typescript
     dev: true
 
-  /@nuxt/eslint@0.3.4(eslint@8.57.0)(nuxt@3.11.2)(rollup@4.17.0)(typescript@5.4.5)(vite@5.2.10):
-    resolution: {integrity: sha512-rYnOEkF2++hXBCRBcByX4EehEuBi+rH+c65jML5rPToDJCk4sMlS5uH/mDJtiWpt5wpmMEcCv6dudXPBFiBd+Q==}
+  /@nuxt/eslint@0.3.10(eslint@8.57.0)(nuxt@3.11.2)(rollup@4.17.0)(typescript@5.4.5)(vite@5.2.10):
+    resolution: {integrity: sha512-EfjP5FJQ1uXqpYx1dHMeaGYL+6oAJqzq/j5HDEX78ZsInU7hoSJjia/0b+dyB+LRM9gn0wDBoOFwSO+6U2HC7w==}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
       eslint-webpack-plugin: ^4.1.0
@@ -2387,13 +2384,14 @@ packages:
     dependencies:
       '@eslint/config-inspector': 0.4.7(eslint@8.57.0)
       '@nuxt/devtools-kit': 1.2.0(nuxt@3.11.2)(rollup@4.17.0)(vite@5.2.10)
-      '@nuxt/eslint-config': 0.3.4(eslint@8.57.0)(typescript@5.4.5)
-      '@nuxt/eslint-plugin': 0.3.4(eslint@8.57.0)(typescript@5.4.5)
+      '@nuxt/eslint-config': 0.3.10(eslint@8.57.0)(typescript@5.4.5)
+      '@nuxt/eslint-plugin': 0.3.10(eslint@8.57.0)(typescript@5.4.5)
       '@nuxt/kit': 3.11.2(rollup@4.17.0)
       chokidar: 3.6.0
       eslint: 8.57.0
       eslint-flat-config-utils: 0.2.4
       eslint-typegen: 0.2.4(eslint@8.57.0)
+      find-up: 7.0.0
       get-port-please: 3.1.2
       mlly: 1.6.1
       pathe: 1.1.2
@@ -2796,6 +2794,7 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: false
 
   /@nuxtjs/seo@2.0.0-rc.8(@lezer/common@1.2.1)(@nuxt/devtools@1.2.0)(@unhead/shared@1.9.7)(@vue/compiler-core@3.4.25)(h3@1.11.1)(nuxt@3.11.2)(postcss@8.4.38)(rollup@4.17.0)(unhead@1.9.7)(vite@5.2.10)(vue@3.4.25)(webpack@5.91.0):
     resolution: {integrity: sha512-N0Ke7A5dHkF5oY9F3VAQAPu0gfkYQHdepIPc2g/GFs+lgNB352djvJ9rNSgVDsxWKmP3RJ1iubl8orCcJiIxyA==}
