@@ -54,8 +54,8 @@ dependencies:
     specifier: ^0.2.3
     version: 0.2.3(eslint@8.57.0)
   lucide-vue-next:
-    specifier: ^0.340.0
-    version: 0.340.0(vue@3.4.25)
+    specifier: ^0.376.0
+    version: 0.376.0(vue@3.4.25)
   nuxt-content-twoslash:
     specifier: ^0.0.10
     version: 0.0.10(@nuxtjs/mdc@0.7.0)(rollup@4.17.0)
@@ -112,9 +112,6 @@ devDependencies:
   '@nuxtjs/i18n':
     specifier: ^8.3.1
     version: 8.3.1(rollup@4.17.0)(vue@3.4.25)
-  '@nuxtjs/mdc':
-    specifier: ^0.7.0
-    version: 0.7.0(rollup@4.17.0)
   '@nuxtjs/seo':
     specifier: 2.0.0-rc.8
     version: 2.0.0-rc.8(@lezer/common@1.2.1)(@nuxt/devtools@1.2.0)(@unhead/shared@1.9.7)(@vue/compiler-core@3.4.25)(h3@1.11.1)(nuxt@3.11.2)(postcss@8.4.38)(rollup@4.17.0)(unhead@1.9.7)(vite@5.2.10)(vue@3.4.25)(webpack@5.91.0)
@@ -2796,6 +2793,7 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: false
 
   /@nuxtjs/seo@2.0.0-rc.8(@lezer/common@1.2.1)(@nuxt/devtools@1.2.0)(@unhead/shared@1.9.7)(@vue/compiler-core@3.4.25)(h3@1.11.1)(nuxt@3.11.2)(postcss@8.4.38)(rollup@4.17.0)(unhead@1.9.7)(vite@5.2.10)(vue@3.4.25)(webpack@5.91.0):
     resolution: {integrity: sha512-N0Ke7A5dHkF5oY9F3VAQAPu0gfkYQHdepIPc2g/GFs+lgNB352djvJ9rNSgVDsxWKmP3RJ1iubl8orCcJiIxyA==}
@@ -8768,8 +8766,8 @@ packages:
       es5-ext: 0.10.64
     dev: true
 
-  /lucide-vue-next@0.340.0(vue@3.4.25):
-    resolution: {integrity: sha512-529tcsDPhxxlQl4pzzrc7cPbataPCONa7jHjXGvmlU2RAr8L886YYHqyPf3K7yek6G3hoULs04U1NsLHkPGUZg==}
+  /lucide-vue-next@0.376.0(vue@3.4.25):
+    resolution: {integrity: sha512-Bu9UMf+TqisJy0NMGRL0rSUM4bhtX0nQGVkpLjoyTpOLgpUfXqW1mMBGaWRW3y1vsuNBY6Y4h0slywfv/cYQ7Q==}
     peerDependencies:
       vue: '>=3.0.1'
     dependencies:
