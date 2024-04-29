@@ -60,8 +60,8 @@ dependencies:
     specifier: ^0.0.10
     version: 0.0.10(@nuxtjs/mdc@0.7.0)(rollup@4.17.0)
   radix-vue:
-    specifier: ^1.7.2
-    version: 1.7.2(vue@3.4.25)
+    specifier: ^1.7.3
+    version: 1.7.3(vue@3.4.25)
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -11303,8 +11303,8 @@ packages:
       inherits: 2.0.4
     dev: true
 
-  /radix-vue@1.7.2(vue@3.4.25):
-    resolution: {integrity: sha512-KczYzzflm8todIk3flaQIWQ6P1wqtUh0cwMBRhp8Pr2JXs8FMG2qfL4lJly2mhMFXc199bG0U4bNLLsrhn5xoA==}
+  /radix-vue@1.7.3(vue@3.4.25):
+    resolution: {integrity: sha512-GgUagGvpO1EtNvkQ27x3Hv26VrTffZ4XRyx8eMabXRxXtbo2GbjAd2HvGjL9A/D7QVHxw1ZUMBDcYWcpw4LEiQ==}
     peerDependencies:
       vue: '>= 3.2.0'
     dependencies:
@@ -13183,7 +13183,7 @@ packages:
     resolution: {integrity: sha512-3PYWMbN3cSdsciv3fzewskxZFnX61PYq1uNsbvizXDo/8sN4SMrWkYDqWaPdTD3GTEm6wpx7j5flRLg7A5ZXbQ==}
     dependencies:
       '@vueuse/core': 10.9.0(vue@3.4.25)
-      radix-vue: 1.7.2(vue@3.4.25)
+      radix-vue: 1.7.3(vue@3.4.25)
       vue: 3.4.25(typescript@5.4.5)
     transitivePeerDependencies:
       - '@vue/composition-api'
