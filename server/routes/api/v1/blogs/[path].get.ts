@@ -1,17 +1,22 @@
 import { eq } from "drizzle-orm"
+import type { Blog } from "~/types/blog"
 
+/**
+ * Get a blog by its path.
+ * @param event The HTTP request containing the blog path as a parameter.
+ */
 export default defineEventHandler(async (event) => {
   try {
-    const p = getRouterParam(event, "path")
-    if (!p) {
+    const path = getRouterParam(event, "path")
+    if (!path) {
       return createError({
         statusCode: 400,
         statusMessage: "missing 'path' parameter",
       })
     }
 
-    const response = await database.query.blogs.findFirst({
-      where: eq(blogs.path, `/blogs/${p}`),
+    const response: Blog | undefined = await database.query.blogs.findFirst({
+      where: eq(blogs.path, `/blogs/${path}`),
     })
 
     if (!response) {

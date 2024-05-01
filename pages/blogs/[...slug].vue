@@ -69,7 +69,7 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
 
 <template>
   <GenericLayoutWrapper>
-    <BlogHeader>
+    <BlogHeader :title="blogContent?.title as string">
       <div class="my-4 flex items-center gap-3">
         <CategoryDisplay text="Programming" to="/blog/category/programming" />
         <BlogDate :date />

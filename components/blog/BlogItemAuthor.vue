@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { BlogAuthor } from "~/types/blog"
-import BlogAvatarFallback from "~/components/blog/BlogAvatarFallback.vue"
 
 defineProps<{
   author: BlogAuthor[]
