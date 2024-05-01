@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  title: "Blog",
+  layout: "default",
+})
+</script>
 
 <template>
   <GenericLayoutWrapper>
@@ -6,5 +11,3 @@
     <TheBlogPageMainSection />
   </GenericLayoutWrapper>
 </template>
-
-<style scoped></style>
