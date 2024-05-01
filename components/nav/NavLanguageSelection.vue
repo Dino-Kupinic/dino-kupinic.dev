@@ -10,7 +10,7 @@ watch(locale, () => {
 <template>
   <div>
     <Select v-model="locale" aria-label="Language Selection">
-      <SelectTrigger aria-label="Language Selection Button">
+      <SelectTrigger aria-label="Language Selection Button" class="mr-3">
         <SelectValue>
           {{ localeProperties.name }}
         </SelectValue>

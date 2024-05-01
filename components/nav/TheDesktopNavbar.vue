@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <NavContainer>
-    <div class="ml-3 flex cursor-pointer items-center">
+    <div class="flex cursor-pointer items-center">
       <NuxtLink to="/">
         <ClientOnly>
           <NavLogo aria-label="Logo" />
@@ -19,7 +19,7 @@ defineProps<{
         </ClientOnly>
       </NuxtLink>
     </div>
-    <NavigationMenu class="mr-2">
+    <NavigationMenu>
       <NavigationMenuList>
         <NavItem v-for="item in items" :key="item.title">
           <template #main>
@@ -32,7 +32,7 @@ defineProps<{
           </template>
         </NavItem>
         <div class="flex items-center space-x-3">
-          <NavDivider />
+          <NavDivider class="mr-3" />
           <ClientOnly>
             <NavBarThemeToggle />
             <NavCommand />

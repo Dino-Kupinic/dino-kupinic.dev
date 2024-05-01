@@ -1,9 +1,9 @@
 <template>
   <nav class="sm:flex sm:justify-center">
-    <div
-      class="m-3 flex flex-row justify-between rounded-lg border bg-background p-3 sm:w-[1024px]"
-    >
-      <slot />
+    <div class="flex w-full justify-center border-b bg-background p-3">
+      <div class="flex w-[1024px] flex-row justify-between">
+        <slot />
+      </div>
     </div>
   </nav>
 </template>
