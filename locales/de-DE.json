@@ -19,6 +19,9 @@
     "about": "Über mich",
     "contact": "Kontakt"
   },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten"
+  },
   "hero": {
     "profession": "Software Entwickler",
     "projects": "Projekte",

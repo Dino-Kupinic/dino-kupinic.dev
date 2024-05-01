@@ -19,6 +19,9 @@
     "about": "About",
     "contact": "Contact"
   },
+  "footer": {
+    "rights": "All rights reserved"
+  },
   "hero": {
     "profession": "Software Developer",
     "projects": "Projects",
