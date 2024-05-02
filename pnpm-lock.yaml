@@ -54,8 +54,8 @@ dependencies:
     specifier: ^0.2.3
     version: 0.2.3(eslint@8.57.0)
   lucide-vue-next:
-    specifier: ^0.376.0
-    version: 0.376.0(vue@3.4.26)
+    specifier: ^0.377.0
+    version: 0.377.0(vue@3.4.26)
   nuxt-content-twoslash:
     specifier: ^0.0.10
     version: 0.0.10(@nuxtjs/mdc@0.7.0)(rollup@4.17.0)
@@ -8818,8 +8818,8 @@ packages:
       es5-ext: 0.10.64
     dev: true
 
-  /lucide-vue-next@0.376.0(vue@3.4.26):
-    resolution: {integrity: sha512-Bu9UMf+TqisJy0NMGRL0rSUM4bhtX0nQGVkpLjoyTpOLgpUfXqW1mMBGaWRW3y1vsuNBY6Y4h0slywfv/cYQ7Q==}
+  /lucide-vue-next@0.377.0(vue@3.4.26):
+    resolution: {integrity: sha512-8esUX7QAmU6UubtfzC7I17uVucDKc/Ghbubh6EJQQ+4q+icWlYoa2Jy7BwSnhJ6xMn+nEKtbGIR1UkZGqWCVRA==}
     peerDependencies:
       vue: '>=3.0.1'
     dependencies:
