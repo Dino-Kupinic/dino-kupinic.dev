@@ -75,7 +75,7 @@
     "nuxt-csurf": "^1.5.2",
     "nuxt-icon": "^0.6.10",
     "nuxt-security": "^1.4.3",
-    "nuxt-viewport": "^2.1.4",
+    "nuxt-viewport": "^2.1.5",
     "postcss": "^8.4.38",
     "prettier": "3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
