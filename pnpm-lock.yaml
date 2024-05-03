@@ -54,8 +54,8 @@ dependencies:
     specifier: ^0.2.3
     version: 0.2.3(eslint@8.57.0)
   lucide-vue-next:
-    specifier: ^0.377.0
-    version: 0.377.0(vue@3.4.26)
+    specifier: ^0.378.0
+    version: 0.378.0(vue@3.4.26)
   nuxt-content-twoslash:
     specifier: ^0.0.10
     version: 0.0.10(@nuxtjs/mdc@0.7.0)(rollup@4.17.0)
@@ -3833,12 +3833,6 @@ packages:
     dependencies:
       '@types/node': 20.12.8
       form-data: 4.0.0
-
-  /@types/node@20.12.7:
-    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: true
 
   /@types/node@20.12.8:
     resolution: {integrity: sha512-NU0rJLJnshZWdE/097cdCBbyW1h4hEg0xpovcoAQYHl8dnEyp/NAOiE45pvc+Bd1Dt+2r94v2eGFpQJ4R7g+2w==}
@@ -8430,7 +8424,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.12.7
+      '@types/node': 20.12.8
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -8912,8 +8906,8 @@ packages:
       es5-ext: 0.10.64
     dev: true
 
-  /lucide-vue-next@0.377.0(vue@3.4.26):
-    resolution: {integrity: sha512-8esUX7QAmU6UubtfzC7I17uVucDKc/Ghbubh6EJQQ+4q+icWlYoa2Jy7BwSnhJ6xMn+nEKtbGIR1UkZGqWCVRA==}
+  /lucide-vue-next@0.378.0(vue@3.4.26):
+    resolution: {integrity: sha512-tz2IUhdOf1q0x1mPOTZEJZYfXVLreQorO2ax4M+CxGOTgCNgXH3cljIWWfJ4jUvxn5rbkFlGPbl9EIfIelZBRA==}
     peerDependencies:
       vue: '>=3.0.1'
     dependencies:
