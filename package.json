@@ -42,7 +42,7 @@
     "radix-vue": "^1.7.3",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "unhead": "^1.9.8",
+    "unhead": "^1.9.9",
     "vaul-vue": "^0.1.0",
     "vue": "^3.4.26",
     "vue-router": "^4.3.2",
