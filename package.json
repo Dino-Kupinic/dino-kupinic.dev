@@ -35,7 +35,7 @@
     "embla-carousel": "^8.0.2",
     "embla-carousel-auto-scroll": "^8.0.2",
     "embla-carousel-autoplay": "^8.0.2",
-    "embla-carousel-vue": "^8.0.2",
+    "embla-carousel-vue": "^8.0.4",
     "eslint-plugin-drizzle": "^0.2.3",
     "lucide-vue-next": "^0.378.0",
     "nuxt-content-twoslash": "^0.0.10",
