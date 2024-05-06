@@ -95,8 +95,8 @@ devDependencies:
     specifier: 0.3.10
     version: 0.3.10(eslint@8.57.0)(nuxt@3.11.2)(rollup@4.17.0)(typescript@5.4.5)(vite@5.2.10)
   '@nuxt/fonts':
-    specifier: ^0.6.1
-    version: 0.6.1(nuxt@3.11.2)(rollup@4.17.0)(vite@5.2.10)
+    specifier: ^0.7.0
+    version: 0.7.0(nuxt@3.11.2)(rollup@4.17.0)(vite@5.2.10)
   '@nuxt/image':
     specifier: ^1.6.0
     version: 1.6.0(rollup@4.17.0)
@@ -2407,8 +2407,8 @@ packages:
       - vite
     dev: true
 
-  /@nuxt/fonts@0.6.1(nuxt@3.11.2)(rollup@4.17.0)(vite@5.2.10):
-    resolution: {integrity: sha512-YeoXSHgRGoKYGLYu/gw7XDQ9mqyO+ihrCCwjxtH6Ke/2r5A9xI3frPzC5RVCgzZjxbd7W3EDAlyVwwEjCb9x+g==}
+  /@nuxt/fonts@0.7.0(nuxt@3.11.2)(rollup@4.17.0)(vite@5.2.10):
+    resolution: {integrity: sha512-nng9m7IbdjPkKbNY26xygsuIeld3WjejGBmB4xN3lZDo8kKtThqzLn+M0enYQZBNGQShLaIAoFa+ccFF50qZRg==}
     dependencies:
       '@nuxt/devtools-kit': 1.2.0(nuxt@3.11.2)(rollup@4.17.0)(vite@5.2.10)
       '@nuxt/kit': 3.11.2(rollup@4.17.0)
