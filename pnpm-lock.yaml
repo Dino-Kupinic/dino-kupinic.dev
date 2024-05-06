@@ -48,8 +48,8 @@ dependencies:
     specifier: ^8.0.2
     version: 8.0.2(embla-carousel@8.0.2)
   embla-carousel-vue:
-    specifier: ^8.0.2
-    version: 8.0.2(vue@3.4.26)
+    specifier: ^8.0.4
+    version: 8.0.4(vue@3.4.26)
   eslint-plugin-drizzle:
     specifier: ^0.2.3
     version: 0.2.3(eslint@8.57.0)
@@ -6662,26 +6662,30 @@ packages:
       embla-carousel: 8.0.2
     dev: false
 
-  /embla-carousel-reactive-utils@8.0.2(embla-carousel@8.0.2):
-    resolution: {integrity: sha512-nLZqDkQdO0hvOP49/dUwjkkepMnUXgIzhyRuDjwGqswpB4Ibnc5M+w7rSQQAM+uMj0cPaXnYOTlv8XD7I/zVNw==}
+  /embla-carousel-reactive-utils@8.0.4(embla-carousel@8.0.4):
+    resolution: {integrity: sha512-7lWM+8hanIF2roTAjxwfqfr0+VTbr9rYVlAs0r5PwPOVpz1G3/+bRelgAYvwcfWVm5Vydo2pKXVfFOPQjznF7w==}
     peerDependencies:
-      embla-carousel: 8.0.2
+      embla-carousel: 8.0.4
     dependencies:
-      embla-carousel: 8.0.2
+      embla-carousel: 8.0.4
     dev: false
 
-  /embla-carousel-vue@8.0.2(vue@3.4.26):
-    resolution: {integrity: sha512-GTxynHlwsG+Ls2UKIbjb/kA1cMQVW9oC8kfCJvOZdrzFOYZFP3wj3nqNE5UmYf3FSE1uy5bY11Pmz8NJEmsH1g==}
+  /embla-carousel-vue@8.0.4(vue@3.4.26):
+    resolution: {integrity: sha512-GA09dnroT0ADYoP+AS5ZbLr0X60jRQfQdyufX6Nj6VXXWA8flY564+9Z5aWWvRmNupvwjAvyAVyFgQMx6hM7nw==}
     peerDependencies:
       vue: ^3.2.37
     dependencies:
-      embla-carousel: 8.0.2
-      embla-carousel-reactive-utils: 8.0.2(embla-carousel@8.0.2)
+      embla-carousel: 8.0.4
+      embla-carousel-reactive-utils: 8.0.4(embla-carousel@8.0.4)
       vue: 3.4.26(typescript@5.4.5)
     dev: false
 
   /embla-carousel@8.0.2:
     resolution: {integrity: sha512-bogsDO8xosuh/l3PxIvA5AMl3+BnRVAse9sDW/60amzj4MbGS5re4WH5eVEXiuH8G1/3G7QUAX2QNr3Yx8z5rA==}
+    dev: false
+
+  /embla-carousel@8.0.4:
+    resolution: {integrity: sha512-INndmilrV9KY4Wnb4F2tI55DuQnFjf3GPOaPDT2LGYiKhIWVNUhv1nz/RI7CZ6WoIZ8MYHP4t6Qm/cqpcGHknA==}
     dev: false
 
   /emoji-regex@10.3.0:
