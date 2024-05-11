@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 
 <template>
   <div
-    class="m-auto my-12 max-w-[1024px] flex-col justify-between space-y-4 px-5"
+    class="m-auto my-12 max-w-[1024px] flex-col justify-between space-y-4 px-5 lg:px-0"
   >
     <p class="text-primary dark:text-secondary">
       &copy; {{ currentYear }} Dino Kupinic. {{ $t("footer.rights") }}
