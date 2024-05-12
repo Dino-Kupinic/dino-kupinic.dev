@@ -1,51 +1,13 @@
-<script setup lang="ts">
-import type { NavigationItem } from "~/types/nav"
-
-const { t, locale } = useI18n()
-const navigationItems = ref<NavigationItem[]>([])
-
-watch(
-  locale,
-  () => {
-    navigationItems.value = [
-      {
-        title: t("nav.projects"),
-        href: "/projects",
-      },
-      {
-        title: t("nav.blogs"),
-        href: "/blog",
-      },
-      {
-        title: t("nav.about"),
-        href: "/about",
-      },
-      {
-        title: t("nav.contact"),
-        href: "/contact",
-      },
-    ]
-  },
-  { immediate: true },
-)
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="m-auto mb-24 h-[300px] w-full border-t bg-background">
-    <div class="m-auto my-12 flex h-full max-w-[1024px] px-5 lg:px-0">
+  <div class="m-auto mb-24 h-auto w-full border-t bg-background sm:h-[300px]">
+    <div
+      class="m-auto my-12 flex h-full max-w-[1024px] flex-col justify-between space-y-8 px-5 sm:flex-row sm:space-y-0 lg:px-0"
+    >
       <FooterContentLeft />
-      <p class="font-semibold">Links</p>
-      <NuxtLink
-        v-for="item in navigationItems"
-        :key="item.title"
-        :to="item.href"
-        class="text-primary dark:text-secondary"
-      >
-        <p class="my-3">
-          {{ item.title }}
-        </p>
-      </NuxtLink>
-      <div></div>
+      <FooterContentCenter />
+      <FooterContentRight />
     </div>
   </div>
 </template>

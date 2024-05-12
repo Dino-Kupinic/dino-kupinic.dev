@@ -17,11 +17,31 @@
     "projects": "Projekte",
     "blogs": "Blog",
     "about": "Über mich",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "home": "Startseite",
+    "uses": "Benutzt"
   },
   "footer": {
+    "links": "Links",
+    "resources": "Ressourcen",
+    "changelog": "Changelog",
+    "faq": "FAQ",
+    "call": "Buche einen Anruf",
+    "legal": "Rechtliches",
+    "cookies": "Cookies",
+    "privacy": "Datenschutz",
+    "impressum": "Impressum",
+    "getInTouch": "Kontakt aufnehmen",
     "rights": "Alle Rechte vorbehalten",
     "madeWith": "Gemacht mit"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Abonniere meinen Newsletter für monatliche Updates",
+    "form": {
+      "email": "Gebe deine E-Mail ein",
+      "submit": "Abonnieren"
+    }
   },
   "hero": {
     "profession": "Software Entwickler",

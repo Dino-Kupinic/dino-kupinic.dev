@@ -17,11 +17,32 @@
     "projects": "Projects",
     "blogs": "Blog",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "home": "Home",
+    "uses": "Uses"
   },
   "footer": {
+    "links": "Links",
+    "resources": "Resources",
+    "changelog": "Changelog",
+    "faq": "FAQ",
+    "call": "Book a call",
+    "legal": "Legal",
+    "cookies": "Cookies",
+    "privacy": "Privacy Policy",
+    "impressum": "Impressum",
+    "getInTouch": "Get in touch",
+    "mail": "Write an e-mail",
     "rights": "All rights reserved",
     "madeWith": "Made with"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Subscribe to my newsletter for monthly updates",
+    "form": {
+      "email": "Enter your e-mail",
+      "submit": "Subscribe"
+    }
   },
   "hero": {
     "profession": "Software Engineer",

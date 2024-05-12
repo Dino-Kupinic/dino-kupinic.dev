@@ -24,6 +24,10 @@ watch(
         title: t("nav.contact"),
         href: "/contact",
       },
+      {
+        title: t("nav.uses"),
+        href: "/uses",
+      },
     ]
   },
   { immediate: true },
