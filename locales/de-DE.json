@@ -20,7 +20,8 @@
     "contact": "Kontakt"
   },
   "footer": {
-    "rights": "Alle Rechte vorbehalten"
+    "rights": "Alle Rechte vorbehalten",
+    "madeWith": "Gemacht mit"
   },
   "hero": {
     "profession": "Software Entwickler",

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer class="w-full">
+  <footer class="w-full bg-background">
     <FooterContent />
     <FooterBottom />
   </footer>

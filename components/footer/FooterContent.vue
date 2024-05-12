@@ -32,14 +32,16 @@ watch(
 
 <template>
   <div class="m-auto mb-24 h-[300px] w-full border-t bg-background">
-    <div class="m-auto my-12 max-w-[1024px] px-5 lg:px-0">
+    <div class="m-auto my-12 flex h-full max-w-[1024px] px-5 lg:px-0">
+      <FooterContentLeft />
+      <p class="font-semibold">Links</p>
       <NuxtLink
         v-for="item in navigationItems"
         :key="item.title"
         :to="item.href"
         class="text-primary dark:text-secondary"
       >
-        <p>
+        <p class="my-3">
           {{ item.title }}
         </p>
       </NuxtLink>

@@ -20,7 +20,8 @@
     "contact": "Contact"
   },
   "footer": {
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "madeWith": "Made with"
   },
   "hero": {
     "profession": "Software Engineer",
