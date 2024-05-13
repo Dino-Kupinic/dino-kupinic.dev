@@ -1,0 +1,7 @@
+/components/ui
+/lib
+/server/migrations
+pnpm-lock.yaml
+local.db
+local.db-shm
+local.db-wal

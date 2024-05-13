@@ -1,8 +1,8 @@
-import animate from "tailwindcss-animate";
+import animate from "tailwindcss-animate"
 
+export const darkMode = ["class"]
+export const safelist = ["dark"]
 /** @type {import("tailwindcss").Config} */
-export const darkMode = ["class"];
-export const safelist = ["dark"];
 export const theme = {
   container: {
     center: true,
@@ -10,6 +10,29 @@ export const theme = {
     screens: {
       "2xl": "1400px",
     },
+  },
+  fontFamily: {
+    sans: ["Geist", "-apple-system", "Segoe UI", "Arial", "sans-serif"],
+    serif: [
+      "ui-serif",
+      "Georgia",
+      "Cambria",
+      "Times New Roman",
+      "Times",
+      "serif",
+    ],
+    mono: [
+      "Geist Mono",
+      "ui-monospace",
+      "SFMono-Regular",
+      "Menlo",
+      "Monaco",
+      "Consolas",
+      "Liberation Mono",
+      "Courier New",
+      "monospace",
+    ],
+    heading: "MonaSans, sans-serif",
   },
   extend: {
     colors: {
@@ -34,6 +57,10 @@ export const theme = {
         DEFAULT: "hsl(var(--muted))",
         foreground: "hsl(var(--muted-foreground))",
       },
+      tertiary: {
+        DEFAULT: "hsl(var(--tertiary))",
+        foreground: "hsl(var(--tertiary-foreground))",
+      },
       accent: {
         DEFAULT: "hsl(var(--accent))",
         foreground: "hsl(var(--accent-foreground))",
@@ -55,20 +82,25 @@ export const theme = {
     },
     keyframes: {
       "accordion-down": {
-        from: {height: 0},
-        to: {height: "var(--radix-accordion-content-height)"},
+        from: { height: 0 },
+        to: { height: "var(--radix-accordion-content-height)" },
       },
       "accordion-up": {
-        from: {height: "var(--radix-accordion-content-height)"},
-        to: {height: 0},
+        from: { height: "var(--radix-accordion-content-height)" },
+        to: { height: 0 },
       },
       "collapsible-down": {
-        from: {height: 0},
-        to: {height: "var(--radix-collapsible-content-height)"},
+        from: { height: 0 },
+        to: { height: "var(--radix-collapsible-content-height)" },
       },
       "collapsible-up": {
-        from: {height: "var(--radix-collapsible-content-height)"},
-        to: {height: 0},
+        from: { height: "var(--radix-collapsible-content-height)" },
+        to: { height: 0 },
+      },
+      text: {
+        to: {
+          backgroundPosition: "200% center",
+        },
       },
     },
     animation: {
@@ -76,7 +108,8 @@ export const theme = {
       "accordion-up": "accordion-up 0.2s ease-out",
       "collapsible-down": "collapsible-down 0.2s ease-in-out",
       "collapsible-up": "collapsible-up 0.2s ease-in-out",
+      "text-gradient": "text 1.5s linear infinite",
     },
   },
-};
-export const plugins = [animate];
+}
+export const plugins = [animate]

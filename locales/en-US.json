@@ -1,0 +1,93 @@
+{
+  "aria": {
+    "toggle-theme": "Toggle theme"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "error": {
+    "title": "An Error occurred",
+    "home": "Go home"
+  },
+  "nav": {
+    "menu": "Menu",
+    "search": "Search",
+    "searchPress": "Press",
+    "projects": "Projects",
+    "blogs": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "home": "Home",
+    "uses": "Uses"
+  },
+  "footer": {
+    "links": "Links",
+    "resources": "Resources",
+    "changelog": "Changelog",
+    "faq": "FAQ",
+    "call": "Book a call",
+    "legal": "Legal",
+    "cookies": "Cookies",
+    "privacy": "Privacy Policy",
+    "impressum": "Impressum",
+    "getInTouch": "Get in touch",
+    "mail": "Write an e-mail",
+    "rights": "All rights reserved",
+    "madeWith": "Made with",
+    "openForWork": "Open for work",
+    "localTime": "Local time"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Subscribe to my newsletter for monthly updates",
+    "form": {
+      "email": "Enter your e-mail",
+      "submit": "Subscribe"
+    }
+  },
+  "hero": {
+    "profession": "Software Engineer",
+    "projects": "Projects",
+    "allProjects": "All Projects",
+    "blog": "Featured Blogs",
+    "readMore": "Read more",
+    "aboutMe": "About me"
+  },
+  "about": {
+    "country": "Austria",
+    "age": "Age",
+    "socials": "Socials",
+    "stacks": "Stacks",
+    "song": "Favourite Song",
+    "framework": "Favourite Framework",
+    "quote": "Favourite Quote",
+    "artist": "Favourite Artists"
+  },
+  "clipboard": {
+    "copy": "Copied to clipboard",
+    "unsupported": "Your browser does not support Clipboard API"
+  },
+  "blog": {
+    "pageTitle": "All Blogs",
+    "copy": "Copy URL",
+    "name": "Blog",
+    "back": "Back to Blog",
+    "toc": "Table of Contents",
+    "links": {
+      "chat": "Chat on Discord",
+      "star": "Star on GitHub",
+      "support": "Support me"
+    },
+    "related": "Related",
+    "latest": "Latest",
+    "loadMore": "Load more"
+  },
+  "comments": {
+    "title": "Comments",
+    "write": "Write",
+    "preview": "Preview",
+    "placeholder": "Write your comment here. Be kind.",
+    "submit": "Comment"
+  }
+}

@@ -1,0 +1,40 @@
+<script setup lang="ts">
+const route = useRoute()
+defineProps<{
+  title: string
+}>()
+</script>
+
+<template>
+  <div class="h-auto w-full pb-6">
+    <div class="mb-8 w-full sm:mb-12">
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink as-child>
+              <NuxtLink to="/blog">
+                <div class="flex items-center">
+                  <Icon name="i-ph-newspaper-fill" class="mr-1" />
+                  <span class="text-sm tracking-wide">
+                    {{ $t("blog.name") }}
+                  </span>
+                </div>
+              </NuxtLink>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink as-child>
+              <NuxtLink :to="route.path">
+                <span class="text-sm tracking-wide">
+                  {{ title }}
+                </span>
+              </NuxtLink>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+    </div>
+    <slot />
+  </div>
+</template>

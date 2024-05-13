@@ -1,0 +1,92 @@
+{
+  "aria": {
+    "toggle-theme": "Thematik ändern"
+  },
+  "theme": {
+    "dark": "Dunkel",
+    "light": "Hell"
+  },
+  "error": {
+    "title": "Ein Fehler ist aufgetreten",
+    "home": "Zurück zur Startseite"
+  },
+  "nav": {
+    "menu": "Menü",
+    "search": "Suchen",
+    "searchPress": "Drücke",
+    "projects": "Projekte",
+    "blogs": "Blog",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "home": "Startseite",
+    "uses": "Benutzt"
+  },
+  "footer": {
+    "links": "Links",
+    "resources": "Ressourcen",
+    "changelog": "Changelog",
+    "faq": "FAQ",
+    "call": "Buche einen Anruf",
+    "legal": "Rechtliches",
+    "cookies": "Cookies",
+    "privacy": "Datenschutz",
+    "impressum": "Impressum",
+    "getInTouch": "Kontakt aufnehmen",
+    "rights": "Alle Rechte vorbehalten",
+    "madeWith": "Gemacht mit",
+    "openForWork": "Offen für Arbeit",
+    "localTime": "Lokale Zeit"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Abonniere meinen Newsletter für monatliche Updates",
+    "form": {
+      "email": "Gebe deine E-Mail ein",
+      "submit": "Abonnieren"
+    }
+  },
+  "hero": {
+    "profession": "Software Entwickler",
+    "projects": "Projekte",
+    "allProjects": "Alle Projekte",
+    "blog": "Vorgestellte Blogs",
+    "readMore": "Mehr Lesen",
+    "aboutMe": "Über mich"
+  },
+  "about": {
+    "country": "Österreich",
+    "age": "Alter",
+    "socials": "Social-Media",
+    "stacks": "Technologien",
+    "song": "Lieblingssong",
+    "framework": "Lieblingsframework",
+    "quote": "Lieblingszitat",
+    "artist": "Lieblingskünstler"
+  },
+  "clipboard": {
+    "copy": "In die Zwischenablage kopiert",
+    "unsupported": "Ihr Browser unterstützt die Clipboard API nicht."
+  },
+  "blog": {
+    "pageTitle": "Alle Blogs",
+    "copy": "URL kopieren",
+    "name": "Blog",
+    "back": "Zurück zu Blogs",
+    "toc": "Inhaltsverzeichnis",
+    "links": {
+      "chat": "Auf Discord chatten",
+      "star": "Stern vergeben",
+      "support": "Unterstütze mich"
+    },
+    "related": "Ähnliches",
+    "latest": "Aktuelles",
+    "loadMore": "Mehr laden"
+  },
+  "comments": {
+    "title": "Kommentare",
+    "write": "Schreiben",
+    "preview": "Vorschau",
+    "placeholder": "Schreibe hier deinen Kommentar. Sei nett.",
+    "submit": "Kommentieren"
+  }
+}
