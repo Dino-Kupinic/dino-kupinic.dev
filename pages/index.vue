@@ -8,8 +8,8 @@ definePageMeta({
 <template>
   <GenericLayoutWrapper>
     <TheHeroSection />
-    <TheProjectsSection />
-    <TheBlogSection />
+    <!--    <TheProjectsSection />-->
+    <!--    <TheBlogSection />-->
     <TheAboutMeSection />
   </GenericLayoutWrapper>
 </template>
