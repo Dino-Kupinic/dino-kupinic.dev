@@ -34,7 +34,9 @@
     "getInTouch": "Get in touch",
     "mail": "Write an e-mail",
     "rights": "All rights reserved",
-    "madeWith": "Made with"
+    "madeWith": "Made with",
+    "openForWork": "Open for work",
+    "localTime": "Local time"
   },
   "newsletter": {
     "title": "Newsletter",

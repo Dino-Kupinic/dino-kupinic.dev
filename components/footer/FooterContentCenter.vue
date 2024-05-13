@@ -80,7 +80,7 @@ watch(
 </script>
 
 <template>
-  <div class="flex gap-16">
+  <div class="flex gap-16 sm:px-3">
     <FooterLinkGroup
       v-for="item in navigationItems"
       :key="item.title"
