@@ -2,6 +2,6 @@
 
 <template>
   <div
-    class="flex h-[300px] w-full rounded-lg border bg-background shadow-sm"
+    class="flex h-[500px] w-full rounded-lg border bg-background shadow-sm"
   ></div>
 </template>
