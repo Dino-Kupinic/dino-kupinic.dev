@@ -31,6 +31,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/device",
     "@nuxtjs/kinde",
+    "nuxt-clarity-analytics",
     "nuxt-content-twoslash", // this needs to be before `@nuxt/content`
     "@nuxt/content",
     "@nuxt/image",
