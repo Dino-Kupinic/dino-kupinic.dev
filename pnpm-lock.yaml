@@ -57,8 +57,8 @@ importers:
         specifier: ^0.2.3
         version: 0.2.3(eslint@8.57.0)
       lucide-vue-next:
-        specifier: ^0.376.0
-        version: 0.376.0(vue@3.4.27(typescript@5.4.5))
+        specifier: ^0.378.0
+        version: 0.378.0(vue@3.4.27(typescript@5.4.5))
       nuxt-content-twoslash:
         specifier: ^0.0.10
         version: 0.0.10(@nuxtjs/mdc@0.7.0(rollup@4.17.2))(rollup@4.17.2)
@@ -4664,8 +4664,8 @@ packages:
   lru-queue@0.1.0:
     resolution: {integrity: sha512-BpdYkt9EvGl8OfWHDQPISVpcl5xZthb+XPsbELj5AQXxIC8IriDZIQYjBJPEm5rS420sjZ0TLEzRcq5KdBhYrQ==}
 
-  lucide-vue-next@0.376.0:
-    resolution: {integrity: sha512-Bu9UMf+TqisJy0NMGRL0rSUM4bhtX0nQGVkpLjoyTpOLgpUfXqW1mMBGaWRW3y1vsuNBY6Y4h0slywfv/cYQ7Q==}
+  lucide-vue-next@0.378.0:
+    resolution: {integrity: sha512-tz2IUhdOf1q0x1mPOTZEJZYfXVLreQorO2ax4M+CxGOTgCNgXH3cljIWWfJ4jUvxn5rbkFlGPbl9EIfIelZBRA==}
     peerDependencies:
       vue: '>=3.0.1'
 
@@ -12701,7 +12701,7 @@ snapshots:
     dependencies:
       es5-ext: 0.10.64
 
-  lucide-vue-next@0.376.0(vue@3.4.27(typescript@5.4.5)):
+  lucide-vue-next@0.378.0(vue@3.4.27(typescript@5.4.5)):
     dependencies:
       vue: 3.4.27(typescript@5.4.5)
 
