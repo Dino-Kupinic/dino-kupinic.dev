@@ -11,6 +11,6 @@ definePageMeta({
     <TheProjectsSection />
     <TheBlogSection />
     <TheAboutMeSection />
-    <TheWorkSection />
+    <TheWorkSection class="mb-16 sm:mb-24" />
   </GenericLayoutWrapper>
 </template>
