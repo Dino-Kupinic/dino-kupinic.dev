@@ -7,4 +7,5 @@ technologies:
   - "Java"
   - "JavaFX"
   - "Gson"
+date: 2022-12-19T00:00:00.000Z
 ---
