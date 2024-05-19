@@ -17,11 +17,9 @@ useSeoMeta({
           {{ $t("error.title") }}
         </SectionHeading>
       </div>
-      <ScrollArea
-        class="h-auto w-[400px] overflow-y-hidden rounded-md border p-4"
-      >
-        <pre>{{ error }}</pre>
-      </ScrollArea>
+      <div class="block h-auto w-[600px] rounded-md border p-4">
+        <pre class="w-full overflow-auto">{{ error }}</pre>
+      </div>
       <NuxtLink to="/">
         <Button class="w-full">{{ $t("error.home") }}</Button>
       </NuxtLink>
