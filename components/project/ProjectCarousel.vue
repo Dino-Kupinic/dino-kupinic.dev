@@ -9,7 +9,7 @@ const plugin = Autoplay({
 })
 
 const { data: projects } = await useAsyncData("projects", () =>
-  queryContent<ProjectContent>("/projects").find(),
+  queryContent<ProjectContent>("/projects").sort({ date: -1 }).limit(6).find(),
 )
 
 if (!projects.value) {
@@ -39,7 +39,7 @@ const viewport = useViewport()
           class="basis-1/2 pl-4 sm:pl-5 md:basis-1/3"
         >
           <div>
-            <ProjectItem :project="project" />
+            <ProjectItem :project />
           </div>
         </CarouselItem>
       </CarouselContent>
