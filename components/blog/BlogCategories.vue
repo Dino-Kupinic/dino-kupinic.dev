@@ -6,6 +6,11 @@ const { pending } = await useLazyFetch("/api/v1/categories", {
   onResponse({ response }) {
     categories.value = response._data
   },
+  onRequestError({ error }) {
+    throw createError({
+      statusMessage: error.message,
+    })
+  },
 })
 
 const viewport = useViewport()
