@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import type { ProjectContent } from "~/types/project"
+
 defineProps<{
-  title: string
-  description: string
+  project: ProjectContent
 }>()
 </script>
 
@@ -12,17 +13,19 @@ defineProps<{
     >
       <ProjectItemHeader>
         <Icon
-          name="i-simple-icons-nuxtdotjs"
-          class="h-10 w-10 text-foreground sm:h-16 sm:w-16"
+          v-for="icon in project.icons"
+          :key="icon"
+          :name="icon"
+          class="mx-2 h-8 w-8 text-foreground sm:h-12 sm:w-12"
         />
       </ProjectItemHeader>
     </CardHeader>
     <CardContent class="px-2 py-0 sm:px-3">
-      <ProjectItemTitle>{{ title }}</ProjectItemTitle>
+      <ProjectItemTitle>{{ project.title }}</ProjectItemTitle>
     </CardContent>
-    <CardFooter class="p-2 pt-1 sm:p-3 sm:pt-1.5">
+    <CardFooter class="p-2 pt-1 sm:p-3 sm:pt-0">
       <ProjectItemDescription>
-        {{ description }}
+        {{ project.description }}
       </ProjectItemDescription>
     </CardFooter>
   </Card>

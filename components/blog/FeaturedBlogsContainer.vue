@@ -9,7 +9,6 @@ if (!data.value) {
   throw createError({
     statusCode: 404,
     statusMessage: "No Blogs found",
-    fatal: true,
   })
 }
 
