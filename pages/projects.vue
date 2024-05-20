@@ -7,7 +7,7 @@ definePageMeta({
 })
 
 const { data: projects } = await useAsyncData("projects", () =>
-  queryContent<ProjectContent>("/projects").sort({ date: -1 }).find(),
+  queryContent<ProjectContent>("/project").sort({ date: -1 }).find(),
 )
 
 if (!projects.value) {

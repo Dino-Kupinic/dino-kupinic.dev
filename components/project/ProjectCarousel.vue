@@ -9,7 +9,7 @@ const plugin = Autoplay({
 })
 
 const { data: projects } = await useAsyncData("projects", () =>
-  queryContent<ProjectContent>("/projects").sort({ date: -1 }).limit(6).find(),
+  queryContent<ProjectContent>("/project").sort({ date: -1 }).limit(6).find(),
 )
 
 if (!projects.value) {
