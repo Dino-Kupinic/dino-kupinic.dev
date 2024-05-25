@@ -5,4 +5,5 @@ export interface ProjectContent extends ParsedContent {
   icons: string[]
   technologies: string[]
   date: Date
+  featured?: boolean
 }

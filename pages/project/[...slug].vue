@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import type { ProjectContent } from "~/types/project"
 
-const route = useRoute()
-
-const { data: project } = await useAsyncData(route.path, () =>
-  queryContent<ProjectContent>(route.path).findOne(),
-)
+const project = ref<ProjectContent | null>(null)
+const { fetchProject } = useProjects()
+project.value = (await fetchProject()).value
 
 if (!project.value) {
   throw createError({

@@ -6,4 +6,5 @@ icons:
 technologies:
   - "Vue.js"
 date: 2023-09-25T00:00:00.000Z
+featured: true
 ---

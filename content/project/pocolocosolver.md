@@ -10,6 +10,7 @@ technologies:
   - "Panda3D"
   - "NumPy"
 date: 2024-01-09T00:00:00.000Z
+featured: true
 ---
 
 The goal of this project is to create an automatic solver for

@@ -10,6 +10,7 @@ technologies:
   - "Tailwind CSS"
   - "PWA"
 date: 2023-12-05T00:00:00.000Z
+featured: true
 ---
 
 The goal of this project is to make it easier for teachers to plan lessons where multiple teachers are involved. The

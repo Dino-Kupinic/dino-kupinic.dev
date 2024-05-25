@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Autoplay from "embla-carousel-autoplay"
-import type { ProjectContent } from "~/types/project"
 
 const plugin = Autoplay({
   delay: 3000,
@@ -8,16 +7,9 @@ const plugin = Autoplay({
   stopOnInteraction: false,
 })
 
-const { data: projects } = await useAsyncData("projects", () =>
-  queryContent<ProjectContent>("/project").sort({ date: -1 }).limit(6).find(),
-)
+const { featuredProjects, fetchProjects } = useProjects()
+await fetchProjects()
 
-if (!projects.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: "No Projects found",
-  })
-}
 const viewport = useViewport()
 </script>
 
@@ -34,7 +26,7 @@ const viewport = useViewport()
     >
       <CarouselContent class="-ml-4 sm:-ml-5">
         <CarouselItem
-          v-for="project in projects"
+          v-for="project in featuredProjects"
           :key="project.title"
           class="basis-1/2 pl-4 sm:pl-5 md:basis-1/3"
         >

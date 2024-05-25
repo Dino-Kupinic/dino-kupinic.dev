@@ -1,16 +1,10 @@
 <script setup lang="ts">
-import type { Blog, BlogDisplay } from "~/types/blog"
+import type { BlogDisplay } from "~/types/blog"
 
-const { data } = await useAsyncData("blogs", () =>
-  queryContent("/blogs").find(),
-)
+const { blogs, fetchBlogs } = useBlog()
+await fetchBlogs()
 
-if (!data.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: "No Blogs found",
-  })
-}
+const copy = ref<BlogDisplay[]>(blogs.value)
 
 const classes: string[] = [
   "row-span-9",
@@ -20,30 +14,8 @@ const classes: string[] = [
   "row-span-4",
 ]
 
-const blogs = ref<BlogDisplay[]>([])
-for (const [index, blog] of data.value.entries()) {
-  const { data: db_blog, pending } = await useLazyFetch<Blog>(
-    `/api/v1${blog._path}`,
-  )
-  if (!pending && !db_blog.value) {
-    throw createError({
-      statusCode: 404,
-      statusMessage: "Blog not found",
-    })
-  }
-  blogs.value.push({
-    title: blog.title as string,
-    author: blog.authors,
-    date: new Date(blog.date),
-    likes: db_blog.value?.likes as number,
-    views: db_blog.value?.views as number,
-    path: blog._path as string,
-    image: {
-      dark: blog.image_dark,
-      light: blog.image_light,
-    },
-    class: classes[index],
-  })
+for (const [index, blog] of copy.value.entries()) {
+  blog.class = classes[index]
 }
 </script>
 

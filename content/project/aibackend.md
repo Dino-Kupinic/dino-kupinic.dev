@@ -11,4 +11,5 @@ technologies:
   - "FastAPI"
   - "llama3"
 date: 2024-05-22T00:00:00.000Z
+featured: true
 ---
