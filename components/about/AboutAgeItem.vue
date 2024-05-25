@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const birthday = +new Date(2006, 5, 25)
+const birthday = +new Date(2006, 4, 25)
 const age = ~~((Date.now() - birthday) / 31557600000)
 </script>
 
