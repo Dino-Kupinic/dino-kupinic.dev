@@ -5,10 +5,7 @@ const props = defineProps<{
   project: ProjectContent
 }>()
 
-const formattedDate = new Date(props.project.date).toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "long",
-})
+const formattedDate = formatDate(new Date(props.project.date))
 </script>
 
 <template>
