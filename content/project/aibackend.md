@@ -3,7 +3,7 @@ title: "AI Backend"
 description: "ai backend for your app powered by llama3"
 icons:
   - "i-simple-icons-python"
-  - "i-simple-icons-fastapi"
+  - "i-devicon-plain-fastapi"
   - "i-simple-icons-meta"
 technologies:
   - "Python"
@@ -12,4 +12,6 @@ technologies:
   - "llama3"
 date: 2024-05-22T00:00:00.000Z
 featured: true
+repository:
+  url: "https://github.com/Dino-Kupinic/ai-backend"
 ---

@@ -14,4 +14,6 @@ technologies:
   - "Docker"
 date: 2024-02-06T00:00:00.000Z
 featured: true
+repository:
+  url: "https://github.com/Dino-Kupinic/E-Reader"
 ---

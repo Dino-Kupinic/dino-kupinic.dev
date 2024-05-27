@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ProjectContent } from "~/types/project"
+import type { RepositoryResponse } from "~/types/github"
 
 const project = ref<ProjectContent | null>(null)
 const { fetchProject } = useProjects()
@@ -24,6 +25,19 @@ useSeoMeta({
 })
 
 const formattedDate = formatDate(new Date(project.value.date))
+const repository = ref<RepositoryResponse | null>(null)
+if (project.value?.repository) {
+  const { fetchRepository } = useGitHub()
+  const url = project.value?.repository?.url
+  try {
+    repository.value = await fetchRepository(
+      url.substring(url.lastIndexOf("/") + 1).toLowerCase(),
+    )
+  } catch (error) {
+    console.error(error)
+    repository.value = null
+  }
+}
 </script>
 
 <template>
@@ -54,7 +68,7 @@ const formattedDate = formatDate(new Date(project.value.date))
         </div>
         <GenericTitle>{{ project?.title }}</GenericTitle>
         <GenericSubtitle>{{ project?.description }}</GenericSubtitle>
-        <div class="mt-4 flex flex-wrap gap-1">
+        <div class="mt-4 flex flex-wrap gap-1 pr-4">
           <Badge
             v-for="technology in project?.technologies"
             :key="technology"
@@ -67,9 +81,9 @@ const formattedDate = formatDate(new Date(project.value.date))
       <div class="basis-2/5">
         <div class="h-full w-full space-y-1 rounded-lg bg-accent p-8">
           <p class="mb-2 font-semibold">Statistics</p>
-          <div class="dark:text-secondary">
+          <div>
             <Icon name="i-ph-calendar" class="mr-2" />
-            <span>Started {{ formattedDate }}</span>
+            <span class="dark:text-secondary">Started {{ formattedDate }}</span>
           </div>
           <div v-if="project?.deployed" class="flex items-center">
             <Icon name="i-heroicons-check-circle" class="mr-2 text-green-500" />
@@ -100,10 +114,11 @@ const formattedDate = formatDate(new Date(project.value.date))
               </NuxtLink>
             </span>
           </div>
+          <ProjectGithubStatistics v-if="repository" :repository="repository" />
         </div>
       </div>
     </div>
-    <main class="w-3/5">
+    <main class="sm:w-3/5">
       <ContentDoc>
         <template #empty>
           <div class="h-[400px]">

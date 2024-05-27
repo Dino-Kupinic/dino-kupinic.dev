@@ -10,4 +10,6 @@ technologies:
   - "HTML"
   - "CSS"
 date: 2023-02-19T00:00:00.000Z
+repository:
+  url: "https://github.com/Dino-Kupinic/Hangman"
 ---

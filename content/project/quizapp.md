@@ -8,4 +8,6 @@ technologies:
   - "JavaFX"
   - "Gson"
 date: 2023-06-05T00:00:00.000Z
+repository:
+  url: "https://github.com/Dino-Kupinic/QuizApp"
 ---

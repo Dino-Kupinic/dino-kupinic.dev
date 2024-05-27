@@ -11,6 +11,9 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  runtimeConfig: {
+    githubToken: "",
+  },
   experimental: {
     typedPages: true,
   },

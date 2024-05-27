@@ -11,7 +11,11 @@ technologies:
   - "NumPy"
 date: 2024-01-09T00:00:00.000Z
 featured: true
+repository:
+  url: "https://github.com/Dino-Kupinic/PocolocoSolver"
 ---
+
+## Description
 
 The goal of this project is to create an automatic solver for
 the [Pocoloco](https://rombol.de/en/products/poco-loco-yavuz-demirhan-turkei-2014-holzspiel-denkspiel-knobelspiel-geduldspiel-aus-holz)
@@ -28,3 +32,5 @@ library for matrix operations.
 For 3D visualization of the puzzle, the Panda3D library is used. The visualization is not necessary for the solver to
 work, but it is a nice addition. After the puzzle is solved, a json file is created that contains the necessary
 movements of each piece in order to solve the puzzle.
+
+## Case study
