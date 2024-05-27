@@ -2,6 +2,7 @@
 const route = useRoute()
 defineProps<{
   title: string
+  base: string
 }>()
 </script>
 
@@ -12,12 +13,9 @@ defineProps<{
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink as-child>
-              <NuxtLink to="/blog">
+              <NuxtLink :to="base">
                 <div class="flex items-center">
-                  <Icon name="i-ph-newspaper-fill" class="mr-1" />
-                  <span class="text-sm tracking-wide">
-                    {{ $t("blog.name") }}
-                  </span>
+                  <slot name="breadcrumb" />
                 </div>
               </NuxtLink>
             </BreadcrumbLink>

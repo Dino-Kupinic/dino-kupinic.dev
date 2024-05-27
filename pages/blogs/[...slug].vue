@@ -68,16 +68,28 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
 </script>
 
 <template>
-  <GenericLayoutWrapper>
-    <BlogHeader :title="blogContent?.title as string" class="mt-6">
+  <ContentLayoutWrapper>
+    <ContentHeader
+      :title="blogContent?.title as string"
+      base="/blogs"
+      class="pt-6"
+    >
+      <template #breadcrumb>
+        <Icon name="i-ph-newspaper-fill" class="mr-1" />
+        <span class="text-sm tracking-wide">
+          {{ $t("blog.name") }}
+        </span>
+      </template>
       <div class="my-4 flex items-center gap-3">
         <CategoryDisplay text="Programming" to="/blog/category/programming" />
         <BlogDate :date />
       </div>
-      <BlogTitle class="max-w-[760px]">{{ blogContent?.title }}</BlogTitle>
-      <BlogSubtitle class="max-w-[600px]">
+      <GenericTitle class="max-w-[760px]">
+        {{ blogContent?.title }}
+      </GenericTitle>
+      <GenericSubtitle class="max-w-[600px]">
         {{ blogContent?.description }}
-      </BlogSubtitle>
+      </GenericSubtitle>
       <BlogAuthorContainer>
         <BlogAuthor
           v-for="author in blogContent?.authors"
@@ -87,7 +99,7 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
           <BlogAuthorName :name="author.name" :handle="author.handle" />
         </BlogAuthor>
       </BlogAuthorContainer>
-    </BlogHeader>
+    </ContentHeader>
     <BlogContent>
       <template #main>
         <ContentDoc />
@@ -139,5 +151,5 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
       </div>
     </BlogFooter>
     <BlogCommentSection />
-  </GenericLayoutWrapper>
+  </ContentLayoutWrapper>
 </template>

@@ -48,8 +48,13 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
   ],
   typescript: {
-    typeCheck: true,
+    typeCheck: "build",
     strict: true,
+    tsConfig: {
+      compilerOptions: {
+        baseUrl: ".",
+      },
+    },
   },
   eslint: {},
   imports: {

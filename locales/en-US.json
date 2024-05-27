@@ -84,6 +84,9 @@
     "latest": "Latest",
     "loadMore": "Load more"
   },
+  "project": {
+    "name": "Projects"
+  },
   "comments": {
     "title": "Comments",
     "write": "Write",
