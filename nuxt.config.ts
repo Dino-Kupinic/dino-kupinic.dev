@@ -51,7 +51,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
   ],
   typescript: {
-    typeCheck: "build",
+    typeCheck: true,
     strict: true,
     tsConfig: {
       compilerOptions: {
