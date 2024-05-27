@@ -6,4 +6,12 @@ export interface ProjectContent extends ParsedContent {
   technologies: string[]
   date: Date
   featured?: boolean
+  deployed?: {
+    vendor: string
+    url: string
+    icon: string
+  }
+  repository?: {
+    url: string
+  }
 }

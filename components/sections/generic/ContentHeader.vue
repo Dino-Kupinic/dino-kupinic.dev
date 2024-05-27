@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="h-auto w-full pb-6">
+  <div class="h-auto w-full pb-2 sm:pb-6">
     <div class="mb-8 w-full sm:mb-12">
       <Breadcrumb>
         <BreadcrumbList>
