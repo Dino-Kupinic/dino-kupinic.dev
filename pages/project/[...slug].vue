@@ -45,7 +45,7 @@ if (project.value?.repository) {
     <ContentHeader
       :title="project?.title as string"
       class="pt-6"
-      base="/projects"
+      :base="$t('project.name')"
     >
       <template #breadcrumb>
         <Icon name="i-ph-cube-focus" class="mr-1" />
@@ -68,28 +68,25 @@ if (project.value?.repository) {
         </div>
         <GenericTitle>{{ project?.title }}</GenericTitle>
         <GenericSubtitle>{{ project?.description }}</GenericSubtitle>
-        <div class="mt-4 flex flex-wrap gap-1 pr-4">
-          <Badge
-            v-for="technology in project?.technologies"
-            :key="technology"
-            variant="outline"
-          >
-            {{ technology }}
-          </Badge>
-        </div>
+        <ProjectTechnologies
+          v-if="project?.technologies"
+          :technologies="project?.technologies"
+        />
       </div>
       <div class="basis-2/5">
         <div class="h-full w-full space-y-1 rounded-lg bg-accent p-8">
-          <p class="mb-2 font-semibold">Statistics</p>
+          <p class="mb-2 font-semibold">{{ $t("project.statistics") }}</p>
           <div>
             <Icon name="i-ph-calendar" class="mr-2" />
-            <span class="dark:text-secondary">Started {{ formattedDate }}</span>
+            <span class="dark:text-secondary">
+              {{ $t("project.started") }} {{ formattedDate }}
+            </span>
           </div>
           <div v-if="project?.deployed" class="flex items-center">
             <Icon name="i-heroicons-check-circle" class="mr-2 text-green-500" />
             <span class="dark:text-secondary">
               <NuxtLink :to="project.deployed.url" class="hover:text-blue-500">
-                <span>Deployed on</span>
+                <span>{{ $t("project.deployedOn") }}</span>
                 <Icon :name="project?.deployed?.icon" class="mx-1 mb-0.5" />
                 <span>{{ project?.deployed?.vendor }}</span>
                 <Icon
@@ -106,7 +103,7 @@ if (project.value?.repository) {
                 :to="project.repository.url"
                 class="hover:text-blue-500"
               >
-                <span>Repository on Github</span>
+                <span>{{ $t("project.repoOnGithub") }}</span>
                 <Icon
                   name="i-solar-arrow-right-up-linear"
                   class="mb-0.5 ml-1"
@@ -122,7 +119,7 @@ if (project.value?.repository) {
       <ContentDoc>
         <template #empty>
           <div class="h-[400px]">
-            <h1>No further description provided.</h1>
+            <h1>{{ $t("project.noDescription") }}</h1>
           </div>
         </template>
       </ContentDoc>

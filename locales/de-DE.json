@@ -85,7 +85,18 @@
     "loadMore": "Mehr laden"
   },
   "project": {
-    "name": "Projekte"
+    "name": "Projekte",
+    "noDescription": "No further description provided.",
+    "repoOnGithub": "Repository auf Github",
+    "deployedOn": "Deployed auf",
+    "started": "Angefangen",
+    "statistics": "Statistiken",
+    "breadcrumb:": "/projekte"
+  },
+  "github": {
+    "stars": "Sterne",
+    "forks": "Forks",
+    "issues": "Issues"
   },
   "comments": {
     "title": "Kommentare",
