@@ -8,7 +8,7 @@ definePageMeta({
 <template>
   <GenericLayoutWrapper>
     <TheHeroSection />
-    <!--    <TheProjectsSection />-->
+    <TheProjectsSection />
     <!--    <TheBlogSection />-->
     <TheAboutMeSection />
     <TheWorkSection class="mb-16 sm:mb-24" />

@@ -41,5 +41,3 @@ Furthermore, managing accounts inside the app and outside is extra work and over
 
 Though, the rights protection (via middleware) to resources is managed by LDAP roles and groups.
 In order for that to work, minor one-time changes have to be made to the LDAP server.
-
-## Case study of converting a Excel file to a whole Full-Stack App
