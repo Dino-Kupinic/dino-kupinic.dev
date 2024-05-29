@@ -7,7 +7,9 @@ const plugin = Autoplay({
   stopOnInteraction: false,
 })
 
-const projects = ref(8)
+const { featuredProjects, fetchProjects } = useProjects()
+await fetchProjects()
+
 const viewport = useViewport()
 </script>
 
@@ -24,15 +26,12 @@ const viewport = useViewport()
     >
       <CarouselContent class="-ml-4 sm:-ml-5">
         <CarouselItem
-          v-for="project in projects"
-          :key="project"
+          v-for="project in featuredProjects"
+          :key="project.title"
           class="basis-1/2 pl-4 sm:pl-5 md:basis-1/3"
         >
           <div>
-            <ProjectItem
-              title="Schulbuchaktion"
-              description="versatile integration for the untis education platform"
-            />
+            <ProjectItem :project />
           </div>
         </CarouselItem>
       </CarouselContent>

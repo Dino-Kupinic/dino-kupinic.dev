@@ -11,6 +11,9 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  runtimeConfig: {
+    githubToken: "",
+  },
   experimental: {
     typedPages: true,
   },
@@ -31,6 +34,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/device",
     "@nuxtjs/kinde",
+    "nuxt-clarity-analytics",
     "nuxt-content-twoslash", // this needs to be before `@nuxt/content`
     "@nuxt/content",
     "@nuxt/image",
@@ -49,6 +53,11 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
     strict: true,
+    tsConfig: {
+      compilerOptions: {
+        baseUrl: ".",
+      },
+    },
   },
   eslint: {},
   imports: {
