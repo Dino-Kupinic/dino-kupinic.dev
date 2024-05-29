@@ -36,7 +36,8 @@
     "madeWith": "Gemacht mit",
     "openForWork": "Offen für Arbeit",
     "localTime": "Lokale Zeit",
-    "mail": "Schreibe eine E-Mail"
+    "mail": "Schreibe eine E-Mail",
+    "response": "Ich werde so schnell wie möglich antworten"
   },
   "newsletter": {
     "title": "Newsletter",
@@ -86,12 +87,12 @@
   },
   "project": {
     "name": "Projekte",
-    "noDescription": "No further description provided.",
+    "noDescription": "Keine weitere Beschreibung vorhanden.",
     "repoOnGithub": "Repository auf Github",
     "deployedOn": "Deployed auf",
     "started": "Angefangen",
     "statistics": "Statistiken",
-    "breadcrumb:": "/projekte"
+    "breadcrumb": "Projekte"
   },
   "github": {
     "stars": "Sterne",

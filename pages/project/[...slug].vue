@@ -42,15 +42,11 @@ if (project.value?.repository) {
 
 <template>
   <ContentLayoutWrapper>
-    <ContentHeader
-      :title="project?.title as string"
-      class="pt-6"
-      :base="$t('project.name')"
-    >
+    <ContentHeader :title="project?.title as string" class="pt-6">
       <template #breadcrumb>
         <Icon name="i-ph-cube-focus" class="mr-1" />
         <span class="text-sm tracking-wide">
-          {{ $t("project.name") }}
+          {{ $t("project.breadcrumb") }}
         </span>
       </template>
     </ContentHeader>
@@ -115,11 +111,13 @@ if (project.value?.repository) {
         </div>
       </div>
     </div>
-    <main class="sm:w-3/5">
+    <main class="mb-16 sm:w-3/5">
       <ContentDoc>
         <template #empty>
           <div class="h-[400px]">
-            <h1>{{ $t("project.noDescription") }}</h1>
+            <ClientOnly>
+              <h1>{{ $t("project.noDescription") }}</h1>
+            </ClientOnly>
           </div>
         </template>
       </ContentDoc>

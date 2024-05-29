@@ -24,7 +24,9 @@ if (!projects.value) {
       title="Projects"
       subtitle="Showcase of all of my projects"
     />
-    <main class="mb-32 mt-3 grid h-auto grid-cols-2 gap-5 sm:grid-cols-3">
+    <main
+      class="mb-32 mt-3 grid h-auto grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5"
+    >
       <ProjectItem v-for="project in projects" :key="project.title" :project />
       <div
         class="flex h-full w-full items-center justify-center rounded-lg bg-accent"

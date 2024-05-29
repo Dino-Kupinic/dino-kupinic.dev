@@ -2,7 +2,6 @@
 const route = useRoute()
 defineProps<{
   title: string
-  base: string
 }>()
 </script>
 
@@ -13,7 +12,7 @@ defineProps<{
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink as-child>
-              <NuxtLink :to="base">
+              <NuxtLink to="/projects">
                 <div class="flex items-center">
                   <slot name="breadcrumb" />
                 </div>

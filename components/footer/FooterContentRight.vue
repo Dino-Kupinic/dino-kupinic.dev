@@ -47,7 +47,7 @@ onMounted(() => {
           {{ $t("footer.getInTouch") }}
         </p>
         <p class="dark:text-secondary">
-          I will try to respond as soon as possible
+          {{ $t("footer.response") }}
         </p>
       </div>
       <div>

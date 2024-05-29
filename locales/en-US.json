@@ -36,7 +36,8 @@
     "rights": "All rights reserved",
     "madeWith": "Made with",
     "openForWork": "Open for work",
-    "localTime": "Local time"
+    "localTime": "Local time",
+    "response": "I will try to respond as soon as possible"
   },
   "newsletter": {
     "title": "Newsletter",
@@ -86,12 +87,12 @@
   },
   "project": {
     "name": "Projects",
-    "noDescription": "Keine weitere Beschreibung vorhanden.",
+    "noDescription": "No further description provided.",
     "repoOnGithub": "Repository on Github",
     "deployedOn": "Deployed on",
     "started": "Started",
     "statistics": "Statistics",
-    "breadcrumb:": "/projects"
+    "breadcrumb": "Projects"
   },
   "github": {
     "stars": "Stars",

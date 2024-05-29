@@ -32,5 +32,3 @@ library for matrix operations.
 For 3D visualization of the puzzle, the Panda3D library is used. The visualization is not necessary for the solver to
 work, but it is a nice addition. After the puzzle is solved, a json file is created that contains the necessary
 movements of each piece in order to solve the puzzle.
-
-## Case study
