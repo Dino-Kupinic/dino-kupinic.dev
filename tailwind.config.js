@@ -40,6 +40,7 @@ export const theme = {
       input: "hsl(var(--input))",
       ring: "hsl(var(--ring))",
       background: "hsl(var(--background))",
+      "main-background": "hsl(var(--main-background))",
       foreground: "hsl(var(--foreground))",
       primary: {
         DEFAULT: "hsl(var(--primary))",

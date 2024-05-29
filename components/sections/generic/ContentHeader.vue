@@ -6,18 +6,15 @@ defineProps<{
 </script>
 
 <template>
-  <div class="h-auto w-full pb-6">
+  <div class="h-auto w-full pb-2 sm:pb-6">
     <div class="mb-8 w-full sm:mb-12">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink as-child>
-              <NuxtLink to="/blog">
+              <NuxtLink to="/projects">
                 <div class="flex items-center">
-                  <Icon name="i-ph-newspaper-fill" class="mr-1" />
-                  <span class="text-sm tracking-wide">
-                    {{ $t("blog.name") }}
-                  </span>
+                  <slot name="breadcrumb" />
                 </div>
               </NuxtLink>
             </BreadcrumbLink>

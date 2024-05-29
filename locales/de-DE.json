@@ -35,7 +35,9 @@
     "rights": "Alle Rechte vorbehalten",
     "madeWith": "Gemacht mit",
     "openForWork": "Offen für Arbeit",
-    "localTime": "Lokale Zeit"
+    "localTime": "Lokale Zeit",
+    "mail": "Schreibe eine E-Mail",
+    "response": "Ich werde so schnell wie möglich antworten"
   },
   "newsletter": {
     "title": "Newsletter",
@@ -51,7 +53,8 @@
     "allProjects": "Alle Projekte",
     "blog": "Vorgestellte Blogs",
     "readMore": "Mehr Lesen",
-    "aboutMe": "Über mich"
+    "aboutMe": "Über mich",
+    "work": "Arbeite mit mir"
   },
   "about": {
     "country": "Österreich",
@@ -81,6 +84,20 @@
     "related": "Ähnliches",
     "latest": "Aktuelles",
     "loadMore": "Mehr laden"
+  },
+  "project": {
+    "name": "Projekte",
+    "noDescription": "Keine weitere Beschreibung vorhanden.",
+    "repoOnGithub": "Repository auf Github",
+    "deployedOn": "Deployed auf",
+    "started": "Angefangen",
+    "statistics": "Statistiken",
+    "breadcrumb": "Projekte"
+  },
+  "github": {
+    "stars": "Sterne",
+    "forks": "Forks",
+    "issues": "Issues"
   },
   "comments": {
     "title": "Kommentare",

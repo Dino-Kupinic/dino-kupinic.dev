@@ -11,6 +11,9 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  runtimeConfig: {
+    githubToken: "",
+  },
   experimental: {
     typedPages: true,
   },
@@ -50,6 +53,11 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
     strict: true,
+    tsConfig: {
+      compilerOptions: {
+        baseUrl: ".",
+      },
+    },
   },
   eslint: {},
   imports: {
