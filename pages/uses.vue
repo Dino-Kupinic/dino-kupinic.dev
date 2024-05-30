@@ -1,5 +1,10 @@
 <script setup lang="ts"></script>
 
-<template></template>
-
-<style scoped></style>
+<template>
+  <ContentLayoutWrapper>
+    <GenericPageHeader
+      :title="$t('uses.title')"
+      :subtitle="$t('uses.subtitle')"
+    />
+  </ContentLayoutWrapper>
+</template>

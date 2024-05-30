@@ -57,6 +57,8 @@
     "work": "Work with me"
   },
   "about": {
+    "title": "About me",
+    "subtitle": "Software Engineer, Open Source Contributor, Blogger",
     "country": "Austria",
     "age": "Age",
     "socials": "Socials",
@@ -86,13 +88,15 @@
     "loadMore": "Load more"
   },
   "project": {
-    "name": "Projects",
+    "title": "Projects",
+    "subtitle": "Showcase of all of my projects",
     "noDescription": "No further description provided.",
     "repoOnGithub": "Repository on Github",
     "deployedOn": "Deployed on",
     "started": "Started",
     "statistics": "Statistics",
-    "breadcrumb": "Projects"
+    "breadcrumb": "Projects",
+    "moreSoon": "More soon"
   },
   "github": {
     "stars": "Stars",
@@ -105,5 +109,9 @@
     "preview": "Preview",
     "placeholder": "Write your comment here. Be kind.",
     "submit": "Comment"
+  },
+  "uses": {
+    "title": "Uses",
+    "subtitle": "Devices, tools, technologies and services I use on a daily basis"
   }
 }

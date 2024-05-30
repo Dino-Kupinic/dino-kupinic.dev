@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import type { ProjectContent } from "~/types/project"
+const { t } = useI18n()
 
 definePageMeta({
-  title: "Projects",
+  title: () => t("project.title"),
   layout: "default",
 })
 
-const { data: projects } = await useAsyncData("projects", () =>
-  queryContent<ProjectContent>("/project").sort({ date: -1 }).find(),
-)
+const { projects, fetchProjects } = useProjects()
+await fetchProjects()
 
 if (!projects.value) {
   throw createError({
@@ -21,8 +20,8 @@ if (!projects.value) {
 <template>
   <GenericLayoutWrapper>
     <GenericPageHeader
-      title="Projects"
-      subtitle="Showcase of all of my projects"
+      :title="$t('project.title')"
+      :subtitle="$t('project.subtitle')"
     />
     <main
       class="mb-32 mt-3 grid h-auto grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5"
@@ -31,9 +30,9 @@ if (!projects.value) {
       <div
         class="flex h-full w-full items-center justify-center rounded-lg bg-accent"
       >
-        <span class="font-heading text-2xl font-semibold tracking-wide"
-          >More soon</span
-        >
+        <span class="font-heading text-2xl font-semibold tracking-wide">
+          {{ $t("project.moreSoon") }}
+        </span>
       </div>
     </main>
   </GenericLayoutWrapper>
