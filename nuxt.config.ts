@@ -102,6 +102,7 @@ export default defineNuxtConfig({
           "https://avatars.githubusercontent.com",
         ],
       },
+      xFrameOptions: false,
     },
   },
   css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
