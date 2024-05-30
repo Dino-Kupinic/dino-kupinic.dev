@@ -90,11 +90,11 @@ export default defineNuxtConfig({
     fallback: "dark",
   },
   security: {
-    // TODO: fix github icons not loading in prod
     headers: {
       crossOriginEmbedderPolicy:
         process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
       contentSecurityPolicy: {
+        "frame-ancestors": false,
         "img-src": [
           "'self'",
           "data:",
