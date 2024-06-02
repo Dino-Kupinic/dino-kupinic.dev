@@ -40,7 +40,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex h-auto flex-col space-y-3">
+  <div class="flex h-auto space-x-3 sm:flex-col sm:space-x-0 sm:space-y-3">
     <div class="flex w-full flex-col space-y-3 rounded-lg border p-3 sm:w-64">
       <div>
         <p class="font-semibold">
@@ -57,33 +57,37 @@ onMounted(() => {
         </Button>
       </div>
     </div>
-    <div class="flex w-full flex-col space-y-3 rounded-lg border p-3 sm:w-64">
-      <div>
-        <p class="font-semibold">{{ $t("footer.localTime") }}</p>
-        <ClientOnly>
-          <div class="h-auto w-full truncate dark:text-secondary">
-            {{ localtime.time }}, {{ localtime.offset }}
-          </div>
-          <template #fallback>
-            <Skeleton class="h-6 w-full" />
-          </template>
-        </ClientOnly>
+    <div class="flex flex-col justify-between sm:gap-3">
+      <div
+        class="flex w-full flex-col space-y-3 rounded-lg border p-3 pb-5 pt-6 sm:w-64 sm:py-3"
+      >
+        <div>
+          <p class="font-semibold">{{ $t("footer.localTime") }}</p>
+          <ClientOnly>
+            <div class="h-auto w-full truncate dark:text-secondary">
+              {{ localtime.time }}, {{ localtime.offset }}
+            </div>
+            <template #fallback>
+              <Skeleton class="h-6 w-full" />
+            </template>
+          </ClientOnly>
+        </div>
       </div>
-    </div>
-    <div
-      class="flex w-full flex-col space-y-3 rounded-lg border px-4 py-2 sm:w-64"
-    >
-      <div>
-        <div class="flex h-auto w-full items-center gap-2">
-          <span class="relative flex h-3 w-3">
-            <span
-              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"
-            ></span>
-            <span
-              class="relative inline-flex h-3 w-3 rounded-full bg-green-500"
-            ></span>
-          </span>
-          <span> {{ $t("footer.openForWork") }} </span>
+      <div
+        class="flex w-full flex-col space-y-3 rounded-lg border px-4 py-2 sm:w-64"
+      >
+        <div>
+          <div class="flex h-auto w-full items-center gap-2">
+            <span class="relative flex h-3 w-3">
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex h-3 w-3 rounded-full bg-green-500"
+              ></span>
+            </span>
+            <span> {{ $t("footer.openForWork") }} </span>
+          </div>
         </div>
       </div>
     </div>
