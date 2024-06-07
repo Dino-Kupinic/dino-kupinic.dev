@@ -57,8 +57,8 @@ dependencies:
     specifier: ^0.2.3
     version: 0.2.3(eslint@8.57.0)
   lucide-vue-next:
-    specifier: ^0.380.0
-    version: 0.380.0(vue@3.4.27)
+    specifier: ^0.390.0
+    version: 0.390.0(vue@3.4.27)
   motion:
     specifier: ^10.17.0
     version: 10.17.0
@@ -9288,8 +9288,8 @@ packages:
       es5-ext: 0.10.64
     dev: true
 
-  /lucide-vue-next@0.380.0(vue@3.4.27):
-    resolution: {integrity: sha512-EalmFYPZMkJZqGuoWf7btuqj7xKXzm83X5zD+dDexf01WpT+rETB/UaOlYhgQD2bcnPIfGs+5LJvYl2KIGdsqw==}
+  /lucide-vue-next@0.390.0(vue@3.4.27):
+    resolution: {integrity: sha512-rP02sQ/8EA6DeONL5DinlXddYD+lCggC0m+bqQBkz6rhM7tkhRmnkY3QIfNkgeXpMfNgYpENUrByaVf7kV7sIQ==}
     peerDependencies:
       vue: '>=3.0.1'
     dependencies:
