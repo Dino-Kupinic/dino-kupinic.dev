@@ -69,8 +69,8 @@ dependencies:
     specifier: ^4.0.2
     version: 4.0.2
   radix-vue:
-    specifier: ^1.8.2
-    version: 1.8.2(vue@3.4.27)
+    specifier: ^1.8.4
+    version: 1.8.4(vue@3.4.27)
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -11860,8 +11860,8 @@ packages:
       inherits: 2.0.4
     dev: true
 
-  /radix-vue@1.8.2(vue@3.4.27):
-    resolution: {integrity: sha512-ey6jG1rPAD/521PsXGrNkjztvh7PRw6Wwbk7LsHjsKqRoy/S4k58ryzmQ0tmoNOiUALfX92+MOnd5F3ONmuZ/w==}
+  /radix-vue@1.8.4(vue@3.4.27):
+    resolution: {integrity: sha512-Pc8BKFQouARED1Lb7/s18Fxny3ZodET5fyXLorW5zf/BiUDQv9gk7NZEYv9sU3uldSvpO3JLLChd0q2repBdGw==}
     peerDependencies:
       vue: '>= 3.2.0'
     dependencies:
@@ -13787,7 +13787,7 @@ packages:
     resolution: {integrity: sha512-E9e0qmHXScnYXDXYuBM0xFjW5DaRcUhj9fkFlv12omd7K/RzXpM+prU+EfHS3sjtDJuy1lBdOlPPYXJeQuT/Qw==}
     dependencies:
       '@vueuse/core': 10.10.0(vue@3.4.27)
-      radix-vue: 1.8.2(vue@3.4.27)
+      radix-vue: 1.8.4(vue@3.4.27)
       vue: 3.4.27(typescript@5.4.5)
     transitivePeerDependencies:
       - '@vue/composition-api'

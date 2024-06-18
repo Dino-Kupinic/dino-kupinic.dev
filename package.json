@@ -41,7 +41,7 @@
     "motion": "^10.17.0",
     "nuxt-content-twoslash": "^0.0.10",
     "octokit": "^4.0.2",
-    "radix-vue": "^1.8.2",
+    "radix-vue": "^1.8.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "unhead": "^1.9.11",
