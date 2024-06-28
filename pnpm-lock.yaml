@@ -81,8 +81,8 @@ dependencies:
     specifier: ^1.9.14
     version: 1.9.14
   vaul-vue:
-    specifier: ^0.1.2
-    version: 0.1.2(typescript@5.4.5)
+    specifier: ^0.2.0
+    version: 0.2.0(radix-vue@1.8.4)(vue@3.4.27)
   vue:
     specifier: ^3.4.27
     version: 3.4.27(typescript@5.4.5)
@@ -14741,15 +14741,17 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vaul-vue@0.1.2(typescript@5.4.5):
-    resolution: {integrity: sha512-E9e0qmHXScnYXDXYuBM0xFjW5DaRcUhj9fkFlv12omd7K/RzXpM+prU+EfHS3sjtDJuy1lBdOlPPYXJeQuT/Qw==}
+  /vaul-vue@0.2.0(radix-vue@1.8.4)(vue@3.4.27):
+    resolution: {integrity: sha512-YV0zqxc8NiVzr1z/Awwbaty0UDDchxj5BfhFbLiYu+Uz0rCfSaDK2zwmuXZvejBJKLGbWw9I5GLHJRse14lQew==}
+    peerDependencies:
+      radix-vue: ^1.4.0
+      vue: ^3.3.0
     dependencies:
       '@vueuse/core': 10.10.0(vue@3.4.27)
       radix-vue: 1.8.5(vue@3.4.27)
       vue: 3.4.27(typescript@5.4.5)
     transitivePeerDependencies:
       - '@vue/composition-api'
-      - typescript
     dev: false
 
   /vfile-location@5.0.2:
