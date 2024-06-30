@@ -51,10 +51,12 @@ onMounted(() => {
         </p>
       </div>
       <div>
-        <Button variant="gradient" class="w-full">
-          <Icon name="i-heroicons-envelope-16-solid" class="mr-2" />
-          <p>{{ $t("footer.mail") }}</p>
-        </Button>
+        <NuxtLink to="mailto:dinokupinic2006@gmail.com">
+          <Button variant="gradient" class="w-full">
+            <Icon name="i-heroicons-envelope-16-solid" class="mr-2" />
+            <p>{{ $t("footer.mail") }}</p>
+          </Button>
+        </NuxtLink>
       </div>
     </div>
     <div class="flex flex-col justify-between sm:gap-3">

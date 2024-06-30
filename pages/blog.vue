@@ -7,7 +7,7 @@ definePageMeta({
 
 <template>
   <GenericLayoutWrapper>
-    <TheBlogPageHeaderSection />
+    <!--    <TheBlogPageHeaderSection />-->
     <TheBlogPageMainSection />
   </GenericLayoutWrapper>
 </template>
