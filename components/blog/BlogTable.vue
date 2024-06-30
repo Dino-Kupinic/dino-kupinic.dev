@@ -15,12 +15,11 @@ async function getCategory(id: number) {}
             <NuxtLink :to="article._path">
               <div class="flex max-h-28 w-full flex-col space-y-4">
                 <div>
-                  <div class="mb-1 flex">
-                    <CategoryMiniDisplay>
-                      <!--                      {{ getCategory(1) }}-->
-                      Programming
-                    </CategoryMiniDisplay>
-                  </div>
+                  <!--                  <div class="mb-1 flex">-->
+                  <!--                    <CategoryMiniDisplay>-->
+                  <!--                      Programming-->
+                  <!--                    </CategoryMiniDisplay>-->
+                  <!--                  </div>-->
                   <BlogItemTitle class="line-clamp-1">
                     {{ article.title }}
                   </BlogItemTitle>
