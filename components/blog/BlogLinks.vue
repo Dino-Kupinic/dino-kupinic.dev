@@ -18,9 +18,9 @@ watch(
         link: "https://discord.gg/y3DeWTBEGR",
       },
       {
-        icon: "i-ph-shooting-star-fill",
-        text: t("blog.links.star"),
-        link: "https://github.com/Dino-Kupinic/dinokupinic",
+        icon: "i-simple-icons-x",
+        text: t("blog.links.follow"),
+        link: "https://x.com/DinoKupinic",
       },
       {
         icon: "i-ic-round-favorite",

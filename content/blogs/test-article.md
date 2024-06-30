@@ -7,18 +7,9 @@ authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
     handle: "@Dino-Kupinic"
-  - name: Jannick Angerer
-    avatar: https://github.com/Neuery17.png
-    handle: "@neuery-17"
-  - name: Michael Ploier
-    avatar: https://github.com/mploier.png
-    handle: "@SaurusRex"
-  - name: Daniel Samhaber
-    avatar: https://github.com/dsamhabe.png
-    handle: "@dsamhabe"
-related:
-  - path: "/blogs/another-article2"
-  - path: "/blogs/test-article"
+#related:
+#  - path: "/blogs/another-article2"
+#  - path: "/blogs/test-article"
 date: 2024-04-05T00:00:00.000Z
 ---
 

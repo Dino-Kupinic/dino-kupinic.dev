@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@formkit/auto-animate",
     "nuxt-csurf",
-    "nuxt-security",
+    // "nuxt-security",
     "nuxt-icon",
     "nuxt-viewport",
     "shadcn-nuxt",
@@ -89,21 +89,22 @@ export default defineNuxtConfig({
     preference: "system",
     fallback: "dark",
   },
-  security: {
-    // TODO: fix github icons not loading in prod
-    headers: {
-      crossOriginEmbedderPolicy:
-        process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
-      contentSecurityPolicy: {
-        "img-src": [
-          "'self'",
-          "data:",
-          "https://github.com",
-          "https://avatars.githubusercontent.com",
-        ],
-      },
-    },
-  },
+  // security: {
+  //   headers: {
+  //     crossOriginEmbedderPolicy:
+  //       process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
+  //     contentSecurityPolicy: {
+  //       "frame-ancestors": false,
+  //       "img-src": [
+  //         "'self'",
+  //         "data:",
+  //         "https://github.com",
+  //         "https://avatars.githubusercontent.com",
+  //       ],
+  //     },
+  //     xFrameOptions: false,
+  //   },
+  // },
   css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
   tailwindcss: {
     exposeConfig: true,
