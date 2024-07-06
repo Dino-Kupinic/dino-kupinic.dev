@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Blog, BlogContent } from "~/types/blog"
+import type { BlogContent } from "~/types/blog"
 
 const route = useRoute()
 const { data: blogContent } = await useAsyncData(route.path, () =>

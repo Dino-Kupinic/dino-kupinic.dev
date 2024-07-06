@@ -3,5 +3,4 @@ import { migrate } from "drizzle-orm/libsql/migrator"
   await migrate(database, {
     migrationsFolder: "./server/migrations",
   })
-  console.log("successfully migrated database")
 })()
