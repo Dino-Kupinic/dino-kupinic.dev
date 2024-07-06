@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ConfigProvider } from "radix-vue"
+
 useSeoMeta({
   ogTitle: "Discover Dino Kupinic's Portfolio",
   description: "Personal portfolio website.",
@@ -20,13 +22,15 @@ const setLocale = () => {
 onMounted(() => {
   setLocale()
 })
+
+const useIdFunction = () => useId()
 </script>
 
 <template>
-  <div>
+  <ConfigProvider :use-id="useIdFunction">
     <NuxtLayout>
       <NuxtPage />
       <Toaster />
     </NuxtLayout>
-  </div>
+  </ConfigProvider>
 </template>
