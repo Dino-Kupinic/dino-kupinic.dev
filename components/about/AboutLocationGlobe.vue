@@ -5,7 +5,7 @@ const el = ref()
 const phi = ref(0)
 
 onMounted(() => {
-  const globe = createGlobe(el.value, {
+  createGlobe(el.value, {
     devicePixelRatio: 2,
     width: 275 * 2,
     height: 275 * 2,
