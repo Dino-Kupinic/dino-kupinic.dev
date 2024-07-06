@@ -5,18 +5,22 @@ export default defineNuxtConfig({
     url: "https://www.dino-kupinic.dev",
     name: "Dino Kupinic",
   },
+
   devtools: {
     enabled: true,
     timeline: {
       enabled: true,
     },
   },
+
   runtimeConfig: {
     githubToken: "",
   },
+
   experimental: {
     typedPages: true,
   },
+
   nitro: {
     imports: {
       dirs: ["./server/db/**"],
@@ -26,6 +30,7 @@ export default defineNuxtConfig({
       tasks: true,
     },
   },
+
   modules: [
     "@nuxthq/studio",
     "@nuxtjs/tailwindcss",
@@ -50,6 +55,7 @@ export default defineNuxtConfig({
     "nuxt-viewport",
     "shadcn-nuxt",
   ],
+
   typescript: {
     typeCheck: true,
     strict: true,
@@ -59,16 +65,20 @@ export default defineNuxtConfig({
       },
     },
   },
+
   eslint: {},
+
   imports: {
     autoImport: true,
   },
+
   components: [
     {
       path: "~/components",
       pathPrefix: false,
     },
   ],
+
   content: {
     highlight: {
       theme: {
@@ -83,12 +93,15 @@ export default defineNuxtConfig({
       },
     },
   },
+
   twoslash: {},
+
   colorMode: {
     classSuffix: "",
     preference: "system",
     fallback: "dark",
   },
+
   // security: {
   //   headers: {
   //     crossOriginEmbedderPolicy:
@@ -106,9 +119,11 @@ export default defineNuxtConfig({
   //   },
   // },
   css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
+
   tailwindcss: {
     exposeConfig: true,
   },
+
   postcss: {
     plugins: {
       "postcss-import": {},
@@ -117,6 +132,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
   i18n: {
     locales: currentLocales,
     detectBrowserLanguage: false,
@@ -124,8 +140,11 @@ export default defineNuxtConfig({
     defaultLocale: "en-US",
     vueI18n: "~/config/i18n.config.ts",
   },
+
   shadcn: {
     prefix: "",
     componentDir: "./components/ui",
   },
+
+  compatibilityDate: "2024-07-07",
 })
