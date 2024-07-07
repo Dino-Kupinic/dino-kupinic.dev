@@ -1,4 +1,4 @@
-import type { ParsedContent } from "@nuxt/content/types"
+import type { ParsedContent } from "@nuxt/content"
 
 export interface ProjectContent extends ParsedContent {
   description: string

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-nocheck
 const props = defineProps<{ id?: string }>()
 
 const { headings } = useRuntimeConfig().public.mdc

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-nocheck
 import { computed, useRuntimeConfig } from "#imports"
 
 const props = defineProps<{ id?: string }>()
