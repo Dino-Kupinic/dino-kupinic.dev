@@ -1,6 +1,7 @@
 import { currentLocales } from "./config/i18n"
 
 export default defineNuxtConfig({
+  compatibilityDate: "2024-07-07",
   site: {
     url: "https://www.dino-kupinic.dev",
     name: "Dino Kupinic",
@@ -13,8 +14,23 @@ export default defineNuxtConfig({
     },
   },
 
+  $production: {
+    scripts: {
+      registry: {
+        clarity: true,
+      },
+    },
+  },
+
   runtimeConfig: {
     githubToken: "",
+    public: {
+      scripts: {
+        clarity: {
+          id: "",
+        },
+      },
+    },
   },
 
   experimental: {
@@ -32,24 +48,17 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    "@nuxthq/studio",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@nuxtjs/i18n",
     "@nuxtjs/seo",
     "@nuxtjs/device",
-    "@nuxtjs/kinde",
-    "nuxt-clarity-analytics",
-    "nuxt-content-twoslash", // this needs to be before `@nuxt/content`
     "@nuxt/content",
     "@nuxt/image",
     "@nuxt/eslint",
     "@nuxt/fonts",
-    "@pinia/nuxt",
-    "@pinia-plugin-persistedstate/nuxt",
+    "@nuxt/scripts",
     "@vueuse/nuxt",
-    "@formkit/auto-animate",
-    "nuxt-csurf",
     // "nuxt-security",
     "nuxt-icon",
     "nuxt-viewport",
@@ -94,30 +103,12 @@ export default defineNuxtConfig({
     },
   },
 
-  twoslash: {},
-
   colorMode: {
     classSuffix: "",
     preference: "system",
     fallback: "dark",
   },
 
-  // security: {
-  //   headers: {
-  //     crossOriginEmbedderPolicy:
-  //       process.env.NODE_ENV === "development" ? "unsafe-none" : "require-corp",
-  //     contentSecurityPolicy: {
-  //       "frame-ancestors": false,
-  //       "img-src": [
-  //         "'self'",
-  //         "data:",
-  //         "https://github.com",
-  //         "https://avatars.githubusercontent.com",
-  //       ],
-  //     },
-  //     xFrameOptions: false,
-  //   },
-  // },
   css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
 
   tailwindcss: {
@@ -145,6 +136,4 @@ export default defineNuxtConfig({
     prefix: "",
     componentDir: "./components/ui",
   },
-
-  compatibilityDate: "2024-07-07",
 })
