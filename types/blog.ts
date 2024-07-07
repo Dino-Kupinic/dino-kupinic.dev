@@ -1,5 +1,5 @@
 import type { z } from "zod"
-import type { ParsedContent } from "@nuxt/content/types"
+import type { ParsedContent } from "@nuxt/content"
 
 export type Blog = z.infer<typeof selectBlogSchema>
 
