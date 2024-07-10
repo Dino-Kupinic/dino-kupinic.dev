@@ -31,18 +31,6 @@ defineProps<{
             </NavigationMenuLink>
           </template>
         </NavItem>
-        <div class="flex items-center space-x-3">
-          <NavDivider class="mr-3" />
-          <ClientOnly>
-            <NavBarThemeToggle />
-            <NavCommand />
-            <template #fallback>
-              <Skeleton class="h-10 w-10" />
-              <Skeleton class="h-10 w-10" />
-            </template>
-          </ClientOnly>
-          <NavLanguageSelection />
-        </div>
       </NavigationMenuList>
     </NavigationMenu>
   </NavContainer>
