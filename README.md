@@ -1,75 +1,42 @@
-# Nuxt 3 Minimal Starter
+# Portfolio Blog Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a porfolio site template complete with a blog. Includes:
 
-## Setup
+- MDX and Markdown support
+- Optimized for SEO (sitemap, robots, JSON-LD schema)
+- RSS Feed
+- Dynamic OG images
+- Syntax highlighting
+- Tailwind v4
+- Vercel Speed Insights / Web Analytics
+- Geist font
 
-Make sure to install the dependencies:
+## Demo
 
-```bash
-# npm
-npm install
+https://portfolio-blog-starter.vercel.app
 
-# pnpm
-pnpm install
+## How to Use
 
-# yarn
-yarn install
+You can choose from one of the following two methods to use this repository:
 
-# bun
-bun install
-```
+### One-Click Deploy
 
-## Development Server
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-Start the development server on `http://localhost:3000`:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
 
-```bash
-# npm
-npm run dev
+### Clone and Deploy
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
 ```
 
-Locally preview production build:
+Then, run Next.js in development mode:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+pnpm dev
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
