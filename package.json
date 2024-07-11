@@ -38,7 +38,7 @@
     "lucide-vue-next": "^0.404.0",
     "motion": "^10.18.0",
     "octokit": "^4.0.2",
-    "radix-vue": "^1.8.5",
+    "radix-vue": "^1.9.1",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "unhead": "^1.9.14",
