@@ -1,4 +1,4 @@
-import { currentLocales } from "./config/i18n"
+import { currentLocales } from "./app/config/i18n"
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-07-07",
