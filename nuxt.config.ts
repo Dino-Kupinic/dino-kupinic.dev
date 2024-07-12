@@ -38,7 +38,10 @@ export default defineNuxtConfig({
       weights: [400],
       styles: ["normal", "italic"],
     },
-    families: [{ name: "Inter", provider: "google" }],
+    families: [
+      { name: "Inter", provider: "google" },
+      { name: "JetBrains Mono", provider: "google" },
+    ],
   },
 
   experimental: {
@@ -73,7 +76,7 @@ export default defineNuxtConfig({
   ],
 
   typescript: {
-    // typeCheck: true, TODO: Enable when fixed
+    typeCheck: true,
     strict: true,
     tsConfig: {
       compilerOptions: {

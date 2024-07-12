@@ -22,6 +22,7 @@ export const theme = {
       "serif",
     ],
     mono: [
+      "JetBrains Mono",
       "ui-monospace",
       "SFMono-Regular",
       "Menlo",

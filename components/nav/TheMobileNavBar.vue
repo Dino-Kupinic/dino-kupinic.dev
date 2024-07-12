@@ -43,7 +43,7 @@ const isOpen = ref<boolean>(false)
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <div class="flex w-full flex-col space-y-2">
-                <NavBarThemeSelection />
+                <ThemeSelection />
               </div>
             </DropdownMenuItem>
           </DropdownMenuContent>

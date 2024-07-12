@@ -4,7 +4,7 @@ description: Learn about the intuitive meta-framework for Vue.js
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
-    handle: '@Dino-Kupinic'
+    handle: "@Dino-Kupinic"
 date: 2024-06-30T00:00:00.000Z
 ---
 
@@ -22,7 +22,7 @@ Nuxt comes with everything included for building complex and enterprise-grade ap
 
 ### File-based Routing
 
-Instead of managing your routes in a seperate file, Nuxt builds your routes based on how they are structured in the `/pages` directory. This is quite convenient compared to  dealing with [Vue Router](https://router.vuejs.org/) manually.
+Instead of managing your routes in a seperate file, Nuxt builds your routes based on how they are structured in the `/pages` directory. This is quite convenient compared to dealing with [Vue Router](https://router.vuejs.org/) manually.
 
 You can also easily define [Layouts](https://nuxt.com/docs/getting-started/views#layouts) for your application. For example, you might have a layout where you do not have a footer or navigation bar.
 
@@ -64,9 +64,9 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
 ### Modules
 
-Nuxt modules extend the core functionality of your Nuxt application, allowing you to easily integrate third-party libraries. 
+Nuxt modules extend the core functionality of your Nuxt application, allowing you to easily integrate third-party libraries.
 
-Modules can simplify tasks such as handling authentication, or adding UI components. With a vast ecosystem of official and community modules, you can enhance your project without reinventing the wheel. 
+Modules can simplify tasks such as handling authentication, or adding UI components. With a vast ecosystem of official and community modules, you can enhance your project without reinventing the wheel.
 
 They are highly configurable, enabling you to tailor their behavior to fit your specific needs. Even better, most of them work without any configuration whatsoever.
 
@@ -86,7 +86,7 @@ Here is an example of data fetching in Nuxt:
 
 ```vue
 <script setup lang="ts">
-const { data: products } = await useFetch('/api/v1/products')
+const { data: products } = await useFetch("/api/v1/products")
 </script>
 
 <template>
@@ -98,10 +98,9 @@ const { data: products } = await useFetch('/api/v1/products')
 
 While this is great, this blocks navigation until the products have been fetched.
 
-
 ### Hot Reload
 
-Nuxt.js offers a hot reload feature like Vue.js. Whenever you make changes to your code, Nuxt will automatically apply those changes and reflect them in real-time without requiring a page refresh. 
+Nuxt.js offers a hot reload feature like Vue.js. Whenever you make changes to your code, Nuxt will automatically apply those changes and reflect them in real-time without requiring a page refresh.
 
 This greatly enhances the development experience by providing instant feedback and speeding up the development process.
 
@@ -110,7 +109,7 @@ This greatly enhances the development experience by providing instant feedback a
 Not every application is the same and Nuxt offers a few options to optimize for your project. Below is everything you can do with Nuxt.
 
 | Mode                                      | Explanation                                                                       | Usage                                                     |
-|-------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------------------------|
+| ----------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------- |
 | **SSR** (Server Side Rendering)           | HTML is rendered on the server and sent to the client                             | The preferred mode for most applications                  |
 | **SPA** (Single Page Application)         | JavaScript is rendered on the client, providing dynamic and fast navigation       | Preferable for Dashboards and highly interactive web apps |
 | **SSG** (Static Site Generation)          | HTML is generated at build time, creating static files                            | Ideal for static websites and blogs                       |
@@ -123,13 +122,13 @@ Each mode has their own advantages and disadvantages. If you feel like your proj
 
 Nuxt can be configured to render each route differently. No other framework gives you such granular control over how to render different parts of your application.
 
-```ts 
+```ts
 export default defineNuxtConfig({
   routeRules: {
-    '/home': { prerender: true }, // pre-render on build
-    '/blogs/**': { isr: true }, // generate on demand once until next deployment
-    '/admin/**': { ssr: false }, // render only on client-side
-  }
+    "/home": { prerender: true }, // pre-render on build
+    "/blogs/**": { isr: true }, // generate on demand once until next deployment
+    "/admin/**": { ssr: false }, // render only on client-side
+  },
 })
 ```
 
@@ -140,4 +139,3 @@ See the full example in the [Documentation](https://nuxt.com/docs/guide/concepts
 Since Nuxt is a full-stack framework (meaning we both have a "frontend" and "backend") it also needs a server.
 
 The "backend" of Nuxt is powered by the [Nitro](https://nitro.unjs.io/) server engine. Under the hood it uses [h3](https://h3.unjs.io/), a minimal Node.js framework.
-
