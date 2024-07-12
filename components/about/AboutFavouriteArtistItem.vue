@@ -25,8 +25,8 @@ const artists: Artist[] = [
     backgroundColor: "purple",
   },
   {
-    name: "No Doubt",
-    link: "https://www.youtube.com/@nodoubt",
+    name: "Earth Wind & Fire",
+    link: "https://www.youtube.com/@earthwindandfire/videos",
     backgroundColor: "blue",
   },
   {
@@ -40,18 +40,18 @@ const artists: Artist[] = [
     backgroundColor: "yellow",
   },
   {
-    name: "PitBull",
-    link: "https://www.youtube.com/@Pitbull/videos",
+    name: "Michael Jackson",
+    link: "https://www.youtube.com/@MichaelJackson/videos",
     backgroundColor: "green",
   },
   {
-    name: "Ava Max",
-    link: "https://www.youtube.com/@avamax/videos",
+    name: "Gotye",
+    link: "https://www.youtube.com/@gotye/videos",
     backgroundColor: "pink",
   },
   {
-    name: "Bonnie Tyler",
-    link: "https://www.youtube.com/@BonnieTylerOfficial/videos",
+    name: "Nirvana",
+    link: "https://www.youtube.com/@nirvana/videos",
     backgroundColor: "yellow",
   },
   {

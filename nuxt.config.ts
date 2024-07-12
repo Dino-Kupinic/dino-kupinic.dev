@@ -33,6 +33,17 @@ export default defineNuxtConfig({
     },
   },
 
+  fonts: {
+    defaults: {
+      weights: [400],
+      styles: ["normal", "italic"],
+    },
+    families: [
+      { name: "Inter", provider: "google" },
+      { name: "JetBrains Mono", provider: "google" },
+    ],
+  },
+
   experimental: {
     typedPages: true,
   },
@@ -59,7 +70,6 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/scripts",
     "@vueuse/nuxt",
-    // "nuxt-security",
     "nuxt-icon",
     "nuxt-viewport",
     "shadcn-nuxt",
@@ -109,7 +119,7 @@ export default defineNuxtConfig({
     fallback: "dark",
   },
 
-  css: ["~/assets/css/main.css", "~/assets/css/tailwind.css"],
+  css: ["~/assets/css/tailwind.css"],
 
   tailwindcss: {
     exposeConfig: true,

@@ -44,7 +44,7 @@ onMounted(() => {
 })
 
 watch(selected, () => {
-  colorMode.value = selected.value
+  colorMode.preference = colorMode.value = selected.value
   display.value = currentTheme.value.name
 })
 </script>
