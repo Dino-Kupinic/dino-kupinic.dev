@@ -1,6 +1,4 @@
-<script setup lang="ts">
-async function getCategory(id: number) {}
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <Table>

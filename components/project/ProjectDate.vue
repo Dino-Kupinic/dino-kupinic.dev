@@ -3,7 +3,10 @@ const props = defineProps<{
   date: string
 }>()
 
-const dateMonth = computed(() => props.date.split(" ")[0].toLowerCase())
+const dateMonth = computed(() => {
+  const dateParts = props.date.split(" ")
+  return dateParts[0]?.toLowerCase() || ""
+})
 
 const getColorClass = (background: boolean) => {
   switch (dateMonth.value) {

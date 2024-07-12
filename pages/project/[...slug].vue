@@ -4,7 +4,7 @@ import type { RepositoryResponse } from "~/types/github"
 
 const project = ref<ProjectContent | null>(null)
 const { fetchProject } = useProjects()
-project.value = (await fetchProject()).value
+project.value = (await fetchProject()).value ?? null
 
 if (!project.value) {
   throw createError({
