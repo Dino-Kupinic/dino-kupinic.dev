@@ -6,7 +6,6 @@ export default defineTask({
     description: "Run database migrations",
   },
   async run() {
-    console.log("Running db migration...")
     try {
       await migrate(database, {
         migrationsFolder: "./server/migrations",

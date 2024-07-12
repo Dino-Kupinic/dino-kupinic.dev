@@ -1,4 +1,4 @@
-import type { ProjectContent } from "~/types/project"
+import type { ProjectContent } from "../types/project"
 
 export const useProjects = () => {
   const route = useRoute()

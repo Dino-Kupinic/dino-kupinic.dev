@@ -2,9 +2,21 @@ import { currentLocales } from "./config/i18n"
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-07-07",
+
+  future: {
+    compatibilityVersion: 4,
+  },
+
   site: {
     url: "https://www.dino-kupinic.dev",
     name: "Dino Kupinic",
+  },
+
+  linkChecker: {
+    report: {
+      html: true,
+      markdown: true,
+    },
   },
 
   devtools: {

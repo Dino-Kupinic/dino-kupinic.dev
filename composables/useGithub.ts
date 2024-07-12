@@ -1,5 +1,5 @@
 import { Octokit } from "octokit"
-import type { RepositoryResponse } from "~/types/github"
+import type { RepositoryResponse } from "../types/github"
 
 export const useGitHub = () => {
   const config = useRuntimeConfig()
