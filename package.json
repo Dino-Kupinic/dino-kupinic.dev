@@ -61,7 +61,7 @@
     "@types/node": "^20.12.12",
     "@vueuse/nuxt": "^10.10.0",
     "autoprefixer": "^10.4.19",
-    "drizzle-kit": "^0.22.8",
+    "drizzle-kit": "^0.23.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-drizzle": "^0.2.3",
