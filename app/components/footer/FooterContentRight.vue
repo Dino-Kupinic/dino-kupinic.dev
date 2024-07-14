@@ -43,7 +43,7 @@ onMounted(() => {
   <div class="flex h-auto space-x-3 sm:flex-col sm:space-x-0 sm:space-y-3">
     <div class="flex w-full flex-col justify-between gap-3">
       <div
-        class="flex w-full flex-col space-y-3 rounded-lg border p-3 pb-5 pt-6 sm:w-64 sm:py-3"
+        class="flex w-full flex-col space-y-3 rounded-lg border bg-background p-3 pb-5 pt-6 sm:w-64 sm:py-3"
       >
         <div>
           <p class="font-semibold">{{ $t("footer.localTime") }}</p>
@@ -58,7 +58,7 @@ onMounted(() => {
         </div>
       </div>
       <div
-        class="flex w-full flex-col space-y-3 rounded-lg border px-4 py-2 sm:w-64"
+        class="flex w-full flex-col space-y-3 rounded-lg border bg-background px-4 py-2 sm:w-64"
       >
         <div>
           <div class="flex h-auto w-full items-center gap-3">

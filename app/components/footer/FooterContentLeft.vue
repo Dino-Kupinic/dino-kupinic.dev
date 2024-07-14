@@ -20,6 +20,7 @@ function subscribe() {
         v-model="email"
         :placeholder="$t('newsletter.form.email')"
         class="w-full"
+        disabled
       />
       <Button class="mt-2 w-full" variant="gradient" @click="subscribe">
         {{ $t("newsletter.form.submit") }}
