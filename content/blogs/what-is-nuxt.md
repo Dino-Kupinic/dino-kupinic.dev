@@ -5,7 +5,7 @@ authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
     handle: "@Dino-Kupinic"
-date: 2024-07-13T00:00:00.000Z
+date: 2024-06-30T00:00:00.000Z
 ---
 
 [Nuxt.js](https://nuxt.com) is an open-source framework for building **full-stack** web apps and websites using Vue.js.
