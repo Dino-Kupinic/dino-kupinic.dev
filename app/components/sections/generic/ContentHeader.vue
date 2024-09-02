@@ -1,8 +1,15 @@
 <script setup lang="ts">
 const route = useRoute()
-defineProps<{
+const props = defineProps<{
   title: string
 }>()
+
+const strippedTitle = computed(() => {
+  if (props.title.length <= 30) {
+    return props.title
+  }
+  return props.title.substring(0, 30).concat("...")
+})
 </script>
 
 <template>
@@ -12,7 +19,7 @@ defineProps<{
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink as-child>
-              <NuxtLink to="/projects">
+              <NuxtLink to="/blog">
                 <div class="flex items-center">
                   <slot name="breadcrumb" />
                 </div>
@@ -24,7 +31,7 @@ defineProps<{
             <BreadcrumbLink as-child>
               <NuxtLink :to="route.path">
                 <span class="text-sm tracking-wide">
-                  {{ title }}
+                  {{ strippedTitle }}
                 </span>
               </NuxtLink>
             </BreadcrumbLink>

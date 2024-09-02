@@ -15,7 +15,6 @@ if (!blogContent.value) {
 }
 
 const title = blogContent.value.title
-const description = blogContent.value?.description
 const image = blogContent.value?.imageDark
 const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
@@ -45,7 +44,6 @@ if (related) {
 
 useSeoMeta({
   title: title,
-  description: description,
   ogImage: image,
   ogTitle: title,
 })
@@ -69,11 +67,7 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
 
 <template>
   <ContentLayoutWrapper>
-    <ContentHeader
-      :title="blogContent?.title as string"
-      base="/blogs"
-      class="pt-6"
-    >
+    <ContentHeader :title="blogContent?.title as string" base="/blogs">
       <template #breadcrumb>
         <Icon name="i-ph-newspaper-fill" class="mr-1" />
         <span class="text-sm tracking-wide">
@@ -89,9 +83,6 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
       <GenericTitle class="max-w-[760px]">
         {{ blogContent?.title }}
       </GenericTitle>
-      <GenericSubtitle class="max-w-[600px]">
-        {{ blogContent?.description }}
-      </GenericSubtitle>
       <BlogAuthorContainer>
         <BlogAuthor
           v-for="author in blogContent?.authors"

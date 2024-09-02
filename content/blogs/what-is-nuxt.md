@@ -1,12 +1,21 @@
 ---
 title: What is Nuxt? A beginner-friendly overview
 description: Learn about the intuitive meta-framework for Vue.js
+date: 2024-06-30
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
     handle: "@Dino-Kupinic"
-date: 2024-06-30T00:00:00.000Z
+tags:
+  - Guide
+  - Web
+seo:
+  image:
+    src: "/nuxt.webp"
+    alt: official nuxt logo
 ---
+
+![nuxt](/images/blog/nuxt.webp)
 
 [Nuxt.js](https://nuxt.com) is an open-source framework for building **full-stack** web apps and websites using Vue.js.
 As a meta-framework, Nuxt builds upon Vue.js,
@@ -26,7 +35,6 @@ Personally, I've been using it for a couple of projects, and I've come to _love_
 ## Features
 
 Nuxt comes with everything included for building complex and enterprise-grade applications and websites.
-Below are the most important aspects.
 
 ### File-based Routing
 
@@ -39,14 +47,71 @@ For example, you might have a layout where you do not have a footer or navigatio
 
 ```
 pages/
- - products.vue
- - contact.vue
- - index.vue
+├── index.vue
+├── products.vue
+└── contact.vue
 ```
 
 Here we can see an example of the file-based routing.
 Nuxt will generate the following routes: `/products`, `/contact` and `/` (index).
-You can also define nested routes using directories.
+It's intuitive, clean, and saves you valuable development time.
+
+It's that simple. No additional configuration required.
+
+### Nested Routes and Dynamic Segments
+
+But wait, there's more!
+Nuxt's routing system is as flexible as it is powerful.
+Need nested routes?
+
+Create a directory structure like this:
+
+```
+pages/
+├── index.vue
+└── blog/
+    ├── index.vue
+    ├── [id].vue
+    └── category/
+        ├── index.vue
+        └── [...slug].vue
+```
+
+- `/` (home page)
+- `/blog` (blog index)
+- `/blog/:id` (individual blog post, where `:id` is dynamic)
+- `/blog/category` (blog category index)
+- `/blog/category/:slug*` (catch-all route for categories)
+
+The `[id].vue` file creates a dynamic segment, perfect for blog posts or something like product pages.
+The `[...slug].vue` file is a catch-all route, ideal for handling multiple parameters.
+
+### Layouts
+
+Nuxt doesn't stop at routing.
+It also provides a powerful layout system.
+Layouts allow you to define a common structure for your pages, keeping your code DRY (Don't Repeat Yourself).
+
+For instance, you might have:
+
+- A default layout with a header and footer
+- A minimal layout for your blog posts
+- A fullscreen layout for immersive pages
+
+To use a layout, just add a `layout` property to your page component:
+
+```vue
+<script setup lang="ts">
+definePageMeta({
+  layout: "blog",
+})
+</script>
+```
+
+This flexibility allows you
+to maintain a consistent look across your site while adapting to the needs of individual pages.
+
+If you only have a `default.vue` layout, you don't need to specify it in your pages.
 
 ### Auto-Imports
 
@@ -79,6 +144,8 @@ const double = computed(() => ref.value * 2)
 const { blogs } = useBlogs()
 </script>
 ```
+
+Whenever I go back to a Vue project without Nuxt (or most other frameworks), I miss this feature so much! 😭
 
 ### Middleware
 
@@ -161,6 +228,33 @@ const { data: products } = await useFetch("/api/v1/products")
 
 While this is great, this blocks navigation until the products have been fetched.
 
+```vue
+<script setup lang="ts">
+const {
+  data: products,
+  status,
+  error,
+  refresh,
+} = useLazyFetch("/api/v1/products")
+</script>
+
+<template>
+  <div>
+    <p v-if="status === 'pending'">Loading products...</p>
+    <p v-else-if="error">Error: {{ error.message }}</p>
+    <template v-else>
+      <p v-for="product in products" :key="product.id">
+        {{ product.name }}, {{ product.price }}$
+      </p>
+    </template>
+    <button @click="refresh">Refresh Products</button>
+  </div>
+</template>
+```
+
+This example uses `useLazyFetch` to fetch products lazily. This means that the page will render immediately, and the
+products will be fetched in the background. This pattern is useful for improving the user experience.
+
 ### Hot Reload
 
 Nuxt.js offers a hot reload feature like Vue.js. Whenever you make changes to your code, Nuxt will automatically apply
@@ -237,7 +331,8 @@ these modes, you will love the Hybrid Rendering feature.
 
 ### Hybrid Rendering
 
-Nuxt can be configured to render each route differently. This feature provides granular control over how to render different parts of your application.
+Nuxt can be configured to render each route differently. This feature provides granular control over how to render
+different parts of your application.
 
 ```ts
 export default defineNuxtConfig({
@@ -308,6 +403,7 @@ With Nuxt DevTools, you can:
 - View and modify state in real-time
 - Analyze network requests
 - Debug server-side rendered content
+- ...and much more!
 
 To use DevTools, run your Nuxt application in development mode, and they will be available in your browser.
 If you can't see them, make sure to enable them in the `nuxt.config.ts`:
@@ -320,23 +416,10 @@ export default defineNuxtConfig({
 })
 ```
 
-## Summary
+## Wrapping up
 
 Nuxt.js is a powerful and flexible meta-framework for Vue.js
 that streamlines the process of building modern web applications.
-
-Its key features include:
-
-1. **File-based Routing**: Simplifies route management.
-2. **Auto-Imports**: Reduces boilerplate code.
-3. **Server-Side Rendering (SSR)**: Improves SEO and initial load times.
-4. **Static Site Generation (SSG)**: Enables fast, pre-rendered static sites.
-5. **Hybrid Rendering**: Allows different rendering strategies for various routes.
-6. **Built-in State Management**: Simplifies data flow with `useState`.
-7. **Middleware**: Enables code execution before rendering.
-8. **Modules**: Extends functionality with easy integration of third-party libraries.
-9. **Nitro Server Engine**: Provides a powerful and flexible backend.
-10. **Enhanced Data Fetching**: Offers improved methods like `useFetch` and `useAsyncData`.
 
 Nuxt combines these features with an intuitive development experience,
 making it an excellent choice for projects of all sizes.
