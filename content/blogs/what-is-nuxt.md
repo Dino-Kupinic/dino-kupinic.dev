@@ -1,6 +1,5 @@
 ---
 title: What is Nuxt? A beginner-friendly overview
-description: Learn about the intuitive meta-framework for Vue.js
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
