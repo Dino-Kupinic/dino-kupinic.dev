@@ -56,7 +56,7 @@
     "@nuxtjs/color-mode": "^3.4.4",
     "@nuxtjs/device": "^3.2.2",
     "@nuxtjs/i18n": "^8.5.1",
-    "@nuxtjs/seo": "2.0.0-rc.12",
+    "@nuxtjs/seo": "2.0.0-rc.20",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@types/node": "^20.16.3",
     "@vueuse/nuxt": "^10.11.1",
