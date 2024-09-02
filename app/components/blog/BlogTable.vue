@@ -13,14 +13,20 @@
             <NuxtLink :to="article._path">
               <div class="flex max-h-28 w-full flex-col space-y-4">
                 <div>
-                  <!--                  <div class="mb-1 flex">-->
-                  <!--                    <CategoryMiniDisplay>-->
-                  <!--                      Programming-->
-                  <!--                    </CategoryMiniDisplay>-->
-                  <!--                  </div>-->
-                  <BlogItemTitle class="line-clamp-1">
-                    {{ article.title }}
-                  </BlogItemTitle>
+                  <div class="flex justify-between pb-1">
+                    <BlogItemTitle class="line-clamp-1">
+                      {{ article.title }}
+                    </BlogItemTitle>
+                    <div class="mb-1 flex space-x-1">
+                      <Badge
+                        v-for="tag in article.tags"
+                        :key="tag"
+                        variant="outline"
+                      >
+                        {{ tag }}
+                      </Badge>
+                    </div>
+                  </div>
                   <p class="text-md line-clamp-1 dark:text-secondary">
                     {{ article.description }}
                   </p>

@@ -1,4 +1,4 @@
-import type { Blog, BlogDisplay } from "../types/blog"
+import type { Blog, BlogDisplay } from "~/types/blog"
 
 export const useBlog = () => {
   const blogs = useState<BlogDisplay[]>("blogs", () => [])
