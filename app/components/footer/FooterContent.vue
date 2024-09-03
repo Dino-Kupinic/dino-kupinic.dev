@@ -7,7 +7,7 @@
     >
       <FooterContentLeft class="order-1 sm:order-1" />
       <FooterContentCenter class="order-3 pt-8 sm:order-2 sm:pt-0" />
-      <!--      <FooterContentRight class="order-2 sm:order-3" />-->
+      <FooterContentRight class="order-2 sm:order-3" />
     </div>
   </div>
 </template>
