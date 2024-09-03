@@ -10,7 +10,7 @@ tags:
   - Guide
 seo:
   image:
-    src: "/nitro.webp"
+    src: "/images/blog/nitro.webp"
     alt: Nitro server engine logo
 ---
 

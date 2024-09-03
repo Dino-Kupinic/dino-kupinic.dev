@@ -1,11 +1,20 @@
 ---
 title: "GitHub Actions: A Beginner's Guide to Automated Workflows"
+description: Get started with a powerful automation tool integrated directly into GitHub.
+date: 2024-07-14
+tags:
+  - Guide
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
     handle: "@Dino-Kupinic"
-date: 2024-07-14T00:00:00.000Z
+seo:
+  image:
+    src: "/images/blog/nitro.webp"
+    alt: Nitro server engine logo
 ---
+
+![Nitro](/images/blog/nitro.webp)
 
 [GitHub Actions](https://github.com/features/actions) is a powerful automation tool integrated directly into GitHub
 repositories. It allows developers to create custom software development lifecycle (SDLC) workflows directly in their

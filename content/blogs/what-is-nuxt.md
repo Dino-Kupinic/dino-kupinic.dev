@@ -11,7 +11,7 @@ tags:
   - Web
 seo:
   image:
-    src: "/nuxt.webp"
+    src: "/images/blog/nuxt.webp"
     alt: official nuxt logo
 ---
 

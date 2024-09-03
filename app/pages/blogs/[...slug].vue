@@ -15,9 +15,10 @@ if (!blogContent.value) {
 }
 
 const title = blogContent.value.title
-const image = blogContent.value?.imageDark
+const image = blogContent.value?.seo.image.src
 const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
+const tags = blogContent?.value.tags
 
 const relatedBlogs = ref<BlogContent[]>([])
 
@@ -32,15 +33,6 @@ if (related) {
     relatedBlogs.value.push(relatedBlogData.value)
   }
 }
-
-// const { data: blog, pending } = await useLazyFetch<Blog>(`/api/v1${route.path}`)
-// if (!pending && !blog.value) {
-//   throw createError({
-//     statusCode: 404,
-//     statusMessage: "Blog not found",
-//     fatal: true,
-//   })
-// }
 
 useSeoMeta({
   title: title,
@@ -75,9 +67,12 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
         </span>
       </template>
       <div class="my-4 flex items-center gap-3">
-        <!-- TODO: add category -->
-
-        <!--        <CategoryDisplay text="Programming" to="/blog/category/programming" />-->
+        <CategoryDisplay
+          v-for="tag in tags"
+          :key="tag"
+          :text="tag"
+          to="/blogs"
+        />
         <BlogDate :date />
       </div>
       <GenericTitle class="max-w-[760px]">
@@ -112,23 +107,10 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
               :key="relatedBlog.title"
               :title="relatedBlog.title as string"
               :to="relatedBlog._path as string"
-              :author="relatedBlog.authors"
+              :authors="relatedBlog.authors"
             />
           </BlogRelatedBlogs>
         </template>
-        <!-- TODO: Add likes and views -->
-
-        <!--        <DividerHorizontal />-->
-        <!--        <div class="flex gap-3">-->
-        <!--          <div v-if="pending">-->
-        <!--            <Skeleton />-->
-        <!--            <Skeleton />-->
-        <!--          </div>-->
-        <!--          <template v-else>-->
-        <!--            <BlogLikeButton class="w-full">{{ blog?.likes }}</BlogLikeButton>-->
-        <!--            <BlogsViewButton class="w-full">{{ blog?.views }}</BlogsViewButton>-->
-        <!--          </template>-->
-        <!--        </div>-->
       </template>
     </BlogContent>
     <BlogFooter>
@@ -145,8 +127,5 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
         </div>
       </div>
     </BlogFooter>
-    <!-- TODO: add comment section -->
-
-    <!--    <BlogCommentSection />-->
   </ContentLayoutWrapper>
 </template>

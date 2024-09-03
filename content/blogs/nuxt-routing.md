@@ -11,7 +11,7 @@ tags:
   - Web
 seo:
   image:
-    src: "/nuxt-routing.webp"
+    src: "/images/blog/nuxt-routing.webp"
     alt: Nuxt routing diagram
 ---
 

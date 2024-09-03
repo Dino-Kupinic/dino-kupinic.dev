@@ -4,7 +4,7 @@ import type { BlogAuthor } from "~/types/blog"
 defineProps<{
   title: string
   to: string
-  author: BlogAuthor[]
+  authors: BlogAuthor[]
 }>()
 </script>
 
@@ -14,7 +14,7 @@ defineProps<{
       class="flex h-auto w-full flex-col space-y-2 rounded-lg border p-3 hover:bg-accent"
     >
       <p class="line-clamp-2 text-sm font-medium">{{ title }}</p>
-      <BlogItemAuthor :author="author" />
+      <BlogItemAuthor :authors="authors" />
     </div>
   </NuxtLink>
 </template>

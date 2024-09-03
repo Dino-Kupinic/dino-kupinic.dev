@@ -32,7 +32,7 @@
                   </p>
                 </div>
                 <div class="flex justify-between space-x-2">
-                  <BlogItemAuthor :author="article.authors" class="truncate" />
+                  <BlogItemAuthor :authors="article.authors" class="truncate" />
                   <BlogDate :date="new Date(article.date)" :short="true" />
                 </div>
               </div>
