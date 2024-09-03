@@ -8,6 +8,7 @@ authors:
     handle: "@Dino-Kupinic"
 tags:
   - Guide
+  - Java
 seo:
   image:
     src: "/images/blog/design-patterns.webp"
@@ -15,13 +16,6 @@ seo:
 ---
 
 ![Design Patterns](/images/blog/design-patterns.webp)
-
-### Table of Contents
-- [Dependency Injection Pattern](#1-dependency-injection-pattern)
-- [Observer Pattern](#2-observer-pattern)
-- [Strategy Pattern](#3-strategy-pattern)
-- [Factory Method Pattern](#4-factory-method-pattern)
-- [Decorator Pattern](#5-decorator-pattern)
 
 Design patterns represent time-tested solutions to common problems in software design,
 offering developers a shared language and approach to solving complex issues.

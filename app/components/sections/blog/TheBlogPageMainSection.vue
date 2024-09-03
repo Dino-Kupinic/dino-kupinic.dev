@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!--    <FeaturedBlogsContainer class="m-auto my-4 sm:my-5" />-->
+    <FeaturedBlogsContainer class="m-auto my-4 sm:my-5" />
     <main class="my-16 flex flex-col gap-4">
       <SectionHeading>{{ $t("blog.latest") }}</SectionHeading>
       <BlogTable />

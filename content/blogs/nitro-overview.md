@@ -8,6 +8,7 @@ authors:
     handle: "@Dino-Kupinic"
 tags:
   - Guide
+  - Web
 seo:
   image:
     src: "/images/blog/nitro.webp"

@@ -4,6 +4,7 @@ description: Get started with a powerful automation tool integrated directly int
 date: 2024-07-14
 tags:
   - Guide
+  - DevOps
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png

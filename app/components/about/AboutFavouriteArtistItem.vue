@@ -25,8 +25,8 @@ const artists: Artist[] = [
     backgroundColor: "purple",
   },
   {
-    name: "Earth Wind & Fire",
-    link: "https://www.youtube.com/@earthwindandfire/videos",
+    name: "Sabrina Carpenter",
+    link: "https://www.youtube.com/channel/UCPKWE1H6xhxwPlqUlKgHb_w",
     backgroundColor: "blue",
   },
   {
@@ -35,8 +35,8 @@ const artists: Artist[] = [
     backgroundColor: "orange",
   },
   {
-    name: "Bon Jovi",
-    link: "https://www.youtube.com/@bonjovi/videos",
+    name: "Ariana Grande",
+    link: "https://www.youtube.com/@ArianaGrande/videos",
     backgroundColor: "yellow",
   },
   {
@@ -55,14 +55,24 @@ const artists: Artist[] = [
     backgroundColor: "yellow",
   },
   {
-    name: "Ado",
-    link: "https://www.youtube.com/@Ado1024/videos",
+    name: "Clover!",
+    link: "https://www.youtube.com/channel/UCR9ZNh-c-aXU6qOURo1lMrg",
     backgroundColor: "teal",
   },
   {
-    name: "Boney M.",
-    link: "https://www.youtube.com/@boneym.official/videos",
+    name: "d3r",
+    link: "https://www.youtube.com/@d3r/featured",
     backgroundColor: "red",
+  },
+  {
+    name: "Tate McRae",
+    link: "https://www.youtube.com/@TateMcRae/videos",
+    backgroundColor: "orange",
+  },
+  {
+    name: "Kaneda7",
+    link: "https://www.youtube.com/channel/UCq8XyJ2xTACSZkt3pidTFrg",
+    backgroundColor: "blue",
   },
 ]
 </script>
@@ -76,6 +86,9 @@ const artists: Artist[] = [
           v-for="artist in artists"
           :key="artist.name"
           :to="artist.link"
+          external
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <AboutFavouriteArtistName :color="artist.backgroundColor">
             {{ artist.name }}

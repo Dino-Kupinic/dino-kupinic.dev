@@ -66,14 +66,16 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
           {{ $t("blog.name") }}
         </span>
       </template>
-      <div class="my-4 flex items-center gap-3">
-        <CategoryDisplay
-          v-for="tag in tags"
-          :key="tag"
-          :text="tag"
-          to="/blogs"
-        />
+      <div class="my-4 flex items-end justify-between">
         <BlogDate :date />
+        <div class="flex space-x-2">
+          <CategoryDisplay
+            v-for="tag in tags"
+            :key="tag"
+            :text="tag"
+            to="/blog"
+          />
+        </div>
       </div>
       <GenericTitle class="max-w-[760px]">
         {{ blogContent?.title }}

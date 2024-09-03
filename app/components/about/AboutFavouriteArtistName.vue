@@ -61,7 +61,7 @@ const getTextColorClass = () => {
 <template>
   <div
     :class="[
-      'flex h-10 w-full items-center rounded-lg bg-gradient-to-r from-background pl-2 dark:from-10%',
+      'flex h-[34px] w-full items-center rounded-lg bg-gradient-to-r from-background pl-2 text-sm dark:from-10% sm:text-base',
       getGradientColorClass(),
     ]"
   >
