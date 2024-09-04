@@ -11,11 +11,11 @@ tags:
   - Web
 seo:
   image:
-    src: "/images/blog/nuxt.webp"
+    src: "/images/blog/nuxt3.webp"
     alt: official nuxt logo
 ---
 
-![nuxt](/images/blog/nuxt.webp)
+![nuxt](/images/blog/nuxt3.webp)
 
 [Nuxt.js](https://nuxt.com) is an open-source framework for building **full-stack** web apps and websites using Vue.js.
 As a meta-framework, Nuxt builds upon Vue.js,
