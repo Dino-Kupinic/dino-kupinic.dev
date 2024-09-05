@@ -18,14 +18,13 @@ const title = blogContent.value.title
 const image = blogContent.value?.seo.image.src
 const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
-const tags = blogContent?.value.tags
 
 const relatedBlogs = ref<BlogContent[]>([])
 
 if (related) {
   for (const relatedBlog of related) {
-    const { data: relatedBlogData } = await useAsyncData(relatedBlog.path, () =>
-      queryContent<BlogContent>(relatedBlog.path).findOne(),
+    const { data: relatedBlogData } = await useAsyncData(relatedBlog, () =>
+      queryContent<BlogContent>(relatedBlog).findOne(),
     )
     if (!relatedBlogData.value) {
       continue
@@ -63,20 +62,14 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
       <template #breadcrumb>
         {{ $t("blog.name") }}
       </template>
-      <div class="my-4 flex items-end justify-between">
-        <BlogDate :date />
-        <!--        <div class="flex space-x-2">-->
-        <!--          <CategoryDisplay-->
-        <!--            v-for="tag in tags"-->
-        <!--            :key="tag"-->
-        <!--            :text="tag"-->
-        <!--            to="/blog"-->
-        <!--          />-->
-        <!--        </div>-->
+      <div class="my-4 flex flex-col items-start justify-between sm:flex-row">
+        <GenericTitle class="max-w-[760px]">
+          {{ blogContent?.title }}
+        </GenericTitle>
+        <div class="my-5">
+          <BlogDate :date />
+        </div>
       </div>
-      <GenericTitle class="max-w-[760px]">
-        {{ blogContent?.title }}
-      </GenericTitle>
       <BlogAuthorContainer>
         <BlogAuthor
           v-for="author in blogContent?.authors"

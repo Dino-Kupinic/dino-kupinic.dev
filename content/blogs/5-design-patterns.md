@@ -1,5 +1,5 @@
 ---
-title: 5 Design Patterns Every Developer Should Know
+title: "5 Design Patterns Every Developer Should Know"
 description: Explore essential software design patterns with real-world examples
 date: 2024-08-03
 authors:
@@ -14,8 +14,6 @@ seo:
     src: "/images/blog/design-patterns.webp"
     alt: 5 Design Patterns you should know
 ---
-
-![Design Patterns](/images/blog/design-patterns.webp)
 
 Design patterns represent time-tested solutions to common problems in software design,
 offering developers a shared language and approach to solving complex issues.
@@ -511,13 +509,19 @@ public class SugarDecorator extends CoffeeDecorator {
 public class CoffeeShop {
     public static void main(String[] args) {
         Coffee simpleCoffee = new SimpleCoffee();
-        System.out.println(simpleCoffee.getDescription() + " - $" + simpleCoffee.getCost());
+        System.out.println(simpleCoffee.getDescription() +
+          " - $" + simpleCoffee.getCost()
+        );
 
         Coffee milkCoffee = new MilkDecorator(simpleCoffee);
-        System.out.println(milkCoffee.getDescription() + " - $" + milkCoffee.getCost());
+        System.out.println(milkCoffee.getDescription() +
+          " - $" + milkCoffee.getCost()
+        );
 
         Coffee sweetMilkCoffee = new SugarDecorator(milkCoffee);
-        System.out.println(sweetMilkCoffee.getDescription() + " - $" + sweetMilkCoffee.getCost());
+        System.out.println(sweetMilkCoffee.getDescription() +
+          " - $" + sweetMilkCoffee.getCost()
+        );
     }
 }
 ```

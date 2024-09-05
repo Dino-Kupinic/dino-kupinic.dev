@@ -27,4 +27,5 @@ export interface BlogContent extends ParsedContent {
       alt: string
     }
   }
+  related?: string[]
 }
