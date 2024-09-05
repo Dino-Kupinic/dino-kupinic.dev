@@ -4,8 +4,9 @@ const props = defineProps<{
   title: string
 }>()
 
+const viewport = useViewport()
 const strippedTitle = computed(() => {
-  if (props.title.length <= 30) {
+  if (viewport.isGreaterThan("tablet") || props.title.length <= 30) {
     return props.title
   }
   return props.title.substring(0, 30).concat("...")
@@ -20,9 +21,7 @@ const strippedTitle = computed(() => {
           <BreadcrumbItem>
             <BreadcrumbLink as-child>
               <NuxtLink to="/blog">
-                <div class="flex items-center">
-                  <slot name="breadcrumb" />
-                </div>
+                <slot name="breadcrumb" />
               </NuxtLink>
             </BreadcrumbLink>
           </BreadcrumbItem>
@@ -30,9 +29,7 @@ const strippedTitle = computed(() => {
           <BreadcrumbItem>
             <BreadcrumbLink as-child>
               <NuxtLink :to="route.path">
-                <span class="text-sm tracking-wide">
-                  {{ strippedTitle }}
-                </span>
+                {{ strippedTitle }}
               </NuxtLink>
             </BreadcrumbLink>
           </BreadcrumbItem>

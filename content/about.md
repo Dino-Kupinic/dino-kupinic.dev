@@ -34,7 +34,7 @@ This website is completely static!
 
 ### Main Technologies:
 
-- [Nuxt](https://nuxtjs.org/): main framework for building the website
+- [Nuxt](https://nuxt.com): main framework for building the website
   - `@nuxt/content`: for writing blog posts
   - `@nuxt/fonts`: for loading fonts
   - `@nuxt/image`: for optimizing images

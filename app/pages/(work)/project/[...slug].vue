@@ -44,10 +44,7 @@ if (project.value?.repository) {
   <ContentLayoutWrapper>
     <ContentHeader :title="project?.title as string" class="pt-6">
       <template #breadcrumb>
-        <Icon name="i-ph-cube-focus" class="mr-1" />
-        <span class="text-sm tracking-wide">
-          {{ $t("project.breadcrumb") }}
-        </span>
+        {{ $t("project.breadcrumb") }}
       </template>
     </ContentHeader>
     <div class="mb-8 flex flex-col space-y-4 sm:flex-row sm:space-x-2">
