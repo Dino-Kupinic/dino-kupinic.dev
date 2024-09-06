@@ -13,6 +13,9 @@ seo:
   image:
     src: "/images/blog/nitro.webp"
     alt: Nitro server engine logo
+related:
+  - "/blogs/what-is-nuxt"
+  - "/blogs/nuxt-routing"
 ---
 
 ![Nitro](/images/blog/nitro.webp)

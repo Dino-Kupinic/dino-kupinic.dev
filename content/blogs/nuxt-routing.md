@@ -13,6 +13,9 @@ seo:
   image:
     src: "/images/blog/nuxt-routing.webp"
     alt: Nuxt routing diagram
+related:
+  - "/blogs/what-is-nuxt"
+  - "/blogs/nitro-overview"
 ---
 
 ![Nuxt Routing](/images/blog/nuxt-routing.webp)

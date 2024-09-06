@@ -5,11 +5,10 @@ I'm currently pursuing a high school diploma in information technology and netwo
 
 I enjoy building full-stack applications and working with modern technologies. I'm always looking for new things to
 learn and improve on.
-When I'm not coding, I'm probably playing video games, listening to music, watching movies or reading books. And when I'm not doing that,
-I'm probably sleeping.
+I also enjoy playing video games, listening to music, watching movies/shows or reading books.
 
 Right now I'm working on a few projects, which you can find on my [GitHub](https://github.com/Dino-Kupinic).
-Machine Learning LLMs (Learning Language Models) are my current focus, but I'm also working on a few web applications.
+Machine Learning and LLMs (Learning Language Models) are my current focus, but I'm also working on a few web applications.
 I'm also writing blog posts about things I learn and find interesting.
 
 ## This Website
@@ -30,7 +29,7 @@ Thanks to [shadcn](https://ui.shadcn.com/) for the awesome component library, wh
 While I'm not going to list every single package I used, I want to highlight a few that I found particularly useful.
 Fun fact: I actually removed a lot of packages that I initially used because I decided against using a server and
 database.
-This website is completely static!
+This website is now completely static!
 
 ### Main Technologies:
 

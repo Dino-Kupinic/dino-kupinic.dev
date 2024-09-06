@@ -51,7 +51,7 @@ export default defineNuxtConfig({
       styles: ["normal", "italic"],
     },
     families: [
-      { name: "Inter", provider: "google" },
+      { name: "Fira Code", provider: "google" },
       { name: "JetBrains Mono", provider: "google" },
     ],
   },

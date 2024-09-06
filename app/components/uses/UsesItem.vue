@@ -1,12 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  title: string
+  description: string
+  image: string
+}>()
+</script>
 
 <template>
   <Card>
     <CardHeader>
-      <CardTitle>Card Title</CardTitle>
-      <CardDescription>Card Description</CardDescription>
+      <CardTitle>{{ title }}</CardTitle>
+      <CardDescription>{{ description }}</CardDescription>
     </CardHeader>
-    <CardContent> Card Content </CardContent>
-    <CardFooter> Card Footer </CardFooter>
+    <CardContent>
+      <NuxtImg :src="image" width="256" height="256" />
+    </CardContent>
   </Card>
 </template>
