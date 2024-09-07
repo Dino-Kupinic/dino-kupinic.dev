@@ -11,12 +11,7 @@ defineProps<{
   <NavContainer>
     <div class="flex cursor-pointer items-center">
       <NuxtLink to="/">
-        <ClientOnly>
-          <NavLogo aria-label="Logo" />
-          <template #fallback>
-            <Skeleton class="h-10 w-20" />
-          </template>
-        </ClientOnly>
+        <NavLogo aria-label="Logo" />
       </NuxtLink>
     </div>
     <NavigationMenu>

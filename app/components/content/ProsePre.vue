@@ -30,7 +30,7 @@ defineProps({
 <template>
   <pre
     :class="$props.class"
-    class="my-6 overflow-auto rounded-lg border bg-background p-3 font-mono text-xs sm:text-sm"
+    class="my-6 overflow-auto rounded-lg border border-dashed bg-background p-3 font-mono text-xs sm:text-sm"
   ><slot /></pre>
 </template>
 

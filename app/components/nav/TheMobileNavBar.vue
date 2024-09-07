@@ -11,14 +11,9 @@ const isOpen = ref<boolean>(false)
 <template>
   <NavContainer>
     <div class="ml-1 flex cursor-pointer items-center gap-2">
-      <ClientOnly>
-        <NuxtLink to="/">
-          <NavLogo aria-label="Logo" />
-        </NuxtLink>
-        <template #fallback>
-          <Skeleton class="h-10 w-20" />
-        </template>
-      </ClientOnly>
+      <NuxtLink to="/">
+        <NavLogo aria-label="Logo" />
+      </NuxtLink>
     </div>
     <div class="flex items-center gap-2">
       <ClientOnly>

@@ -10,10 +10,10 @@ defineProps<{
   <Card class="hover:bg-accent">
     <div class="flex h-full flex-col justify-between gap-3 p-5">
       <CardHeader class="p-0">
-        <CardTitle>{{ title }}</CardTitle>
+        <CardTitle class="text-xl">{{ title }}</CardTitle>
         <CardDescription>{{ description }}</CardDescription>
       </CardHeader>
-      <div class="flex h-40 w-40 w-full items-center justify-center">
+      <div class="flex h-40 w-full items-center justify-center">
         <NuxtImg :src="image" class="max-h-full max-w-full object-contain" />
       </div>
     </div>

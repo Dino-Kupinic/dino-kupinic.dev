@@ -82,7 +82,7 @@
   }
 
   body {
-    @apply bg-main-background text-foreground;
+    @apply bg-main-background text-foreground antialiased;
     transition: background 0.2s;
   }
 }

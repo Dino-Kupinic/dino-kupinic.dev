@@ -66,7 +66,7 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
         <GenericTitle class="max-w-[760px]">
           {{ blogContent?.title }}
         </GenericTitle>
-        <div class="my-5">
+        <div class="mb-5 sm:my-5">
           <BlogDate :date />
         </div>
       </div>

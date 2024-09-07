@@ -8,6 +8,8 @@
     />
     <main class="mt-8">
       <UsesDevicesSection />
+      <UsesPCSection />
+      <UsesSoftwareSection />
     </main>
   </ContentLayoutWrapper>
 </template>

@@ -30,7 +30,7 @@ const devices = [
 </script>
 
 <template>
-  <main class="my-16 flex flex-col gap-4">
+  <section class="my-16 flex flex-col gap-4">
     <SectionHeading>Devices</SectionHeading>
     <section class="flex flex-col gap-4 md:flex-row">
       <UsesItemCover
@@ -49,7 +49,7 @@ const devices = [
         />
       </div>
     </section>
-  </main>
+  </section>
 </template>
 
 <style scoped></style>
