@@ -11,9 +11,11 @@ tags:
   - Java
 seo:
   image:
-    src: "/images/blog/design-patterns.webp"
+    src: "/images/blog/Red.png"
     alt: 5 Design Patterns you should know
 ---
+
+![img](/images/blog/Red.png)
 
 Design patterns represent time-tested solutions to common problems in software design,
 offering developers a shared language and approach to solving complex issues.
