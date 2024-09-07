@@ -8,10 +8,14 @@ authors:
     handle: "@Dino-Kupinic"
 tags:
   - Guide
+  - Web
 seo:
   image:
-    src: "/nitro.webp"
+    src: "/images/blog/nitro.webp"
     alt: Nitro server engine logo
+related:
+  - "/blogs/what-is-nuxt"
+  - "/blogs/nuxt-routing"
 ---
 
 ![Nitro](/images/blog/nitro.webp)

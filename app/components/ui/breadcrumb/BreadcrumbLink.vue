@@ -15,7 +15,9 @@ const props = withDefaults(
   <Primitive
     :as="as"
     :as-child="asChild"
-    :class="cn('transition-colors hover:text-foreground', props.class)"
+    :class="
+      cn('text-blue-500 transition-colors hover:text-foreground', props.class)
+    "
   >
     <slot />
   </Primitive>

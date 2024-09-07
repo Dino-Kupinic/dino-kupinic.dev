@@ -51,23 +51,9 @@ export default defineNuxtConfig({
       styles: ["normal", "italic"],
     },
     families: [
-      { name: "Inter", provider: "google" },
+      { name: "Fira Code", provider: "google" },
       { name: "JetBrains Mono", provider: "google" },
     ],
-  },
-
-  experimental: {
-    typedPages: true,
-  },
-
-  nitro: {
-    imports: {
-      dirs: ["./server/db/**"],
-      imports: [{ from: "zod", name: "z" }],
-    },
-    experimental: {
-      tasks: true,
-    },
   },
 
   modules: [
@@ -75,7 +61,6 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/i18n",
     "@nuxtjs/seo",
-    "@nuxtjs/device",
     "@nuxt/content",
     "@nuxt/image",
     "@nuxt/eslint",
@@ -88,7 +73,7 @@ export default defineNuxtConfig({
   ],
 
   typescript: {
-    typeCheck: false, // TODO: Enable when fixed
+    typeCheck: true,
     strict: true,
     tsConfig: {
       compilerOptions: {
@@ -116,6 +101,7 @@ export default defineNuxtConfig({
         default: "github-light",
         dark: "github-dark",
       },
+      langs: ["vue", "java", "bash", "typescript", "javascript", "yaml"],
     },
     markdown: {
       anchorLinks: {

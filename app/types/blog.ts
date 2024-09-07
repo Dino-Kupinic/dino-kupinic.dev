@@ -1,12 +1,4 @@
-import type { z } from "zod"
 import type { ParsedContent } from "@nuxt/content"
-
-export type Blog = z.infer<typeof selectBlogSchema>
-
-export type BlogImage = {
-  dark: string
-  light: string
-}
 
 export interface BlogAuthor {
   name: string
@@ -19,20 +11,21 @@ export interface BlogContentAuthor extends BlogAuthor {
   handle: string
 }
 
-export interface BlogDisplay {
-  title: string
-  likes: number
-  views: number
+export interface BlogDisplay extends BlogContent {
   path: string
-  date: Date
-  author: BlogAuthor[]
-  image: BlogImage
   class?: string
 }
 
 export interface BlogContent extends ParsedContent {
   description: string
   date: Date
-  image: BlogImage
   authors: BlogContentAuthor[]
+  tags: string[]
+  seo: {
+    image: {
+      src: string
+      alt: string
+    }
+  }
+  related?: string[]
 }

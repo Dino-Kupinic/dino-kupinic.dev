@@ -29,10 +29,6 @@ watch(
             title: t("nav.about"),
             href: "/about",
           },
-          {
-            title: t("nav.contact"),
-            href: "/contact",
-          },
         ],
       },
       {

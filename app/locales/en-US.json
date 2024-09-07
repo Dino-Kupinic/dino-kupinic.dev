@@ -17,7 +17,6 @@
     "projects": "Projects",
     "blogs": "Blog",
     "about": "About",
-    "contact": "Contact",
     "home": "Home",
     "uses": "Uses"
   },
@@ -62,7 +61,7 @@
     "country": "Austria",
     "age": "Age",
     "socials": "Socials",
-    "stacks": "Stacks",
+    "stacks": "Skills",
     "song": "Favourite Song",
     "framework": "Favourite Framework",
     "quote": "Favourite Quote",

@@ -1,6 +1,5 @@
 <template>
-  <code
-    class="my-6 rounded-lg border bg-background px-2 py-1 text-xs sm:text-sm"
+  <code class="my-6 rounded-lg bg-accent px-1 py-0.5 text-xs sm:text-sm"
     ><slot
   /></code>
 </template>

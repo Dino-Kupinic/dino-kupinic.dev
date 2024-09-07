@@ -1,12 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  title: string
+  description: string
+  image: string
+}>()
+</script>
 
 <template>
-  <Card>
-    <CardHeader>
-      <CardTitle>Card Title</CardTitle>
-      <CardDescription>Card Description</CardDescription>
-    </CardHeader>
-    <CardContent> Card Content </CardContent>
-    <CardFooter> Card Footer </CardFooter>
+  <Card class="hover:bg-accent">
+    <div class="flex h-full flex-col justify-between gap-3 p-5">
+      <CardHeader class="p-0">
+        <CardTitle class="text-xl">{{ title }}</CardTitle>
+        <CardDescription>{{ description }}</CardDescription>
+      </CardHeader>
+      <div class="flex h-40 w-full items-center justify-center">
+        <NuxtImg :src="image" class="max-h-full max-w-full object-contain" />
+      </div>
+    </div>
   </Card>
 </template>

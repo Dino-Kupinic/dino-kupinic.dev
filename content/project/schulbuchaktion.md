@@ -54,5 +54,3 @@ In order for that to work, minor one-time changes have to be made to the LDAP se
   schulbuchaktion makes use of [JWT Tokens](https://jwt.io/) and middleware on both the front- and backend to secure the app. Unauthenticated users do not have permission to access the API aswell.
 - **Extensive Documentation:**
   the documentation features both guides for users and developers. While the app is designed to be simple and intuitive, teachers can still look up on how to use certain features.
-
-## Case study of converting a Excel file to a whole Full-Stack App

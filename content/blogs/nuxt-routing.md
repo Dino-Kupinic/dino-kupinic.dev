@@ -11,11 +11,14 @@ tags:
   - Web
 seo:
   image:
-    src: "/nuxt-routing.webp"
+    src: "/images/blog/Water.png"
     alt: Nuxt routing diagram
+related:
+  - "/blogs/what-is-nuxt"
+  - "/blogs/nitro-overview"
 ---
 
-![Nuxt Routing](/images/blog/nuxt-routing.webp)
+![Nuxt Routing](/images/blog/Water.png)
 
 Routing is a fundamental aspect of any web application, and Nuxt provides an intuitive and powerful routing system that
 simplifies the process of creating and managing routes. In this comprehensive guide, we'll explore the ins and outs of
