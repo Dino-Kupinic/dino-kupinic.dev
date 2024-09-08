@@ -6,9 +6,9 @@ const os = [
     image: "/images/about/os/windows.png",
   },
   {
-    title: "MacOS Sequoia",
+    title: "MacOS",
     description: "Programming",
-    image: "/images/about/os/mac.png",
+    image: "/images/about/os/macos.avif",
   },
   {
     title: "Debian 12",
@@ -122,6 +122,11 @@ const apps = [
     image: "/images/about/apps/pixelmator-pro.avif",
   },
   {
+    title: "Photoshop",
+    description: "Image editing",
+    image: "/images/about/apps/photoshop.png",
+  },
+  {
     title: "iStat Menus",
     description: "System monitoring",
     image: "/images/about/apps/istat.avif",
@@ -131,12 +136,32 @@ const apps = [
     description: "Pixel art",
     image: "/images/about/apps/aseprite.png",
   },
+  {
+    title: "GeoGebra",
+    description: "Mathematics",
+    image: "/images/about/apps/geogebra.png",
+  },
+  {
+    title: "VirtualBox",
+    description: "Virtualization",
+    image: "/images/about/apps/virtualbox.png",
+  },
+  {
+    title: "OBS",
+    description: "Streaming, Recording",
+    image: "/images/about/apps/obs.png",
+  },
+  {
+    title: "Blender",
+    description: "3D modeling",
+    image: "/images/about/apps/blender.png",
+  },
 ]
 </script>
 
 <template>
   <section class="my-16 flex flex-col gap-4">
-    <SectionHeading>Operating Systems</SectionHeading>
+    <SectionHeading>Desktop Operating Systems</SectionHeading>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
       <UsesItem
         v-for="o in os"

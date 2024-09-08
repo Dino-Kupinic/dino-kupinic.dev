@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
     <SpeedInsights />
     <TheNavBar />
     <slot />
+    <CookieBanner />
     <TheFooter />
   </div>
 </template>

@@ -10,7 +10,7 @@ defineProps<{
   <Card class="hover:bg-accent">
     <div class="flex h-full flex-col justify-between gap-3 p-5">
       <CardHeader class="p-0">
-        <CardTitle class="text-xl">{{ title }}</CardTitle>
+        <CardTitle class="text-xl tracking-tighter">{{ title }}</CardTitle>
         <CardDescription>{{ description }}</CardDescription>
       </CardHeader>
       <div class="flex h-40 w-full items-center justify-center">
