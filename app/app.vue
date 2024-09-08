@@ -23,14 +23,15 @@ onMounted(() => {
   setLocale()
 })
 
-// const useIdFunction = () => useId()
+const useIdFunction = () => useId()
 </script>
 
 <template>
-  <!--  <ConfigProvider :use-id="useIdFunction">-->
-  <NuxtLayout>
-    <NuxtPage />
-    <Toaster />
-  </NuxtLayout>
-  <!--  </ConfigProvider>-->
+  <!-- @vue-ignore -->
+  <ConfigProvider :use-id="useIdFunction">
+    <NuxtLayout>
+      <NuxtPage />
+      <Toaster />
+    </NuxtLayout>
+  </ConfigProvider>
 </template>
