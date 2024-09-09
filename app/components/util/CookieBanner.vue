@@ -1,18 +1,24 @@
 <script setup lang="ts">
 const isVisible = ref<boolean>(true)
+const analyticalCookies = ref<boolean>(true)
 
 const handleAccept = () => {
-  // Here you would typically set a cookie or local storage item
-  // to remember the user's choice
-  console.log("Cookies accepted")
-
   isVisible.value = false
 }
 
+const handleReject = () => {
+  analyticalCookies.value = false
+  handleManagePreferences()
+}
+
 const handleManagePreferences = () => {
-  // Here you would typically open a modal or navigate to a page
-  // where users can manage their cookie preferences
-  console.log("Manage preferences clicked")
+  if (!analyticalCookies.value) {
+    localStorage.setItem("va-disable", "true")
+    analyticalCookies.value = false
+  } else {
+    localStorage.removeItem("va-disable")
+  }
+  closeBanner()
 }
 
 const closeBanner = () => {
@@ -51,12 +57,7 @@ const closeBanner = () => {
           </Button>
           <Dialog>
             <DialogTrigger>
-              <Button
-                variant="secondary"
-                size="sm"
-                class="w-full sm:w-auto"
-                @click="handleManagePreferences"
-              >
+              <Button variant="secondary" size="sm" class="w-full sm:w-auto">
                 Customize
               </Button>
             </DialogTrigger>
@@ -67,16 +68,44 @@ const closeBanner = () => {
                   Make changes to your cookie preferences here.
                 </DialogDescription>
               </DialogHeader>
+              <div class="mt-4 grid gap-6">
+                <div class="flex items-center justify-between space-x-2">
+                  <Label for="necessary" class="flex flex-col space-y-1">
+                    <span>Strictly Necessary</span>
+                    <span
+                      class="font-normal leading-snug text-muted-foreground"
+                    >
+                      These cookies are essential in order to use the website
+                      and use its features.
+                    </span>
+                  </Label>
+                  <Switch id="necessary" default-checked disabled />
+                </div>
+                <div class="flex items-center justify-between space-x-2">
+                  <Label for="functional" class="flex flex-col space-y-1">
+                    <span>Analytical Cookies</span>
+                    <span
+                      class="font-normal leading-snug text-muted-foreground"
+                    >
+                      These cookies allow the website to collect information on
+                      how it is used.
+                    </span>
+                  </Label>
+                  <Switch id="functional" v-model:checked="analyticalCookies" />
+                </div>
+              </div>
               <DialogFooter>
-                <Button variant="default" size="sm"> Save changes </Button>
+                <Button
+                  variant="default"
+                  size="sm"
+                  @click="handleManagePreferences"
+                >
+                  Save changes
+                </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <Button
-            variant="destructive"
-            size="sm"
-            @click="handleManagePreferences"
-          >
+          <Button variant="destructive" size="sm" @click="handleReject">
             Reject Non-Essential
           </Button>
         </div>
