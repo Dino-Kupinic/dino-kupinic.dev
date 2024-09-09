@@ -15,8 +15,8 @@ importers:
         specifier: ^1.0.12
         version: 1.0.12(vue-router@4.4.3(vue@3.5.3(typescript@5.5.4)))(vue@3.5.3(typescript@5.5.4))
       '@vueuse/core':
-        specifier: ^10.11.1
-        version: 10.11.1(vue@3.5.3(typescript@5.5.4))
+        specifier: ^11.0.3
+        version: 11.0.3(vue@3.5.3(typescript@5.5.4))
       nuxt:
         specifier: ^3.13.1
         version: 3.13.1(@parcel/watcher@2.4.1)(@types/node@22.5.4)(eslint@8.57.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.21.2)(terser@5.32.0)(typescript@5.5.4)(vite@5.4.3(@types/node@22.5.4)(terser@5.32.0))(vue-tsc@2.0.29(typescript@5.5.4))(webpack-sources@3.2.3)
@@ -132,9 +132,6 @@ importers:
       unhead:
         specifier: ^1.11.1
         version: 1.11.1
-      vaul-vue:
-        specifier: ^0.2.0
-        version: 0.2.0(radix-vue@1.9.5(vue@3.5.3(typescript@5.5.4)))(vue@3.5.3(typescript@5.5.4))
       vue-tsc:
         specifier: 2.0.29
         version: 2.0.29(typescript@5.5.4)
@@ -5740,12 +5737,6 @@ packages:
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
-
-  vaul-vue@0.2.0:
-    resolution: {integrity: sha512-YV0zqxc8NiVzr1z/Awwbaty0UDDchxj5BfhFbLiYu+Uz0rCfSaDK2zwmuXZvejBJKLGbWw9I5GLHJRse14lQew==}
-    peerDependencies:
-      radix-vue: ^1.4.0
-      vue: ^3.3.0
 
   vfile-location@5.0.3:
     resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
@@ -13283,14 +13274,6 @@ snapshots:
       spdx-expression-parse: 3.0.1
 
   vary@1.1.2: {}
-
-  vaul-vue@0.2.0(radix-vue@1.9.5(vue@3.5.3(typescript@5.5.4)))(vue@3.5.3(typescript@5.5.4)):
-    dependencies:
-      '@vueuse/core': 10.11.1(vue@3.5.3(typescript@5.5.4))
-      radix-vue: 1.9.5(vue@3.5.3(typescript@5.5.4))
-      vue: 3.5.3(typescript@5.5.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
 
   vfile-location@5.0.3:
     dependencies:
