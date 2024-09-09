@@ -21,12 +21,10 @@ const closeBanner = () => {
 </script>
 
 <template>
-  <Transition name="fade">
+  <Transition>
     <div
       v-if="isVisible"
       class="fixed bottom-0 left-0 right-0 z-10 flex w-full flex-col justify-center gap-3 border-t bg-background p-4"
-      role="alert"
-      aria-live="polite"
     >
       <div class="m-auto max-w-[1024px] space-y-4">
         <div class="mb-4 mr-12 md:mb-0 md:mr-4">
@@ -84,7 +82,6 @@ const closeBanner = () => {
         </div>
         <button
           class="absolute right-3 top-1 text-gray-500 hover:text-gray-700"
-          aria-label="Close cookie banner"
           @click="closeBanner"
         >
           <Icon name="i-heroicons-x-mark" />
@@ -95,13 +92,13 @@ const closeBanner = () => {
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
+.v-enter-active,
+.v-leave-active {
   transition: opacity 0.5s ease;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.v-enter-from,
+.v-leave-to {
   opacity: 0;
 }
 </style>
