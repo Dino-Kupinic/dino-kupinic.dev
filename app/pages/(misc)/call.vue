@@ -1,5 +1,9 @@
 <script setup lang="ts"></script>
 
-<template></template>
+<template>
+  <ClientOnly>
+    <CalEmbed />
+  </ClientOnly>
+</template>
 
 <style scoped></style>

@@ -35,20 +35,12 @@ watch(
         title: t("footer.resources"),
         links: [
           {
-            title: t("footer.changelog"),
-            href: "/changelog",
-          },
-          {
             title: t("footer.call"),
             href: "/call",
           },
           {
             title: t("nav.uses"),
             href: "/uses",
-          },
-          {
-            title: t("footer.faq"),
-            href: "/faq",
           },
         ],
       },
