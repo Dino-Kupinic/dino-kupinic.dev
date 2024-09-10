@@ -130,11 +130,8 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
       unhead:
-        specifier: ^1.11.1
-        version: 1.11.1
-      vaul-vue:
-        specifier: ^0.2.0
-        version: 0.2.0(radix-vue@1.9.5(vue@3.5.3(typescript@5.5.4)))(vue@3.5.3(typescript@5.5.4))
+        specifier: ^1.11.2
+        version: 1.11.2
       vue-tsc:
         specifier: 2.0.29
         version: 2.0.29(typescript@5.5.4)
@@ -1730,14 +1727,23 @@ packages:
   '@unhead/dom@1.11.1':
     resolution: {integrity: sha512-lyqegiA35OzcvsaP9gQpAPWv5LmZpP9D/55xkFVTnaXfd1kl1TCxBkioAzv3lxtaYsu6CLSqH/jRxO+fB3Q2kQ==}
 
+  '@unhead/dom@1.11.2':
+    resolution: {integrity: sha512-e5Ilqa1ktwGJGhFt3jEI78LywNuvqOR4GdEa+sV2OuKbldWBoS8DosCf7jzwEIPYgn2ubDQ0ygn9JH+m/x88gA==}
+
   '@unhead/schema-org@1.11.1':
     resolution: {integrity: sha512-iMvjHEByqut3Z1o5o2OP+3RFlIuhSOY4Yv7wa/1fGD57hcPtwgSZVI/Ie/XlxmgVss48VEZDsSUk6iVb2FC+BQ==}
 
   '@unhead/schema@1.11.1':
     resolution: {integrity: sha512-oEl5vV3+zZyY1Y3PVE1+gWNMj2wJczP6w0gscp8RnFRSik9p94XqYzBnzeb0tezIyVJWKWycGne9ocV0uGHbzw==}
 
+  '@unhead/schema@1.11.2':
+    resolution: {integrity: sha512-ALyIIA0084JjGQJD6tJetQdqVNw/V6d2LaCC06jSm+JUqxsRWRZcSbNZUg5xr0T4xQPrefZYrGp76PbOdotPbQ==}
+
   '@unhead/shared@1.11.1':
     resolution: {integrity: sha512-05hd92qxAwkndMU8Ftklf4/97GuRVYHM0XzMz3ioENxJl8NfFGAyV48H/idt8WFv8JIkY9d7KgJDBmxG+CHi9Q==}
+
+  '@unhead/shared@1.11.2':
+    resolution: {integrity: sha512-Zg56xBrqkr9f9m3/+G/2CzbLba6g3/M2myWmyuZtn/ncUk3K2IXvXvlZAzMHx4yO++Xeik2QUWpHEdXRh+PxAA==}
 
   '@unhead/ssr@1.11.1':
     resolution: {integrity: sha512-rol3eGQZOvkKAsx604rZCM3uiBXNfro5V73kQKWq4kv6GNEifzY1r54Fqj1cOk6AMVYpNqowmDcvBwBC/rqXZw==}
@@ -5567,6 +5573,9 @@ packages:
   unhead@1.11.1:
     resolution: {integrity: sha512-2BqoGPtor6eR427J2m6+Qhxwpi+6Uea0Dok+gGn8v+LOzOxQG/fNR6m7qw+7a0uB2PlR3ImvoAvWQ/LiNevymg==}
 
+  unhead@1.11.2:
+    resolution: {integrity: sha512-k/MA5yzPh5M4pksDzOXf2GBJn0XV4quWao1q173NF7NL3Ji4RQ3ZxvZcwA/nGr7wu3+twJIRoKti3Otc4JMNyw==}
+
   unicode-emoji-modifier-base@1.0.0:
     resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}
     engines: {node: '>=4'}
@@ -5740,12 +5749,6 @@ packages:
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
-
-  vaul-vue@0.2.0:
-    resolution: {integrity: sha512-YV0zqxc8NiVzr1z/Awwbaty0UDDchxj5BfhFbLiYu+Uz0rCfSaDK2zwmuXZvejBJKLGbWw9I5GLHJRse14lQew==}
-    peerDependencies:
-      radix-vue: ^1.4.0
-      vue: ^3.3.0
 
   vfile-location@5.0.3:
     resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
@@ -8172,6 +8175,11 @@ snapshots:
       '@unhead/schema': 1.11.1
       '@unhead/shared': 1.11.1
 
+  '@unhead/dom@1.11.2':
+    dependencies:
+      '@unhead/schema': 1.11.2
+      '@unhead/shared': 1.11.2
+
   '@unhead/schema-org@1.11.1':
     dependencies:
       ufo: 1.5.4
@@ -8181,9 +8189,18 @@ snapshots:
       hookable: 5.5.3
       zhead: 2.2.4
 
+  '@unhead/schema@1.11.2':
+    dependencies:
+      hookable: 5.5.3
+      zhead: 2.2.4
+
   '@unhead/shared@1.11.1':
     dependencies:
       '@unhead/schema': 1.11.1
+
+  '@unhead/shared@1.11.2':
+    dependencies:
+      '@unhead/schema': 1.11.2
 
   '@unhead/ssr@1.11.1':
     dependencies:
@@ -13058,6 +13075,13 @@ snapshots:
       '@unhead/shared': 1.11.1
       hookable: 5.5.3
 
+  unhead@1.11.2:
+    dependencies:
+      '@unhead/dom': 1.11.2
+      '@unhead/schema': 1.11.2
+      '@unhead/shared': 1.11.2
+      hookable: 5.5.3
+
   unicode-emoji-modifier-base@1.0.0: {}
 
   unicode-properties@1.4.1:
@@ -13283,14 +13307,6 @@ snapshots:
       spdx-expression-parse: 3.0.1
 
   vary@1.1.2: {}
-
-  vaul-vue@0.2.0(radix-vue@1.9.5(vue@3.5.3(typescript@5.5.4)))(vue@3.5.3(typescript@5.5.4)):
-    dependencies:
-      '@vueuse/core': 10.11.1(vue@3.5.3(typescript@5.5.4))
-      radix-vue: 1.9.5(vue@3.5.3(typescript@5.5.4))
-      vue: 3.5.3(typescript@5.5.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
 
   vfile-location@5.0.3:
     dependencies:
