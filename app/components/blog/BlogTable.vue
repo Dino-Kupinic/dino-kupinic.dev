@@ -14,9 +14,9 @@
               <div class="flex max-h-28 w-full flex-col space-y-4">
                 <div>
                   <div class="flex justify-between pb-1">
-                    <BlogItemTitle class="line-clamp-1">
+                    <h3 class="w-full text-xl font-medium text-foreground">
                       {{ article.title }}
-                    </BlogItemTitle>
+                    </h3>
                     <div class="mb-1 flex space-x-1">
                       <Badge
                         v-for="tag in article.tags"

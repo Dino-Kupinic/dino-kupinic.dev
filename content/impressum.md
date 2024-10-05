@@ -2,8 +2,6 @@
 
 Dino Kupinic
 
-Resthofstraße 33
-
 4400 Steyr, Austria
 
 ## Contact Information

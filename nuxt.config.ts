@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     },
     families: [
       { name: "Fira Code", provider: "google" },
-      { name: "JetBrains Mono", provider: "google" },
+      { name: "Inter", provider: "google" },
     ],
   },
 

@@ -35,29 +35,8 @@ watch(
         title: t("footer.resources"),
         links: [
           {
-            title: t("footer.call"),
-            href: "/call",
-          },
-          {
             title: t("nav.uses"),
             href: "/uses",
-          },
-        ],
-      },
-      {
-        title: t("footer.legal"),
-        links: [
-          {
-            title: t("footer.privacy"),
-            href: "/privacy",
-          },
-          {
-            title: t("footer.impressum"),
-            href: "/impressum",
-          },
-          {
-            title: t("footer.cookies"),
-            href: "/cookies",
           },
         ],
       },
