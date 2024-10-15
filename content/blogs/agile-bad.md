@@ -1,5 +1,5 @@
 ---
-title: "Nuxt Routing: A Comprehensive Guide"
+title: "Agile Software Development: Great, until it isn't"
 description: Dive deep into Nuxt's powerful and intuitive routing system
 date: 2024-07-24
 authors:

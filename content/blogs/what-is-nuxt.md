@@ -1,6 +1,6 @@
 ---
 title: What is Nuxt? A beginner-friendly overview
-description: Learn about the intuitive meta-framework for Vue.js
+description: A quick tour about the intuitive meta-framework for Vue.js
 date: 2024-06-30
 authors:
   - name: Dino Kupinic
@@ -89,6 +89,18 @@ pages/
 The `[id].vue` file creates a dynamic segment, perfect for blog posts or something like product pages.
 The `[...slug].vue` file is a catch-all route, ideal for handling multiple parameters.
 
+### Route Groups
+
+```
+pages/
+├── index.vue
+└── (legal)/
+    ├── privacy.vue
+    └── cookies.vue
+```
+
+As of Nuxt `3.13` you can use route groups to, ...group routes!
+
 ### Layouts
 
 Nuxt doesn't stop at routing.
@@ -99,9 +111,9 @@ For instance, you might have:
 
 - A default layout with a header and footer
 - A minimal layout for your blog posts
-- A fullscreen layout for immersive pages
+- A fullscreen layout
 
-To use a layout, just add a `layout` property to your page component:
+To use a specific layout, just add a `layout` property to your page component:
 
 ```vue
 <script setup lang="ts">
@@ -115,6 +127,16 @@ This flexibility allows you
 to maintain a consistent look across your site while adapting to the needs of individual pages.
 
 If you only have a `default.vue` layout, you don't need to specify it in your pages.
+
+```vue
+<script setup lang="ts">
+definePageMeta({
+  layout: false,
+})
+</script>
+```
+
+You can also disable the layout for a specific page, which is useful for a login page for example.
 
 ### Auto-Imports
 
@@ -148,7 +170,7 @@ const { blogs } = useBlogs()
 </script>
 ```
 
-Whenever I go back to a Vue project without Nuxt (or most other frameworks), I miss this feature so much! 😭
+Whenever I go back to a Vue project without Nuxt (or most other frameworks), I really miss this feature.
 
 ### Middleware
 

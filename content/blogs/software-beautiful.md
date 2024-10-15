@@ -1,5 +1,5 @@
 ---
-title: "Nitro.js: The Powerhouse Behind Nuxt"
+title: "Why Software should be beautiful"
 description: Discover the versatile and powerful server engine driving Nuxt applications
 date: 2024-07-22
 authors:

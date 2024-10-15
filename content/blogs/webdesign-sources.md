@@ -1,6 +1,6 @@
 ---
-title: "GitHub Actions: A Beginner's Guide to Automated Workflows"
-description: Get started with a powerful automation tool integrated directly into GitHub.
+title: "Amazing Sources for Web Design Inspiration"
+description: Steal like an artist
 date: 2024-07-14
 tags:
   - Guide

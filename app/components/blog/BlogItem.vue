@@ -14,7 +14,7 @@ defineProps<{
     <BlogItemBackground :image="blog.seo.image.src" />
     <div class="z-10 flex h-full w-full flex-col justify-end p-4 sm:gap-2">
       <CardContent class="flex-none p-0">
-        <h3 class="line-clamp-2 w-full text-xl font-medium text-foreground">
+        <h3 class="line-clamp-2 w-full text-xl font-semibold text-foreground">
           {{ blog.title }}
         </h3>
       </CardContent>
