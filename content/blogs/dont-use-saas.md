@@ -11,9 +11,9 @@ tags:
   - Advice
 seo:
   image:
-    src: "/images/blog/Red.png"
-    alt: 5 Design Patterns you should know
+    src: "/images/blog/saas_blog.png"
+    alt: SaaS blog post cover image
 ---
 
-![img](/images/blog/Red.png)
+![SaaS](/images/blog/saas_blog.png)
 

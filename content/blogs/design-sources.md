@@ -10,12 +10,12 @@ authors:
     handle: "@Dino-Kupinic"
 seo:
   image:
-    src: "/images/blog/nitro.webp"
-    alt: Nitro server engine logo
+    src: "/images/blog/design_blog.png"
+    alt: Design blog post cover image
 related:
   - "/blogs/software-should-be-beautiful"
 ---
 
-![Nitro](/images/blog/nitro.webp)
+![Design blog](/images/blog/design_blog.png)
 
 ### Mobbin

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const props = defineProps<{
+  base: string
   title: string
 }>()
 
@@ -20,7 +21,7 @@ const strippedTitle = computed(() => {
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink as-child>
-              <NuxtLink to="/blog">
+              <NuxtLink :to="base">
                 <slot name="breadcrumb" />
               </NuxtLink>
             </BreadcrumbLink>

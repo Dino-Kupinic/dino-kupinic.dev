@@ -10,13 +10,13 @@ tags:
   - Design
 seo:
   image:
-    src: "/images/blog/nitro.webp"
-    alt: Nitro server engine logo
+    src: "/images/blog/software_blog.png"
+    alt: Software blog post cover image
 related:
   - "/blogs/design-sources"
 ---
 
-![Nitro](/images/blog/nitro.webp)
+![Software](/images/blog/software_blog.png)
 
 Let's talk about something that's been on my mind lately: the beauty of software.
 

@@ -10,9 +10,9 @@ tags:
   - Rant
 seo:
   image:
-    src: "/images/blog/Water.png"
-    alt: Nuxt routing diagram
+    src: "/images/blog/agile_blog.png"
+    alt: Agile blog post cover image
 ---
 
-![Nuxt Routing](/images/blog/Water.png)
+![Agile](/images/blog/agile_blog.png)
 

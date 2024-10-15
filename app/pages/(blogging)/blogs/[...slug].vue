@@ -58,7 +58,7 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
 
 <template>
   <ContentLayoutWrapper>
-    <ContentHeader :title="blogContent?.title as string" base="/blogs">
+    <ContentHeader :title="blogContent?.title as string" base="/blog">
       <template #breadcrumb>
         {{ $t("blog.name") }}
       </template>
