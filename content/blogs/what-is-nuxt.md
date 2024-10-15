@@ -1,6 +1,6 @@
 ---
-title: What is Nuxt? A beginner-friendly overview
-description: A quick tour about the intuitive meta-framework for Vue.js
+title: "What is Nuxt? An overview"
+description: "A quick tour about the intuitive meta-framework for Vue.js"
 date: 2024-06-30
 authors:
   - name: Dino Kupinic
