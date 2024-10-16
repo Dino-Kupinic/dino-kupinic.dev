@@ -8,7 +8,7 @@ learn and improve on.
 I also enjoy playing video games, listening to music, watching movies/shows or reading books.
 
 Right now I'm working on a few projects, which you can find on my [GitHub](https://github.com/Dino-Kupinic).
-Machine Learning and LLMs (Learning Language Models) are my current focus, but I'm also working on a few web applications.
+Machine Learning and LLMs (Large Language Models) are my current focus, but I'm also working on a few web applications.
 I'm also writing blog posts about things I learn and find interesting.
 
 ## This Website
