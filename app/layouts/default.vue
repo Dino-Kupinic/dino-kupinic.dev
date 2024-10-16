@@ -8,7 +8,8 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
     <SpeedInsights />
     <TheNavBar />
     <slot />
-    <CookieBanner />
+    <!-- Enable after request, also finish it -->
+    <!--    <CookieBanner />-->
     <TheFooter />
   </div>
 </template>

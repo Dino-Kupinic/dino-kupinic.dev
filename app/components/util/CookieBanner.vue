@@ -1,18 +1,24 @@
 <script setup lang="ts">
 const isVisible = ref<boolean>(true)
+const analyticalCookies = ref<boolean>(true)
 
 const handleAccept = () => {
-  // Here you would typically set a cookie or local storage item
-  // to remember the user's choice
-  console.log("Cookies accepted")
-
   isVisible.value = false
 }
 
+const handleReject = () => {
+  analyticalCookies.value = false
+  handleManagePreferences()
+}
+
 const handleManagePreferences = () => {
-  // Here you would typically open a modal or navigate to a page
-  // where users can manage their cookie preferences
-  console.log("Manage preferences clicked")
+  if (!analyticalCookies.value) {
+    localStorage.setItem("va-disable", "true")
+    analyticalCookies.value = false
+  } else {
+    localStorage.removeItem("va-disable")
+  }
+  closeBanner()
 }
 
 const closeBanner = () => {
@@ -21,12 +27,10 @@ const closeBanner = () => {
 </script>
 
 <template>
-  <Transition name="fade">
+  <Transition>
     <div
       v-if="isVisible"
       class="fixed bottom-0 left-0 right-0 z-10 flex w-full flex-col justify-center gap-3 border-t bg-background p-4"
-      role="alert"
-      aria-live="polite"
     >
       <div class="m-auto max-w-[1024px] space-y-4">
         <div class="mb-4 mr-12 md:mb-0 md:mr-4">
@@ -53,12 +57,7 @@ const closeBanner = () => {
           </Button>
           <Dialog>
             <DialogTrigger>
-              <Button
-                variant="secondary"
-                size="sm"
-                class="w-full sm:w-auto"
-                @click="handleManagePreferences"
-              >
+              <Button variant="secondary" size="sm" class="w-full sm:w-auto">
                 Customize
               </Button>
             </DialogTrigger>
@@ -69,22 +68,49 @@ const closeBanner = () => {
                   Make changes to your cookie preferences here.
                 </DialogDescription>
               </DialogHeader>
+              <div class="mt-4 grid gap-6">
+                <div class="flex items-center justify-between space-x-2">
+                  <Label for="necessary" class="flex flex-col space-y-1">
+                    <span>Strictly Necessary</span>
+                    <span
+                      class="font-normal leading-snug text-muted-foreground"
+                    >
+                      These cookies are essential in order to use the website
+                      and use its features.
+                    </span>
+                  </Label>
+                  <Switch id="necessary" default-checked disabled />
+                </div>
+                <div class="flex items-center justify-between space-x-2">
+                  <Label for="functional" class="flex flex-col space-y-1">
+                    <span>Analytical Cookies</span>
+                    <span
+                      class="font-normal leading-snug text-muted-foreground"
+                    >
+                      These cookies allow the website to collect information on
+                      how it is used.
+                    </span>
+                  </Label>
+                  <Switch id="functional" v-model:checked="analyticalCookies" />
+                </div>
+              </div>
               <DialogFooter>
-                <Button variant="default" size="sm"> Save changes </Button>
+                <Button
+                  variant="default"
+                  size="sm"
+                  @click="handleManagePreferences"
+                >
+                  Save changes
+                </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <Button
-            variant="destructive"
-            size="sm"
-            @click="handleManagePreferences"
-          >
+          <Button variant="destructive" size="sm" @click="handleReject">
             Reject Non-Essential
           </Button>
         </div>
         <button
           class="absolute right-3 top-1 text-gray-500 hover:text-gray-700"
-          aria-label="Close cookie banner"
           @click="closeBanner"
         >
           <Icon name="i-heroicons-x-mark" />
@@ -95,13 +121,13 @@ const closeBanner = () => {
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
+.v-enter-active,
+.v-leave-active {
   transition: opacity 0.5s ease;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.v-enter-from,
+.v-leave-to {
   opacity: 0;
 }
 </style>

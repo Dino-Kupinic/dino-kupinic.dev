@@ -27,13 +27,6 @@ if (!projects.value) {
       class="mb-32 mt-3 grid h-auto grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5"
     >
       <ProjectItem v-for="project in projects" :key="project.title" :project />
-      <div
-        class="flex h-full w-full items-center justify-center rounded-lg bg-accent"
-      >
-        <span class="font-heading text-2xl font-semibold tracking-wide">
-          {{ $t("project.moreSoon") }}
-        </span>
-      </div>
     </main>
   </GenericLayoutWrapper>
 </template>

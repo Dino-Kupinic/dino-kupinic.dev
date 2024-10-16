@@ -13,10 +13,12 @@
             <NuxtLink :to="article._path">
               <div class="flex max-h-28 w-full flex-col space-y-4">
                 <div>
-                  <div class="flex justify-between pb-1">
-                    <BlogItemTitle class="line-clamp-1">
+                  <div class="flex items-center justify-between pb-1">
+                    <h3
+                      class="w-full text-ellipsis pr-3 text-sm font-medium text-foreground sm:text-xl"
+                    >
                       {{ article.title }}
-                    </BlogItemTitle>
+                    </h3>
                     <div class="mb-1 flex space-x-1">
                       <Badge
                         v-for="tag in article.tags"

@@ -42,7 +42,11 @@ if (project.value?.repository) {
 
 <template>
   <ContentLayoutWrapper>
-    <ContentHeader :title="project?.title as string" class="pt-6">
+    <ContentHeader
+      :title="project?.title as string"
+      base="/projects"
+      class="pt-6"
+    >
       <template #breadcrumb>
         {{ $t("project.breadcrumb") }}
       </template>

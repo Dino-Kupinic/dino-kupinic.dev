@@ -10,13 +10,10 @@ const languages: StackItem[] = [
   { tooltip: "TypeScript", icon: "i-akar-icons-typescript-fill" },
   { tooltip: "JavaScript", icon: "i-akar-icons-javascript-fill" },
   { tooltip: "C++", icon: "i-simple-icons-cplusplus" },
-  { tooltip: "C", icon: "i-simple-icons-c" },
   { tooltip: "Java", icon: "i-ant-design-java-outlined" },
   { tooltip: "PHP", icon: "i-akar-icons-php-fill" },
   { tooltip: "Python", icon: "i-ion-logo-python" },
-  { tooltip: "Swift", icon: "i-simple-icons-swift" },
   { tooltip: "Bash", icon: "i-codicon-terminal-bash" },
-  { tooltip: "Lua", icon: "i-simple-icons-lua" },
   { tooltip: "Markdown", icon: "i-simple-icons-markdown" },
 ]
 
@@ -27,8 +24,6 @@ const frameworks: StackItem[] = [
   { tooltip: "Spring Boot", icon: "i-simple-icons-spring" },
   { tooltip: "Symfony", icon: "i-simple-icons-symfony" },
   { tooltip: "NestJS", icon: "i-simple-icons-nestjs" },
-  { tooltip: "Qt", icon: "i-simple-icons-qt" },
-  { tooltip: "Flutter", icon: "i-simple-icons-flutter" },
 ]
 
 const libraries: StackItem[] = [
@@ -36,7 +31,6 @@ const libraries: StackItem[] = [
   { tooltip: "Vite", icon: "i-file-icons-vite" },
   { tooltip: "Vitest", icon: "i-simple-icons-vitest" },
   { tooltip: "Tailwind", icon: "i-mdi-tailwind" },
-  { tooltip: "Bootstrap", icon: "i-ri-bootstrap-fill" },
   { tooltip: "Drizzle", icon: "i-simple-icons-drizzle" },
   { tooltip: "Prisma", icon: "i-simple-icons-prisma" },
   { tooltip: "Supabase", icon: "i-ri-supabase-fill" },
@@ -47,14 +41,12 @@ const databases: StackItem[] = [
   { tooltip: "SQLite", icon: "i-simple-icons-sqlite" },
   { tooltip: "Postgres", icon: "i-akar-icons-postgresql-fill" },
   { tooltip: "MySQL", icon: "i-simple-icons-mysql" },
-  { tooltip: "Turso", icon: "i-simple-icons-turso" },
 ]
 
 const etc: StackItem[] = [
   { tooltip: "Docker", icon: "i-simple-icons-docker" },
   { tooltip: "Git", icon: "i-bx-bxl-git" },
   { tooltip: "Figma", icon: "i-ph-figma-logo" },
-  { tooltip: "Vercel", icon: "i-akar-icons-vercel-fill" },
 ]
 
 const mix: StackItem[] = [...frameworks, ...libraries, ...databases, ...etc]

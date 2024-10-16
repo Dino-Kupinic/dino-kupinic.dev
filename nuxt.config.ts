@@ -21,9 +21,6 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: true,
-    timeline: {
-      enabled: true,
-    },
   },
 
   $production: {
@@ -52,7 +49,7 @@ export default defineNuxtConfig({
     },
     families: [
       { name: "Fira Code", provider: "google" },
-      { name: "JetBrains Mono", provider: "google" },
+      { name: "Inter", provider: "google" },
     ],
   },
 
@@ -101,7 +98,15 @@ export default defineNuxtConfig({
         default: "github-light",
         dark: "github-dark",
       },
-      langs: ["vue", "java", "bash", "typescript", "javascript", "yaml"],
+      langs: [
+        "vue",
+        "java",
+        "bash",
+        "typescript",
+        "javascript",
+        "yaml",
+        "wasm",
+      ],
     },
     markdown: {
       anchorLinks: {

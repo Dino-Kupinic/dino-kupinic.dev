@@ -9,9 +9,6 @@ const currentYear = new Date().getFullYear()
     <p class="text-primary dark:text-secondary">
       &copy; {{ currentYear }} Dino Kupinic. {{ $t("footer.rights") }}
     </p>
-    <div class="flex justify-between">
-      <FooterSocials />
-      <FooterMadeWith />
-    </div>
+    <FooterSocials />
   </div>
 </template>
