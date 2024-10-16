@@ -15,7 +15,7 @@ watch(
       {
         icon: "i-ic-baseline-discord",
         text: t("blog.links.chat"),
-        link: "https://discord.gg/y3DeWTBEGR",
+        link: "https://discord.gg/VhJx3fCcEw",
       },
       {
         icon: "i-simple-icons-x",

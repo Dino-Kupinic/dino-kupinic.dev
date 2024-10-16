@@ -18,7 +18,7 @@ export default function (): SocialItem[] {
     {
       icon: "i-ic-baseline-discord",
       name: "Discord",
-      link: "https://discord.gg/y3DeWTBEGR",
+      link: "https://discord.gg/VhJx3fCcEw",
     },
     {
       icon: "i-mdi-instagram",
