@@ -17,5 +17,5 @@ repository:
 
 ## Description
 
-Tourney is the tournament app to support the yearly football-, volleyball- and basketball tournament at the my school.
+Tourney is the tournament app to support the yearly football-, volleyball- and basketball tournament at my school.
 

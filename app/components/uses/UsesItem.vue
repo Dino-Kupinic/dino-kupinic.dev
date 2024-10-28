@@ -4,6 +4,8 @@ defineProps<{
   description: string
   image: string
 }>()
+
+const img = useImage()
 </script>
 
 <template>
@@ -14,7 +16,11 @@ defineProps<{
         <CardDescription>{{ description }}</CardDescription>
       </CardHeader>
       <div class="flex h-40 w-full items-center justify-center">
-        <NuxtImg :src="image" class="max-h-full max-w-full object-contain" />
+        <NuxtImg
+          :src="image"
+          class="max-h-full max-w-full object-contain"
+          :placeholder="img(image, { h: 300, f: 'png', blur: 2, q: 50 })"
+        />
       </div>
     </div>
   </Card>

@@ -15,7 +15,7 @@
                 <div>
                   <div class="flex items-center justify-between pb-1">
                     <h3
-                      class="w-full text-ellipsis pr-3 text-sm font-medium text-foreground sm:text-xl"
+                      class="w-full text-ellipsis pr-3 text-sm font-semibold tracking-tight text-foreground sm:text-xl"
                     >
                       {{ article.title }}
                     </h3>
