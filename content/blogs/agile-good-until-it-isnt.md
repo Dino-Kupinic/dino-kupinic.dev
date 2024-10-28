@@ -1,13 +1,14 @@
 ---
-title: "Agile Software Development: Great, until it isn't"
-description: "Somehow, nobody knows how to do it right"
+title: "Rethinking Agile"
+description: "Navigating the challenges of implementing Agile effectively"
 date: 2024-07-24
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
     handle: "@Dino-Kupinic"
 tags:
-  - Rant
+  - Agile
+  - Project Management
 seo:
   image:
     src: "/images/blog/agile_blog.png"
@@ -16,86 +17,61 @@ seo:
 
 ![Agile](/images/blog/agile_blog.png)
 
-Ah, Agile. The methodology that promised to revolutionize software development.
-The answer to waterfall's rigidity.
-The solution to all our project management woes. Except when it isn't – which seems most of the time.
+Agile software development promised to revolutionize the way we build products, with its emphasis on flexibility,
+collaboration, and faster delivery. However, the reality often falls short of the promise, as many organizations
+struggle to implement Agile effectively.
 
-## Promise vs. Reality
+## The Gaps Between Promise and Reality
 
-Agile and SCRUM have become synonymous with software development, but the reality often falls short of the promise.
-It's not that Agile is inherently bad – it's just that most organizations don't know how to do it right.
+Agile and Scrum have become ubiquitous in software development, but the implementation often fails to capture the true
+spirit of the methodology.
 
-Below is a comparison of what Agile promises and what it often delivers
-_(this is a generalization and not representative of all Agile projects)_:
+| Promise                           | Reality                                                                          |
+|-----------------------------------|----------------------------------------------------------------------------------|
+| Flexible and adaptive development | Daily standups that feel more like status updates than collaborative discussions |
+| Better communication              | Sprint planning that resembles a more traditional waterfall approach             |
+| Faster delivery                   | Story points that become proxies for hours worked again                          |
+| Productive environment            | Meetings that consume a significant portion of the work week                     |
+| Satisfied customers               | Product owners who struggle to prioritize the backlog effectively                |
+| Happy developers                  | Developers who are sometimes dissatisfied with the implementation                |
 
+## Challenges in Adopting Agile
 
-| Promise                           | Reality                                                                                       |
-|-----------------------------------|-----------------------------------------------------------------------------------------------|
-| Flexible and adaptive development | Daily standups that feel like interrogations                                                  |
-| Better communication              | Sprint planning that's basically waterfall with extra steps                                   |
-| Faster delivery                   | Story points that somehow became hours again                                                  |
-| Productive environment            | "Meetings" that eat up half your work week                                                    |
-| Satisfied customers               | Product owners who treat the backlog like a wish list                                         |
-| Happy developers                  | 80% of developers are unhappy with their job, [source](https://survey.stackoverflow.co/2024/) |
+The core principles of Agile, such as flexibility, adaptability, and collaboration, can be challenging to implement in
+practice. Some common pitfalls include:
 
-## Where It All Went Wrong
+### Rigid "Prescriptive" Agile
 
-In theory, Agile is about flexibility, adaptability, and collaboration.
-In practice, it's often about bureaucracy, process, and meetings.
+Many organizations adopt the ceremonial aspects of Agile (e.g., Scrum Masters, Jira boards, daily standups) without
+truly embracing the underlying mindset. This can lead to a bureaucratic approach that undermines the benefits of Agile.
 
-### Only "Prescriptive" Agile
+### Conflicting Demands
 
-- The Scrum Master ✅
-- The Jira board (or similar) ✅
-- The daily standups ✅
-- The two-week/three-week sprints ✅
-- The actual agility ❌
+Teams often struggle to balance the need for detailed planning and estimation with the Agile principle of embracing
+change. This can result in a cognitive dissonance where teams claim to be Agile while still requiring rigid upfront
+specifications.
 
-### Agile Circus
+### Meeting Overload
 
-```
-PM: "We're Agile!"
-Also PM: "I need a detailed estimate for the next 6 months"
-```
+Agile methodologies can lead to a proliferation of meetings, from sprint planning to retrospectives. If not managed
+carefully, these ceremonies can consume a significant portion of the team's time, leaving less time for actual
+development work.
 
-This cognitive dissonance is everywhere. Teams claim to be Agile while:
+## A More Effective Agile Approach
 
-- Requiring detailed specifications upfront
-- Refusing to adapt to change
-- Measuring success by story point velocity
-- Treating the sprint backlog as carved in stone
+So what can we do?
 
-### Meetings, Meetings, Meetings
+1. **Prioritize Agility over Processes**: Focus on the fundamental principles of Agile, such as adaptability and
+   collaboration, rather than strictly following a prescribed set of practices.
 
-A typical "Agile" week:
+2. **Optimize Meetings**: Carefully evaluate the necessity and duration of Agile ceremonies, keeping them focused and
+   efficient.
 
-| Day       | Activity                  | Duration      |
-|-----------|---------------------------|---------------|
-| Monday    | Sprint Planning           | 2 hours       |
-| Tuesday   | Backlog Refinement        | 1 hour        |
-| Wednesday | Technical Debt Discussion | 1 hour        |
-| Thursday  | Sprint Review             | 1 hour        |
-| Friday    | Retrospective             | 1.5 hours     |
-| Every Day | Daily Standup             | 15–30 minutes |
+3. **Embrace Continuous Improvement**: Regularly review and adjust the Agile implementation based on feedback and
+   lessons learned, rather than treating it as a fixed solution.
 
-That's roughly 7–9 hours per week just in ceremonies. When exactly are we supposed to code?
+4. **Collaborative Culture**: Encourage open communication, shared ownership, and a willingness to adapt to
+   change throughout the organization.
 
-## Certification Industrial Complex
+Please keep in mind that these are my experiences with Agile! You may have a different view on this. 🙏
 
-Certified Scrum Master, Professional Scrum Master (PSM1, PSM2, PSM3), SAFe Scrum Master...
-
-Yet somehow, despite all these certified experts, projects still go over budget, miss deadlines, deliver wrong features
-and accumulate technical debt?!
-
-## Cut out all the bullsh*t
-
-- Keep standups under 10 minutes and only include people who need to be there
-- Make retrospectives actionable
-- Plan only what you can reasonably forecast and adjust as needed
-- Skip ceremonies that don't add value
-
-## Conclusion
-
-Agile isn't that bad – it's just been corrupted by process-obsessed organizations and certification mills. The original
-Agile
-Manifesto was just 68 words, yet somehow we've turned it into a bureaucratic nightmare.
