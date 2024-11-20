@@ -8,7 +8,6 @@ authors:
     handle: "@Dino-Kupinic"
 tags:
   - Agile
-  - Project Management
 seo:
   image:
     src: "/images/blog/agile_blog.png"

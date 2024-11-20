@@ -16,62 +16,62 @@ type Artist = {
 const artists: Artist[] = [
   {
     name: "Dua Lipa",
-    link: "https://www.youtube.com/@dualipa",
+    link: "https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we?si=LHwN-361QOGmiL8X2e9zFw",
     backgroundColor: "red",
   },
   {
     name: "Lady Gaga",
-    link: "https://www.youtube.com/@LadyGaga",
+    link: "https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms?si=hjIbQs_OQPeUrzLkAR0Fww",
     backgroundColor: "purple",
   },
   {
-    name: "Sabrina Carpenter",
-    link: "https://www.youtube.com/channel/UCPKWE1H6xhxwPlqUlKgHb_w",
-    backgroundColor: "blue",
-  },
-  {
-    name: "Tainted",
-    link: "https://www.youtube.com/@taintedsc/videos",
-    backgroundColor: "orange",
-  },
-  {
-    name: "Ariana Grande",
-    link: "https://www.youtube.com/@ArianaGrande/videos",
-    backgroundColor: "yellow",
-  },
-  {
     name: "Michael Jackson",
-    link: "https://www.youtube.com/@MichaelJackson/videos",
+    link: "https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm?si=amJGfgpMRIq6WwlE51yrbw",
     backgroundColor: "green",
   },
   {
-    name: "Gotye",
-    link: "https://www.youtube.com/@gotye/videos",
-    backgroundColor: "pink",
+    name: "luvwillow",
+    link: "https://open.spotify.com/artist/3QMquHHgjA58upVZerNHNx?si=BnPdvHnTSoShTaZr6SZ_jA",
+    backgroundColor: "orange",
   },
   {
-    name: "Nirvana",
-    link: "https://www.youtube.com/@nirvana/videos",
+    name: "m1v",
+    link: "https://open.spotify.com/artist/5pfVvTVQiPCMClDlE3bj0S?si=YA5KuKaLRtKb-tYEENhuDA",
+    backgroundColor: "blue",
+  },
+  {
+    name: "Linkin Park",
+    link: "https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz?si=2bEBTiN9SxSvu15okEe21w",
     backgroundColor: "yellow",
   },
   {
-    name: "Clover!",
-    link: "https://www.youtube.com/channel/UCR9ZNh-c-aXU6qOURo1lMrg",
+    name: "hauntingclaire",
+    link: "https://open.spotify.com/artist/7dEkEZWOVUUythoZFI2kaS?si=pGA78jBMS6SXU-1rXir39w",
+    backgroundColor: "pink",
+  },
+  {
+    name: "No Doubt",
+    link: "https://open.spotify.com/artist/0cQbJU1aAzvbEmTuljWLlF?si=OCkAS8VzSyGVzHaBRfsHjA",
+    backgroundColor: "green",
+  },
+  {
+    name: "asteria",
+    link: "https://open.spotify.com/artist/0I7VmE5LkRmWoHltutTUh9?si=GU7QnLc5QhKTUGbfEfgO7g",
     backgroundColor: "teal",
   },
   {
     name: "d3r",
-    link: "https://www.youtube.com/@d3r/featured",
+    link: "https://open.spotify.com/artist/41PE0deubI6MpwYruSEWHG?si=lWuwK-hnTuG7ALEWUy3QBg",
     backgroundColor: "red",
   },
   {
-    name: "Tate McRae",
-    link: "https://www.youtube.com/@TateMcRae/videos",
+    name: "Disturbed",
+    link: "https://open.spotify.com/artist/3TOqt5oJwL9BE2NG9MEwDa?si=I_1N2GSLQuexj712hFOecQ",
     backgroundColor: "orange",
   },
   {
     name: "Kaneda7",
-    link: "https://www.youtube.com/channel/UCq8XyJ2xTACSZkt3pidTFrg",
+    link: "https://open.spotify.com/artist/3ONCRtjXvAUCwfKSuSkuOM?si=L0rmGQY6Rm-YTZ_3iKePJg",
     backgroundColor: "blue",
   },
 ]
