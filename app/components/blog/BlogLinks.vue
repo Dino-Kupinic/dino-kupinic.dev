@@ -13,11 +13,6 @@ watch(
   () => {
     items.value = [
       {
-        icon: "i-ic-baseline-discord",
-        text: t("blog.links.chat"),
-        link: "https://discord.gg/VhJx3fCcEw",
-      },
-      {
         icon: "i-simple-icons-x",
         text: t("blog.links.follow"),
         link: "https://x.com/DinoKupinic",

@@ -16,11 +16,6 @@ export default function (): SocialItem[] {
       link: "https://github.com/Dino-Kupinic",
     },
     {
-      icon: "i-ic-baseline-discord",
-      name: "Discord",
-      link: "https://discord.gg/VhJx3fCcEw",
-    },
-    {
       icon: "i-mdi-instagram",
       name: "Instagram",
       link: "https://www.instagram.com/dinokupinic?igsh=ejhvbTA1dDZrYmFr&utm_source=qr",
