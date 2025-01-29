@@ -22,9 +22,9 @@ const devices = [
     image: "/images/about/ipad-air.webp",
   },
   {
-    title: "Apple Pencil",
-    description: "2nd Generation",
-    image: "/images/about/apple-pencil.png",
+    title: "Apple Watch S10",
+    description: "42mm Silver",
+    image: "/images/about/apple-watch.png",
   },
 ]
 </script>
