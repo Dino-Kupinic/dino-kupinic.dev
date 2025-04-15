@@ -10,16 +10,6 @@ const os = [
     description: "Programming",
     image: "/images/about/os/macos.avif",
   },
-  {
-    title: "Debian 12",
-    description: "Virtual Machine",
-    image: "/images/about/os/debian.png",
-  },
-  {
-    title: "Arch Linux",
-    description: "Virtual Machine",
-    image: "/images/about/os/arch.png",
-  },
 ]
 
 const dev = [
@@ -52,11 +42,6 @@ const dev = [
 
 const apps = [
   {
-    title: "Apple Music",
-    description: "Music streaming",
-    image: "/images/about/apps/apple-music.png",
-  },
-  {
     title: "Apple Books",
     description: "Reading",
     image: "/images/about/apps/apple-books.png",
@@ -80,11 +65,6 @@ const apps = [
     title: "Discord",
     description: "Chat & Voice",
     image: "/images/about/apps/discord-app.png",
-  },
-  {
-    title: "Arc",
-    description: "Browser",
-    image: "/images/about/apps/arc.png",
   },
   {
     title: "Apple Notes",
@@ -140,11 +120,6 @@ const apps = [
     title: "GeoGebra",
     description: "Mathematics",
     image: "/images/about/apps/geogebra.png",
-  },
-  {
-    title: "VirtualBox",
-    description: "Virtualization",
-    image: "/images/about/apps/virtualbox.png",
   },
   {
     title: "OBS",

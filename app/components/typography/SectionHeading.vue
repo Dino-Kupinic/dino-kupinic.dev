@@ -21,7 +21,7 @@ const getSize = () => {
 </script>
 
 <template>
-  <h3 :class="['font-heading font-semibold tracking-tight', getSize()]">
+  <h3 :class="['font-heading font-semibold tracking-tighter', getSize()]">
     <slot />
   </h3>
 </template>

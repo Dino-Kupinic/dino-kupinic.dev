@@ -22,7 +22,11 @@ defineProps<{
               :href="item.href"
               :class="navigationMenuTriggerStyle()"
             >
-              {{ item.title }}
+              <span
+                class="font-mono uppercase tracking-tight decoration-dotted underline-offset-4 hover:underline"
+              >
+                {{ item.title }}
+              </span>
             </NavigationMenuLink>
           </template>
         </NavItem>
