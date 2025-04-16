@@ -11,7 +11,7 @@ technologies:
   - "NGINX"
   - "WebSocket"
   - "ShadCN"
-date: 2025-05-04T00:00:00.000Z
+date: 2025-04-05T00:00:00.000Z
 featured: true
 repository:
   url: "https://github.com/Dino-Kupinic/peekaboo"
