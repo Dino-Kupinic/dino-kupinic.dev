@@ -1,7 +1,7 @@
 ---
-title: "Why you should usually avoid using SaaS"
+title: "Don't use SaaS as a newbie"
 description: You don't know how to host, write a websocket or do e-mail
-date: 2024-09-15
+date: 2024-10-15
 authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
@@ -61,7 +61,7 @@ Or gets acquired by a competitor?
 
 ### Hosting
 
-Instead of learning how to set up a linux server, configure nginx or apache,
+Instead of learning how to set up a Linux server, configure NGINX or Apache,
 manage SSL certificates or handle load balancing, you're clicking `Deploy to Vercel` and calling it a day.
 
 Getting a VPS and deploying a simple app is a great exercise in understanding how the web works.
@@ -94,6 +94,7 @@ There are legitimate cases for using SaaS and I myself use them when it makes se
 - **MVP Development**: When you need to validate an idea quickly
 - **Small Personal Projects**: Where learning infrastructure isn't the goal (leeching off of free tiers)
 - **Specific Complex Features**: When the service provides genuine expertise
+- **Time Constraints**: When you need to deliver quickly and can't afford to build everything from scratch
 
 ## Conclusion
 

@@ -1,6 +1,6 @@
 ---
 title: "Grape"
-description: "the paste-bin you should be using starting now"
+description: "The paste-bin you need to start using now"
 icons:
   - "i-simple-icons-vuedotjs"
   - "i-simple-icons-tailwindcss"

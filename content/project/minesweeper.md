@@ -1,6 +1,6 @@
 ---
 title: "Minesweeper"
-description: "minesweeper with multiple difficulties and highscore"
+description: "Minesweeper with multiple difficulty levels and high scores"
 icons:
   - "i-ant-design-java-outlined"
 technologies:

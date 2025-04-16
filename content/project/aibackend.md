@@ -1,6 +1,6 @@
 ---
 title: "AI Backend"
-description: "ai backend for your app powered by llama3"
+description: "FastAPI starter to get started building AI apps fast"
 icons:
   - "i-simple-icons-python"
   - "i-simple-icons-fastapi"

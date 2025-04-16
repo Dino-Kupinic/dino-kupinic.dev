@@ -1,6 +1,6 @@
 ---
 title: "TicTacToe"
-description: "colorful TicTacToe game playable in your browser"
+description: "Colorful Tic-Tac-Toe game playable in your browser"
 icons:
   - "i-simple-icons-javascript"
   - "i-simple-icons-html5"

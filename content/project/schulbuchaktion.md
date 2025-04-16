@@ -1,6 +1,6 @@
 ---
 title: Schulbuchaktion
-description: intuitive book ordering management system for austrian schools
+description: "Intuitive book ordering management system for Austrian schools"
 icons:
   - i-simple-icons-nuxtdotjs
   - i-simple-icons-symfony

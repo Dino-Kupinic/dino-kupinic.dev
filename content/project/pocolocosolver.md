@@ -1,6 +1,6 @@
 ---
 title: "Pocoloco Solver"
-description: "automatic solver for the pocoloco puzzle with 3D visualization"
+description: "Automatic solver for the Pocoloco puzzle with 3D visualization"
 icons:
   - "i-simple-icons-python"
   - "i-simple-icons-numpy"

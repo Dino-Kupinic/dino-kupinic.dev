@@ -1,6 +1,6 @@
 ---
 title: "Hangman"
-description: "simple ASCII hangman playable in your browser"
+description: "Simple ASCII hangman game playable in your browser"
 icons:
   - "i-simple-icons-javascript"
   - "i-simple-icons-html5"

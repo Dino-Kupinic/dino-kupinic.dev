@@ -1,6 +1,6 @@
 ---
 title: "E-Reader"
-description: "book/dvd borrowing management system for libraries"
+description: "Book/DVD borrowing management system for libraries"
 icons:
   - "i-devicon-plain-mysql"
   - "i-simple-icons-spring"

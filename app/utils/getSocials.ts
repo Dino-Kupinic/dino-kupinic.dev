@@ -25,5 +25,10 @@ export default function (): SocialItem[] {
       name: "YouTube",
       link: "https://www.youtube.com/channel/UCeO73z_5j_7U92xByZv3VtA",
     },
+    {
+      icon: "i-simple-icons-x",
+      name: "X (Twitter)",
+      link: "https://www.x.com/DinoKupinic",
+    },
   ]
 }

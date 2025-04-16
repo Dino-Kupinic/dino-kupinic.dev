@@ -18,12 +18,16 @@ const languages: StackItem[] = [
 ]
 
 const frameworks: StackItem[] = [
+  { tooltip: "React", icon: "i-simple-icons-react" },
+  { tooltip: "Next", icon: "i-simple-icons-nextdotjs" },
   { tooltip: "Vue", icon: "i-simple-icons-vuedotjs" },
   { tooltip: "Svelte", icon: "i-simple-icons-svelte" },
   { tooltip: "Nuxt", icon: "i-simple-icons-nuxtdotjs" },
   { tooltip: "Spring Boot", icon: "i-simple-icons-spring" },
   { tooltip: "Symfony", icon: "i-simple-icons-symfony" },
   { tooltip: "NestJS", icon: "i-simple-icons-nestjs" },
+  { tooltip: "Express", icon: "i-simple-icons-express" },
+  { tooltip: "Bun", icon: "i-simple-icons-bun" },
 ]
 
 const libraries: StackItem[] = [
@@ -34,7 +38,7 @@ const libraries: StackItem[] = [
   { tooltip: "Drizzle", icon: "i-simple-icons-drizzle" },
   { tooltip: "Prisma", icon: "i-simple-icons-prisma" },
   { tooltip: "Supabase", icon: "i-ri-supabase-fill" },
-  { tooltip: "PocketBase", icon: "i-simple-icons-pocketbase" },
+  { tooltip: "FastAPI", icon: "i-simple-icons-fastapi" },
 ]
 
 const databases: StackItem[] = [

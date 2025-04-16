@@ -1,6 +1,6 @@
 ---
 title: "Dino Kupinic"
-description: "my portfolio website that you are currently visiting"
+description: "My portfolio website that you are currently visiting"
 icons:
   - "i-simple-icons-nuxtdotjs"
   - "i-simple-icons-tailwindcss"

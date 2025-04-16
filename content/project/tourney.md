@@ -1,6 +1,6 @@
 ---
 title: "Tourney"
-description: "delightful and easy tournament management"
+description: "Delightful and easy tournament management"
 icons:
   - "i-simple-icons-nuxtdotjs"
   - "i-simple-icons-supabase"

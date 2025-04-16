@@ -30,23 +30,13 @@ const artists: Artist[] = [
     backgroundColor: "green",
   },
   {
-    name: "luvwillow",
-    link: "https://open.spotify.com/artist/3QMquHHgjA58upVZerNHNx?si=BnPdvHnTSoShTaZr6SZ_jA",
-    backgroundColor: "orange",
-  },
-  {
-    name: "m1v",
-    link: "https://open.spotify.com/artist/5pfVvTVQiPCMClDlE3bj0S?si=YA5KuKaLRtKb-tYEENhuDA",
-    backgroundColor: "blue",
-  },
-  {
     name: "Linkin Park",
     link: "https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz?si=2bEBTiN9SxSvu15okEe21w",
     backgroundColor: "yellow",
   },
   {
-    name: "hauntingclaire",
-    link: "https://open.spotify.com/artist/7dEkEZWOVUUythoZFI2kaS?si=pGA78jBMS6SXU-1rXir39w",
+    name: "Troye Sivan",
+    link: "https://open.spotify.com/artist/3WGpXCj9YhhfX11TToZcXP?si=44fa43ac5e1646bb",
     backgroundColor: "pink",
   },
   {
@@ -62,7 +52,7 @@ const artists: Artist[] = [
   {
     name: "d3r",
     link: "https://open.spotify.com/artist/41PE0deubI6MpwYruSEWHG?si=lWuwK-hnTuG7ALEWUy3QBg",
-    backgroundColor: "red",
+    backgroundColor: "purple",
   },
   {
     name: "Disturbed",
@@ -70,8 +60,18 @@ const artists: Artist[] = [
     backgroundColor: "orange",
   },
   {
-    name: "Kaneda7",
-    link: "https://open.spotify.com/artist/3ONCRtjXvAUCwfKSuSkuOM?si=L0rmGQY6Rm-YTZ_3iKePJg",
+    name: "luvwillow",
+    link: "https://open.spotify.com/artist/3QMquHHgjA58upVZerNHNx?si=BnPdvHnTSoShTaZr6SZ_jA",
+    backgroundColor: "red",
+  },
+  {
+    name: "TOMORROW X TOGETHER",
+    link: "https://open.spotify.com/artist/0ghlgldX5Dd6720Q3qFyQB?si=aFCGGct0RjixZ9vPC70_rg",
+    backgroundColor: "yellow",
+  },
+  {
+    name: "m1v",
+    link: "https://open.spotify.com/artist/5pfVvTVQiPCMClDlE3bj0S?si=YA5KuKaLRtKb-tYEENhuDA",
     backgroundColor: "blue",
   },
 ]

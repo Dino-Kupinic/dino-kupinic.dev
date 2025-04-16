@@ -1,7 +1,7 @@
 ---
 title: "Amazing Sources for Design Inspiration"
 description: "Steal like an artist"
-date: 2024-09-10
+date: 2025-2-3
 tags:
   - Guide
 authors:
@@ -21,7 +21,8 @@ related:
 There's a saying that goes: "Good artists copy, great artists steal."
 The same applies to design – inspiration is everywhere, and the best designers know where to look.
 
-_This is a curated list of some of the best sources for design inspiration, from websites to tools and everything in between._
+_This is a curated list of some of the best sources for design inspiration, from websites to tools and everything in
+between._
 
 ### Mobbin
 
@@ -30,11 +31,9 @@ It's a great resource for designers and developers looking for inspiration or ju
 
 ![mobbin](/images/blog/mobbin_preview.png)
 
-**Why it's valuable:**
-- Real-world examples from published apps
-- Searchable interface patterns
-- Regular updates with new content
-- High-quality screenshots
+Mobbin features real-world examples from published apps, making it an excellent reference point. Its searchable
+interface patterns help users quickly find specific elements. The platform is updated regularly with fresh content and
+offers high-quality screenshots for deeper insight.
 
 ### Curated Design
 
@@ -43,11 +42,8 @@ It's a great place to find inspiration for your next project or just to see what
 
 ![curated.design](/images/blog/curated_preview.png)
 
-**Key features:**
-- Hand-picked selections
-- Focus on modern design trends
-- Various categories and filters
-- Regular updates
+The designs are hand-picked to ensure quality and creativity. They emphasize current design trends and allow
+users to browse through various categories and filters. Like Mobbin, it is regularly updated to stay relevant.
 
 ### Dark Mode Design
 
@@ -55,11 +51,10 @@ It's a great place to find inspiration for your next project or just to see what
 
 ![dark](/images/blog/dark_preview.png)
 
-**What makes it special:**
-- Focused specifically on dark themes
-- Great for accessibility insights
-- Color palette inspiration
-- Modern design patterns
+This site focuses specifically on dark themes, offering valuable insights into accessibility. It also provides
+inspiration for color palettes and highlights modern design patterns suited for dark UI.
+
+> **UPDATE (16.04.2025)**: It seems the website is not updated anymore, but it still has a lot of great examples.
 
 ### Footer Design
 
@@ -67,23 +62,21 @@ It's a great place to find inspiration for your next project or just to see what
 
 ![footer](/images/blog/footer_preview.png)
 
-**Why footers matter:**
-- Often overlooked but crucial for UX
-- Important for navigation and information architecture
-- Opportunity for brand expression
-- Key conversion placement
+Footers. The most underrated part of a website.
 
 ### Minimal Gallery
 
-[Minimal Gallery](https://www.footer.design/) is a collection of the best minimal design examples from around the web.
+[Minimal Gallery](https://minimal.gallery/) is a collection of the best minimal design examples from around the web.
 
-![footer](/images/blog/minimal_preview.png)
+![minimal](/images/blog/minimal_preview.png)
 
-**Benefits of minimal design:**
-- Focuses on essential elements
-- Improves user experience
+Probably the best website for minimal design inspiration.
+It features a wide range of categories, including startups, portfolios, SaaS and more.
+The designs are hand-picked to ensure quality and creativity.
+The site is regularly updated with fresh content, making it a great
+resource for designers and developers looking for inspiration.
+
 
 ## Conclusion
 
-Design inspiration is all around us – from the websites we visit to the apps we use.
-By keeping an eye on the latest trends and best practices, you can stay ahead of the curve and create designs that stand out.
+Inspiration is everywhere, and the best designers know where to look.

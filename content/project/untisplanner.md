@@ -1,6 +1,6 @@
 ---
 title: "UntisPlanner"
-description: "versatile integration for the untis education software"
+description: "Versatile integration for the Untis education software"
 icons:
   - "i-simple-icons-nuxtdotjs"
   - "i-simple-icons-tailwindcss"

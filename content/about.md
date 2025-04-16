@@ -1,7 +1,7 @@
 ## Hey there! 👋
 
 My name is Dino Kupinic (as you might have guessed) and I'm a software engineer from Austria.
-I'm currently pursuing a high school diploma in information technology and network technology.
+I started programming when I was 11 years old, and I've been doing it ever since.
 
 I enjoy building full-stack applications and working with modern technologies. I'm always looking for new things to
 learn and improve on.
@@ -9,6 +9,8 @@ I also enjoy playing video games, listening to music, watching movies/shows or r
 
 Right now I'm working on a few projects, which you can find on my [GitHub](https://github.com/Dino-Kupinic).
 Machine Learning and LLMs (Large Language Models) are my current focus, but I'm also working on a few web applications.
+
+In terms of web development, I'm currently working with `React`, `Next.js`, `TypeScript` and `Tailwind CSS`.
 I'm also writing blog posts about things I learn and find interesting.
 
 ## This Website
@@ -18,11 +20,18 @@ little bit about myself on the internet.
 Building this website was a fun experience, and I learned a lot about web development in the process.
 Though it's not perfect, I'm happy with the result, and I'm looking forward to improving it in the future.
 
+### Future Plans
+
+In the future, I want to rewrite this website in Next.js and use a totally different design.
+I have a few ideas in mind, but I want to keep them a secret for now!
+Right now, I'm not sure when that will happen, but I want to do it sometime in 2025/26.
+
 ## Inspiration
 
 I got inspired by the design of [Vercel](https://vercel.com) and [Next.js](https://nextjs.org). I wanted to build
 something similar, but with my own twist.
 Thanks to [shadcn](https://ui.shadcn.com/) for the awesome component library, which I used as a base for my website.
+Though I would like to make my own component library in the future!
 
 ## Tech Stack
 

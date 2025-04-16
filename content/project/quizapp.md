@@ -1,6 +1,6 @@
 ---
 title: "Quiz App"
-description: "kahoot-like quiz app for your desktop included with editor and highscores"
+description: "Kahoot-like quiz app for your desktop, including an editor and high scores"
 icons:
   - "i-ant-design-java-outlined"
 technologies:

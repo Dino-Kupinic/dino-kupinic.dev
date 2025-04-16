@@ -8,11 +8,16 @@
         <!--        <TooltipProvider>-->
         <!--          <Tooltip>-->
         <!--            <TooltipTrigger>-->
-        <NuxtLink to="https://nuxt.com" external>
+        <NuxtLink
+          to="https://typescriptlang.org"
+          external
+          target="_blank"
+          rel="noreferrer"
+        >
           <Icon
-            name="i-simple-icons-nuxtdotjs"
+            name="i-simple-icons-typescript"
             class="h-32 w-32"
-            aria-label="Nuxt Logo"
+            aria-label="TypeScript Logo"
           />
         </NuxtLink>
         <!--            </TooltipTrigger>-->

@@ -1,6 +1,6 @@
 ---
 title: "Peekaboo"
-description: "analyze and view nginx logs in real-time"
+description: "Analyze and view NGINX logs in real-time"
 icons:
   - "i-simple-icons-react"
   - "i-simple-icons-bun"

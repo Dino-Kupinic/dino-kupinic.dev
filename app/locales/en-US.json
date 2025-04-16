@@ -57,13 +57,13 @@
   },
   "about": {
     "title": "About me",
-    "subtitle": "Software Engineer, Open Source Contributor, Blogger",
+    "subtitle": "Software Engineer",
     "country": "Austria",
     "age": "Age",
     "socials": "Socials",
     "stacks": "Skills",
     "song": "Favourite Song",
-    "framework": "Favourite Framework",
+    "framework": "Favourite Language",
     "quote": "Favourite Quote",
     "artist": "Favourite Artists"
   },

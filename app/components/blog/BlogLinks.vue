@@ -36,6 +36,9 @@ watch(
       :key="item.text"
       :to="item.link"
       class="my-1.5 flex"
+      external
+      target="_blank"
+      rel="noreferrer"
     >
       <span
         class="text-sm text-neutral-500 hover:text-foreground dark:text-neutral-500 dark:hover:text-foreground"
