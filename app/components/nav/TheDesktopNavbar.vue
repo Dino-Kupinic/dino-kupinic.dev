@@ -27,6 +27,9 @@ defineProps<{
               >
                 {{ item.title }}
               </span>
+              <Badge v-if="item.title === 'Yuzzuwo'" class="-mr-1 ml-2">
+                NEW
+              </Badge>
             </NavigationMenuLink>
           </template>
         </NavItem>

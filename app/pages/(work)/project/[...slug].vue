@@ -112,7 +112,7 @@ if (project.value?.repository) {
         </div>
       </div>
     </div>
-    <main class="mb-16 sm:w-3/5">
+    <main class="mb-48 sm:w-3/5">
       <ContentDoc>
         <template #empty>
           <div class="h-[400px]">

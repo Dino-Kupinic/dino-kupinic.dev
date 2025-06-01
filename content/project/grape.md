@@ -11,7 +11,6 @@ technologies:
   - "Tailwind CSS"
   - "PWA"
 date: 2024-01-27T00:00:00.000Z
-featured: true
 deployed:
   vendor: "Linode"
   url: "https://grape.comcrops.at/"

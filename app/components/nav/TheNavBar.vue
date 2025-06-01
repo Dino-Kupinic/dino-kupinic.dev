@@ -9,6 +9,10 @@ watch(
   () => {
     navigationItems.value = [
       {
+        title: "Yuzzuwo",
+        href: "/yuzzuwo",
+      },
+      {
         title: t("nav.projects"),
         href: "/projects",
       },
