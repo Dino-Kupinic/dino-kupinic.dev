@@ -105,7 +105,7 @@ const closeBanner = () => {
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <Button variant="destructive" size="sm" @click="handleReject">
+          <Button variant="secondary" size="sm" @click="handleReject">
             Reject Non-Essential
           </Button>
         </div>

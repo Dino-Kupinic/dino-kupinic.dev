@@ -32,6 +32,18 @@ export const theme = {
       "Courier New",
       "monospace",
     ],
+    ymono: [
+      "UnifontEX",
+      "Fira Code",
+      "ui-monospace",
+      "SFMono-Regular",
+      "Menlo",
+      "Monaco",
+      "Consolas",
+      "Liberation Mono",
+      "Courier New",
+      "monospace",
+    ],
     heading: "Inter, sans-serif",
   },
   extend: {
