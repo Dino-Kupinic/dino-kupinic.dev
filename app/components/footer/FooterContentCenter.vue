@@ -38,6 +38,10 @@ watch(
             title: t("nav.uses"),
             href: "/uses",
           },
+          {
+            title: "Cookies",
+            href: "/cookies",
+          },
         ],
       },
     ]

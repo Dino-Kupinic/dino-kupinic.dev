@@ -15,6 +15,9 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
     <div class="relative z-10">
       <slot />
+      <ClientOnly>
+        <CookieBanner />
+      </ClientOnly>
     </div>
   </div>
 </template>

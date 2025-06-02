@@ -4,6 +4,8 @@ import Yzwo from "~/components/yuzzuwo/Yzwo.vue"
 definePageMeta({
   layout: "yuzzuwo",
 })
+
+const currentYear = new Date().getFullYear()
 </script>
 
 <template>
@@ -25,20 +27,22 @@ definePageMeta({
           <ThemeSelection />
         </div>
       </div>
-      <div class="flex w-full justify-between bg-black p-16">
-        <Yzwo />
+      <div
+        class="flex w-full flex-col justify-center bg-black p-12 sm:flex-row sm:justify-between sm:p-16"
+      >
+        <Yzwo class="mb-16 h-full w-full sm:mb-0 sm:h-auto sm:w-auto" />
         <div
-          class="flex h-auto flex-col justify-between border bg-white p-8 dark:bg-black"
+          class="flex h-auto flex-col justify-between gap-3 border bg-white p-8 dark:bg-black sm:gap-0"
         >
           <HeroSubtitle class="border-b tracking-tighter">Yuzzuwo</HeroSubtitle>
           <p class="font-ymono text-xl uppercase dark:text-neutral-500">
             Open-source tools and experiments by
           </p>
-          <BlogAuthorContainer>
+          <div>
             <BlogAuthor avatar-src="https://github.com/Dino-Kupinic.png">
               <BlogAuthorName name="Dino Kupinic" handle="@Dino-Kupinic" />
             </BlogAuthor>
-          </BlogAuthorContainer>
+          </div>
           <p
             class="self-end font-ymono text-xl uppercase dark:text-neutral-500"
           >
@@ -53,7 +57,7 @@ definePageMeta({
         ///// projects /////
       </p>
     </div>
-    <div class="grid w-full grid-cols-3">
+    <div class="grid w-full grid-cols-1 sm:grid-cols-3">
       <NuxtLink
         to="/project/sniptide"
         class="hover:bg-neutral-100 dark:hover:bg-neutral-900"
@@ -76,13 +80,41 @@ definePageMeta({
           </div>
         </div>
       </NuxtLink>
-      <div class="h-96 border-r"></div>
-      <div class="h-96 border-r"></div>
+      <div
+        class="flex h-96 items-center justify-center border-x border-t sm:border-l-0 sm:border-r sm:border-t-0"
+      >
+        <p class="font-ymono text-xl uppercase dark:text-neutral-500">404</p>
+      </div>
+      <div
+        class="flex h-96 items-center justify-center border-x border-t sm:border-l-0 sm:border-r sm:border-t-0"
+      >
+        <p class="font-ymono text-xl uppercase dark:text-neutral-500">404</p>
+      </div>
     </div>
-    <div class="grid w-full grid-cols-3">
-      <div class="h-96 border"></div>
-      <div class="col-span-2 h-96 border"></div>
+    <div class="grid w-full grid-cols-1 sm:grid-cols-3">
+      <div
+        class="flex h-96 items-center justify-center border-x border-t sm:border-r"
+      >
+        <p class="font-ymono text-xl uppercase dark:text-neutral-500">404</p>
+      </div>
+      <div
+        class="col-span-2 flex h-96 items-center justify-center border-l border-r border-t sm:border-l-0"
+      >
+        <div class="flex flex-col gap-3">
+          <p class="font-ymono text-xl uppercase dark:text-neutral-500">
+            Got a project in mind?
+          </p>
+          <div class="flex w-auto gap-2 sm:w-96">
+            <Input placeholder="Share your idea here" class="w-full" />
+            <Button :disabled="true">Send</Button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="h-[32rem] border">ok</div>
+    <div class="h-[32rem] border">
+      <!--      <p class="text-primary dark:text-secondary">-->
+      <!--        &copy; {{ currentYear }} Yuzzuwo. All rights reserved.-->
+      <!--      </p>-->
+    </div>
   </GenericLayoutWrapper>
 </template>

@@ -13,8 +13,8 @@ technologies:
   - "Docker"
 date: 2025-05-13T00:00:00.000Z
 featured: true
-#repository:
-#  url: "https://github.com/Dino-Kupinic/tourney"
+repository:
+  url: "https://github.com/Yuzzuwo/sniptide"
 ---
 
 

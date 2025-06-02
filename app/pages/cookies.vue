@@ -1,5 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const change = () => {
+  localStorage.removeItem("va-disable")
+  window.location.reload()
+}
+</script>
 
-<template></template>
-
-<style scoped></style>
+<template>
+  <GenericLayoutWrapper>
+    <ContentDoc path="/cookies" />
+    <Button @click="change">Change Preferences</Button>
+  </GenericLayoutWrapper>
+</template>

@@ -1,8 +1,14 @@
 <script setup lang="ts">
-const isVisible = ref<boolean>(true)
-const analyticalCookies = ref<boolean>(true)
+const isVisible = ref(false)
+const analyticalCookies = ref(true)
+
+if (import.meta.client) {
+  const value = localStorage.getItem("va-disable")
+  isVisible.value = value === null
+}
 
 const handleAccept = () => {
+  localStorage.setItem("va-disable", "false")
   isVisible.value = false
 }
 
@@ -14,9 +20,8 @@ const handleReject = () => {
 const handleManagePreferences = () => {
   if (!analyticalCookies.value) {
     localStorage.setItem("va-disable", "true")
-    analyticalCookies.value = false
   } else {
-    localStorage.removeItem("va-disable")
+    localStorage.setItem("va-disable", "false")
   }
   closeBanner()
 }
@@ -45,7 +50,7 @@ const closeBanner = () => {
             page.
           </p>
           <p class="mt-2 text-sm italic">
-            You see this because of EU regulations (GDPR) and compliance with
+            You see this due to EU regulations (GDPR) and compliance with
             privacy laws
           </p>
         </div>
