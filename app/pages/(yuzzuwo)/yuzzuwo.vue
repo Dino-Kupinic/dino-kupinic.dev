@@ -10,6 +10,9 @@ const currentYear = new Date().getFullYear()
 
 <template>
   <GenericLayoutWrapper class="bg-white dark:bg-black">
+    <div class="flex w-full items-center justify-center border-x border-t p-3">
+      <p class="font-ymono text-xl text-red-500">[WORK IN PROGRESS]</p>
+    </div>
     <div class="h-auto w-full border">
       <div class="flex items-center justify-between p-4">
         <NuxtLink to="/" class="flex items-center gap-2">
@@ -47,7 +50,6 @@ const currentYear = new Date().getFullYear()
             class="self-end font-ymono text-xl uppercase dark:text-neutral-500"
           >
             EST. 2025;
-            <span class="text-red-500">[ALPHA, WORK IN PROGRESS]</span>
           </p>
         </div>
       </div>
