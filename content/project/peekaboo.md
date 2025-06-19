@@ -22,4 +22,20 @@ repository:
 Peekaboo is a simple nginx log viewer that allows you to view your nginx logs in a user-friendly way.
 It is built with React and Bun, and is designed to be fast and lightweight.
 
+### Why?
+
+I wanted to create a simple tool that would allow me to view my nginx logs in real-time,
+without having to use the command line.
+I also wanted to learn more about Bun, and this project was a great way to do that.
+
+### Features
+
+- Real-time log viewing with WebSocket support
+- Runs on Bun for blazingly fast performance
+- Modern UI built with ShadCN
+
+### Status
+
+Heavily work in progress (as of 19.06.2025)
+
 
