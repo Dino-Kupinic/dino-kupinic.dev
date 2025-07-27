@@ -25,7 +25,6 @@ const frameworks: StackItem[] = [
   { tooltip: "Nuxt", icon: "i-simple-icons-nuxtdotjs" },
   { tooltip: "Spring Boot", icon: "i-simple-icons-spring" },
   { tooltip: "Symfony", icon: "i-simple-icons-symfony" },
-  { tooltip: "NestJS", icon: "i-simple-icons-nestjs" },
   { tooltip: "Express", icon: "i-simple-icons-express" },
   { tooltip: "Bun", icon: "i-simple-icons-bun" },
 ]

@@ -65,8 +65,8 @@ const artists: Artist[] = [
     backgroundColor: "red",
   },
   {
-    name: "TOMORROW X TOGETHER",
-    link: "https://open.spotify.com/artist/0ghlgldX5Dd6720Q3qFyQB?si=aFCGGct0RjixZ9vPC70_rg",
+    name: "6arelyhuman",
+    link: "https://open.spotify.com/artist/1oYXEVbGh1L7EWGm9C68cN?si=6FTDkrz8SFuhi5oGbVjC9g",
     backgroundColor: "yellow",
   },
   {

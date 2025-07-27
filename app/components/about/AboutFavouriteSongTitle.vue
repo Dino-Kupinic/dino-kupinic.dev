@@ -1,22 +1,24 @@
 <script setup lang="ts">
 const props = defineProps<{
-  color: "red" | "orange" | "yellow" | "green" | "blue" | "purple"
+  color: "red" | "orange" | "yellow" | "green" | "blue" | "purple" | "teal"
 }>()
 
 const getColor = () => {
   switch (props.color) {
     case "red":
-      return "text-red-700"
+      return "text-red-600"
     case "orange":
-      return "text-orange-700"
+      return "text-orange-600"
     case "yellow":
       return "text-yellow-600"
     case "green":
-      return "text-green-700"
+      return "text-green-600"
+    case "teal":
+      return "text-teal-600"
     case "blue":
-      return "text-blue-700"
+      return "text-blue-600"
     case "purple":
-      return "text-purple-700"
+      return "text-purple-600"
   }
 }
 </script>

@@ -3,11 +3,11 @@ title: "Sniptide"
 description: "A bold, modern and self-hostable paste platform"
 icons:
   - "i-simple-icons-nextdotjs"
-  - "i-simple-icons-nestjs"
+  - "i-simple-icons-hono"
   - "i-simple-icons-postgresql"
 technologies:
   - "Next.js"
-  - "Nest.js"
+  - "Hono"
   - "PostgreSQL"
   - "Redis"
   - "Docker"
