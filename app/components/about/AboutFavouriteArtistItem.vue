@@ -25,13 +25,13 @@ const artists: Artist[] = [
     backgroundColor: "purple",
   },
   {
-    name: "Michael Jackson",
-    link: "https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm?si=amJGfgpMRIq6WwlE51yrbw",
+    name: "Gwen Stefani",
+    link: "https://open.spotify.com/artist/4yiQZ8tQPux8cPriYMWUFP?si=baq4V29EQAOIBVwX_SyHFA",
     backgroundColor: "green",
   },
   {
-    name: "Linkin Park",
-    link: "https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz?si=2bEBTiN9SxSvu15okEe21w",
+    name: "Charli XCX",
+    link: "https://open.spotify.com/artist/25uiPmTg16RbhZWAqwLBy5?si=VrMxzZlEQ5S9tOBGKUcM5g",
     backgroundColor: "yellow",
   },
   {
@@ -45,19 +45,19 @@ const artists: Artist[] = [
     backgroundColor: "green",
   },
   {
-    name: "asteria",
-    link: "https://open.spotify.com/artist/0I7VmE5LkRmWoHltutTUh9?si=GU7QnLc5QhKTUGbfEfgO7g",
+    name: "Avril Lavigne",
+    link: "https://open.spotify.com/artist/0p4nmQO2msCgU4IF37Wi3j?si=RRUJr37sS52th0Ef3LCOJg",
     backgroundColor: "teal",
+  },
+  {
+    name: "Ariana Grande",
+    link: "https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR?si=voSoudvmTXypa_QuDt3h4A",
+    backgroundColor: "orange",
   },
   {
     name: "d3r",
     link: "https://open.spotify.com/artist/41PE0deubI6MpwYruSEWHG?si=lWuwK-hnTuG7ALEWUy3QBg",
     backgroundColor: "purple",
-  },
-  {
-    name: "Disturbed",
-    link: "https://open.spotify.com/artist/3TOqt5oJwL9BE2NG9MEwDa?si=I_1N2GSLQuexj712hFOecQ",
-    backgroundColor: "orange",
   },
   {
     name: "luvwillow",

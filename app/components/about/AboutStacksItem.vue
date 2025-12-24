@@ -13,6 +13,7 @@ const languages: StackItem[] = [
   { tooltip: "Java", icon: "i-ant-design-java-outlined" },
   { tooltip: "PHP", icon: "i-akar-icons-php-fill" },
   { tooltip: "Python", icon: "i-ion-logo-python" },
+  { tooltip: "Swift", icon: "i-simple-icons-swift" },
   { tooltip: "Bash", icon: "i-codicon-terminal-bash" },
   { tooltip: "Markdown", icon: "i-simple-icons-markdown" },
 ]
