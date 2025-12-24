@@ -1,27 +1,30 @@
-import type { BlogContent, BlogDisplay } from "~/types/blog"
+import type { BlogContent, BlogDisplay } from "~/types/blog";
 
 export const useBlog = () => {
-  const blogs = useState<BlogDisplay[]>("blogs", () => [])
+	const blogs = useState<BlogDisplay[]>("blogs", () => []);
 
-  async function fetchBlogs() {
-    if (blogs.value.length) return
+	async function fetchBlogs() {
+		if (blogs.value.length) return;
 
-    try {
-      const blogsContent = await queryContent<BlogContent>("/blogs").find()
+		try {
+			const blogsContent = await queryContent<BlogContent>("/blogs").find();
 
-      blogs.value = blogsContent.map((blog) => ({
-        ...blog,
-        date: new Date(blog.date),
-        path: blog._path as string,
-      }))
-    } catch (error) {
-      blogs.value = []
-      return error
-    }
-  }
+			blogs.value = blogsContent
+				.map((blog) => ({
+					...blog,
+					date: new Date(blog.date),
+					path: blog._path as string,
+				}))
+				.sort((a, b) => b.date.getTime() - a.date.getTime())
+				.slice(0, 5);
+		} catch (error) {
+			blogs.value = [];
+			return error;
+		}
+	}
 
-  return {
-    blogs,
-    fetchBlogs,
-  }
-}
+	return {
+		blogs,
+		fetchBlogs,
+	};
+};
