@@ -38,6 +38,18 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
   ],
 
+  fonts: {
+    defaults: {
+      weights: [400],
+      styles: ["normal", "italic"],
+    },
+    families: [
+      { name: "Fira Code", provider: "google" },
+      { name: "Inter", provider: "google" },
+      { name: "UnifontEX", provider: "fontsource" },
+    ],
+  },
+
   shadcn: {
     prefix: "",
     componentDir: "./app/components/ui",
