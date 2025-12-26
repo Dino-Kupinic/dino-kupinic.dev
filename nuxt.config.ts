@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@vueuse/nuxt",
     "@nuxt/icon",
+    "@nuxtjs/device",
   ],
 
   shadcn: {

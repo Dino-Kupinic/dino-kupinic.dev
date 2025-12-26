@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
   <div>
     <NuxtLoadingIndicator />
     <SpeedInsights />
-    <!--    <TheNavBar />-->
+    <TheNavBar />
     <slot />
     <ClientOnly>
       <!--      <CookieBanner />-->
