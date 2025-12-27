@@ -35,8 +35,8 @@ const isOpen = ref<boolean>(false)
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <div class="flex w-full flex-col space-y-2">
-                <!--                <ThemeSelection />-->
+              <div>
+                <ThemeSelection />
               </div>
             </DropdownMenuItem>
           </DropdownMenuContent>

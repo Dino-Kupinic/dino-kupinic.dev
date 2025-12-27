@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { ProjectContent } from "~/types/project"
+// import type { ProjectContent } from "~/types/project"
 
 const props = defineProps<{
-  project: ProjectContent
+  // project: ProjectContent
+  project: any
 }>()
 
 const formattedDate = formatDate(new Date(props.project.date))
