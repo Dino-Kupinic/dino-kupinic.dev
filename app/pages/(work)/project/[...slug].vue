@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import type { ProjectContent } from "~/types/project"
 import type { RepositoryResponse } from "~/types/github"
 
 const project = ref<ProjectContent | null>(null)
-const { fetchProject } = useProjects()
-project.value = (await fetchProject()).value ?? null
+// const { fetchProject } = useProjects()
+// project.value = (await fetchProject()).value ?? null
+const route = useRoute()
+const { data } = await useAsyncData(route.path, () => {
+  return queryCollection("projects").first()
+})
+project.value = data.value
 
 if (!project.value) {
   throw createError({
@@ -47,9 +51,7 @@ if (project.value?.repository) {
       base="/projects"
       class="pt-6"
     >
-      <template #breadcrumb>
-        {{ $t("project.breadcrumb") }}
-      </template>
+      <template #breadcrumb> Projects </template>
     </ContentHeader>
     <div class="mb-8 flex flex-col space-y-4 sm:flex-row sm:space-x-2">
       <div class="grow-0 basis-3/5">
@@ -58,7 +60,7 @@ if (project.value?.repository) {
           class="w-max rounded-lg bg-purple-100 dark:bg-purple-900"
         >
           <span
-            class="mx-1.5 text-xs font-normal text-purple-600 dark:text-purple-100 sm:text-sm"
+            class="mx-1.5 text-xs font-normal text-purple-600 sm:text-sm dark:text-purple-100"
           >
             {{ isFeatured }}
           </span>
@@ -71,19 +73,19 @@ if (project.value?.repository) {
         />
       </div>
       <div class="basis-2/5">
-        <div class="h-full w-full space-y-1 rounded-lg bg-accent p-8">
-          <p class="mb-2 font-semibold">{{ $t("project.statistics") }}</p>
+        <div class="bg-accent h-full w-full space-y-1 rounded-lg p-8">
+          <p class="mb-2 font-semibold">Statistics</p>
           <div>
             <Icon name="i-ph-calendar" class="mr-2" />
             <span class="dark:text-secondary">
-              {{ $t("project.started") }} {{ formattedDate }}
+              Started {{ formattedDate }}
             </span>
           </div>
           <div v-if="project?.deployed" class="flex items-center">
             <Icon name="i-heroicons-check-circle" class="mr-2 text-green-500" />
             <span class="dark:text-secondary">
               <NuxtLink :to="project.deployed.url" class="hover:text-blue-500">
-                <span>{{ $t("project.deployedOn") }}</span>
+                <span>Deployed on</span>
                 <Icon :name="project?.deployed?.icon" class="mx-1 mb-0.5" />
                 <span>{{ project?.deployed?.vendor }}</span>
                 <Icon
@@ -100,7 +102,7 @@ if (project.value?.repository) {
                 :to="project.repository.url"
                 class="hover:text-blue-500"
               >
-                <span>{{ $t("project.repoOnGithub") }}</span>
+                <span>Repository on Github</span>
                 <Icon
                   name="i-solar-arrow-right-up-linear"
                   class="mb-0.5 ml-1"
@@ -115,9 +117,9 @@ if (project.value?.repository) {
     <main class="mb-48 sm:w-3/5">
       <ContentDoc>
         <template #empty>
-          <div class="h-[400px]">
+          <div class="h-100">
             <ClientOnly>
-              <h1>{{ $t("project.noDescription") }}</h1>
+              <h1>No further description provided.</h1>
             </ClientOnly>
           </div>
         </template>
