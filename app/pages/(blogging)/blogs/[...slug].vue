@@ -47,11 +47,11 @@ type SocialLink = {
 const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
   {
     icon: "i-simple-icons-x",
-    to: `https://twitter.com/intent/tweet?text=https://dino-kupinic.dev${blogContent.value?._path}`,
+    to: `https://twitter.com/intent/tweet?text=https://dino-kupinic.dev${blogContent.value.path}`,
   },
   {
     icon: "i-simple-icons-linkedin",
-    to: `https://www.linkedin.com/sharing/share-offsite/?url=https://dino-kupinic.dev${blogContent.value?._path}`,
+    to: `https://www.linkedin.com/sharing/share-offsite/?url=https://dino-kupinic.dev${blogContent.value.path}`,
   },
 ])
 </script>

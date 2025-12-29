@@ -21,6 +21,7 @@ export const blogFrontmatterSchema = z.object({
   date: z.date(),
   authors: z.array(authorSchema),
   tags: z.array(z.string()).optional(),
+  related: z.array(z.string()).optional(),
   seo: seoSchema.optional(),
 })
 export type BlogFrontmatter = z.infer<typeof blogFrontmatterSchema>

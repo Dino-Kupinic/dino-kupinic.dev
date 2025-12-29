@@ -11,6 +11,6 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
     <ClientOnly>
       <!--      <CookieBanner />-->
     </ClientOnly>
-    <!--    <TheFooter />-->
+    <TheFooter />
   </div>
 </template>

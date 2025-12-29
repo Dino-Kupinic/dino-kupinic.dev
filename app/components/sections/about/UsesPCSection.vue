@@ -77,7 +77,7 @@ const parts = [
   <section class="my-16 flex flex-col gap-4">
     <SectionHeading>PC Setup</SectionHeading>
     <Table>
-      <TableCaption class="m-3 rounded border border-dashed bg-accent p-3">
+      <TableCaption class="bg-accent m-3 rounded border border-dashed p-3">
         Bought from
         <NuxtLink to="https://amazon.de" external class="text-blue-500"
           >Amazon</NuxtLink
@@ -98,7 +98,7 @@ const parts = [
       </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead class="w-[100px] sm:w-[200px]"> Component </TableHead>
+          <TableHead class="w-25 sm:w-50"> Component </TableHead>
           <TableHead>Name</TableHead>
           <TableHead class="text-right"> Description </TableHead>
         </TableRow>

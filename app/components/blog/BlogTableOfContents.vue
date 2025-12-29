@@ -10,7 +10,7 @@ const route = useRoute()
 
 <template>
   <div>
-    <p class="text-lg font-semibold">{{ $t("blog.toc") }}</p>
+    <p class="text-lg font-semibold">Table of Contents</p>
     <ul class="mt-3">
       <NuxtLink
         v-for="link in links"
@@ -18,7 +18,7 @@ const route = useRoute()
         :to="route.path + '#' + link.id"
       >
         <li
-          class="truncate text-sm leading-6 text-neutral-500 hover:text-foreground dark:text-neutral-500 dark:hover:text-foreground"
+          class="hover:text-foreground dark:hover:text-foreground truncate text-sm leading-6 text-neutral-500 dark:text-neutral-500"
         >
           <span>
             {{ link.text }}
