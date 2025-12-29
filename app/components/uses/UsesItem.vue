@@ -19,7 +19,9 @@ const img = useImage()
         <NuxtImg
           :src="image"
           class="max-h-full max-w-full object-contain"
-          :placeholder="img(image, { h: 300, f: 'png', blur: 2, q: 50 })"
+          :placeholder="
+            img(image, { height: 300, format: 'png', blur: 2, quality: 50 })
+          "
         />
       </div>
     </div>

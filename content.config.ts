@@ -12,7 +12,7 @@ export default defineContentConfig({
     projects: defineCollection({
       schema: projectFrontmatterSchema,
       type: "data",
-      source: "projects/*.md",
+      source: "project/*.md",
     }),
     misc: defineCollection({
       type: "page",

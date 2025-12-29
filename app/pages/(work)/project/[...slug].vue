@@ -5,8 +5,9 @@ const project = ref<ProjectContent | null>(null)
 // const { fetchProject } = useProjects()
 // project.value = (await fetchProject()).value ?? null
 const route = useRoute()
+console.log(route.path)
 const { data } = await useAsyncData(route.path, () => {
-  return queryCollection("projects").first()
+  return queryCollection("projects").path(route.path).first()
 })
 project.value = data.value
 

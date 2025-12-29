@@ -5,36 +5,21 @@ type ThemeItem = {
 }
 
 const colorMode = useColorMode()
-const selected = ref<string>("")
 
-const themes = ref<ThemeItem[]>([
-  {
-    name: "Dark",
-    value: "dark",
-  },
-  {
-    name: "Light",
-    value: "light",
-  },
-])
-const display = ref<string>("")
+const themes = [
+  { name: "Dark", value: "dark" },
+  { name: "Light", value: "light" },
+] as const satisfies readonly ThemeItem[]
 
-const currentTheme: ComputedRef<ThemeItem> = computed(() => {
-  return themes.value.find(
-    (theme: ThemeItem) => theme.value === colorMode.value,
-  ) as ThemeItem
+const selected = computed({
+  get: () => colorMode.preference || "dark",
+  set: (value) => {
+    colorMode.preference = value
+  },
 })
 
-onMounted(() => {
-  if (!colorMode.preference) colorMode.preference = "dark"
-
-  selected.value = currentTheme.value.value
-  display.value = currentTheme.value.name
-})
-
-watch(selected, () => {
-  colorMode.preference = colorMode.value = selected.value
-  display.value = currentTheme.value.name
+const currentTheme = computed(() => {
+  return themes.find((theme) => theme.value === colorMode.value) ?? themes[0]
 })
 </script>
 
@@ -48,14 +33,14 @@ watch(selected, () => {
         />
         <Icon v-else name="i-heroicons-sun-16-solid" />
         <span class="ml-3">
-          {{ display }}
+          {{ currentTheme.name }}
         </span>
       </SelectValue>
     </SelectTrigger>
     <SelectContent>
       <SelectItem
         v-for="theme in themes"
-        :key="theme.name"
+        :key="theme.value"
         :value="theme.value"
       >
         {{ theme.name }}
