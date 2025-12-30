@@ -1,3 +1,6 @@
+import type Collection from "@nuxt/content"
+import type PageCollection from "@nuxt/content"
+
 export interface BlogAuthor {
   name: string
   avatar: string
@@ -28,3 +31,5 @@ export interface BlogContent {
   }
   related?: string[]
 }
+
+export type Blog = PageCollection<"blogs">

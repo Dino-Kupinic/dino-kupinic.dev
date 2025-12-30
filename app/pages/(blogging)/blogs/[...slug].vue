@@ -19,12 +19,12 @@ const image = blogContent.value.seo?.image?.src
 const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
 
-const relatedBlogs = ref<BlogContent[]>([])
+const relatedBlogs = ref<[]>([])
 
 if (related) {
   for (const relatedBlog of related) {
     const { data: relatedBlogData } = await useAsyncData(relatedBlog, () => {
-      return queryCollection(relatedBlog).first()
+      return queryCollection("blogs").path(relatedBlog).first()
     })
     if (!relatedBlogData.value) {
       continue
