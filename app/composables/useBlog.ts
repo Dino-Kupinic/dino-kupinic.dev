@@ -1,5 +1,9 @@
+export type BlogQuery = NonNullable<
+  Awaited<ReturnType<ReturnType<typeof queryCollection<"blogs">>["first"]>>
+> & { date: Date }
+
 export const useBlog = () => {
-  const blogs = useState<any[]>("blogs", () => [])
+  const blogs = useState<BlogQuery[]>("blogs", () => [])
 
   async function fetchBlogs() {
     if (blogs.value.length) return
@@ -10,7 +14,6 @@ export const useBlog = () => {
       blogs.value = blogsContent.map((blog) => ({
         ...blog,
         date: new Date(blog.date),
-        path: blog.path as string,
       }))
     } catch (error) {
       blogs.value = []

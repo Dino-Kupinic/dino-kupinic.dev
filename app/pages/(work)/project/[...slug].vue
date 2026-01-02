@@ -1,14 +1,8 @@
 <script setup lang="ts">
 import type { RepositoryResponse } from "~/types/github"
 
-const project = ref<ProjectContent | null>(null)
-// const { fetchProject } = useProjects()
-// project.value = (await fetchProject()).value ?? null
-const route = useRoute()
-const { data } = await useAsyncData(route.path, () => {
-  return queryCollection("projects").path(route.path).first()
-})
-project.value = data.value
+const { fetchProject } = useProjects()
+const project = await fetchProject()
 
 if (!project.value) {
   throw createError({
@@ -86,8 +80,12 @@ if (project.value?.repository) {
             <span class="dark:text-secondary">
               <NuxtLink :to="project.deployed.url" class="hover:text-blue-500">
                 <span>Deployed on</span>
-                <Icon :name="project?.deployed?.icon" class="mx-1 mb-0.5" />
-                <span>{{ project?.deployed?.vendor }}</span>
+                <Icon
+                  v-if="project.deployed.icon"
+                  :name="project.deployed.icon"
+                  class="mx-1 mb-0.5"
+                />
+                <span>{{ project.deployed.vendor }}</span>
                 <Icon
                   name="i-solar-arrow-right-up-linear"
                   class="mb-0.5 ml-1"
@@ -115,15 +113,14 @@ if (project.value?.repository) {
       </div>
     </div>
     <main class="mb-48 sm:w-3/5">
-      <ContentDoc>
-        <template #empty>
-          <div class="h-100">
-            <ClientOnly>
-              <h1>No further description provided.</h1>
-            </ClientOnly>
-          </div>
-        </template>
-      </ContentDoc>
+      <ContentRenderer v-if="project" :value="project" />
+      <template v-else>
+        <div class="h-100">
+          <ClientOnly>
+            <h1>No further description provided.</h1>
+          </ClientOnly>
+        </div>
+      </template>
     </main>
   </ContentLayoutWrapper>
 </template>

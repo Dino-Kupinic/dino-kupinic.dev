@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { BlogAuthor } from "~/types/blog"
+import type { Author } from "~/schemas/blogSchema"
 
 defineProps<{
-  authors: BlogAuthor[]
+  authors: Author[]
 }>()
 </script>
 
 <template>
-  <div class="text-sm text-primary dark:text-secondary">
+  <div class="text-primary dark:text-secondary text-sm">
     <div v-if="authors.length === 1" class="flex items-center">
       <Avatar size="xs" class="mr-2">
         <AvatarImage :src="authors[0]?.avatar ?? ''" alt="author avatar" />

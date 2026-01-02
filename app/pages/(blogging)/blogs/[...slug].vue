@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { BlogContent } from "~/types/blog"
-
 const route = useRoute()
 const { data: blogContent } = await useAsyncData(route.path, () => {
   return queryCollection("blogs").path(route.path).first()
@@ -19,19 +17,18 @@ const image = blogContent.value.seo?.image?.src
 const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
 
-const relatedBlogs = ref<[]>([])
+const { data: relatedBlogs } = await useAsyncData(
+  `related-${route.path}`,
+  async () => {
+    if (!related?.length) return []
 
-if (related) {
-  for (const relatedBlog of related) {
-    const { data: relatedBlogData } = await useAsyncData(relatedBlog, () => {
-      return queryCollection("blogs").path(relatedBlog).first()
-    })
-    if (!relatedBlogData.value) {
-      continue
-    }
-    relatedBlogs.value.push(relatedBlogData.value)
-  }
-}
+    const blogs = await Promise.all(
+      related.map((path) => queryCollection("blogs").path(path).first()),
+    )
+
+    return blogs.filter(Boolean)
+  },
+)
 
 useSeoMeta({
   title: title,
@@ -47,11 +44,11 @@ type SocialLink = {
 const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
   {
     icon: "i-simple-icons-x",
-    to: `https://twitter.com/intent/tweet?text=https://dino-kupinic.dev${blogContent.value.path}`,
+    to: `https://twitter.com/intent/tweet?text=https://dino-kupinic.dev${blogContent.value?.path}`,
   },
   {
     icon: "i-simple-icons-linkedin",
-    to: `https://www.linkedin.com/sharing/share-offsite/?url=https://dino-kupinic.dev${blogContent.value.path}`,
+    to: `https://www.linkedin.com/sharing/share-offsite/?url=https://dino-kupinic.dev${blogContent.value?.path}`,
   },
 ])
 </script>
@@ -80,7 +77,7 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
     </ContentHeader>
     <BlogContent>
       <template #main>
-        <ContentDoc />
+        <ContentRenderer v-if="blogContent" :value="blogContent" />
       </template>
       <template #sidebar>
         <BlogTableOfContents
@@ -89,15 +86,15 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
         />
         <DividerHorizontal />
         <BlogLinks />
-        <template v-if="relatedBlogs.length">
+        <template v-if="relatedBlogs && relatedBlogs.length">
           <DividerHorizontal />
           <BlogRelatedBlogs>
             <BlogRelatedBlog
               v-for="relatedBlog in relatedBlogs"
-              :key="relatedBlog.title"
-              :title="relatedBlog.title as string"
-              :to="relatedBlog._path as string"
-              :authors="relatedBlog.authors"
+              :key="relatedBlog?.title"
+              :title="relatedBlog?.title!"
+              :to="relatedBlog?.path!"
+              :authors="relatedBlog?.authors!"
             />
           </BlogRelatedBlogs>
         </template>

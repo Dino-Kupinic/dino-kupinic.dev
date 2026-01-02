@@ -1,6 +1,10 @@
+export type ProjectQuery = NonNullable<
+  Awaited<ReturnType<ReturnType<typeof queryCollection<"projects">>["first"]>>
+>
+
 export const useProjects = () => {
   const route = useRoute()
-  const projects = useState<any[]>("projects", () => [])
+  const projects = useState<ProjectQuery[]>("projects", () => [])
   const featuredProjects = computed(() =>
     projects.value.filter((project) => project.featured),
   )

@@ -5,6 +5,7 @@ export const authorSchema = z.object({
   avatar: z.url(),
   handle: z.string(),
 })
+export type Author = z.infer<typeof authorSchema>
 
 export const seoImageSchema = z.object({
   src: z.string(),
@@ -24,4 +25,4 @@ export const blogFrontmatterSchema = z.object({
   related: z.array(z.string()).optional(),
   seo: seoSchema.optional(),
 })
-export type BlogFrontmatter = z.infer<typeof blogFrontmatterSchema>
+export type Blog = z.infer<typeof blogFrontmatterSchema>

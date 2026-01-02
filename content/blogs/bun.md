@@ -10,11 +10,11 @@ tags:
   - JavaScript
 seo:
   image:
-    src: "/images/blog/bun_blog.png"
+    src: "/images/blog/bun_blog_light.png"
     alt: Bun blog post cover image
 ---
 
-![Bun](/images/blog/bun_blog.png)
+![Bun](/images/blog/bun_blog_light.png)
 
 ## Trying Bun
 
