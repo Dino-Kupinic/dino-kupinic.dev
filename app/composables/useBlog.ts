@@ -1,5 +1,8 @@
-export type BlogQuery = NonNullable<
-  Awaited<ReturnType<ReturnType<typeof queryCollection<"blogs">>["first"]>>
+export type BlogQuery = Omit<
+  NonNullable<
+    Awaited<ReturnType<ReturnType<typeof queryCollection<"blogs">>["first"]>>
+  >,
+  "date"
 > & { date: Date }
 
 export const useBlog = () => {
