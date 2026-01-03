@@ -1,14 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite"
 
+export const SITE_URL = "https://www.dino-kupinic.dev"
+export const SITE_NAME = "Dino Kupinic"
+export const SITE_DESCRIPTION =
+  "Dino Kupinic is a personal portfolio website designed to showcase the " +
+  "professional work and personal information of Dino Kupinic."
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
 
   devtools: { enabled: true },
 
   site: {
-    url: "https://www.dino-kupinic.dev",
-    name: "Dino Kupinic",
+    url: SITE_URL,
+    name: SITE_NAME,
+  },
+
+  llms: {
+    domain: SITE_URL,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    full: {
+      title: SITE_NAME,
+      description: SITE_DESCRIPTION,
+    },
   },
 
   css: ["~/assets/css/tailwind.css"],
@@ -36,6 +52,8 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/icon",
     "@nuxtjs/device",
+    "nuxt-llms",
+    "nuxt-studio",
   ],
 
   fonts: {
