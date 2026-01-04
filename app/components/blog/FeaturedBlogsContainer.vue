@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { blogs, fetchBlogs } = useBlog()
-await fetchBlogs()
+await fetchBlogs(5)
 
 const classes: string[] = [
   "row-span-9",

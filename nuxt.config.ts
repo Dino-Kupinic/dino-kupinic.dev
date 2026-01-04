@@ -27,6 +27,18 @@ export default defineNuxtConfig({
     },
   },
 
+  studio: {
+    repository: {
+      provider: "github",
+      owner: "Dino-Kupinic",
+      repo: "dinokupinic",
+      branch: "main",
+    },
+    i18n: {
+      defaultLocale: "en",
+    },
+  },
+
   css: ["~/assets/css/tailwind.css"],
 
   vite: {
@@ -62,9 +74,8 @@ export default defineNuxtConfig({
       styles: ["normal", "italic"],
     },
     families: [
-      { name: "Fira Code", provider: "google" },
+      { name: "Commit Mono", provider: "fontsource" },
       { name: "Inter", provider: "google" },
-      { name: "UnifontEX", provider: "fontsource" },
     ],
   },
 

@@ -8,11 +8,13 @@ export type BlogQuery = Omit<
 export const useBlog = () => {
   const blogs = useState<BlogQuery[]>("blogs", () => [])
 
-  async function fetchBlogs() {
+  async function fetchBlogs(limit?: number) {
     if (blogs.value.length) return
 
     try {
-      const blogsContent = await queryCollection("blogs").limit(5).all()
+      const blogsContent = limit
+        ? await queryCollection("blogs").limit(limit).all()
+        : await queryCollection("blogs").all()
 
       blogs.value = blogsContent.map((blog) => ({
         ...blog,

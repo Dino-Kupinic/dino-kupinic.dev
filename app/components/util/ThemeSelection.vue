@@ -24,27 +24,35 @@ const currentTheme = computed(() => {
 </script>
 
 <template>
-  <Select v-model="selected">
-    <SelectTrigger>
-      <SelectValue>
-        <Icon
-          v-if="colorMode.value === 'dark'"
-          name="i-heroicons-moon-16-solid"
-        />
-        <Icon v-else name="i-heroicons-sun-16-solid" />
-        <span class="ml-3">
-          {{ currentTheme.name }}
-        </span>
-      </SelectValue>
-    </SelectTrigger>
-    <SelectContent>
-      <SelectItem
-        v-for="theme in themes"
-        :key="theme.value"
-        :value="theme.value"
-      >
-        {{ theme.name }}
-      </SelectItem>
-    </SelectContent>
-  </Select>
+  <ClientOnly>
+    <Select v-model="selected">
+      <SelectTrigger class="w-full" size="default">
+        <SelectValue class="flex gap-3">
+          <Icon
+            :name="
+              colorMode.value === 'dark'
+                ? 'i-heroicons-moon-16-solid'
+                : 'i-heroicons-sun-16-solid'
+            "
+            size="16"
+          />
+          <span class="pl-0.5 text-base">
+            {{ currentTheme.name }}
+          </span>
+        </SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem
+          v-for="theme in themes"
+          :key="theme.value"
+          :value="theme.value"
+        >
+          {{ theme.name }}
+        </SelectItem>
+      </SelectContent>
+    </Select>
+    <template #fallback>
+      <Skeleton class="h-10 w-full" />
+    </template>
+  </ClientOnly>
 </template>

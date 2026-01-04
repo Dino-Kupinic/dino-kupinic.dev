@@ -5,10 +5,11 @@ useSeoMeta({
   ogDescription:
     "Dino Kupinic is a personal portfolio website designed to showcase the professional work and " +
     "personal information of Dino Kupinic.",
-});
+})
 </script>
 
 <template>
+  <NuxtLoadingIndicator />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>

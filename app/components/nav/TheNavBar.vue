@@ -27,9 +27,11 @@ const navigationItems = ref<NavigationItem[]>([
 
 <template>
   <TheMobileNavBar
-    v-if="!$device.isDesktopOrTablet"
-    class="sticky top-0 z-50"
+    class="sticky top-0 z-50 md:hidden"
     :items="navigationItems"
   />
-  <TheDesktopNavbar v-else :items="navigationItems" class="sticky top-0 z-50" />
+  <TheDesktopNavbar
+    :items="navigationItems"
+    class="sticky top-0 z-50 hidden md:block"
+  />
 </template>

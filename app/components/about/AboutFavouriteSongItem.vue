@@ -13,7 +13,7 @@
         </div>
         <div class="p-2 sm:grow">
           <NuxtImg
-            class="w-full overflow-hidden rounded-lg shadow-[0_0px_198px_5px_rgba(58,111,133,0.5)]"
+            class="w-full overflow-hidden rounded-lg shadow-[0_0px_120px_5px_rgba(58,111,133,0.5)]"
             src="/images/index/shallow-lady-gaga.jpg"
             alt="Shallow by Lady Gaga"
           />
