@@ -7,7 +7,7 @@ const navigationItems = ref<NavigationItem[]>([
   //   href: "/yuzzuwo",
   // },
   {
-    title: "Projekte",
+    title: "Projects",
     href: "/projects",
   },
   {

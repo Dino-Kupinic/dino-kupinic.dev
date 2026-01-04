@@ -1,17 +1,14 @@
 <script setup lang="ts">
-// import type { ProjectContent } from "~/types/project"
-
 const props = defineProps<{
-  // project: ProjectContent
-  project: any
+  project: ProjectQuery
 }>()
 
 const formattedDate = formatDate(new Date(props.project.date))
 </script>
 
 <template>
-  <NuxtLink :to="project._path">
-    <Card class="h-55 sm:h-auto">
+  <NuxtLink :to="project.path">
+    <Card class="h-55 gap-0 py-0 sm:h-auto">
       <CardHeader
         class="flex items-center justify-center p-2.5 pb-1 sm:p-4 sm:pb-2"
       >
@@ -22,7 +19,8 @@ const formattedDate = formatDate(new Date(props.project.date))
             v-for="icon in project.icons"
             :key="icon"
             :name="icon"
-            class="text-foreground mx-2 h-8 w-8 sm:h-12 sm:w-12"
+            :size="isMobile ? 32 : 40"
+            class="text-foreground mx-2"
           />
           <ProjectDate
             class="absolute right-2 bottom-2"
