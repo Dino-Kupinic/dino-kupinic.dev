@@ -8,15 +8,19 @@ authors:
   - name: Dino Kupinic
     avatar: https://github.com/Dino-Kupinic.png
     handle: "@Dino-Kupinic"
+images:
+  dark: "/images/blog/design_blog_dark.png"
+  light: "/images/blog/design_blog_light.png"
 seo:
   image:
-    src: "/images/blog/design_blog.png"
+    src: "/images/blog/design_blog_light.png"
     alt: Design blog post cover image
 related:
   - "/blogs/software-should-be-beautiful"
 ---
 
-![Design blog](/images/blog/design_blog.png)
+::BlogImage{light="/images/blog/design_blog_light.png" dark="/images/blog/design_blog_dark.png" alt="Design blog post cover image"}
+::
 
 There's a saying that goes: "Good artists copy, great artists steal."
 The same applies to design – inspiration is everywhere, and the best designers know where to look.

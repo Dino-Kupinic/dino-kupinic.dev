@@ -1,8 +1,6 @@
 <script setup lang="ts">
-const { t } = useI18n()
-
 definePageMeta({
-  title: () => t("project.title"),
+  title: "Projects",
   layout: "default",
 })
 
@@ -20,11 +18,11 @@ if (!projects.value) {
 <template>
   <GenericLayoutWrapper>
     <GenericPageHeader
-      :title="$t('project.title')"
-      :subtitle="$t('project.subtitle')"
+      title="Projects"
+      subtitle="Showcase of all of my projects"
     />
     <main
-      class="mb-32 mt-3 grid h-auto grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5"
+      class="mt-3 mb-32 grid h-auto grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5"
     >
       <ProjectItem v-for="project in projects" :key="project.title" :project />
     </main>

@@ -2,7 +2,7 @@
 
 <template>
   <AboutItem icon="i-ic-baseline-location-on">
-    <template #header>{{ $t("about.country") }}</template>
+    <template #header>Austria</template>
     <template #content>
       <div class="flex justify-center">
         <AboutLocationGlobe />

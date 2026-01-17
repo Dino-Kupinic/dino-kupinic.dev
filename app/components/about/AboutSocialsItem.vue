@@ -4,7 +4,7 @@ const socials = getSocials()
 
 <template>
   <AboutItem icon="i-heroicons-link-16-solid">
-    <template #header>{{ $t("about.socials") }}</template>
+    <template #header>Socials</template>
     <template #content>
       <div class="flex h-full w-auto items-center justify-center">
         <div class="flex flex-col gap-2">
@@ -12,7 +12,7 @@ const socials = getSocials()
             v-for="item in socials"
             :key="item.name"
             :to="item.link"
-            class="decoration-1 hover:text-primary hover:underline"
+            class="hover:text-primary decoration-1 hover:underline"
             target="_blank"
             rel="noopener"
             external

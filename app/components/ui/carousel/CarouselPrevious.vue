@@ -1,32 +1,41 @@
 <script setup lang="ts">
-import { ArrowLeft } from "lucide-vue-next"
-import { useCarousel } from "./useCarousel"
 import type { WithClassAsProps } from "./interface"
+import type { ButtonVariants } from '@/components/ui/button'
+import { ArrowLeft } from "lucide-vue-next"
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
+import { useCarousel } from "./useCarousel"
 
-const props = defineProps<WithClassAsProps>()
+const props = withDefaults(defineProps<{
+  variant?: ButtonVariants["variant"]
+  size?: ButtonVariants["size"]
+}
+& WithClassAsProps>(), {
+  variant: "outline",
+  size: "icon",
+})
 
 const { orientation, canScrollPrev, scrollPrev } = useCarousel()
 </script>
 
 <template>
   <Button
+    data-slot="carousel-previous"
     :disabled="!canScrollPrev"
-    :class="
-      cn(
-        'absolute h-8 w-8 touch-manipulation rounded-full p-0 sm:h-10 sm:w-10',
-        orientation === 'horizontal'
-          ? '-left-4 top-1/2 -translate-y-1/2 sm:-left-6 lg:-left-12 xl:-left-16'
-          : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
-        props.class,
-      )
-    "
-    variant="outline"
+    :class="cn(
+      'absolute size-8 rounded-full',
+      orientation === 'horizontal'
+        ? 'top-1/2 -left-12 -translate-y-1/2'
+        : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
+      props.class,
+    )"
+    :variant="variant"
+    :size="size"
     @click="scrollPrev"
   >
     <slot>
-      <ArrowLeft class="h-4 w-4 text-current sm:h-5 sm:w-5" />
+      <ArrowLeft />
+      <span class="sr-only">Previous Slide</span>
     </slot>
   </Button>
 </template>

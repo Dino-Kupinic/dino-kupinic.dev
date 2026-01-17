@@ -79,7 +79,7 @@ const artists: Artist[] = [
 
 <template>
   <AboutItem icon="i-mdi-account-music">
-    <template #header>{{ $t("about.artist") }}</template>
+    <template #header>Favorite Artists</template>
     <template #content>
       <div class="flex flex-col gap-2 pt-3">
         <NuxtLink

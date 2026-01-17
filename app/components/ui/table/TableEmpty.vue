@@ -1,24 +1,18 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue"
-import TableRow from "./TableRow.vue"
-import TableCell from "./TableCell.vue"
+import type { HTMLAttributes } from "vue"
+import { reactiveOmit } from "@vueuse/core"
 import { cn } from "@/lib/utils"
+import TableCell from "./TableCell.vue"
+import TableRow from "./TableRow.vue"
 
-const props = withDefaults(
-  defineProps<{
-    class?: HTMLAttributes["class"]
-    colspan?: number
-  }>(),
-  {
-    colspan: 1,
-  },
-)
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
+const props = withDefaults(defineProps<{
+  class?: HTMLAttributes["class"]
+  colspan?: number
+}>(), {
+  colspan: 1,
 })
+
+const delegatedProps = reactiveOmit(props, "class")
 </script>
 
 <template>
@@ -26,7 +20,7 @@ const delegatedProps = computed(() => {
     <TableCell
       :class="
         cn(
-          'whitespace-nowrap p-4 align-middle text-sm text-foreground',
+          'p-4 whitespace-nowrap align-middle text-sm text-foreground',
           props.class,
         )
       "

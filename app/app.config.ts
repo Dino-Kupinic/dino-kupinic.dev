@@ -1,10 +1,9 @@
+import { defineAppConfig } from "nuxt/app";
+
 export default defineAppConfig({
-  nuxtIcon: {
-    size: "20px",
-    class: "icon",
-    mode: "css",
-    aliases: {
-      nuxt: "logos:nuxt-icon",
-    },
-  },
-})
+	icon: {
+		size: "20px",
+		mode: "css",
+		cssLayer: "base",
+	},
+});

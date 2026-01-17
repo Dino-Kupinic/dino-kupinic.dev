@@ -35,11 +35,11 @@ const closeBanner = () => {
   <Transition>
     <div
       v-if="isVisible"
-      class="fixed bottom-0 left-0 right-0 z-10 flex w-full flex-col justify-center gap-3 border-t bg-background p-4"
+      class="bg-background fixed right-0 bottom-0 left-0 z-10 flex w-full flex-col justify-center gap-3 border-t p-4"
     >
-      <div class="m-auto max-w-[1024px] space-y-4">
-        <div class="mb-4 mr-12 md:mb-0 md:mr-4">
-          <p class="text-sm text-foreground">
+      <div class="m-auto max-w-5xl space-y-4">
+        <div class="mr-12 mb-4 md:mr-4 md:mb-0">
+          <p class="text-foreground text-sm">
             We use cookies to enhance your browsing experience and analyze our
             traffic. By clicking "Accept All", you consent to our use of
             cookies. Read more in our
@@ -55,7 +55,7 @@ const closeBanner = () => {
           </p>
         </div>
         <div
-          class="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0"
+          class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2"
         >
           <Button variant="default" size="sm" @click="handleAccept">
             Accept All
@@ -78,7 +78,7 @@ const closeBanner = () => {
                   <Label for="necessary" class="flex flex-col space-y-1">
                     <span>Strictly Necessary</span>
                     <span
-                      class="font-normal leading-snug text-muted-foreground"
+                      class="text-muted-foreground leading-snug font-normal"
                     >
                       These cookies are essential in order to use the website
                       and use its features.
@@ -90,7 +90,7 @@ const closeBanner = () => {
                   <Label for="functional" class="flex flex-col space-y-1">
                     <span>Analytical Cookies</span>
                     <span
-                      class="font-normal leading-snug text-muted-foreground"
+                      class="text-muted-foreground leading-snug font-normal"
                     >
                       These cookies allow the website to collect information on
                       how it is used.
@@ -115,7 +115,7 @@ const closeBanner = () => {
           </Button>
         </div>
         <button
-          class="absolute right-3 top-1 text-gray-500 hover:text-gray-700"
+          class="absolute top-1 right-3 text-gray-500 hover:text-gray-700"
           @click="closeBanner"
         >
           <Icon name="i-heroicons-x-mark" />

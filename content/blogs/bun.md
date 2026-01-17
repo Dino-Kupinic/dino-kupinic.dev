@@ -8,13 +8,17 @@ authors:
     handle: "@Dino-Kupinic"
 tags:
   - JavaScript
+images:
+  dark: "/images/blog/bun_blog_dark.png"
+  light: "/images/blog/bun_blog_light.png"
 seo:
   image:
-    src: "/images/blog/bun_blog.png"
+    src: "/images/blog/bun_blog_light.png"
     alt: Bun blog post cover image
 ---
 
-![Bun](/images/blog/bun_blog.png)
+::BlogImage{light="/images/blog/bun_blog_light.png" dark="/images/blog/bun_blog_dark.png" alt="Bun blog post cover image"}
+::
 
 ## Trying Bun
 

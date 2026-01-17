@@ -58,7 +58,7 @@ const mix: StackItem[] = [...frameworks, ...libraries, ...databases, ...etc]
 
 <template>
   <AboutItem icon="i-heroicons-code-bracket-16-solid">
-    <template #header>{{ $t("about.stacks") }}</template>
+    <template #header>Skills</template>
     <template #content>
       <div class="flex h-full w-full flex-col justify-center space-y-2">
         <AboutStacksCarouselRow direction="backward">

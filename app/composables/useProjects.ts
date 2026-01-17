@@ -1,8 +1,10 @@
-import type { ProjectContent } from "~/types/project"
+export type ProjectQuery = NonNullable<
+  Awaited<ReturnType<ReturnType<typeof queryCollection<"projects">>["first"]>>
+>
 
 export const useProjects = () => {
   const route = useRoute()
-  const projects = useState<ProjectContent[]>("projects", () => [])
+  const projects = useState<ProjectQuery[]>("projects", () => [])
   const featuredProjects = computed(() =>
     projects.value.filter((project) => project.featured),
   )
@@ -11,9 +13,9 @@ export const useProjects = () => {
     if (projects.value.length) return
 
     try {
-      projects.value = await queryContent<ProjectContent>("/project")
-        .sort({ date: -1 })
-        .find()
+      projects.value = await queryCollection("projects")
+        .order("date", "DESC")
+        .all()
     } catch (error) {
       projects.value = []
       return error
@@ -21,9 +23,9 @@ export const useProjects = () => {
   }
 
   async function fetchProject() {
-    const { data } = await useAsyncData(route.path, () =>
-      queryContent<ProjectContent>(route.path).findOne(),
-    )
+    const { data } = await useAsyncData(route.path, () => {
+      return queryCollection("projects").path(route.path).first()
+    })
     return data
   }
 

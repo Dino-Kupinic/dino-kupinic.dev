@@ -2,7 +2,7 @@
 
 <template>
   <AboutItem icon="i-ri-double-quotes-l">
-    <template #header>{{ $t("about.quote") }}</template>
+    <template #header>Favorite Quote</template>
     <template #content>
       <div class="flex h-full flex-col">
         <p

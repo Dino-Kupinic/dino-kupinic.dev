@@ -17,32 +17,42 @@ const isOpen = ref<boolean>(false)
     </div>
     <div class="flex items-center gap-2">
       <ClientOnly>
-        <DropdownMenu v-model:open="isOpen">
-          <DropdownMenuTrigger>
+        <Drawer v-model:open="isOpen">
+          <DrawerTrigger>
             <NavBurgerMenu :open="isOpen" />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent class="mr-4 w-44" align="end">
-            <DropdownMenuLabel class="text-lg">
-              {{ $t("nav.menu") }}
-            </DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem
-              v-for="item in items"
-              :key="item.href"
-              class="text-lg"
-            >
-              <NuxtLink :to="item.href">
-                {{ item.title }}
-              </NuxtLink>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <div class="flex w-full flex-col space-y-2">
-                <ThemeSelection />
+          </DrawerTrigger>
+          <DrawerContent class="px-4">
+            <DrawerHeader>
+              <div
+                class="flex flex-col gap-4 border-b pt-6 pb-4 text-left text-3xl tracking-tight"
+              >
+                <div class="mb-8 flex w-full items-center justify-between">
+                  <NavLogo />
+                  <div class="w-40">
+                    <ThemeSelection />
+                  </div>
+                </div>
+                <div v-for="item in items" :key="item.href" class="text-xl">
+                  <NuxtLink :to="item.href" @click="isOpen = false">
+                    <div
+                      class="flex w-full items-center justify-between underline decoration-dotted underline-offset-4"
+                    >
+                      <p class="font-mono">
+                        {{ item.title.toUpperCase() }}
+                      </p>
+                      <Icon name="i-solar-arrow-right-up-linear" />
+                    </div>
+                  </NuxtLink>
+                </div>
               </div>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+            </DrawerHeader>
+            <DrawerFooter class="flex w-full flex-col gap-2 pt-0 pb-6">
+              <DrawerClose>
+                <Button variant="outline" class="w-full"> Close </Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
       </ClientOnly>
     </div>
   </NavContainer>

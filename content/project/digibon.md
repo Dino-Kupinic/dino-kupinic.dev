@@ -12,7 +12,7 @@ technologies:
   - "Tailwind CSS"
   - "PWA"
   - "XML"
-date: 2024-07-8T00:00:00.000Z
+date: 2024-07-08
 ---
 
 Source code for this project is private.

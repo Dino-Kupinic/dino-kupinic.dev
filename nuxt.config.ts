@@ -1,89 +1,56 @@
-import { currentLocales } from "./app/config/i18n"
+// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite"
+
+export const SITE_URL = "https://www.dino-kupinic.dev"
+export const SITE_NAME = "Dino Kupinic"
+export const SITE_DESCRIPTION =
+  "Dino Kupinic is a personal portfolio website designed to showcase the " +
+  "professional work and personal information of Dino Kupinic."
 
 export default defineNuxtConfig({
-  compatibilityDate: "2024-07-07",
+  compatibilityDate: "2025-07-15",
 
-  future: {
-    compatibilityVersion: 4,
-  },
+  devtools: { enabled: true },
 
   site: {
-    url: "https://www.dino-kupinic.dev",
-    name: "Dino Kupinic",
+    url: SITE_URL,
+    name: SITE_NAME,
   },
 
-  linkChecker: {
-    report: {
-      html: true,
-      markdown: true,
+  llms: {
+    domain: SITE_URL,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    full: {
+      title: SITE_NAME,
+      description: SITE_DESCRIPTION,
     },
   },
 
-  devtools: {
-    enabled: true,
+  studio: {
+    repository: {
+      provider: "github",
+      owner: "Dino-Kupinic",
+      repo: "dinokupinic",
+      branch: "main",
+    },
+    i18n: {
+      defaultLocale: "en",
+    },
   },
 
-  $production: {
-    scripts: {
-      registry: {
-        clarity: true,
+  nitro: {
+    vercel: {
+      functions: {
+        runtime: "bun1.x",
       },
     },
   },
 
-  runtimeConfig: {
-    githubToken: "",
-    public: {
-      scripts: {
-        clarity: {
-          id: "",
-        },
-      },
-    },
-  },
+  css: ["~/assets/css/tailwind.css"],
 
-  fonts: {
-    defaults: {
-      weights: [400],
-      styles: ["normal", "italic"],
-    },
-    families: [
-      { name: "Fira Code", provider: "google" },
-      { name: "Inter", provider: "google" },
-      { name: "UnifontEX", provider: "fontsource" },
-    ],
-  },
-
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/color-mode",
-    "@nuxtjs/i18n",
-    "@nuxtjs/seo",
-    "@nuxt/content",
-    "@nuxt/image",
-    "@nuxt/eslint",
-    "@nuxt/fonts",
-    "@nuxt/scripts",
-    "@vueuse/nuxt",
-    "nuxt-icon",
-    "nuxt-viewport",
-    "shadcn-nuxt",
-  ],
-
-  typescript: {
-    typeCheck: true,
-    strict: true,
-    tsConfig: {
-      compilerOptions: {
-        baseUrl: ".",
-      },
-    },
-  },
-
-  eslint: {},
-
-  imports: {
-    autoImport: true,
+  vite: {
+    plugins: [tailwindcss()],
   },
 
   components: [
@@ -93,61 +60,64 @@ export default defineNuxtConfig({
     },
   ],
 
-  content: {
-    highlight: {
-      theme: {
-        default: "github-light",
-        dark: "github-dark",
+  modules: [
+    "shadcn-nuxt",
+    "@nuxt/eslint",
+    "@nuxtjs/seo",
+    "@nuxt/content",
+    "@nuxt/image",
+    "@nuxtjs/color-mode",
+    "@nuxt/fonts",
+    "@nuxt/scripts",
+    "@vueuse/nuxt",
+    "@nuxt/icon",
+    "@nuxtjs/device",
+    "nuxt-llms",
+    "nuxt-studio",
+  ],
+
+  fonts: {
+    defaults: {
+      weights: [400],
+      styles: ["normal", "italic"],
+    },
+    families: [
+      {
+        name: "Commit Mono",
+        provider: "fontsource",
+        fallbacks: [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
       },
-      langs: [
-        "vue",
-        "java",
-        "bash",
-        "typescript",
-        "javascript",
-        "yaml",
-        "wasm",
-      ],
-    },
-    markdown: {
-      anchorLinks: {
-        depth: 3,
-        exclude: [1],
+      {
+        name: "Raveo Display",
+        provider: "local",
+        weights: [200, 300, 400, 500, 600, 700],
+        fallbacks: [
+          "-apple-system",
+          "system-ui",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Arial",
+          "sans-serif",
+        ],
       },
-    },
-  },
-
-  colorMode: {
-    classSuffix: "",
-    preference: "system",
-    fallback: "dark",
-  },
-
-  css: ["~/assets/css/tailwind.css"],
-
-  tailwindcss: {
-    exposeConfig: true,
-  },
-
-  postcss: {
-    plugins: {
-      "postcss-import": {},
-      "tailwindcss/nesting": {},
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-
-  i18n: {
-    locales: currentLocales,
-    detectBrowserLanguage: false,
-    langDir: "locales",
-    defaultLocale: "en-US",
-    vueI18n: "~/config/i18n.config.ts",
+    ],
   },
 
   shadcn: {
     prefix: "",
     componentDir: "./app/components/ui",
+  },
+
+  typescript: {
+    typeCheck: true,
   },
 })

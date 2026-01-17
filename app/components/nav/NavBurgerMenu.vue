@@ -6,7 +6,9 @@ defineProps<{
 
 <template>
   <Button variant="outline" size="icon" aria-label="Burger Menu">
-    <Icon v-if="!open" name="i-heroicons-bars-3-16-solid" class="h-6 w-6" />
-    <Icon v-else name="i-heroicons-x-mark-solid" class="h-6 w-6" />
+    <Icon
+      :name="open ? 'i-heroicons-x-mark-solid' : 'i-heroicons-bars-3-16-solid'"
+      size="20"
+    />
   </Button>
 </template>

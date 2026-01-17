@@ -13,9 +13,9 @@ function copyToClipboard() {
 
 <template>
   <Button variant="ghost" size="default" @click="copyToClipboard()">
-    <span class="text-sm">
-      <Icon name="i-ph-link" class="mr-1" />
-      <span>{{ $t("blog.copy") }}</span>
+    <span class="text-sm flex items-center gap-1.5">
+      <Icon name="i-ph-link" size="20" />
+      <span>Copy URL</span>
     </span>
   </Button>
 </template>

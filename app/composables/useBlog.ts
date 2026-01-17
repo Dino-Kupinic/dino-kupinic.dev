@@ -1,30 +1,34 @@
-import type { BlogContent, BlogDisplay } from "~/types/blog";
+export type BlogQuery = Omit<
+  NonNullable<
+    Awaited<ReturnType<ReturnType<typeof queryCollection<"blogs">>["first"]>>
+  >,
+  "date"
+> & { date: Date }
 
-export const useBlog = () => {
-	const blogs = useState<BlogDisplay[]>("blogs", () => []);
+export const useBlog = (limit?: number) => {
+  const key = `blogs-${limit ?? "all"}`
+  const blogs = useState<BlogQuery[]>(key, () => [])
 
-	async function fetchBlogs() {
-		if (blogs.value.length) return;
+  async function fetchBlogs() {
+    if (blogs.value.length) return
 
-		try {
-			const blogsContent = await queryContent<BlogContent>("/blogs").find();
+    try {
+      const blogsContent = limit
+        ? await queryCollection("blogs").limit(limit).all()
+        : await queryCollection("blogs").all()
 
-			blogs.value = blogsContent
-				.map((blog) => ({
-					...blog,
-					date: new Date(blog.date),
-					path: blog._path as string,
-				}))
-				.sort((a, b) => b.date.getTime() - a.date.getTime())
-				.slice(0, 5);
-		} catch (error) {
-			blogs.value = [];
-			return error;
-		}
-	}
+      blogs.value = blogsContent.map((blog) => ({
+        ...blog,
+        date: new Date(blog.date),
+      }))
+    } catch (error) {
+      blogs.value = []
+      return error
+    }
+  }
 
-	return {
-		blogs,
-		fetchBlogs,
-	};
-};
+  return {
+    blogs,
+    fetchBlogs,
+  }
+}

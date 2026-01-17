@@ -12,16 +12,14 @@ useSeoMeta({
 <template>
   <div class="flex h-screen w-full items-center justify-center">
     <div class="m-3 flex flex-col space-y-3">
-      <div class="rounded-lg border bg-background p-3">
-        <SectionHeading class="text-center">
-          {{ $t("error.title") }}
-        </SectionHeading>
+      <div class="bg-background rounded-lg border p-3">
+        <SectionHeading class="text-center"> Error </SectionHeading>
       </div>
-      <div class="block h-auto w-[600px] rounded-md border p-4">
+      <div class="block h-auto w-150 rounded-md border p-4">
         <pre class="w-full overflow-auto">{{ error }}</pre>
       </div>
       <NuxtLink to="/">
-        <Button class="w-full">{{ $t("error.home") }}</Button>
+        <Button class="w-full">Back to home</Button>
       </NuxtLink>
     </div>
   </div>

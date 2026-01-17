@@ -19,7 +19,7 @@ watch(selected, () => {
     v-model:pressed="selected"
     :show-active="false"
     size="sm"
-    :aria-label="$t('aria.toggle-theme')"
+    aria-label="Toggle Theme"
   >
     <Icon v-if="selected" name="i-heroicons-moon-16-solid" />
     <Icon v-else name="i-heroicons-sun-16-solid" />

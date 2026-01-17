@@ -8,15 +8,19 @@ authors:
     handle: "@Dino-Kupinic"
 tags:
   - Design
+images:
+  dark: "/images/blog/software_blog_dark.png"
+  light: "/images/blog/software_blog_light.png"
 seo:
   image:
-    src: "/images/blog/software_blog.png"
+    src: "/images/blog/software_blog_light.png"
     alt: Software blog post cover image
 related:
   - "/blogs/design-sources"
 ---
 
-![Software](/images/blog/software_blog.png)
+::BlogImage{light="/images/blog/software_blog_light.png" dark="/images/blog/software_blog_dark.png" alt="Software blog post cover image"}
+::
 
 Design is everything.
 

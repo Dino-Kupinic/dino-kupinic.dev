@@ -13,7 +13,7 @@ const socials = getSocials()
       external
       class="text-primary dark:text-secondary"
     >
-      <Icon :name="item.icon" />
+      <Icon :name="item.icon" size="20" />
     </NuxtLink>
   </div>
 </template>

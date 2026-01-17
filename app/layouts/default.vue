@@ -4,12 +4,11 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
 <template>
   <div>
-    <NuxtLoadingIndicator />
     <SpeedInsights />
     <TheNavBar />
     <slot />
     <ClientOnly>
-      <CookieBanner />
+      <!--      <CookieBanner />-->
     </ClientOnly>
     <TheFooter />
   </div>

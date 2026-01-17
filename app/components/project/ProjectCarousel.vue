@@ -9,8 +9,6 @@ const plugin = Autoplay({
 
 const { featuredProjects, fetchProjects } = useProjects()
 await fetchProjects()
-
-const viewport = useViewport()
 </script>
 
 <template>
@@ -35,7 +33,7 @@ const viewport = useViewport()
           </div>
         </CarouselItem>
       </CarouselContent>
-      <template v-if="viewport.isGreaterThan('tablet')">
+      <template v-if="$device.isDesktopOrTablet">
         <CarouselPrevious aria-label="Carousel Previous Item" />
         <CarouselNext aria-label="Carousel Next Item" />
       </template>

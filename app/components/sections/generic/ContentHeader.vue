@@ -5,9 +5,9 @@ const props = defineProps<{
   title: string
 }>()
 
-const viewport = useViewport()
+const { isDesktopOrTablet } = useDevice()
 const strippedTitle = computed(() => {
-  if (viewport.isGreaterThan("tablet") || props.title.length <= 30) {
+  if (isDesktopOrTablet || props.title.length <= 30) {
     return props.title
   }
   return props.title.substring(0, 30).concat("...")
@@ -16,7 +16,7 @@ const strippedTitle = computed(() => {
 
 <template>
   <div class="h-auto w-full pb-2 sm:pb-6">
-    <div class="mb-8 mt-4 w-full sm:mb-12">
+    <div class="mt-4 mb-8 w-full sm:mb-12">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
