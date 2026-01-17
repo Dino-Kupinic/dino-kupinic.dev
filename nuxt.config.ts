@@ -74,8 +74,33 @@ export default defineNuxtConfig({
       styles: ["normal", "italic"],
     },
     families: [
-      { name: "Commit Mono", provider: "fontsource" },
-      { name: "Inter", provider: "google" },
+      {
+        name: "Commit Mono",
+        provider: "fontsource",
+        fallbacks: [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
+      },
+      {
+        name: "Raveo Display",
+        provider: "local",
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        fallbacks: [
+          "-apple-system",
+          "system-ui",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Arial",
+          "sans-serif",
+        ],
+      },
     ],
   },
 

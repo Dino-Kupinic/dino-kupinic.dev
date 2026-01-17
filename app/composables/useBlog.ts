@@ -5,10 +5,11 @@ export type BlogQuery = Omit<
   "date"
 > & { date: Date }
 
-export const useBlog = () => {
-  const blogs = useState<BlogQuery[]>("blogs", () => [])
+export const useBlog = (limit?: number) => {
+  const key = `blogs-${limit ?? "all"}`
+  const blogs = useState<BlogQuery[]>(key, () => [])
 
-  async function fetchBlogs(limit?: number) {
+  async function fetchBlogs() {
     if (blogs.value.length) return
 
     try {

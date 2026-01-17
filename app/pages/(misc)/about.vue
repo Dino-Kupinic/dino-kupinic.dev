@@ -2,7 +2,6 @@
 const { data: page } = await useAsyncData("about-page", () => {
   return queryCollection("misc").path("/misc/about").first()
 })
-console.log(page.value)
 </script>
 
 <template>

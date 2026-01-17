@@ -15,13 +15,15 @@ const formattedDate = formatDate(new Date(props.project.date))
         <div
           class="from-background to-accent dark:to-muted relative flex h-32 w-full items-center justify-center rounded-md bg-linear-to-t sm:h-80"
         >
-          <Icon
-            v-for="icon in project.icons"
-            :key="icon"
-            :name="icon"
-            :size="isMobile ? 32 : 40"
-            class="text-foreground mx-2"
-          />
+          <ClientOnly>
+            <Icon
+              v-for="icon in project.icons"
+              :key="icon"
+              :name="icon"
+              :size="isMobile ? 28 : 40"
+              class="text-foreground mx-2"
+            />
+          </ClientOnly>
           <ProjectDate
             class="absolute right-2 bottom-2"
             :date="formattedDate"
