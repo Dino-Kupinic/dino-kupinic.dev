@@ -69,14 +69,14 @@ if (project.value?.repository) {
       <div class="basis-2/5">
         <div class="bg-accent h-full w-full space-y-1 rounded-lg p-8">
           <p class="mb-2 font-semibold">Statistics</p>
-          <div>
-            <Icon name="i-ph-calendar" class="mr-2" />
+          <div class="flex items-center gap-2">
+            <Icon name="i-ph-calendar" size="20" />
             <span class="dark:text-secondary">
               Started {{ formattedDate }}
             </span>
           </div>
           <div v-if="project?.deployed" class="flex items-center">
-            <Icon name="i-heroicons-check-circle" class="mr-2 text-green-500" />
+            <Icon name="i-heroicons-check-circle" size="20" class="text-green-500" />
             <span class="dark:text-secondary">
               <NuxtLink :to="project.deployed.url" class="hover:text-blue-500">
                 <span>Deployed on</span>
@@ -93,8 +93,8 @@ if (project.value?.repository) {
               </NuxtLink>
             </span>
           </div>
-          <div v-if="project?.repository" class="flex items-center">
-            <Icon name="i-heroicons-check-circle" class="mr-2 text-green-500" />
+          <div v-if="project?.repository" class="flex items-center gap-2">
+            <Icon name="i-heroicons-check-circle" size="20" class="text-green-500" />
             <span class="dark:text-secondary">
               <NuxtLink
                 :to="project.repository.url"
