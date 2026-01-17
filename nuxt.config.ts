@@ -39,6 +39,14 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    vercel: {
+      functions: {
+        runtime: "bun1.x",
+      },
+    },
+  },
+
   css: ["~/assets/css/tailwind.css"],
 
   vite: {

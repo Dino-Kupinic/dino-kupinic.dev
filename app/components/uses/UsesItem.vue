@@ -16,13 +16,7 @@ const img = useImage()
         <CardDescription>{{ description }}</CardDescription>
       </CardHeader>
       <div class="flex h-40 w-full items-center justify-center">
-        <NuxtImg
-          :src="image"
-          class="max-h-full max-w-full object-contain"
-          :placeholder="
-            img(image, { height: 300, format: 'png', blur: 2, quality: 50 })
-          "
-        />
+        <NuxtImg :src="image" class="max-h-full max-w-full object-contain" />
       </div>
     </div>
   </Card>
