@@ -32,9 +32,9 @@ const items = ref<BlogItem[]>([
       rel="noreferrer"
     >
       <span
-        class="hover:text-foreground dark:hover:text-foreground text-sm text-neutral-500 dark:text-neutral-500"
+        class="hover:text-foreground dark:hover:text-foreground text-sm text-neutral-500 dark:text-neutral-500 flex items-center gap-1.5"
       >
-        <Icon :name="item.icon" class="mr-1" />
+        <Icon :name="item.icon" size="20" />
         {{ item.text }}
         <Icon name="i-ci-arrow-up-right-md" class="mb-1 h-4 w-4" />
       </span>

@@ -20,7 +20,7 @@ const formattedDate = formatDate(new Date(props.project.date))
               v-for="icon in project.icons"
               :key="icon"
               :name="icon"
-              :size="isMobile ? 28 : 40"
+              :size="isMobile ? 28 : 48"
               class="text-foreground mx-2"
             />
           </ClientOnly>

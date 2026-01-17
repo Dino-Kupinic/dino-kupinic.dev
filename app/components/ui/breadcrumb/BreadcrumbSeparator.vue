@@ -16,7 +16,7 @@ const props = defineProps<{
     :class="cn('[&>svg]:size-3.5', props.class)"
   >
     <slot>
-      <ChevronRight />
+      <strong class="text-base">/</strong>
     </slot>
   </li>
 </template>

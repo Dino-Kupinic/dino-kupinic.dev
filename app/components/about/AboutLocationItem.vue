@@ -5,7 +5,7 @@
     <template #header>Austria</template>
     <template #content>
       <div class="flex justify-center">
-        <!--        <AboutLocationGlobe />-->
+        <AboutLocationGlobe />
       </div>
     </template>
   </AboutItem>

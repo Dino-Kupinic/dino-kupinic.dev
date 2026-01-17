@@ -1,6 +1,6 @@
 ---
-title: "AI Backend"
-description: "FastAPI starter to get started building AI apps fast"
+title: "Blackrose"
+description: "AI starter to get started building AI apps fast"
 icons:
   - "i-simple-icons-python"
   - "i-simple-icons-fastapi"
@@ -18,7 +18,7 @@ repository:
 
 ## Description
 
-AI Backend is a backend service for your app powered by llama3.
-It provides a simple API for your app to interact with llama3 and get the results of the AI models.
+Blackrose is a backend service for your app powered by AI.
+It provides a simple API for your app to interact with llama or similar and get the results of the AI models.
 
 Under the hood it uses FastAPI to provide a RESTful API and ollama to run the AI models.
