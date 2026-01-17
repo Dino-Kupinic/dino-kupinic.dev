@@ -59,8 +59,10 @@ if (project.value?.repository) {
             {{ isFeatured }}
           </span>
         </div>
-        <GenericTitle>{{ project?.title }}</GenericTitle>
-        <GenericSubtitle>{{ project?.description }}</GenericSubtitle>
+        <div class="flex flex-col">
+         <GenericTitle>{{ project?.title }}</GenericTitle>
+         <GenericSubtitle>{{ project?.description }}</GenericSubtitle>
+        </div>
         <ProjectTechnologies
           v-if="project?.technologies"
           :technologies="project?.technologies"

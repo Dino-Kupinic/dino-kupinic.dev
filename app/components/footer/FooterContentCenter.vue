@@ -32,10 +32,10 @@ const navigationItems = ref<NavigationItemGroup[]>([
         title: "Uses",
         href: "/uses",
       },
-      {
+/*       {
         title: "Cookies",
         href: "/cookies",
-      },
+      }, */
     ],
   },
 ])
