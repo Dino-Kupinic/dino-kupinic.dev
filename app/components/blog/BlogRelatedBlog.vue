@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <NuxtLink :to>
     <div
-      class="hover:bg-accent flex h-auto w-full flex-col space-y-2 rounded-lg border p-3"
+      class="hover:bg-accent flex h-auto w-full flex-col space-y-2 rounded-radius border p-3"
     >
       <p class="line-clamp-2 text-sm font-medium">{{ title }}</p>
       <BlogItemAuthor :authors="authors" />

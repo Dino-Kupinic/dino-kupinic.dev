@@ -9,13 +9,17 @@ authors:
 tags:
   - Guide
   - Web
+images:
+  dark: "/images/blog/nuxt_blog_dark.png"
+  light: "/images/blog/nuxt_blog_light.png"
 seo:
   image:
-    src: "/images/blog/nuxt_blog.png"
+    src: "/images/blog/nuxt_blog_light.png"
     alt: Nuxt blog post cover image
 ---
 
-![nuxt](/images/blog/nuxt_blog.png)
+::BlogImage{light="/images/blog/nuxt_blog_light.png" dark="/images/blog/nuxt_blog_dark.png" alt="Nuxt blog post cover image"}
+::
 
 [Nuxt.js](https://nuxt.com) is an open-source framework for building **full-stack** web apps and websites using Vue.js.
 As a meta-framework, Nuxt builds upon Vue.js,

@@ -9,13 +9,17 @@ authors:
 tags:
   - Rant
   - Advice
+images:
+  dark: "/images/blog/saas_blog_dark.png"
+  light: "/images/blog/saas_blog_light.png"
 seo:
   image:
-    src: "/images/blog/saas_blog.png"
+    src: "/images/blog/saas_blog_light.png"
     alt: SaaS blog post cover image
 ---
 
-![SaaS](/images/blog/saas_blog.png)
+::BlogImage{light="/images/blog/saas_blog_light.png" dark="/images/blog/saas_blog_dark.png" alt="SaaS blog post cover image"}
+::
 
 Vercel for hosting, Supabase for databases, Resend for emails, etc.
 
