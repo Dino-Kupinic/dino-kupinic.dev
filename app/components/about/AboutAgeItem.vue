@@ -8,7 +8,7 @@ const count = useMotionValue(0)
 const rounded = useTransform(count, () => Math.round(count.get()))
 
 const ageRef = ref<HTMLElement | null>(null)
-const isInView = useInView(ageRef, {once: true})
+const isInView = useInView(ageRef, { once: true })
 
 watch(isInView, (v) => {
   if (v) {
@@ -22,10 +22,12 @@ watch(isInView, (v) => {
     <template #header>Age</template>
     <template #content>
       <div class="flex h-full items-center justify-center">
-        <span class="text-9xl font-bold tracking-tighter" ref="ageRef" aria-label="Age">
-          <RowValue
-            :value="rounded"
-          />
+        <span
+          class="text-9xl font-bold tracking-tighter"
+          ref="ageRef"
+          aria-label="Age"
+        >
+          <RowValue :value="rounded" />
         </span>
       </div>
     </template>

@@ -86,7 +86,7 @@ if (project.value?.repository) {
               size="20"
               class="text-green-500"
             />
-            <span class="dark:text-secondary">
+            <span class="dark:text-secondary text-foreground">
               <NuxtLink :to="project.deployed.url" class="hover:text-blue-500">
                 <span>Deployed on</span>
                 <Icon
