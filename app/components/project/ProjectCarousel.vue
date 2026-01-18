@@ -19,6 +19,7 @@ await fetchProjects()
         loop: true,
       }"
       :plugins="[plugin]"
+      aria-label="Featured Projects Carousel"
       @mouseenter="plugin.stop"
       @mouseleave="[plugin.reset(), plugin.play()]"
     >

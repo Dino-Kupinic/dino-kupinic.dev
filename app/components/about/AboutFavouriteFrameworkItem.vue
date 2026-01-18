@@ -13,6 +13,7 @@
                 external
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Next.js"
               >
                 <Icon
                   name="i-logos-nextjs-icon"

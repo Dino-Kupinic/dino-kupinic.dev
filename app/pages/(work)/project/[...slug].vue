@@ -77,7 +77,10 @@ if (project.value?.repository) {
               Started {{ formattedDate }}
             </span>
           </div>
-          <div v-if="project?.deployed" class="flex items-center">
+          <div
+            v-if="project?.deployed"
+            class="text-secondary flex items-center gap-2"
+          >
             <Icon
               name="i-heroicons-check-circle"
               size="20"
@@ -89,13 +92,10 @@ if (project.value?.repository) {
                 <Icon
                   v-if="project.deployed.icon"
                   :name="project.deployed.icon"
-                  class="mx-1 mb-0.5"
+                  class="mx-1"
                 />
                 <span>{{ project.deployed.vendor }}</span>
-                <Icon
-                  name="i-solar-arrow-right-up-linear"
-                  class="mb-0.5 ml-1"
-                />
+                <Icon name="i-solar-arrow-right-up-linear" class="ml-1" />
               </NuxtLink>
             </span>
           </div>

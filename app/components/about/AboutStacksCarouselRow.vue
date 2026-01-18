@@ -28,6 +28,7 @@ const plugin = Autoscroll({
         loop: true,
       }"
       :plugins="[plugin]"
+      aria-label="Stacks Carousel"
       @mouseenter="plugin.stop"
       @mouseleave="[plugin.reset(), plugin.play()]"
     >

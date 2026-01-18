@@ -81,6 +81,7 @@ export default defineNuxtConfig({
     "nuxt-llms",
     "nuxt-studio",
     "@nuxt/a11y",
+    "motion-v/nuxt",
     Sonda({
       server: true,
     }),

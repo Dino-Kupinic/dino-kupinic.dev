@@ -61,7 +61,10 @@ const mix: StackItem[] = [...frameworks, ...libraries, ...databases, ...etc]
     <template #header>Skills</template>
     <template #content>
       <div class="flex h-full w-full flex-col justify-center space-y-2">
-        <AboutStacksCarouselRow direction="backward">
+        <AboutStacksCarouselRow
+          direction="backward"
+          aria-label="Languages Carousel"
+        >
           <AboutStacksCarouselItem
             v-for="language in languages"
             :key="language.tooltip"
@@ -71,7 +74,10 @@ const mix: StackItem[] = [...frameworks, ...libraries, ...databases, ...etc]
             {{ language.tooltip }}
           </AboutStacksCarouselItem>
         </AboutStacksCarouselRow>
-        <AboutStacksCarouselRow direction="forward">
+        <AboutStacksCarouselRow
+          direction="forward"
+          aria-label="Frameworks, Libraries, Databases and etc. Carousel"
+        >
           <AboutStacksCarouselItem
             v-for="m in mix"
             :key="m.tooltip"

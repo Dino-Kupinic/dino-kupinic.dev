@@ -12,6 +12,7 @@ const socials = getSocials()
       rel="noopener"
       external
       class="text-primary dark:text-secondary"
+      :aria-label="item.name"
     >
       <Icon :name="item.icon" size="20" />
     </NuxtLink>

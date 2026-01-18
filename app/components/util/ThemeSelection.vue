@@ -27,7 +27,7 @@ const currentTheme = computed(() => {
   <ClientOnly>
     <Select v-model="selected">
       <SelectTrigger class="w-full" size="default">
-        <SelectValue class="flex gap-3">
+        <SelectValue class="flex gap-3" aria-label="Theme selection">
           <Icon
             :name="
               colorMode.value === 'dark'
@@ -36,7 +36,7 @@ const currentTheme = computed(() => {
             "
             size="16"
           />
-          <span class="pl-0.5 text-base">
+          <span class="pl-0.5 text-base" aria-label="Theme name">
             {{ currentTheme.name }}
           </span>
         </SelectValue>
