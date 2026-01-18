@@ -80,7 +80,6 @@ The designs are hand-picked to ensure quality and creativity.
 The site is regularly updated with fresh content, making it a great
 resource for designers and developers looking for inspiration.
 
-
 ## Conclusion
 
 Inspiration is everywhere, and the best designers know where to look.

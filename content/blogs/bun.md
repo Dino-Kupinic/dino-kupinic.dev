@@ -44,9 +44,4 @@ Bun isn't just a runtime, but for some reason it has everything you need to buil
 ## Should You Switch?
 
 If you're deep in a Node or Deno setup, I'm not saying you need to rewrite everything overnight.
-But I *am* saying you should give Bun a shot on your next small project or script.
-
-
-
-
-
+But I _am_ saying you should give Bun a shot on your next small project or script.

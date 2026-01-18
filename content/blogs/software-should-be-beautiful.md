@@ -35,7 +35,7 @@ But software, in its essence, can be just as beautiful.
 Good software isn't just about a sleek user interface!
 It's about the harmony between functionality, efficiency, and user experience.
 
-## Why you should give a f*ck
+## Why you should give a f\*ck
 
 ### Cognitive Load
 
@@ -73,6 +73,7 @@ Am I the only one who thought amazon was a scam when I first saw it?
 Beautiful software starts with clean architecture.
 Like a well-designed building, software needs strong foundations and logical organization.
 This means:
+
 - Clear separation of concerns
 - Intuitive module organization
 - Consistent patterns and practices
@@ -80,6 +81,7 @@ This means:
 ### Thoughtful User Experience
 
 The user interface should feel natural and easy to use:
+
 - Consistent visual language and layout
 - Meaningful animations and transitions (not just for show)
 - Responsive and adaptive design (mobile-friendly)
@@ -93,9 +95,10 @@ Keep in mind that these are just guidelines, not strict rules.
 ---
 
 **Start with Purpose**
-  - Understand your users' needs
-  - Define clear objectives
-  - Plan before implementing (design first)
+
+- Understand your users' needs
+- Define clear objectives
+- Plan before implementing (design first)
 
 Some form of whiteboarding or sketching is always a good idea.
 It's much easier to iterate than in code. I usually use [Figma](https://www.figma.com/) for this.
@@ -103,9 +106,10 @@ It's much easier to iterate than in code. I usually use [Figma](https://www.figm
 ---
 
 **Embrace Simplicity**
-  - Remove unnecessary complexity
-  - Focus on core functionality
-  - Make decisions obvious
+
+- Remove unnecessary complexity
+- Focus on core functionality
+- Make decisions obvious
 
 You don't need to reinvent the wheel.
 Use established patterns and practices.
@@ -115,17 +119,19 @@ Users should be able to use your software without reading a manual
 ---
 
 **Pay Attention to Details**
-  - Consistent spacing and formatting
-  - Thoughtful error messages
+
+- Consistent spacing and formatting
+- Thoughtful error messages
 
 `"Oops! An error occurred, please try again!"` is not helpful.
 
 ---
 
 **Test and Iterate**
-  - Gather user feedback
-  - Measure performance
-  - Continuously improve
+
+- Gather user feedback
+- Measure performance
+- Continuously improve
 
 ## Conclusion
 
