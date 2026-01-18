@@ -8,12 +8,12 @@ const formattedDate = formatDate(new Date(props.project.date))
 
 <template>
   <NuxtLink :to="project.path">
-    <Card class="h-55 gap-0 py-0 sm:h-auto">
+    <Card class="h-55 gap-0 py-0 sm:h-auto rounded-sm">
       <CardHeader
         class="flex items-center justify-center p-2.5 pb-1 sm:p-4 sm:pb-2"
       >
         <div
-          class="from-background to-accent dark:to-muted relative flex h-32 w-full items-center justify-center rounded-md bg-linear-to-t sm:h-80"
+          class="from-background to-accent dark:to-muted relative flex h-32 w-full items-center justify-center bg-linear-to-t sm:h-80"
         >
           <ClientOnly>
             <Icon

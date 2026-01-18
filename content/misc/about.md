@@ -20,7 +20,7 @@ little bit about myself on the internet.
 Building this website was a fun experience, and I learned a lot about web development in the process.
 Though it's not perfect, I'm happy with the result, and I'm looking forward to improving it in the future.
 
-### Future Plans
+## Future Plans
 
 In the future, I want to rewrite this website in Next.js and use a totally different design.
 I have a few ideas in mind, but I want to keep them a secret for now!
