@@ -37,5 +37,3 @@ I also wanted to learn more about Bun, and this project was a great way to do th
 ### Status
 
 Heavily work in progress (as of 19.06.2025)
-
-

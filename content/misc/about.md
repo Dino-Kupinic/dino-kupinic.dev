@@ -64,5 +64,3 @@ This website is now completely static!
 - [prettier](https://prettier.io/): code formatting
 - `octokit`: GitHub API
 - `date-fns`: date formatting
-
-

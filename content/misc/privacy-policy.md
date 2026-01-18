@@ -29,7 +29,7 @@ We collect several types of information from and about users of our Website, inc
   about your browsing behavior on the Website. For more details, see
   our [Cookie Policy](https://dino-kupinic.dev/cookies).
 
-*We don't collect any information that can be used to identify you personally, such as your name or email address.*
+_We don't collect any information that can be used to identify you personally, such as your name or email address._
 
 ### How We Use Your Data
 
@@ -74,7 +74,7 @@ We do not sell, trade, or otherwise transfer your personal data to outside parti
 If you are located in the European Economic Area (EEA), you have the following rights regarding your personal data:
 
 | Right                     | Description                                                                   |
-|---------------------------|-------------------------------------------------------------------------------|
+| ------------------------- | ----------------------------------------------------------------------------- |
 | Access                    | request a copy of the personal data we hold about you.                        |
 | Rectification             | request that we correct any inaccurate or incomplete data.                    |
 | Erasure                   | request that we delete your personal data under certain circumstances         |
@@ -82,9 +82,9 @@ If you are located in the European Economic Area (EEA), you have the following r
 | Data Portability          | request that we transfer your personal data to another data controller        |
 | Withdraw Consent          | You can withdraw consent for the processing of your personal data at any time |
 
-*Please note that we can only fulfill requests that are possible. As an example, we cannot delete data already collected
+_Please note that we can only fulfill requests that are possible. As an example, we cannot delete data already collected
 by third-party services. We can also not give you access to data that does not exist, such as personal data that we do not
-collect.*
+collect._
 
 To exercise any of these rights, please contact us at dinokupinic2006@gmail.com.
 
