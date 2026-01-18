@@ -18,6 +18,15 @@ export default defineNuxtConfig({
     name: SITE_NAME,
   },
 
+  routeRules: {
+    "/": { prerender: true },
+    "/about": { prerender: true },
+    "/uses": { prerender: true },
+    "/project/**": { isr: true },
+    "/blog/**": { isr: true },
+    "/api/**": { cors: true },
+  },
+
   sourcemap: {
     client: true,
     server: true,
@@ -54,6 +63,10 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/tailwind.css"],
+
+  a11y: {
+    logIssues: false,
+  },
 
   vite: {
     plugins: [tailwindcss()],
