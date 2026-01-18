@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite"
+import Sonda from "sonda/nuxt"
 
 export const SITE_URL = "https://www.dino-kupinic.dev"
 export const SITE_NAME = "Dino Kupinic"
@@ -15,6 +16,11 @@ export default defineNuxtConfig({
   site: {
     url: SITE_URL,
     name: SITE_NAME,
+  },
+
+  sourcemap: {
+    client: true,
+    server: true,
   },
 
   llms: {
@@ -61,7 +67,6 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    "shadcn-nuxt",
     "@nuxt/eslint",
     "@nuxtjs/seo",
     "@nuxt/content",
@@ -72,8 +77,13 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/icon",
     "@nuxtjs/device",
+    "shadcn-nuxt",
     "nuxt-llms",
     "nuxt-studio",
+    "@nuxt/a11y",
+    Sonda({
+      server: true,
+    }),
   ],
 
   fonts: {

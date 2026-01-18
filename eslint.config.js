@@ -1,5 +1,5 @@
-import withNuxt from "./.nuxt/eslint.config.mjs";
-import eslintConfigPrettier from "eslint-config-prettier";
+import withNuxt from "./.nuxt/eslint.config.mjs"
+import eslintConfigPrettier from "eslint-config-prettier"
 
 export default withNuxt(
   {
@@ -38,4 +38,4 @@ export default withNuxt(
     ignores: ["**/components/ui", "**/components/content", "**/lib"],
   },
   eslintConfigPrettier,
-);
+)
