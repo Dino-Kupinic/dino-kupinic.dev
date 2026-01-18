@@ -2,25 +2,12 @@ export type ProjectQuery = NonNullable<
   Awaited<ReturnType<ReturnType<typeof queryCollection<"projects">>["first"]>>
 >
 
-export const useProjects = () => {
+export const useProjects = async () => {
   const route = useRoute()
-  const projects = useState<ProjectQuery[]>("projects", () => [])
-  const featuredProjects = computed(() =>
-    projects.value.filter((project) => project.featured),
+  const { data: projects } = await useAsyncData<ProjectQuery[]>(
+    "projects",
+    () => queryCollection("projects").order("date", "DESC").all(),
   )
-
-  async function fetchProjects() {
-    if (projects.value.length) return
-
-    try {
-      projects.value = await queryCollection("projects")
-        .order("date", "DESC")
-        .all()
-    } catch (error) {
-      projects.value = []
-      return error
-    }
-  }
 
   async function fetchProject() {
     const { data } = await useAsyncData(route.path, () => {
@@ -29,10 +16,13 @@ export const useProjects = () => {
     return data
   }
 
+  const featuredProjects = computed(() =>
+    (projects.value ?? []).filter((project) => project.featured),
+  )
+
   return {
     projects,
     featuredProjects,
-    fetchProjects,
     fetchProject,
   }
 }

@@ -7,8 +7,7 @@ const plugin = Autoplay({
   stopOnInteraction: false,
 })
 
-const { featuredProjects, fetchProjects } = useProjects()
-await fetchProjects()
+const { featuredProjects } = await useProjects()
 </script>
 
 <template>
@@ -34,7 +33,7 @@ await fetchProjects()
           </div>
         </CarouselItem>
       </CarouselContent>
-      <template v-if="$device.isDesktopOrTablet">
+      <template v-if="isTablet">
         <CarouselPrevious aria-label="Carousel Previous Item" />
         <CarouselNext aria-label="Carousel Next Item" />
       </template>
