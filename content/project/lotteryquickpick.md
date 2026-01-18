@@ -8,5 +8,3 @@ technologies:
   - "CMake"
 date: 2021-02-11T00:00:00.000Z
 ---
-
-

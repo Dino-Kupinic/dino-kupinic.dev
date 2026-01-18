@@ -23,7 +23,7 @@ defineProps<{
               :class="navigationMenuTriggerStyle()"
             >
               <span
-                class="font-mono uppercase tracking-tight decoration-dotted underline-offset-4 hover:underline"
+                class="font-mono tracking-tight uppercase decoration-dotted underline-offset-4 hover:underline"
               >
                 {{ item.title }}
               </span>

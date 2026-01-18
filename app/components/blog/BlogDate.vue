@@ -20,7 +20,7 @@ const formattedDate = computed(() => {
 
 <template>
   <span
-    class="flex items-center text-nowrap text-sm text-neutral-500 dark:text-secondary"
+    class="dark:text-secondary flex items-center text-sm text-nowrap text-neutral-500"
   >
     {{ formattedDate }}
   </span>

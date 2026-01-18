@@ -60,8 +60,8 @@ if (project.value?.repository) {
           </span>
         </div>
         <div class="flex flex-col">
-         <GenericTitle>{{ project?.title }}</GenericTitle>
-         <GenericSubtitle>{{ project?.description }}</GenericSubtitle>
+          <GenericTitle>{{ project?.title }}</GenericTitle>
+          <GenericSubtitle>{{ project?.description }}</GenericSubtitle>
         </div>
         <ProjectTechnologies
           v-if="project?.technologies"
@@ -78,7 +78,11 @@ if (project.value?.repository) {
             </span>
           </div>
           <div v-if="project?.deployed" class="flex items-center">
-            <Icon name="i-heroicons-check-circle" size="20" class="text-green-500" />
+            <Icon
+              name="i-heroicons-check-circle"
+              size="20"
+              class="text-green-500"
+            />
             <span class="dark:text-secondary">
               <NuxtLink :to="project.deployed.url" class="hover:text-blue-500">
                 <span>Deployed on</span>
@@ -96,7 +100,11 @@ if (project.value?.repository) {
             </span>
           </div>
           <div v-if="project?.repository" class="flex items-center gap-2">
-            <Icon name="i-heroicons-check-circle" size="20" class="text-green-500" />
+            <Icon
+              name="i-heroicons-check-circle"
+              size="20"
+              class="text-green-500"
+            />
             <span class="dark:text-secondary">
               <NuxtLink
                 :to="project.repository.url"

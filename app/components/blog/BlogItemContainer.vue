@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <NuxtLink
     :to
-    class="rounded-lg border bg-card text-card-foreground shadow-sm"
+    class="bg-card text-card-foreground rounded-lg border shadow-sm"
   >
     <slot />
   </NuxtLink>

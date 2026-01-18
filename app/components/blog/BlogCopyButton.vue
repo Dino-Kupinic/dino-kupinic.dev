@@ -13,7 +13,7 @@ function copyToClipboard() {
 
 <template>
   <Button variant="ghost" size="default" @click="copyToClipboard()">
-    <span class="text-sm flex items-center gap-1.5">
+    <span class="flex items-center gap-1.5 text-sm">
       <Icon name="i-ph-link" size="20" />
       <span>Copy URL</span>
     </span>

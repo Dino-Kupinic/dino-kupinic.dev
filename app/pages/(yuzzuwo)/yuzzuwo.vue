@@ -21,7 +21,7 @@ const currentYear = new Date().getFullYear()
           >
             <Icon
               name="i-material-symbols-arrow-left-alt-rounded"
-              class="mb-1 mr-1"
+              class="mr-1 mb-1"
             />
             back to dino-kupinic.dev
           </span>
@@ -35,7 +35,7 @@ const currentYear = new Date().getFullYear()
       >
         <Yzwo class="mb-16 h-full w-full sm:mb-0 sm:h-auto sm:w-auto" />
         <div
-          class="flex h-auto flex-col justify-between gap-3 border bg-white p-8 dark:bg-black sm:gap-0"
+          class="flex h-auto flex-col justify-between gap-3 border bg-white p-8 sm:gap-0 dark:bg-black"
         >
           <HeroSubtitle class="border-b tracking-tighter">Yuzzuwo</HeroSubtitle>
           <p class="font-ymono text-xl uppercase dark:text-neutral-500">
@@ -47,7 +47,7 @@ const currentYear = new Date().getFullYear()
             </BlogAuthor>
           </div>
           <p
-            class="self-end font-ymono text-xl uppercase dark:text-neutral-500"
+            class="font-ymono self-end text-xl uppercase dark:text-neutral-500"
           >
             EST. 2025;
           </p>
@@ -70,12 +70,12 @@ const currentYear = new Date().getFullYear()
           </div>
           <div class="flex flex-col gap-1 p-4">
             <p
-              class="truncate text-lg font-semibold text-foreground sm:text-lg"
+              class="text-foreground truncate text-lg font-semibold sm:text-lg"
             >
               Sniptide
             </p>
             <p
-              class="self-end font-ymono text-xl uppercase dark:text-neutral-500"
+              class="font-ymono self-end text-xl uppercase dark:text-neutral-500"
             >
               A bold, modern and self-hostable paste platform
             </p>
@@ -83,12 +83,12 @@ const currentYear = new Date().getFullYear()
         </div>
       </NuxtLink>
       <div
-        class="flex h-96 items-center justify-center border-x border-t sm:border-l-0 sm:border-r sm:border-t-0"
+        class="flex h-96 items-center justify-center border-x border-t sm:border-t-0 sm:border-r sm:border-l-0"
       >
         <p class="font-ymono text-xl uppercase dark:text-neutral-500">404</p>
       </div>
       <div
-        class="flex h-96 items-center justify-center border-x border-t sm:border-l-0 sm:border-r sm:border-t-0"
+        class="flex h-96 items-center justify-center border-x border-t sm:border-t-0 sm:border-r sm:border-l-0"
       >
         <p class="font-ymono text-xl uppercase dark:text-neutral-500">404</p>
       </div>
@@ -100,7 +100,7 @@ const currentYear = new Date().getFullYear()
         <p class="font-ymono text-xl uppercase dark:text-neutral-500">404</p>
       </div>
       <div
-        class="col-span-2 flex h-96 items-center justify-center border-l border-r border-t sm:border-l-0"
+        class="col-span-2 flex h-96 items-center justify-center border-t border-r border-l sm:border-l-0"
       >
         <div class="flex flex-col gap-3">
           <p class="font-ymono text-xl uppercase dark:text-neutral-500">

@@ -7,9 +7,9 @@ defineProps<{
 
 <template>
   <div>
-    <p class="text-left leading-5 text-foreground">{{ name }}</p>
+    <p class="text-foreground text-left leading-5">{{ name }}</p>
     <p
-      class="text-left text-sm font-normal text-neutral-400 dark:text-secondary"
+      class="dark:text-secondary text-left text-sm font-normal text-neutral-400"
     >
       {{ handle }}
     </p>

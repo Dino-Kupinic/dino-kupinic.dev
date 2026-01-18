@@ -13,10 +13,10 @@ defineProps<{
     <NuxtImg
       :src="colorMode.value === 'dark' ? dark : light"
       :alt="alt"
-      class="w-full overflow-hidden rounded-xl border mb-4"
+      class="mb-4 w-full overflow-hidden rounded-xl border"
     />
     <template #fallback>
-      <Skeleton class="w-full h-[420px] overflow-hidden rounded-xl border" />
+      <Skeleton class="h-[420px] w-full overflow-hidden rounded-xl border" />
     </template>
   </ClientOnly>
 </template>

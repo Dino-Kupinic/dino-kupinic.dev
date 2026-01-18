@@ -8,7 +8,7 @@ defineProps<{
   <Button
     variant="ghost"
     size="default"
-    class="mr-2 flex h-auto items-center px-2 py-2 text-primary dark:text-secondary"
+    class="text-primary dark:text-secondary mr-2 flex h-auto items-center px-2 py-2"
   >
     <Avatar size="sm" class="mr-2">
       <AvatarImage :src="avatarSrc" alt="author avatar" />

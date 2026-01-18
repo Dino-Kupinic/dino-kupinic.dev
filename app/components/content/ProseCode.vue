@@ -1,5 +1,3 @@
 <template>
-  <code
-   class="font-mono border text-base p-1 rounded-md"
-  ><slot /></code>
+  <code class="rounded-xl border px-1 py-0.5 mx-0.5 font-mono text-sm"><slot /></code>
 </template>

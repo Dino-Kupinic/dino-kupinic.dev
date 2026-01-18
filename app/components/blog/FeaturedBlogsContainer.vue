@@ -13,7 +13,7 @@ const classes: string[] = [
 
 <template>
   <div
-    class="grid h-auto grid-cols-1 grid-rows-9 gap-5 sm:h-150 sm:grid-cols-3 md:h-175"
+    class="grid h-auto grid-cols-1 grid-rows-9 gap-5 sm:h-160 sm:grid-cols-3 md:h-180"
   >
     <BlogItem
       v-for="(blog, index) in blogs"

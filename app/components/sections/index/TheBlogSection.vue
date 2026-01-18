@@ -8,7 +8,7 @@
           :size="$device.isMobile ? 'default' : 'sm'"
           class="w-full sm:w-40"
         >
-          Read me
+          Read more
         </Button>
       </NuxtLink>
     </div>

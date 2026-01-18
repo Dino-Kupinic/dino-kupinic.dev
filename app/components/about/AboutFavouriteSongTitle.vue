@@ -25,7 +25,7 @@ const getColor = () => {
 
 <template>
   <h3
-    class="text-2xl font-bold leading-6 sm:text-xl sm:leading-5"
+    class="text-2xl leading-6 font-bold sm:text-xl sm:leading-5"
     :class="getColor()"
   >
     <slot />
