@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ProjectQuery } from "~/types/query"
+
 const props = defineProps<{
   project: ProjectQuery
 }>()
@@ -8,7 +10,7 @@ const formattedDate = formatDate(new Date(props.project.date))
 
 <template>
   <NuxtLink :to="project.path">
-    <Card class="h-55 gap-0 py-0 sm:h-auto rounded-sm">
+    <Card class="h-55 gap-0 rounded-sm py-0 sm:h-auto">
       <CardHeader
         class="flex items-center justify-center p-2.5 pb-1 sm:p-4 sm:pb-2"
       >

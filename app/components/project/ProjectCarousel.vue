@@ -7,12 +7,13 @@ const plugin = Autoplay({
   stopOnInteraction: false,
 })
 
-const { featuredProjects } = useProjects()
+const { featuredProjects, pending } = useProjects()
 </script>
 
 <template>
   <div class="relative w-full">
     <Carousel
+      v-if="!pending && featuredProjects.length"
       :opts="{
         align: 'start',
         loop: true,

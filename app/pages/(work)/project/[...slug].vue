@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { RepositoryResponse } from "~/types/github"
 
-const { project } = useProjects()
+const { data: project, pending, error } = useProject()
 
-if (!project.value) {
+if (!pending.value && (!project.value || error.value)) {
   throw createError({
     statusCode: 404,
     statusMessage: "Project not found",
@@ -15,13 +15,13 @@ const isFeatured = computed(() => {
 })
 
 useSeoMeta({
-  title: project.value.title,
-  ogTitle: project.value.title,
+  title: project.value?.title,
+  ogTitle: project.value?.title,
   description: project.value?.description,
   ogDescription: project.value?.description,
 })
 
-const formattedDate = formatDate(new Date(project.value.date))
+const formattedDate = formatDate(new Date(project.value?.date as string))
 const repository = ref<RepositoryResponse | null>(null)
 if (project.value?.repository) {
   const { fetchRepository } = useGitHub()
