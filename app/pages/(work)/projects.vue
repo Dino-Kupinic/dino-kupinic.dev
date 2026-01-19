@@ -4,7 +4,7 @@ definePageMeta({
   layout: "default",
 })
 
-const { projects } = await useProjects()
+const { projects } = useProjects()
 
 if (!projects.value) {
   throw createError({

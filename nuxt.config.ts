@@ -32,6 +32,10 @@ export default defineNuxtConfig({
     server: true,
   },
 
+  sitemap: {
+    zeroRuntime: true,
+  },
+
   llms: {
     domain: SITE_URL,
     title: SITE_NAME,

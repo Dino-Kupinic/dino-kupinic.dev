@@ -7,7 +7,7 @@ const plugin = Autoplay({
   stopOnInteraction: false,
 })
 
-const { featuredProjects } = await useProjects()
+const { featuredProjects } = useProjects()
 </script>
 
 <template>

@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import type { RepositoryResponse } from "~/types/github"
 
-const { fetchProject } = await useProjects()
-const project = await fetchProject()
+const { project } = useProjects()
 
 if (!project.value) {
   throw createError({
