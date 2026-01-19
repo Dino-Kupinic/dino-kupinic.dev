@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NavigationItem } from "~/types/nav"
+import { VisuallyHidden } from "reka-ui"
 
 defineProps<{
   items: NavigationItem[]
@@ -22,6 +23,10 @@ const isOpen = ref<boolean>(false)
             <NavBurgerMenu :open="isOpen" />
           </DrawerTrigger>
           <DrawerContent class="px-4">
+            <VisuallyHidden>
+              <DrawerTitle />
+              <DialogDescription />
+            </VisuallyHidden>
             <DrawerHeader>
               <div
                 class="flex flex-col gap-4 border-b pt-6 pb-4 text-left text-3xl tracking-tight"

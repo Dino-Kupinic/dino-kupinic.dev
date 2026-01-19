@@ -4,12 +4,13 @@ definePageMeta({
   layout: "default",
 })
 
-const { projects, pending, error } = useProjects()
+const { fetchProjects, projects } = useProjects()
+await fetchProjects()
 
-if (!pending.value && (error.value || !projects.value?.length)) {
+if (!projects.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "No projects found",
+    statusMessage: "No Projects found",
   })
 }
 </script>

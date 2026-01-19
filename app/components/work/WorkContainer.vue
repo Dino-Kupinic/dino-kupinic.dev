@@ -94,10 +94,10 @@ const hasMessageError = computed(() => !!errors.value.message)
     class="bg-background flex w-full flex-col gap-5 rounded-lg border p-5 shadow-sm sm:flex-row sm:items-stretch"
   >
     <div
-      class="bg-accent flex w-full items-center justify-center rounded-lg p-12"
+      class="from-background dark:to-destructive flex w-full items-center justify-center rounded-lg bg-linear-to-t to-blue-400 p-12"
     >
       <h3 class="text-center text-4xl font-bold tracking-tighter sm:text-5xl">
-        Let's make something great. ✌️
+        Let's make something great.
       </h3>
     </div>
     <div class="w-full max-w-md">
