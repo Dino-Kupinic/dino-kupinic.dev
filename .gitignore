@@ -18,6 +18,7 @@ logs
 .fleet
 .idea
 .sonda
+.vercel
 
 # Local env files
 .env

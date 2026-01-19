@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Autoplay from "embla-carousel-autoplay"
+import type { ProjectQuery } from "~/types/query"
 
 const plugin = Autoplay({
   delay: 3000,
@@ -7,13 +8,19 @@ const plugin = Autoplay({
   stopOnInteraction: false,
 })
 
-const { featuredProjects, pending } = useProjects()
+const { data: projects } = await useAsyncData<ProjectQuery[]>(
+  "home-projects",
+  () => queryCollection("projects").order("date", "DESC").all(),
+)
+
+const featuredProjects = computed(() =>
+  (projects.value ?? []).filter((project) => project.featured),
+)
 </script>
 
 <template>
   <div class="relative w-full">
     <Carousel
-      v-if="!pending && featuredProjects.length"
       :opts="{
         align: 'start',
         loop: true,

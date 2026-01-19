@@ -101,6 +101,7 @@ export default defineNuxtConfig({
     "motion-v/nuxt",
     Sonda({
       server: true,
+      open: false,
     }),
   ],
 
