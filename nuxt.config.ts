@@ -36,8 +36,6 @@ export default defineNuxtConfig({
     zeroRuntime: true,
   },
 
-  hints: {},
-
   llms: {
     domain: SITE_URL,
     title: SITE_NAME,
