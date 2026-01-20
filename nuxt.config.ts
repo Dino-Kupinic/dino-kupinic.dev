@@ -36,6 +36,8 @@ export default defineNuxtConfig({
     zeroRuntime: true,
   },
 
+  hints: {},
+
   llms: {
     domain: SITE_URL,
     title: SITE_NAME,
@@ -84,6 +86,10 @@ export default defineNuxtConfig({
   ],
 
   modules: [
+    Sonda({
+      server: true,
+      open: false,
+    }),
     "@nuxt/eslint",
     "@nuxtjs/seo",
     "@nuxt/content",
@@ -99,10 +105,7 @@ export default defineNuxtConfig({
     "nuxt-studio",
     "@nuxt/a11y",
     "motion-v/nuxt",
-    Sonda({
-      server: true,
-      open: false,
-    }),
+    // "@nuxt/hints", TODO: enable when you can configure it properly
   ],
 
   fonts: {
@@ -128,7 +131,7 @@ export default defineNuxtConfig({
       {
         name: "Raveo Display",
         provider: "local",
-        weights: [200, 300, 400, 500, 600, 700],
+        weights: [300, 400, 500, 600, 700],
         fallbacks: [
           "-apple-system",
           "system-ui",
