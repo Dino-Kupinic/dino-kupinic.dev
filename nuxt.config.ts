@@ -50,7 +50,7 @@ export default defineNuxtConfig({
     repository: {
       provider: "github",
       owner: "Dino-Kupinic",
-      repo: "dinokupinic",
+      repo: "dino-kupinic.dev",
       branch: "main",
     },
     i18n: {
