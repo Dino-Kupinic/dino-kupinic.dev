@@ -1,6 +1,4 @@
-export type ProjectQuery = NonNullable<
-  Awaited<ReturnType<ReturnType<typeof queryCollection<"projects">>["first"]>>
->
+import type { ProjectQuery } from "~/types/query"
 
 export const useProjects = () => {
   const route = useRoute()

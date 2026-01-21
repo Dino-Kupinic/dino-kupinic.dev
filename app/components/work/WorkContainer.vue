@@ -96,7 +96,9 @@ const hasMessageError = computed(() => !!errors.value.message)
     <div
       class="from-background dark:to-destructive flex w-full items-center justify-center rounded-lg bg-linear-to-t to-blue-400 p-12"
     >
-      <h3 class="text-center text-4xl font-bold tracking-tighter sm:text-5xl">
+      <h3
+        class="text-foreground text-center text-4xl font-bold tracking-tighter sm:text-5xl"
+      >
         Let's make something great.
       </h3>
     </div>
