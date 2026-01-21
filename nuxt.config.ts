@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     "/about": { prerender: true },
     "/uses": { prerender: true },
     "/project/**": { isr: true },
-    "/blog/**": { isr: true },
+    "/blogs/**": { isr: true },
     "/api/**": { cors: true },
   },
 
