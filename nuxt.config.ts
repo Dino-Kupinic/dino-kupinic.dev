@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     "/about": { prerender: true },
     "/uses": { prerender: true },
     "/project/**": { isr: true },
-    "/blog/**": { isr: true },
+    "/blogs/**": { isr: true },
     "/api/**": { cors: true },
   },
 
@@ -58,13 +58,14 @@ export default defineNuxtConfig({
     },
   },
 
-  nitro: {
-    vercel: {
-      functions: {
-        runtime: "bun1.x",
-      },
-    },
-  },
+  // TODO: enable when Bun runtime is supported properly by @nuxt/content
+  // nitro: {
+  //   vercel: {
+  //     functions: {
+  //       runtime: "bun1.x",
+  //     },
+  //   },
+  // },
 
   css: ["~/assets/css/tailwind.css"],
 
