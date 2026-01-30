@@ -7,6 +7,7 @@ export const SITE_NAME = "Dino Kupinic"
 export const SITE_DESCRIPTION =
   "Dino Kupinic is a personal portfolio website designed to showcase the " +
   "professional work and personal information of Dino Kupinic."
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/public/images/blog/bun_blog_dark.png` // TODO: change to a custom og image
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -16,6 +17,28 @@ export default defineNuxtConfig({
   site: {
     url: SITE_URL,
     name: SITE_NAME,
+  },
+
+  schemaOrg: {
+    identity: {
+      type: "Person",
+      name: "Dino Kupinic",
+      image: "public/images/dino_kupinic.png",
+      sameAs: [
+        "https://x.com/DinoKupinic",
+        "https://github.com/Dino-Kupinic",
+        SITE_URL,
+      ],
+    },
+  },
+
+  runtimeConfig: {
+    public: {
+      siteUrl: SITE_URL,
+      siteName: SITE_NAME,
+      siteDescription: SITE_DESCRIPTION,
+      siteOgImage: DEFAULT_OG_IMAGE,
+    },
   },
 
   routeRules: {
