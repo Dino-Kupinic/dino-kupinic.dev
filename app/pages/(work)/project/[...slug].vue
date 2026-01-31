@@ -11,16 +11,48 @@ if (!project.value) {
   })
 }
 
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+const siteName = config.public.siteName
+const siteOgImage = config.public.siteOgImage
+const canonicalUrl = new URL(useRoute().path, siteUrl).toString()
+const title = project.value.title
+const description = project.value?.description
+
 const isFeatured = computed(() => {
   return project.value?.featured ? "Featured" : null
 })
 
 useSeoMeta({
-  title: project.value.title,
-  ogTitle: project.value.title,
-  description: project.value?.description,
-  ogDescription: project.value?.description,
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description,
+  ogUrl: canonicalUrl,
+  ogImage: siteOgImage,
+  ogImageAlt: `${siteName} open graph image`,
+  twitterCard: "summary_large_image",
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: siteOgImage,
 })
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: canonicalUrl,
+    },
+  ],
+})
+
+useSchemaOrg([
+  defineWebPage({
+    name: title,
+    url: canonicalUrl,
+    description,
+  }),
+])
 
 const formattedDate = formatDate(new Date(project.value.date))
 const repository = ref<RepositoryResponse | null>(null)

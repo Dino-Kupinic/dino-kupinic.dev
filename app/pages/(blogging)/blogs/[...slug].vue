@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useSiteUrl } from "~/utils/seo"
+
 const route = useRoute()
 const { data: blogContent } = await useAsyncData(route.path, () => {
   return queryCollection("blogs").path(route.path).first()
@@ -12,10 +14,18 @@ if (!blogContent.value) {
   })
 }
 
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+const siteName = config.public.siteName
+const siteOgImage = config.public.siteOgImage
+
 const title = blogContent.value.title
-const image = blogContent.value.seo?.image?.src
+const description = blogContent.value.description
+const image =
+  useSiteUrl(blogContent.value.seo?.image?.src, siteUrl) ?? siteOgImage
 const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
+const canonicalUrl = new URL(route.path, siteUrl).toString()
 
 const { data: relatedBlogs } = await useAsyncData(
   `related-${route.path}`,
@@ -32,9 +42,49 @@ const { data: relatedBlogs } = await useAsyncData(
 
 useSeoMeta({
   title: title,
+  description,
   ogImage: image,
   ogTitle: title,
+  ogDescription: description,
+  ogUrl: canonicalUrl,
+  twitterCard: "summary_large_image",
+  twitterImage: image,
+  twitterTitle: title,
+  twitterDescription: description,
 })
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: canonicalUrl,
+    },
+  ],
+})
+
+useSchemaOrg([
+  defineWebPage({
+    name: title,
+    url: canonicalUrl,
+    description,
+  }),
+  defineArticle({
+    headline: title,
+    description,
+    image,
+    datePublished: blogContent.value.date,
+    // dateModified: blogContent.value.updatedAt ?? blogContent.value.date, // TODO: Uncomment when updatedAt is available
+    author: blogContent.value.authors?.map((author) =>
+      definePerson({
+        name: author.name,
+      }),
+    ),
+    publisher: defineOrganization({
+      name: siteName,
+      url: siteUrl,
+    }),
+  }),
+])
 
 type SocialLink = {
   icon: string
