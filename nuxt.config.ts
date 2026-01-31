@@ -7,7 +7,7 @@ export const SITE_NAME = "Dino Kupinic"
 export const SITE_DESCRIPTION =
   "Dino Kupinic is a personal portfolio website designed to showcase the " +
   "professional work and personal information of Dino Kupinic."
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/public/images/blog/bun_blog_dark.png` // TODO: change to a custom og image
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/blog/bun_blog_dark.png` // TODO: change to a custom og image
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
