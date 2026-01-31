@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useSiteUrl } from "~/utils/seo"
-
 const route = useRoute()
 const { data: blogContent } = await useAsyncData(route.path, () => {
   return queryCollection("blogs").path(route.path).first()
@@ -21,8 +19,9 @@ const siteOgImage = config.public.siteOgImage
 
 const title = blogContent.value.title
 const description = blogContent.value.description
-const image =
-  useSiteUrl(blogContent.value.seo?.image?.src, siteUrl) ?? siteOgImage
+// const image =
+//   useSiteUrl(blogContent.value.seo?.image?.src, siteUrl) ?? siteOgImage
+const image = siteOgImage
 const related = blogContent.value?.related
 const date = new Date(blogContent?.value.date)
 const canonicalUrl = new URL(route.path, siteUrl).toString()
