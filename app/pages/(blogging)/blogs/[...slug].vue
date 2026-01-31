@@ -135,7 +135,7 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
           :links="blogContent.body.toc.links"
         />
         <DividerHorizontal />
-        <BlogLinks />
+        <BlogLinks :canonical-url="canonicalUrl" />
         <template v-if="relatedBlogs && relatedBlogs.length">
           <DividerHorizontal />
           <BlogRelatedBlogs>

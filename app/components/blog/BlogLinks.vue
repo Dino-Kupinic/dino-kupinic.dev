@@ -5,7 +5,16 @@ type BlogItem = {
   link: string
 }
 
-const items = ref<BlogItem[]>([
+const props = defineProps<{
+  canonicalUrl: string
+}>()
+
+const items = computed<BlogItem[]>(() => [
+  {
+    icon: "i-simple-icons-openai",
+    text: "Open in ChatGPT",
+    link: `https://chatgpt.com/?q=${encodeURIComponent(props.canonicalUrl)}`,
+  },
   {
     icon: "i-simple-icons-x",
     text: "Follow on X",
