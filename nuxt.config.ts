@@ -151,7 +151,7 @@ export default defineNuxtConfig({
         ],
       },
       {
-        name: "Raveo Display",
+        name: "Raveo",
         provider: "local",
         weights: [300, 400, 500, 600, 700],
         fallbacks: [
