@@ -7,7 +7,7 @@ export const SITE_NAME = "Dino Kupinic"
 export const SITE_DESCRIPTION =
   "Dino Kupinic is a personal portfolio website designed to showcase the " +
   "professional work and personal information of Dino Kupinic."
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/blog/bun_blog_dark.png` // TODO: change to a custom og image
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/default_og_image.png`
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -151,7 +151,7 @@ export default defineNuxtConfig({
         ],
       },
       {
-        name: "Raveo Display",
+        name: "Raveo",
         provider: "local",
         weights: [300, 400, 500, 600, 700],
         fallbacks: [

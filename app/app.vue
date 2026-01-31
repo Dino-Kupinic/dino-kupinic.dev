@@ -17,6 +17,7 @@ useSeoMeta({
   twitterImage: siteOgImage,
   twitterDescription: siteDescription,
   twitterTitle: siteName,
+  twitterCreator: "DinoKupinic",
 })
 
 useHead({
@@ -24,6 +25,11 @@ useHead({
     {
       rel: "canonical",
       href: siteUrl,
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/favicon.ico",
     },
   ],
 })
