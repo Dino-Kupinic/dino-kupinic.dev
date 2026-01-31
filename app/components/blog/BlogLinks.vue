@@ -16,6 +16,11 @@ const items = computed<BlogItem[]>(() => [
     link: `https://chatgpt.com/?q=${encodeURIComponent(props.canonicalUrl)}`,
   },
   {
+    icon: "i-simple-icons-anthropic",
+    text: "Open in Claude",
+    link: `https://claude.ai/new?q=${encodeURIComponent(props.canonicalUrl)}`,
+  },
+  {
     icon: "i-simple-icons-x",
     text: "Follow on X",
     link: "https://x.com/DinoKupinic",
