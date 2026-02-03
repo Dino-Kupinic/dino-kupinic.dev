@@ -118,18 +118,32 @@ if (project.value?.repository) {
               size="20"
               class="text-green-500"
             />
-            <span class="dark:text-secondary text-foreground">
-              <NuxtLink :to="project.deployed.url" class="hover:text-blue-500">
-                <span>Deployed on</span>
+            <NuxtLink
+              :to="project.deployed.url"
+              class="group hover:text-blue-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                class="dark:text-secondary text-foreground flex flex-row items-center gap-1.5 group-hover:text-blue-500"
+              >
+                <p class="group-hover:text-blue-500">Deployed on</p>
                 <Icon
                   v-if="project.deployed.icon"
                   :name="project.deployed.icon"
-                  class="mx-1"
+                  size="20"
+                  class="group-hover:text-blue-500"
                 />
-                <span>{{ project.deployed.vendor }}</span>
-                <Icon name="i-solar-arrow-right-up-linear" class="ml-1" />
-              </NuxtLink>
-            </span>
+                <p class="group-hover:text-blue-500">
+                  {{ project.deployed.vendor }}
+                </p>
+                <Icon
+                  name="i-solar-arrow-right-up-linear"
+                  size="16"
+                  class="group-hover:text-blue-500"
+                />
+              </div>
+            </NuxtLink>
           </div>
           <div v-if="project?.repository" class="flex items-center gap-2">
             <Icon

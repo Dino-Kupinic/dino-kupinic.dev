@@ -18,7 +18,7 @@ const socials = getSocials()
             external
           >
             <div class="flex w-full items-center space-x-2">
-              <Icon :name="item.icon" />
+              <Icon :name="item.icon" size="18" />
               <span>{{ item.name }}</span>
             </div>
           </NuxtLink>

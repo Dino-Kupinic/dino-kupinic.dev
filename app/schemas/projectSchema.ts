@@ -13,6 +13,7 @@ export const projectFrontmatterSchema = z.object({
   technologies: z.array(z.string()).optional(),
   date: z.date(),
   featured: z.boolean().optional(),
+  caseStudy: z.string().optional(),
   deployed: deployedSchema.optional(),
   repository: z
     .object({
