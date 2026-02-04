@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     identity: {
       type: "Person",
       name: "Dino Kupinic",
-      image: "public/images/dino_kupinic.png",
+      image: "/images/dino_kupinic.png",
       sameAs: [
         "https://x.com/DinoKupinic",
         "https://github.com/Dino-Kupinic",
