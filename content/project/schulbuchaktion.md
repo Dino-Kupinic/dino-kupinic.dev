@@ -20,11 +20,6 @@ technologies:
   - VitePress
   - OpenAPI
 date: 2024-03-07T00:00:00.000Z
-featured: true
-deployed:
-  vendor: Vercel
-  url: https://schulbuchaktion-docs.vercel.app/
-  icon: i-simple-icons-vercel
 repository:
   url: https://github.com/Dino-Kupinic/Schulbuchaktion
 ---
