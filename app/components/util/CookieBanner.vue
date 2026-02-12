@@ -28,9 +28,8 @@ const isDialogOpen = computed({
   },
 })
 
-const consentTypeContent: Record<
-  AllConsentNames,
-  { title: string; description: string }
+const consentTypeContent: Partial<
+  Record<AllConsentNames, { title: string; description: string }>
 > = {
   necessary: {
     title: "Strictly Necessary",
@@ -46,16 +45,6 @@ const consentTypeContent: Record<
     title: "Analytics",
     description:
       "These cookies help us understand how visitors use the website and improve performance.",
-  },
-  experience: {
-    title: "Experience",
-    description:
-      "These cookies help us provide a better user experience and test new features.",
-  },
-  marketing: {
-    title: "Marketing",
-    description:
-      "These cookies are used to deliver relevant advertisements and track their effectiveness.",
   },
 }
 

@@ -1,17 +1,23 @@
 import {
-  allConsentNames,
+  type AllConsentNames,
   configureConsentManager,
   createConsentManagerStore,
 } from "c15t"
 
 export default defineNuxtPlugin(() => {
+  const enabledConsentTypes: AllConsentNames[] = [
+    "necessary",
+    "functionality",
+    "measurement",
+  ]
+
   const manager = configureConsentManager({
     mode: "offline",
   })
 
   const consentStore = createConsentManagerStore(manager, {
     namespace: "c15tStore",
-    initialGdprTypes: [...allConsentNames],
+    initialGdprTypes: enabledConsentTypes,
     legalLinks: {
       privacyPolicy: {
         href: "/privacy-policy",
