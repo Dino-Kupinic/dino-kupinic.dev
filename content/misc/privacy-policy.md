@@ -1,5 +1,5 @@
-- Effective Date: `08.09.2024`
-- Last Updated: `08.09.2024`
+- Effective Date: `10.02.2026`
+- Last Updated: `10.02.2026`
 
 ## Introduction
 
@@ -28,16 +28,15 @@ We collect several types of information from and about users of our Website, inc
   information
   about your browsing behavior on the Website. For more details, see
   our [Cookie Policy](https://dino-kupinic.dev/cookies).
-
-_We don't collect any information that can be used to identify you personally, such as your name or email address._
+- **Contact Information:** If you choose to contact us through a contact form or email, we may collect your name,
+  email address, and any other information you provide in your message.
 
 ### How We Use Your Data
 
 We may use the information we collect for the following purposes:
 
 - **To provide and maintain our Website:** We use the data to improve the functionality and performance of the site.
-- **To analyze Website usage:** Using tools like [Vercel Analytics](https://vercel.com/docs/analytics)
-  and [Microsoft Clarity](https://clarity.microsoft.com/), we collect anonymized usage data to
+- **To analyze Website usage:** Using tools like [Vercel Analytics](https://vercel.com/docs/analytics), we collect anonymized usage data to
   understand how visitors use the Website and improve the user experience.
 - **To communicate with you:** If you provide your email address through a contact form or other means, we may use it to
   respond to your inquiries or send updates.
@@ -53,8 +52,7 @@ Cookies are files with a small amount of data that may include an anonymous uniq
   site
   won’t work.
 - **Analytics Cookies:** We use these cookies to collect information on how visitors interact with the Website, enabling
-  us to
-  improve user experience. For this purpose, we use services like Vercel Analytics and Microsoft Clarity.
+  us to improve user experience.
 - **Marketing Cookies:** If applicable, these cookies track user behavior for advertising purposes.
   You can control your cookie preferences at any time through our [Cookie Settings](https://dino-kupinic.dev/cookies).
 
@@ -83,10 +81,18 @@ If you are located in the European Economic Area (EEA), you have the following r
 | Withdraw Consent          | You can withdraw consent for the processing of your personal data at any time |
 
 _Please note that we can only fulfill requests that are possible. As an example, we cannot delete data already collected
-by third-party services. We can also not give you access to data that does not exist, such as personal data that we do not
-collect._
+by third-party services. We can also not give you access to data that does not exist._
 
 To exercise any of these rights, please contact us at dinokupinic2006@gmail.com.
+Though you may also contact for a complaint to the relevant data protection authority, which in Austria is the:
+
+**Österreichische Datenschutzbehörde**
+
+- Barichgasse 40-42
+
+- 1030 Wien
+
+- https://www.dsb.gv.at
 
 ### Data Security
 
