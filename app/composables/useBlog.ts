@@ -1,8 +1,10 @@
-export type BlogQuery = Omit<
-  NonNullable<
-    Awaited<ReturnType<ReturnType<typeof queryCollection<"blogs">>["first"]>>
-  >,
-  "date"
+type BlogListQueryResult = NonNullable<
+  Awaited<ReturnType<ReturnType<typeof queryCollection<"blogs">>["first"]>>
+>
+
+export type BlogQuery = Pick<
+  BlogListQueryResult,
+  "path" | "title" | "description" | "authors" | "tags" | "images"
 > & { date: Date }
 
 export const useBlog = (limit?: number) => {
@@ -13,9 +15,21 @@ export const useBlog = (limit?: number) => {
     if (blogs.value.length) return
 
     try {
+      const blogQuery = queryCollection("blogs")
+        .select(
+          "path",
+          "title",
+          "description",
+          "authors",
+          "tags",
+          "images",
+          "date",
+        )
+        .order("date", "DESC")
+
       const blogsContent = limit
-        ? await queryCollection("blogs").limit(limit).all()
-        : await queryCollection("blogs").all()
+        ? await blogQuery.limit(limit).all()
+        : await blogQuery.all()
 
       blogs.value = blogsContent.map((blog) => ({
         ...blog,
