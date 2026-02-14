@@ -18,4 +18,3 @@ When visiting this site, you can:
 - **Accept all** analytics
 - **Reject non-essential** tools
 - **Customize** your preferences
-

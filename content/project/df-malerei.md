@@ -54,7 +54,3 @@ Features that were added to the new website include:
 ### Full Case Study
 
 A full case study will be published in the future, once the project is fully completed and the client is satisfied with the results. The case study will include more details about the development process, challenges faced and how they were overcome, as well as the impact of the new website on the client's business.
-
-
-
-

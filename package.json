@@ -10,8 +10,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "npx prettier . --check",
-    "format:write": "npx prettier . --write",
+    "format": "bunx prettier . --check",
+    "format:write": "bunx prettier . --write",
     "release": "semantic-release",
     "prepare": "husky"
   },
@@ -88,11 +88,11 @@
   },
   "lint-staged": {
     "*.{js,ts,cjs,mjs,vue}": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint . --fix",
+      "prettier . --write"
     ],
     "*.{json,jsonc,md,css,scss,html,yml,yaml}": [
-      "prettier --write"
+      "prettier . --write"
     ]
   }
 }
