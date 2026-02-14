@@ -136,9 +136,30 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
           :links="blogContent.body.toc.links"
         />
         <DividerHorizontal />
-        <BlogLinks :canonical-url="canonicalUrl" />
-        <template v-if="relatedBlogs && relatedBlogs.length">
-          <DividerHorizontal />
+        <div class="my-6 sm:hidden">
+          <BlogLinks :canonical-url="canonicalUrl" :mobile-grid="true" />
+        </div>
+        <div class="hidden sm:block">
+          <BlogLinks :canonical-url="canonicalUrl" />
+          <template v-if="relatedBlogs && relatedBlogs.length">
+            <DividerHorizontal />
+            <BlogRelatedBlogs>
+              <BlogRelatedBlog
+                v-for="relatedBlog in relatedBlogs"
+                :key="relatedBlog?.title"
+                :title="relatedBlog?.title!"
+                :to="relatedBlog?.path!"
+                :authors="relatedBlog?.authors!"
+              />
+            </BlogRelatedBlogs>
+          </template>
+        </div>
+      </template>
+    </BlogContent>
+    <template v-if="relatedBlogs && relatedBlogs.length">
+      <div class="my-8 sm:hidden">
+        <DividerHorizontal />
+        <div class="pt-6">
           <BlogRelatedBlogs>
             <BlogRelatedBlog
               v-for="relatedBlog in relatedBlogs"
@@ -148,9 +169,9 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
               :authors="relatedBlog?.authors!"
             />
           </BlogRelatedBlogs>
-        </template>
-      </template>
-    </BlogContent>
+        </div>
+      </div>
+    </template>
     <BlogFooter>
       <div class="flex justify-between">
         <BlogBackButton />
