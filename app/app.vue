@@ -1,9 +1,6 @@
 <script setup lang="ts">
-const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl
-const siteName = config.public.siteName
-const siteDescription = config.public.siteDescription
-const siteOgImage = config.public.siteOgImage
+const { siteUrl, siteName, siteDescription, siteOgImage } =
+  useSiteRuntimeConfig()
 
 useSeoMeta({
   titleTemplate: `%s · ${siteName}`,

@@ -12,10 +12,7 @@ if (!blogContent.value) {
   })
 }
 
-const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl
-const siteName = config.public.siteName
-const siteOgImage = config.public.siteOgImage
+const { siteUrl, siteName, siteOgImage } = useSiteRuntimeConfig()
 
 const title = blogContent.value.title
 const description = blogContent.value.description

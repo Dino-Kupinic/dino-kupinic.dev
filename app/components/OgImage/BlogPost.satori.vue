@@ -7,7 +7,7 @@ withDefaults(
     title: "title",
   },
 )
-const siteUrl = useRuntimeConfig().public.siteUrl
+const { siteUrl } = useSiteRuntimeConfig()
 
 // TODO: fix this not working (https://github.com/nuxt-modules/og-image/issues/441)
 </script>
