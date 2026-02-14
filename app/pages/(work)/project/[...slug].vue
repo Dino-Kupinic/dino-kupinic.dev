@@ -11,10 +11,7 @@ if (!project.value) {
   })
 }
 
-const config = useRuntimeConfig()
-const siteUrl = config.public.siteUrl
-const siteName = config.public.siteName
-const siteOgImage = config.public.siteOgImage
+const { siteUrl, siteName, siteOgImage } = useSiteRuntimeConfig()
 const canonicalUrl = new URL(useRoute().path, siteUrl).toString()
 const title = project.value.title
 const description = project.value?.description

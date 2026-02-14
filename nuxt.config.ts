@@ -47,7 +47,79 @@ export default defineNuxtConfig({
     "/uses": { prerender: true },
     "/project/**": { isr: true },
     "/blogs/**": { isr: true },
+    "/feed.xml": { prerender: true },
+    "/feed.atom": { prerender: true },
+    "/feed.json": { prerender: true },
     "/api/**": { cors: true },
+  },
+
+  app: {
+    head: {
+      link: [
+        {
+          rel: "alternate",
+          type: "application/rss+xml",
+          title: `${SITE_NAME} RSS Feed`,
+          href: `${SITE_URL}/feed.xml`,
+        },
+        {
+          rel: "alternate",
+          type: "application/atom+xml",
+          title: `${SITE_NAME} Atom Feed`,
+          href: `${SITE_URL}/feed.atom`,
+        },
+        {
+          rel: "alternate",
+          type: "application/feed+json",
+          title: `${SITE_NAME} JSON Feed`,
+          href: `${SITE_URL}/feed.json`,
+        },
+      ],
+    },
+  },
+
+  feedme: {
+    defaults: {
+      common: false,
+      routes: false,
+    },
+    feeds: {
+      common: {
+        feed: {
+          id: SITE_URL,
+          link: SITE_URL,
+          title: SITE_NAME,
+          description: SITE_DESCRIPTION,
+          language: "en",
+          favicon: `${SITE_URL}/favicon.ico`,
+        },
+        collections: ["blogs"],
+        fixDateFields: true,
+        mapping: [
+          ["id", "path"],
+          ["link", "path"],
+          ["title", "title"],
+          ["description", "description"],
+          ["date", "date"],
+        ],
+        replace: [[/^(?=\/)/.toString(), SITE_URL]],
+      },
+      routes: {
+        "/feed.xml": { type: "rss2" },
+        "/feed.atom": { type: "atom1" },
+        "/feed.json": { type: "json1" },
+      },
+    },
+  },
+
+  content: {
+    renderer: {
+      anchorLinks: {
+        h2: true,
+        h3: true,
+        h4: true,
+      },
+    },
   },
 
   sourcemap: {
@@ -115,6 +187,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxtjs/seo",
     "@nuxt/content",
+    "nuxt-feedme",
     "@nuxt/image",
     "@nuxtjs/color-mode",
     "@nuxt/fonts",
