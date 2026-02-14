@@ -50,6 +50,16 @@ export default defineNuxtConfig({
     "/api/**": { cors: true },
   },
 
+  content: {
+    renderer: {
+      anchorLinks: {
+        h2: true,
+        h3: true,
+        h4: true,
+      },
+    },
+  },
+
   sourcemap: {
     client: true,
     server: true,

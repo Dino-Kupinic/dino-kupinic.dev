@@ -7,6 +7,7 @@ type BlogItem = {
 
 const props = defineProps<{
   canonicalUrl: string
+  mobileGrid?: boolean
 }>()
 
 const items = computed<BlogItem[]>(() => [
@@ -36,22 +37,27 @@ const items = computed<BlogItem[]>(() => [
 <template>
   <div>
     <p class="mb-3 text-lg font-semibold">Links</p>
-    <NuxtLink
-      v-for="item in items"
-      :key="item.text"
-      :to="item.link"
-      class="my-1.5 flex"
-      external
-      target="_blank"
-      rel="noreferrer"
-    >
-      <span
-        class="hover:text-foreground dark:hover:text-foreground flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-500"
+    <div :class="props.mobileGrid ? 'grid grid-cols-2 gap-2' : ''">
+      <NuxtLink
+        v-for="item in items"
+        :key="item.text"
+        :to="item.link"
+        :class="
+          props.mobileGrid ? 'flex min-w-0 rounded border p-2' : 'my-1.5 flex'
+        "
+        external
+        target="_blank"
+        rel="noreferrer"
       >
-        <Icon :name="item.icon" size="20" />
-        {{ item.text }}
-        <Icon name="i-ci-arrow-up-right-md" class="mb-1 h-4 w-4" />
-      </span>
-    </NuxtLink>
+        <span
+          class="hover:text-foreground dark:hover:text-foreground flex min-w-0 items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-500"
+        >
+          <Icon :name="item.icon" size="20" />
+          <span class="truncate">
+            {{ item.text }}
+          </span>
+        </span>
+      </NuxtLink>
+    </div>
   </div>
 </template>
