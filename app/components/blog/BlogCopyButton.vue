@@ -8,13 +8,40 @@ const props = defineProps<{
 const { siteUrl } = useSiteRuntimeConfig()
 
 const source = ref<string>(`${siteUrl}${props.link}`)
-const { copy } = useClipboard({ source })
+const toastPosition = computed(() =>
+  isMobile.value ? "top-center" : "bottom-right",
+)
+const { copy, copied, isSupported } = useClipboard({
+  source,
+  legacy: true,
+})
 
 async function copyToClipboard() {
-  await copy(source.value)
-  toast.success("Copied to clipboard", {
-    position: isMobile.value ? "top-center" : "bottom-right",
-  })
+  if (!isSupported.value) {
+    toast.error("Clipboard is not available in this environment.", {
+      position: toastPosition.value,
+    })
+    return
+  }
+
+  try {
+    await copy(source.value)
+
+    if (!copied.value) {
+      toast.error("Could not copy URL.", {
+        position: toastPosition.value,
+      })
+      return
+    }
+
+    toast.success("Copied to clipboard", {
+      position: toastPosition.value,
+    })
+  } catch {
+    toast.error("Could not copy URL.", {
+      position: toastPosition.value,
+    })
+  }
 }
 </script>
 
