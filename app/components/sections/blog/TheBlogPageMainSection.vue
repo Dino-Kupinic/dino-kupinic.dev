@@ -5,8 +5,41 @@ const { blogs, fetchBlogs } = useBlog()
 await fetchBlogs()
 
 const currentPage = ref(1)
+const searchQuery = ref("")
 
-const totalBlogs = computed(() => blogs.value.length)
+const normalizedSearchQuery = computed(() =>
+  searchQuery.value.trim().toLowerCase(),
+)
+
+const filteredBlogs = computed(() => {
+  const query = normalizedSearchQuery.value
+
+  if (!query) {
+    return blogs.value
+  }
+
+  return blogs.value.filter((blog) => {
+    const tags = blog.tags ?? []
+    const authors = blog.authors.flatMap((author) => [
+      author.name,
+      author.handle,
+    ])
+    const searchableFields = [
+      blog.title,
+      blog.description ?? "",
+      ...tags,
+      ...authors,
+    ]
+
+    return searchableFields.some((field) => field.toLowerCase().includes(query))
+  })
+})
+
+watch(normalizedSearchQuery, () => {
+  currentPage.value = 1
+})
+
+const totalBlogs = computed(() => filteredBlogs.value.length)
 const totalPages = computed(() =>
   Math.max(1, Math.ceil(totalBlogs.value / BLOGS_PER_PAGE)),
 )
@@ -23,7 +56,7 @@ watchEffect(() => {
 
 const paginatedBlogs = computed(() => {
   const start = (currentPage.value - 1) * BLOGS_PER_PAGE
-  return blogs.value.slice(start, start + BLOGS_PER_PAGE)
+  return filteredBlogs.value.slice(start, start + BLOGS_PER_PAGE)
 })
 
 const showPagination = computed(() => totalBlogs.value > BLOGS_PER_PAGE)
@@ -32,8 +65,26 @@ const showPagination = computed(() => totalBlogs.value > BLOGS_PER_PAGE)
   <div>
     <FeaturedBlogsContainer class="m-auto my-4 sm:my-5" />
     <main class="my-16 flex flex-col gap-4">
-      <SectionHeading>Latest</SectionHeading>
-      <BlogTable :blogs="paginatedBlogs" />
+      <div class="flex items-center justify-between">
+        <SectionHeading>Latest</SectionHeading>
+        <ButtonGroup>
+          <Input
+            v-model="searchQuery"
+            placeholder="Search blogs..."
+            aria-label="Search blogs"
+          />
+          <Button variant="outline" aria-label="Search blogs" type="button">
+            <Icon name="i-heroicons-magnifying-glass" size="16" />
+          </Button>
+        </ButtonGroup>
+      </div>
+      <BlogTable v-if="paginatedBlogs.length" :blogs="paginatedBlogs" />
+      <div
+        v-else
+        class="text-muted-foreground rounded-md border border-dashed px-4 py-8 text-center text-sm"
+      >
+        No blog posts found.
+      </div>
       <div v-if="showPagination" class="flex flex-col gap-6">
         <Pagination
           v-slot="{ page }"
