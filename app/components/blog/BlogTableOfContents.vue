@@ -12,7 +12,7 @@ defineProps<{
     <ul class="mt-3 space-y-1">
       <li v-for="link in links" :key="link.id">
         <NuxtLink
-          class="hover:text-foreground dark:hover:text-foreground block w-full truncate text-sm leading-6 text-neutral-500 dark:text-neutral-500"
+          class="hover:text-foreground dark:hover:text-foreground block w-full truncate text-sm leading-6 text-neutral-500 transition-colors dark:text-neutral-500"
           :href="`#${link.id}`"
         >
           {{ link.text }}
@@ -21,7 +21,7 @@ defineProps<{
         <ul v-if="link.children?.length" class="mt-1 space-y-1">
           <li v-for="child in link.children" :key="child.id">
             <NuxtLink
-              class="hover:text-foreground dark:hover:text-foreground block w-full truncate pl-3 text-sm leading-6 text-neutral-500 dark:text-neutral-500"
+              class="hover:text-foreground dark:hover:text-foreground block w-full truncate pl-3 text-sm leading-6 text-neutral-500 transition-colors dark:text-neutral-500"
               :href="`#${child.id}`"
             >
               {{ child.text }}
