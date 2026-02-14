@@ -1,13 +1,24 @@
 <script setup lang="ts">
-const { blogs, fetchBlogs } = useBlog()
-await fetchBlogs()
+import type { BlogQuery } from "~/composables/useBlog"
+
+const props = defineProps<{
+  blogs?: BlogQuery[]
+}>()
+
+const { blogs: allBlogs, fetchBlogs } = useBlog()
+
+if (!props.blogs) {
+  await fetchBlogs()
+}
+
+const displayedBlogs = computed(() => props.blogs ?? allBlogs.value)
 </script>
 
 <template>
   <Table>
     <TableBody>
       <TableRow
-        v-for="article in blogs"
+        v-for="article in displayedBlogs"
         :key="article.path"
         class="hover:bg-accent w-full p-3"
       >
