@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useSiteRuntimeConfig } from "~/composables/useSiteRuntimeConfig"
+
 withDefaults(
   defineProps<{
     title?: string
