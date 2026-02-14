@@ -23,8 +23,8 @@ watch(isInView, (v) => {
     <template #content>
       <div class="flex h-full items-center justify-center">
         <span
-          class="text-9xl font-bold tracking-tighter"
           ref="ageRef"
+          class="text-9xl font-bold tracking-tighter"
           aria-label="Age"
         >
           <RowValue :value="rounded" />

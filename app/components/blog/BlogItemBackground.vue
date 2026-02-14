@@ -2,8 +2,6 @@
 defineProps<{
   image: string
 }>()
-
-const img = useImage()
 </script>
 
 <template>

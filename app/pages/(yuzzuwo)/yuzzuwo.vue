@@ -4,8 +4,6 @@ import Yzwo from "~/components/yuzzuwo/Yzwo.vue"
 definePageMeta({
   layout: "yuzzuwo",
 })
-
-const currentYear = new Date().getFullYear()
 </script>
 
 <template>
