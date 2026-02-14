@@ -55,23 +55,23 @@ const artists: Artist[] = [
     backgroundColor: "orange",
   },
   {
-    name: "d3r",
-    link: "https://open.spotify.com/artist/41PE0deubI6MpwYruSEWHG?si=lWuwK-hnTuG7ALEWUy3QBg",
+    name: "Miley Cyrus",
+    link: "https://open.spotify.com/artist/5YGY8feqx7naU7z4HrwZM6?si=3a61fd4824ee4dec",
     backgroundColor: "purple",
   },
   {
-    name: "luvwillow",
-    link: "https://open.spotify.com/artist/3QMquHHgjA58upVZerNHNx?si=BnPdvHnTSoShTaZr6SZ_jA",
+    name: "Britney Spears",
+    link: "https://open.spotify.com/artist/26dSoYclwsYLMAKD3tpOr4?si=nZt-STxNSJiLLD6M5OdB4g",
     backgroundColor: "red",
   },
   {
-    name: "6arelyhuman",
-    link: "https://open.spotify.com/artist/1oYXEVbGh1L7EWGm9C68cN?si=6FTDkrz8SFuhi5oGbVjC9g",
+    name: "Crush 40",
+    link: "https://open.spotify.com/artist/4gNEgDZhEu6ldAI2wWdZsL?si=489fec2294b74cd7",
     backgroundColor: "yellow",
   },
   {
-    name: "m1v",
-    link: "https://open.spotify.com/artist/5pfVvTVQiPCMClDlE3bj0S?si=YA5KuKaLRtKb-tYEENhuDA",
+    name: "Linkin Park",
+    link: "https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz?si=5bde26b3993c4cad",
     backgroundColor: "blue",
   },
 ]

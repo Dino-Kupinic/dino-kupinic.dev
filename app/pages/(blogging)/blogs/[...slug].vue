@@ -107,9 +107,11 @@ const socialLinks: ComputedRef<SocialLink[]> = computed(() => [
     <ContentHeader :title="blogContent?.title as string" base="/blog">
       <template #breadcrumb> Blog </template>
       <div class="my-4 flex flex-col items-start justify-between sm:flex-row">
-        <GenericTitle class="max-w-190">
-          {{ blogContent?.title }}
-        </GenericTitle>
+        <div class="max-w-2xl">
+          <GenericTitle>
+            {{ blogContent?.title }}
+          </GenericTitle>
+        </div>
         <div class="mb-5 sm:my-5">
           <BlogDate :date />
         </div>
