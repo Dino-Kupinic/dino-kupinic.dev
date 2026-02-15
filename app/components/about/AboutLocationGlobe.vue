@@ -2,7 +2,10 @@
 import createGlobe from "cobe"
 import { motion, type PanInfo } from "motion-v"
 
-const GLOBE_SIZE = 420
+const isMobile = useMediaQuery("(max-width: 767px)")
+const GLOBE_SIZE = computed(() => {
+  return isMobile.value ? 375 : 420
+})
 const AUTO_SPIN_SPEED = 0.007
 const DRAG_SENSITIVITY = 0.004
 const VELOCITY_SENSITIVITY = 0.00008
@@ -12,30 +15,17 @@ const MOMENTUM_EPSILON = 0.00001
 const el = ref<HTMLCanvasElement | null>(null)
 const phi = ref(0)
 const dragMomentum = ref(0)
-const isDragging = ref(false)
+const isPanning = ref(false)
 let globe: ReturnType<typeof createGlobe> | null = null
 
-const handleDragStart = () => {
-  isDragging.value = true
-}
-
-const handleDrag = (_event: PointerEvent, info: PanInfo) => {
-  phi.value -= info.delta.x * DRAG_SENSITIVITY
-  dragMomentum.value = -info.velocity.x * VELOCITY_SENSITIVITY
-}
-
-const handleDragEnd = (_event: PointerEvent, info: PanInfo) => {
-  isDragging.value = false
-  dragMomentum.value = -info.velocity.x * VELOCITY_SENSITIVITY
-}
-
-onMounted(() => {
+const setupGlobe = () => {
   if (!el.value) return
 
+  globe?.destroy()
   globe = createGlobe(el.value, {
     devicePixelRatio: 2,
-    width: GLOBE_SIZE * 2,
-    height: GLOBE_SIZE * 2,
+    width: GLOBE_SIZE.value * 2,
+    height: GLOBE_SIZE.value * 2,
     phi: 0,
     theta: 0,
     dark: 1,
@@ -48,9 +38,9 @@ onMounted(() => {
     markers: [{ location: [47.5162, 14.5501], size: 0.07 }],
     onRender: (state) => {
       state.phi = phi.value
-      phi.value += AUTO_SPIN_SPEED + (isDragging.value ? 0 : dragMomentum.value)
+      if (isPanning.value) return
 
-      if (isDragging.value) return
+      phi.value += AUTO_SPIN_SPEED + dragMomentum.value
 
       dragMomentum.value *= MOMENTUM_DAMPING
       if (Math.abs(dragMomentum.value) < MOMENTUM_EPSILON) {
@@ -58,6 +48,28 @@ onMounted(() => {
       }
     },
   })
+}
+
+const handlePanStart = () => {
+  isPanning.value = true
+}
+
+const handlePan = (_event: PointerEvent, info: PanInfo) => {
+  phi.value -= info.delta.x * DRAG_SENSITIVITY
+  dragMomentum.value = -info.velocity.x * VELOCITY_SENSITIVITY
+}
+
+const handlePanEnd = (_event: PointerEvent, info: PanInfo) => {
+  isPanning.value = false
+  dragMomentum.value = -info.velocity.x * VELOCITY_SENSITIVITY
+}
+
+onMounted(() => {
+  setupGlobe()
+})
+
+watch(GLOBE_SIZE, () => {
+  setupGlobe()
 })
 
 onUnmounted(() => {
@@ -67,15 +79,15 @@ onUnmounted(() => {
 
 <template>
   <motion.div
-    drag="x"
-    :drag-constraints="{ left: 0, right: 0 }"
-    :drag-elastic="0.12"
-    :drag-momentum="false"
-    :on-drag-start="handleDragStart"
-    :on-drag="handleDrag"
-    :on-drag-end="handleDragEnd"
-    class="cursor-grab touch-none select-none active:cursor-grabbing"
+    :on-pan-start="handlePanStart"
+    :on-pan="handlePan"
+    :on-pan-end="handlePanEnd"
+    class="mx-auto cursor-grab touch-none select-none active:cursor-grabbing"
   >
-    <canvas ref="el" class="pointer-events-none h-[420px] w-[420px]"></canvas>
+    <canvas
+      ref="el"
+      :style="{ width: `${GLOBE_SIZE}px`, height: `${GLOBE_SIZE}px` }"
+      class="pointer-events-none block"
+    ></canvas>
   </motion.div>
 </template>
