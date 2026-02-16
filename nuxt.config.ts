@@ -204,14 +204,15 @@ export default defineNuxtConfig({
   ],
 
   fonts: {
+    provider: "local",
     defaults: {
-      weights: [400],
+      weights: [400, 700],
       styles: ["normal", "italic"],
     },
     families: [
       {
         name: "Commit Mono",
-        provider: "fontsource",
+        provider: "local",
         fallbacks: [
           "ui-monospace",
           "SFMono-Regular",
