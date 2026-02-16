@@ -6,6 +6,8 @@ This site serves as a platform to showcase my projects, share my thoughts throug
 
 ![Video of the website](.github/website.gif)
 
+Version `1.2.0` in the video
+
 ## 😄 Author
 
 - [@Dino Kupinic](https://www.github.com/Dino-Kupinic)
