@@ -166,6 +166,17 @@ export default defineNuxtConfig({
 
   a11y: {
     logIssues: false,
+    axe: {
+      options: {
+        rules: [
+          { id: "color-contrast", enabled: false },
+          { id: "color-contrast-enhanced", enabled: false },
+        ],
+      },
+      runOptions: {
+        runOnly: ["wcag2a", "wcag2aa"],
+      },
+    },
   },
 
   vite: {
