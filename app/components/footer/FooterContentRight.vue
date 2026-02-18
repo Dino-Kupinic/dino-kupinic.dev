@@ -76,7 +76,12 @@ onMounted(() => {
         </div>
       </div>
       <ThemeSelection />
-      <Button variant="outline" class="w-full lg:w-64" size="sm" as-child>
+      <Button
+        variant="outline"
+        class="w-full border-yellow-500 bg-yellow-100 hover:bg-yellow-100 lg:w-64 dark:border-yellow-500"
+        size="sm"
+        as-child
+      >
         <NuxtLink
           :to="githubRepoUrl"
           target="_blank"
