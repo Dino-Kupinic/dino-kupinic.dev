@@ -43,7 +43,7 @@ onMounted(() => {
   <div class="flex h-auto space-x-3 sm:flex-col sm:space-y-3 sm:space-x-0">
     <div class="flex w-full flex-col justify-between gap-3">
       <div
-        class="bg-background flex w-full flex-col space-y-3 rounded-lg border p-3 pt-6 pb-5 sm:w-64 sm:py-3"
+        class="bg-background flex w-full flex-col space-y-3 rounded-lg border p-3 pt-6 pb-5 sm:w-full sm:py-3 lg:w-64"
       >
         <div>
           <p class="font-semibold">Local Time</p>
@@ -58,7 +58,7 @@ onMounted(() => {
         </div>
       </div>
       <div
-        class="bg-background flex w-full flex-col space-y-3 rounded-lg border px-4 py-2 sm:w-64"
+        class="bg-background flex w-full flex-col space-y-3 rounded-lg border px-4 py-2 sm:w-full lg:w-64"
       >
         <div>
           <div class="flex h-auto w-full items-center gap-3">

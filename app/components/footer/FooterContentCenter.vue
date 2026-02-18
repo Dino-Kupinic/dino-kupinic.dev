@@ -55,7 +55,9 @@ const navigationItems = ref<NavigationItemGroup[]>([
 </script>
 
 <template>
-  <div class="flex gap-16 sm:px-3">
+  <div
+    class="flex justify-between sm:justify-start sm:gap-16 sm:px-3 lg:justify-center"
+  >
     <FooterLinkGroup
       v-for="item in navigationItems"
       :key="item.title"
