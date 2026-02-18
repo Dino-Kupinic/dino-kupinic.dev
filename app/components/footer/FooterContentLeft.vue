@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="flex h-3/4 w-full flex-col justify-between space-y-2 rounded-lg border p-3 sm:w-64"
+    class="flex h-auto w-full flex-col justify-between space-y-2 rounded-lg border p-3 lg:w-64"
   >
     <div>
       <p class="font-semibold">Ad space</p>
