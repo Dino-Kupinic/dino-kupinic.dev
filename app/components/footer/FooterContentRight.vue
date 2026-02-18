@@ -89,8 +89,16 @@ onMounted(() => {
           external
           aria-label="Star this repository on GitHub"
         >
-          <Icon name="i-mdi-github" size="16" />
-          <span>Star on GitHub</span>
+          <Icon
+            name="i-heroicons-star-solid"
+            size="14"
+            class="text-yellow-500 dark:text-yellow-400"
+          />
+          <span>Star on</span>
+          <span class="inline-flex items-center gap-1">
+            <Icon name="i-mdi-github" size="16" />
+            <span>GitHub</span>
+          </span>
         </NuxtLink>
       </Button>
     </div>
