@@ -8,6 +8,7 @@ const localtime = ref<LocalTimeInfo>({
   time: "",
   offset: "",
 })
+const githubRepoUrl = "https://github.com/Dino-Kupinic/dino-kupinic.dev"
 
 function updateTimeAndOffset() {
   const viennaTime = new Date().toLocaleString("en-US", {
@@ -75,6 +76,31 @@ onMounted(() => {
         </div>
       </div>
       <ThemeSelection />
+      <Button
+        variant="outline"
+        class="w-full border-yellow-500 bg-yellow-100 hover:bg-yellow-100 lg:w-64 dark:border-yellow-500"
+        size="sm"
+        as-child
+      >
+        <NuxtLink
+          :to="githubRepoUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          external
+          aria-label="Star this repository on GitHub"
+        >
+          <Icon
+            name="i-heroicons-star-solid"
+            size="14"
+            class="text-yellow-500 dark:text-yellow-400"
+          />
+          <span>Star on</span>
+          <span class="inline-flex items-center gap-1">
+            <Icon name="i-mdi-github" size="16" />
+            <span>GitHub</span>
+          </span>
+        </NuxtLink>
+      </Button>
     </div>
   </div>
 </template>
