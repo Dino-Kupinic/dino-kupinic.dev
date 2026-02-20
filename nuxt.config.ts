@@ -211,6 +211,7 @@ export default defineNuxtConfig({
     "nuxt-studio",
     "@nuxt/a11y",
     "motion-v/nuxt",
+    "@polar-sh/nuxt",
     // "@nuxt/hints", TODO: enable when you can configure it properly
   ],
 

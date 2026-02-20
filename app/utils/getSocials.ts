@@ -18,7 +18,7 @@ export default function (): SocialItem[] {
     {
       icon: "i-mdi-instagram",
       name: "Instagram",
-      link: "https://www.instagram.com/yuzzuwo/",
+      link: "https://www.instagram.com/dinokupinic/",
     },
     {
       icon: "i-mdi-youtube",

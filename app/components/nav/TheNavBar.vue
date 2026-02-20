@@ -2,10 +2,11 @@
 import type { NavigationItem } from "~/types/nav"
 
 const navigationItems = ref<NavigationItem[]>([
-  // {
-  //   title: "Yuzzuwo",
-  //   href: "/yuzzuwo",
-  // },
+  {
+    title: "Shop",
+    href: "/shop",
+    badge: "NEW",
+  },
   {
     title: "Projects",
     href: "/projects",
