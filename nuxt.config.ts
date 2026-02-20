@@ -39,6 +39,10 @@ export default defineNuxtConfig({
       siteDescription: SITE_DESCRIPTION,
       siteOgImage: DEFAULT_OG_IMAGE,
     },
+    mode: process.env.POLAR_MODE,
+    accessToken: process.env.POLAR_ACCESS_TOKEN,
+    polarSuccessUrl: process.env.POLAR_SUCCESS_URL,
+    webhookSecret: process.env.POLAR_WEBHOOK_SECRET,
   },
 
   routeRules: {
@@ -122,10 +126,10 @@ export default defineNuxtConfig({
     },
   },
 
-  sourcemap: {
-    client: true,
-    server: true,
-  },
+  // sourcemap: {
+  //   client: true,
+  //   server: true,
+  // },
 
   sitemap: {
     zeroRuntime: true,
