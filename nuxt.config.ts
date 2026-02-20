@@ -8,11 +8,42 @@ export const SITE_DESCRIPTION =
   "Dino Kupinic is a personal portfolio website designed to showcase the " +
   "professional work and personal information of Dino Kupinic."
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/default_og_image.png`
+const isDev = process.env.NODE_ENV !== "production"
+const devProfile = process.env.NUXT_DEV_PROFILE === "full" ? "full" : "fast"
+const isFastDev = isDev && devProfile === "fast"
+const enableHeavyDevModules = !isDev || devProfile === "full"
+
+const alwaysOnModules = [
+  "@nuxt/eslint",
+  "@nuxtjs/seo",
+  "@nuxt/content",
+  "nuxt-feedme",
+  "@nuxt/image",
+  "@nuxtjs/color-mode",
+  "@nuxt/fonts",
+  "@nuxt/scripts",
+  "@vueuse/nuxt",
+  "@nuxt/icon",
+  "@nuxtjs/device",
+  "shadcn-nuxt",
+  "nuxt-llms",
+  "motion-v/nuxt",
+  "@polar-sh/nuxt",
+]
+
+const heavyDevModules = [
+  Sonda({
+    server: true,
+    open: false,
+  }),
+  "nuxt-studio",
+  "@nuxt/a11y",
+]
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
 
-  devtools: { enabled: true },
+  devtools: { enabled: !isFastDev },
 
   site: {
     url: SITE_URL,
@@ -126,10 +157,10 @@ export default defineNuxtConfig({
     },
   },
 
-  // sourcemap: {
-  //   client: true,
-  //   server: true,
-  // },
+  sourcemap: {
+    client: !isFastDev,
+    server: !isFastDev,
+  },
 
   sitemap: {
     zeroRuntime: true,
@@ -145,17 +176,21 @@ export default defineNuxtConfig({
     },
   },
 
-  studio: {
-    repository: {
-      provider: "github",
-      owner: "Dino-Kupinic",
-      repo: "dino-kupinic.dev",
-      branch: "main",
-    },
-    i18n: {
-      defaultLocale: "en",
-    },
-  },
+  ...(enableHeavyDevModules
+    ? {
+        studio: {
+          repository: {
+            provider: "github",
+            owner: "Dino-Kupinic",
+            repo: "dino-kupinic.dev",
+            branch: "main",
+          },
+          i18n: {
+            defaultLocale: "en",
+          },
+        },
+      }
+    : {}),
 
   // TODO: enable when Bun runtime is supported properly by @nuxt/content
   // nitro: {
@@ -168,20 +203,24 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/tailwind.css"],
 
-  a11y: {
-    logIssues: false,
-    axe: {
-      options: {
-        rules: [
-          { id: "color-contrast", enabled: false },
-          { id: "color-contrast-enhanced", enabled: false },
-        ],
-      },
-      runOptions: {
-        runOnly: ["wcag2a", "wcag2aa"],
-      },
-    },
-  },
+  ...(enableHeavyDevModules
+    ? {
+        a11y: {
+          logIssues: false,
+          axe: {
+            options: {
+              rules: [
+                { id: "color-contrast", enabled: false },
+                { id: "color-contrast-enhanced", enabled: false },
+              ],
+            },
+            runOptions: {
+              runOnly: ["wcag2a", "wcag2aa"],
+            },
+          },
+        },
+      }
+    : {}),
 
   vite: {
     plugins: [tailwindcss()],
@@ -195,27 +234,8 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    Sonda({
-      server: true,
-      open: false,
-    }),
-    "@nuxt/eslint",
-    "@nuxtjs/seo",
-    "@nuxt/content",
-    "nuxt-feedme",
-    "@nuxt/image",
-    "@nuxtjs/color-mode",
-    "@nuxt/fonts",
-    "@nuxt/scripts",
-    "@vueuse/nuxt",
-    "@nuxt/icon",
-    "@nuxtjs/device",
-    "shadcn-nuxt",
-    "nuxt-llms",
-    "nuxt-studio",
-    "@nuxt/a11y",
-    "motion-v/nuxt",
-    "@polar-sh/nuxt",
+    ...alwaysOnModules,
+    ...(enableHeavyDevModules ? heavyDevModules : []),
     // "@nuxt/hints", TODO: enable when you can configure it properly
   ],
 
@@ -262,6 +282,6 @@ export default defineNuxtConfig({
   },
 
   typescript: {
-    typeCheck: true,
+    typeCheck: !isFastDev,
   },
 })
