@@ -9,7 +9,7 @@ import "vue-sonner/style.css"
     <TheNavBar />
     <slot />
     <ClientOnly>
-      <CookieBanner />
+      <!--      <CookieBanner />-->
     </ClientOnly>
     <TheFooter />
     <Toaster />
