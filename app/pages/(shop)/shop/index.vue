@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { data } = useFetch("/api/products")
+
+console.log(data.value)
 </script>
 
 <template>
@@ -9,6 +11,6 @@ const { data } = useFetch("/api/products")
       <ShopSubtitleMarquee />
     </header>
 
-    <ProductCatalog :products="data" />
+    <ProductCatalog class="mb-32" :products="data" />
   </GenericLayoutWrapper>
 </template>

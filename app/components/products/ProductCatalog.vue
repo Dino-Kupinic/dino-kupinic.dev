@@ -1,19 +1,28 @@
 <script setup lang="ts">
+type Product = {
+  id: string
+  name: string
+  description?: string | null
+  images?: Array<{ url?: string | null }>
+  medias?: Array<{ publicUrl?: string | null }>
+  prices?: Array<{ priceAmount?: number | null }>
+}
+
 defineProps<{
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  products: any
+  products?: Product[] | null
 }>()
 </script>
 
 <template>
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <div
+    class="mt-3 mb-32 grid h-auto auto-rows-fr grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5"
+  >
     <ProductCard
-      v-for="product in products"
-      :id="product.id"
+      v-for="product in products ?? []"
       :key="product.id"
       :name="product.name"
       :description="product.description"
-      :image="product.images?.[0]?.url"
+      :image="product.medias?.[0]?.publicUrl || product.images?.[0]?.url"
       :price-amount="product.prices?.[0]?.priceAmount"
     />
   </div>
