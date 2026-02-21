@@ -32,7 +32,7 @@ const subtitles = [
 
 <template>
   <div
-    class="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden border-y border-neutral-200 bg-white py-2 dark:border-y-2 dark:border-black dark:bg-neutral-950"
+    class="shop-subtitle-marquee-shell relative w-screen overflow-hidden border-y border-neutral-200 bg-white py-2 dark:border-y-2 dark:border-black dark:bg-neutral-950"
   >
     <div
       class="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(34,197,94,0.08)_0%,rgba(14,165,233,0.07)_45%,rgba(245,158,11,0.08)_100%)] dark:bg-[linear-gradient(90deg,rgba(16,185,129,0.18)_0%,rgba(6,182,212,0.16)_45%,rgba(234,179,8,0.18)_100%)]"
@@ -59,7 +59,6 @@ const subtitles = [
           :key="`${groupIndex}-${subtitle.text}`"
           :class="[
             'shop-subtitle-marquee-card border-2 border-black px-3 py-1.5 font-mono text-sm font-bold tracking-tight whitespace-nowrap italic sm:px-4 sm:text-base',
-            'dark:[text-shadow:1px_1px_0_rgba(0,0,0,0.5)]',
             subtitle.toneClass,
           ]"
         >
@@ -71,6 +70,10 @@ const subtitles = [
 </template>
 
 <style scoped>
+.shop-subtitle-marquee-shell {
+  margin-inline: calc(50% - 50vw);
+}
+
 .shop-subtitle-marquee-track {
   animation: shop-subtitle-marquee 16s linear infinite;
   will-change: transform;
