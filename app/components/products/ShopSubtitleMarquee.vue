@@ -3,24 +3,24 @@ const subtitles = [
   {
     text: "LOOKING FOR [Irresistible Deals] THAT WILL [Blow Your Mind!?]",
     toneClass:
-      "bg-green-100 text-green-600 dark:bg-green-800 dark:text-green-200",
+      "bg-green-100 text-green-700 dark:bg-green-800 dark:text-green-200",
   },
   {
     text: "AN AWESOME PRICE.! AN ABSOLUTELY [[Terrifying]] PRICE",
-    toneClass: "bg-red-100 text-red-500 dark:bg-red-800 dark:text-red-200",
+    toneClass: "bg-red-100 text-red-700 dark:bg-red-800 dark:text-red-200",
   },
   {
     text: "I JUST NEED YOUR [Account Details] AND THE [Number on theB4ck]!",
     toneClass:
-      "bg-yellow-100 text-yellow-500 dark:bg-yellow-800 dark:text-yellow-200",
+      "bg-yellow-100 text-yellow-700 dark:bg-yellow-800 dark:text-yellow-200",
   },
   {
     text: "HURRY UP AND BUY! ",
-    toneClass: "bg-cyan-100 text-cyan-500 dark:bg-cyan-800 dark:text-cyan-200",
+    toneClass: "bg-cyan-100 text-cyan-700 dark:bg-cyan-800 dark:text-cyan-200",
   },
   {
     text: "YOU HAVE TOO MUCH MONEY",
-    toneClass: "bg-blue-100 text-blue-500 dark:bg-blue-800 dark:text-blue-200",
+    toneClass: "bg-blue-100 text-blue-700 dark:bg-blue-800 dark:text-blue-200",
   },
   {
     text: "TAKE THE DEAL YOU LITTLE [Sponge]",
@@ -32,19 +32,19 @@ const subtitles = [
 
 <template>
   <div
-    class="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden border-y-2 border-black bg-neutral-950 py-2"
+    class="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden border-y border-neutral-200 bg-white py-2 dark:border-y-2 dark:border-black dark:bg-neutral-950"
   >
     <div
-      class="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(16,185,129,0.18)_0%,rgba(6,182,212,0.16)_45%,rgba(234,179,8,0.18)_100%)]"
+      class="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(34,197,94,0.08)_0%,rgba(14,165,233,0.07)_45%,rgba(245,158,11,0.08)_100%)] dark:bg-[linear-gradient(90deg,rgba(16,185,129,0.18)_0%,rgba(6,182,212,0.16)_45%,rgba(234,179,8,0.18)_100%)]"
     />
     <div
-      class="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.14)_0px,rgba(255,255,255,0.14)_1px,transparent_1px,transparent_3px)] opacity-35"
+      class="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(2,6,23,0.06)_0px,rgba(2,6,23,0.06)_1px,transparent_1px,transparent_3px)] opacity-20 dark:bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.14)_0px,rgba(255,255,255,0.14)_1px,transparent_1px,transparent_3px)] dark:opacity-35"
     />
     <div
-      class="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-neutral-950 to-transparent"
+      class="pointer-events-none absolute inset-y-0 left-0 w-8 bg-linear-to-r from-white to-transparent dark:from-neutral-950"
     />
     <div
-      class="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-neutral-950 to-transparent"
+      class="pointer-events-none absolute inset-y-0 right-0 w-8 bg-linear-to-l from-white to-transparent dark:from-neutral-950"
     />
 
     <div class="shop-subtitle-marquee-track relative z-10 flex w-max">
@@ -58,8 +58,8 @@ const subtitles = [
           v-for="subtitle in subtitles"
           :key="`${groupIndex}-${subtitle.text}`"
           :class="[
-            'shop-subtitle-marquee-card border-2 border-black px-3 py-1.5 font-mono text-sm font-bold tracking-[0.05em] whitespace-nowrap uppercase italic sm:px-4 sm:text-base',
-            '[text-shadow:1px_1px_0_rgba(0,0,0,0.5)]',
+            'shop-subtitle-marquee-card border-2 border-black px-3 py-1.5 font-mono text-sm font-bold tracking-tight whitespace-nowrap italic sm:px-4 sm:text-base',
+            'dark:[text-shadow:1px_1px_0_rgba(0,0,0,0.5)]',
             subtitle.toneClass,
           ]"
         >
@@ -72,7 +72,7 @@ const subtitles = [
 
 <style scoped>
 .shop-subtitle-marquee-track {
-  animation: shop-subtitle-marquee 24s infinite;
+  animation: shop-subtitle-marquee 16s linear infinite;
   will-change: transform;
 }
 
@@ -83,11 +83,11 @@ const subtitles = [
 
 @keyframes shop-subtitle-marquee {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
