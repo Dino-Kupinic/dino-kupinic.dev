@@ -19,6 +19,7 @@ defineProps<{
   >
     <ProductCard
       v-for="product in products ?? []"
+      :id="product.id"
       :key="product.id"
       :name="product.name"
       :description="product.description"

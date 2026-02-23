@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
+  id: string
   name: string
   description?: string | null
   image?: string | null
@@ -9,7 +10,6 @@ const props = defineProps<{
 const creator = {
   name: "Dino Kupinic",
   avatar: "https://github.com/Dino-Kupinic.png",
-  githubUrl: "https://github.com/Dino-Kupinic",
 }
 
 const formattedPrice = computed(() =>
@@ -26,11 +26,31 @@ const priceBadgeClass = computed(() =>
     ? "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-100"
     : "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-100",
 )
+
+const buyNow = () => {
+  const customerId = sessionStorage.getItem("customerId")
+  const customerEmail = sessionStorage.getItem("customerEmail")
+  const customerName = sessionStorage.getItem("customerName")
+  const url = new URL("/api/checkout", window.location.origin)
+
+  url.searchParams.append("products", props.id)
+  if (customerId) {
+    url.searchParams.append("customerId", customerId)
+  }
+  if (customerEmail) {
+    url.searchParams.append("customerEmail", customerEmail)
+  }
+  if (customerName) {
+    url.searchParams.append("customerName", customerName)
+  }
+  window.location.href = url.toString()
+}
 </script>
 
 <template>
   <Card
-    class="group h-full min-h-72 gap-0 overflow-hidden rounded-sm py-0 sm:min-h-120"
+    class="group h-full min-h-68 gap-0 overflow-hidden rounded-lg py-0 sm:min-h-110"
+    @click="buyNow"
   >
     <CardHeader class="flex items-center justify-center p-0">
       <div
@@ -57,32 +77,28 @@ const priceBadgeClass = computed(() =>
       <CardTitle class="text-foreground line-clamp-3 text-sm sm:text-lg">
         {{ props.name }}
       </CardTitle>
-      <CardDescription
-        class="text-foreground/90 dark:text-secondary mt-1 line-clamp-2 text-sm leading-5 sm:text-base sm:leading-6"
-      >
-        {{ props.description || "No description provided." }}
-      </CardDescription>
+      <!--      <CardDescription-->
+      <!--        class="text-foreground/90 dark:text-secondary mt-1 line-clamp-2 text-sm leading-5 sm:text-base sm:leading-6"-->
+      <!--      >-->
+      <!--        {{ props.description || "No description provided." }}-->
+      <!--      </CardDescription>-->
 
-      <NuxtLink
-        :to="creator.githubUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-        external
-        class="mt-3 inline-flex w-fit items-center gap-2 text-sm underline decoration-dotted underline-offset-4 hover:opacity-80"
+      <div
+        class="mt-3 inline-flex w-fit items-center gap-2 text-xs underline decoration-dotted underline-offset-4 hover:opacity-80 sm:text-sm"
       >
-        <Avatar class="size-5 border">
+        <Avatar class="size-5 border sm:size-6">
           <AvatarImage :src="creator.avatar" alt="creator avatar" />
-          <AvatarFallback>D</AvatarFallback>
+          <AvatarFallback>?</AvatarFallback>
         </Avatar>
         <span>{{ creator.name }}</span>
-      </NuxtLink>
+      </div>
     </CardContent>
 
     <CardFooter class="mt-auto p-0">
       <div class="border-border w-full border-t px-2.5 py-2 sm:px-4 sm:py-3">
         <span
           :class="[
-            'rounded-md px-3 py-0.5 text-base font-semibold',
+            'rounded-lg px-3 py-0.5 text-base font-semibold',
             priceBadgeClass,
           ]"
         >

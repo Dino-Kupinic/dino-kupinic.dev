@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = useFetch("/api/products")
+const { data } = await useFetch("/api/products")
 
 console.log(data.value)
 </script>
@@ -11,6 +11,22 @@ console.log(data.value)
       <ShopSubtitleMarquee />
     </header>
 
-    <ProductCatalog class="mb-32" :products="data" />
+    <main class="mb-32 sm:mb-64">
+      <ProductCatalog v-if="data && data.length !== 0" :products="data" />
+      <div v-else>
+        <div
+          class="border-muted flex h-48 w-full items-center justify-center rounded-md border"
+        >
+          <div class="flex flex-col items-center gap-2">
+            <Icon
+              name="i-heroicons-shopping-bag"
+              size="32"
+              class="text-foreground/70"
+            />
+            <p class="text-foreground/70 text-sm">No products available.</p>
+          </div>
+        </div>
+      </div>
+    </main>
   </GenericLayoutWrapper>
 </template>
