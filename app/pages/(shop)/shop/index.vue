@@ -10,6 +10,7 @@ const { data } = await useFetch("/api/products")
     </header>
 
     <main class="mb-32 sm:mb-64">
+      <!-- @vue-ignore: TODO: for now it's fine that we don't map type explicitely -->
       <ProductCatalog v-if="data && data.length !== 0" :products="data" />
       <div v-else>
         <div
