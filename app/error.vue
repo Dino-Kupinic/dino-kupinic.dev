@@ -2,9 +2,10 @@
 import type { NuxtError } from "#app"
 
 const props = defineProps<{ error: NuxtError }>()
+const route = useRoute()
 
 const statusCode = computed(() => {
-  const code = Number(props.error?.statusCode)
+  const code = Number(props.error?.status)
   return Number.isFinite(code) && code > 0 ? code : 500
 })
 
@@ -29,8 +30,7 @@ const primaryMessage = computed(() => {
 })
 
 const errorPath = computed(() => {
-  const url = props.error?.url
-  return typeof url === "string" && url.length > 0 ? url : "/"
+  return route.fullPath || "/"
 })
 
 const technicalDetails = computed(() =>
@@ -39,7 +39,7 @@ const technicalDetails = computed(() =>
       statusCode: statusCode.value,
       statusMessage: props.error?.statusMessage ?? null,
       message: props.error?.message ?? null,
-      url: props.error?.url ?? null,
+      path: route.fullPath || "/",
       fatal: props.error?.fatal ?? null,
       unhandled: props.error?.unhandled ?? null,
       data: props.error?.data ?? null,
