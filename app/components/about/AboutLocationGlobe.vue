@@ -2,21 +2,30 @@
 import createGlobe from "cobe"
 import { motion, type PanInfo } from "motion-v"
 
-const isMobile = useMediaQuery("(max-width: 767px)")
-const GLOBE_SIZE = computed(() => {
-  return isMobile.value ? 375 : 420
-})
+const MAX_GLOBE_SIZE = 420
+const GLOBE_SIZE = ref(MAX_GLOBE_SIZE)
 const AUTO_SPIN_SPEED = 0.007
 const DRAG_SENSITIVITY = 0.004
 const VELOCITY_SENSITIVITY = 0.00008
 const MOMENTUM_DAMPING = 0.94
 const MOMENTUM_EPSILON = 0.00001
 
+const containerEl = ref<HTMLDivElement | null>(null)
 const el = ref<HTMLCanvasElement | null>(null)
 const phi = ref(0)
 const dragMomentum = ref(0)
 const isPanning = ref(false)
 let globe: ReturnType<typeof createGlobe> | null = null
+let resizeObserver: ResizeObserver | null = null
+
+const updateGlobeSize = () => {
+  if (!containerEl.value) return
+
+  const { width } = containerEl.value.getBoundingClientRect()
+  if (!width) return
+
+  GLOBE_SIZE.value = Math.min(Math.round(width), MAX_GLOBE_SIZE)
+}
 
 const setupGlobe = () => {
   if (!el.value) return
@@ -65,29 +74,41 @@ const handlePanEnd = (_event: PointerEvent, info: PanInfo) => {
 }
 
 onMounted(() => {
-  setupGlobe()
-})
+  updateGlobeSize()
 
-watch(GLOBE_SIZE, () => {
+  if (containerEl.value) {
+    resizeObserver = new ResizeObserver(() => {
+      const previousSize = GLOBE_SIZE.value
+      updateGlobeSize()
+      if (previousSize !== GLOBE_SIZE.value) {
+        setupGlobe()
+      }
+    })
+    resizeObserver.observe(containerEl.value)
+  }
+
   setupGlobe()
 })
 
 onUnmounted(() => {
+  resizeObserver?.disconnect()
   globe?.destroy()
 })
 </script>
 
 <template>
-  <motion.div
-    :on-pan-start="handlePanStart"
-    :on-pan="handlePan"
-    :on-pan-end="handlePanEnd"
-    class="mx-auto cursor-grab touch-none select-none active:cursor-grabbing"
-  >
-    <canvas
-      ref="el"
-      :style="{ width: `${GLOBE_SIZE}px`, height: `${GLOBE_SIZE}px` }"
-      class="pointer-events-none block"
-    ></canvas>
-  </motion.div>
+  <div ref="containerEl" class="mx-auto w-full max-w-[420px]">
+    <motion.div
+      :on-pan-start="handlePanStart"
+      :on-pan="handlePan"
+      :on-pan-end="handlePanEnd"
+      class="cursor-grab touch-none select-none active:cursor-grabbing"
+    >
+      <canvas
+        ref="el"
+        :style="{ width: `${GLOBE_SIZE}px`, height: `${GLOBE_SIZE}px` }"
+        class="pointer-events-none mx-auto block max-w-full"
+      ></canvas>
+    </motion.div>
+  </div>
 </template>
