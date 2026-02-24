@@ -1,7 +1,5 @@
 <script setup lang="ts">
 const { data } = await useFetch("/api/products")
-
-console.log(data.value)
 </script>
 
 <template>
