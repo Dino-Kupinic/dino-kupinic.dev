@@ -8,7 +8,7 @@
     "dev:fast": "NUXT_DEV_PROFILE=fast nuxt dev",
     "dev:fast:host": "NUXT_DEV_PROFILE=fast nuxt dev --host",
     "dev:full": "NUXT_DEV_PROFILE=full nuxt dev",
-    "dev:full:host": "NUXT_DEV_PROFILE=full nuxt dev --hoat",
+    "dev:full:host": "NUXT_DEV_PROFILE=full nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",

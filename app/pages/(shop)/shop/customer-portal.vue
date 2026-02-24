@@ -13,7 +13,7 @@ const accessPortal = () => {
   if (customerId)
     window.location.href = `/api/customer-portal?customerId=${customerId}`
   else if (email.value)
-    window.location.href = `/api/customer-portal?customerEmail=${email.value}`
+    window.location.href = `/api/customer-portal?customerEmail=${encodeURIComponent(email.value)}`
   else alert("Please provide an email address to access the portal.")
 }
 </script>

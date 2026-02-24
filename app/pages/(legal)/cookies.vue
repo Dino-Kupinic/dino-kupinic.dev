@@ -1,4 +1,6 @@
 <script setup lang="ts">
+throw createError({ statusCode: 404, fatal: true })
+
 const { data: page } = await useAsyncData("cookies-page", () => {
   return queryCollection("misc").path("/misc/cookies").first()
 })
