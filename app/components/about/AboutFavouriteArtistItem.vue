@@ -78,7 +78,7 @@ const artists: Artist[] = [
 </script>
 
 <template>
-  <AboutItem icon="i-mdi-account-music">
+  <AboutItem icon="i-ph-music-notes">
     <template #header>Favorite Artists</template>
     <template #content>
       <div class="flex flex-col gap-2 pt-3">

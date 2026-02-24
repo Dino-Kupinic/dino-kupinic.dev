@@ -27,7 +27,7 @@ const items = computed<BlogItem[]>(() => [
     link: "https://x.com/DinoKupinic",
   },
   {
-    icon: "i-ic-round-favorite",
+    icon: "i-heroicons-heart-solid",
     text: "Support me",
     link: "https://ko-fi.com/dinokupinic",
   },

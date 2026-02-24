@@ -16,6 +16,8 @@
             class="w-full overflow-hidden rounded-lg shadow-[0_0px_120px_5px_rgba(58,111,133,0.5)]"
             src="/images/index/shallow-lady-gaga.jpg"
             alt="Shallow by Lady Gaga"
+            width="1200"
+            height="1200"
           />
         </div>
       </div>

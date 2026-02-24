@@ -39,12 +39,17 @@ const isOpen = ref<boolean>(false)
                 </div>
                 <div v-for="item in items" :key="item.href" class="text-xl">
                   <NuxtLink :to="item.href" @click="isOpen = false">
-                    <div
-                      class="flex w-full items-center justify-between underline decoration-dotted underline-offset-4"
-                    >
-                      <p class="font-mono">
-                        {{ item.title.toUpperCase() }}
-                      </p>
+                    <div class="flex w-full items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <p
+                          class="font-mono underline decoration-dotted underline-offset-4"
+                        >
+                          {{ item.title.toUpperCase() }}
+                        </p>
+                        <Badge v-if="item.badge" class="bg-blue-500 text-white">
+                          {{ item.badge }}
+                        </Badge>
+                      </div>
                       <Icon name="i-solar-arrow-right-up-linear" />
                     </div>
                   </NuxtLink>

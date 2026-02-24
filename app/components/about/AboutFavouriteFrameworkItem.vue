@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <AboutItem icon="i-mage-stars-c-fill">
+  <AboutItem icon="i-heroicons-sparkles">
     <template #header>Favorite Framework</template>
     <template #content>
       <div class="flex h-full w-full items-center justify-center">
@@ -16,7 +16,7 @@
                 aria-label="Next.js"
               >
                 <Icon
-                  name="i-logos-nextjs-icon"
+                  name="i-simple-icons-nextdotjs"
                   size="128"
                   aria-label="Next.js"
                 />

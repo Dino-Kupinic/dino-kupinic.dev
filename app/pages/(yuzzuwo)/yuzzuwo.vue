@@ -17,10 +17,7 @@ definePageMeta({
           <span
             class="font-ymono text-xl uppercase decoration-dotted underline-offset-4 hover:underline dark:text-neutral-500"
           >
-            <Icon
-              name="i-material-symbols-arrow-left-alt-rounded"
-              class="mr-1 mb-1"
-            />
+            <Icon name="i-heroicons-arrow-left" class="mr-1 mb-1" />
             back to dino-kupinic.dev
           </span>
         </NuxtLink>

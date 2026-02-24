@@ -11,17 +11,17 @@ type SocialItem = {
 export default function (): SocialItem[] {
   return [
     {
-      icon: "i-mdi-github",
+      icon: "i-simple-icons-github",
       name: "GitHub",
       link: "https://github.com/Dino-Kupinic",
     },
     {
-      icon: "i-mdi-instagram",
+      icon: "i-simple-icons-instagram",
       name: "Instagram",
-      link: "https://www.instagram.com/yuzzuwo/",
+      link: "https://www.instagram.com/dinokupinic/",
     },
     {
-      icon: "i-mdi-youtube",
+      icon: "i-simple-icons-youtube",
       name: "YouTube",
       link: "https://www.youtube.com/channel/UCeO73z_5j_7U92xByZv3VtA",
     },

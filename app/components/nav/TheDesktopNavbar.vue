@@ -22,14 +22,20 @@ defineProps<{
               :href="item.href"
               :class="navigationMenuTriggerStyle()"
             >
-              <span
-                class="font-mono tracking-tight uppercase decoration-dotted underline-offset-4 hover:underline"
-              >
-                {{ item.title }}
-              </span>
-              <Badge v-if="item.title === 'Yuzzuwo'" class="-mr-1 ml-2">
-                NEW
-              </Badge>
+              <div class="flex items-center gap-1">
+                <span
+                  class="font-mono tracking-tight uppercase decoration-dotted underline-offset-4 hover:underline"
+                >
+                  {{ item.title }}
+                </span>
+                <Badge
+                  v-if="item.badge"
+                  variant="default"
+                  class="bg-blue-500 text-white"
+                >
+                  {{ item.badge }}
+                </Badge>
+              </div>
             </NavigationMenuLink>
           </template>
         </NavItem>
