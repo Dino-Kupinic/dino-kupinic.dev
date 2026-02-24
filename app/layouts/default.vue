@@ -8,9 +8,9 @@ import "vue-sonner/style.css"
     <SpeedInsights />
     <TheNavBar />
     <slot />
-    <ClientOnly>
-      <CookieBanner />
-    </ClientOnly>
+    <!--    <ClientOnly>-->
+    <!--      <CookieBanner />-->
+    <!--    </ClientOnly>-->
     <TheFooter />
     <Toaster />
   </div>
