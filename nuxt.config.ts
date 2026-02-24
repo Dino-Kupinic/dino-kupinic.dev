@@ -88,6 +88,14 @@ export default defineNuxtConfig({
     "/api/**": { cors: true },
   },
 
+  // Remove the cookies page since we don't use it right now
+  hooks: {
+    "pages:extend"(pages) {
+      const index = pages.findIndex((p) => p.name === "cookies")
+      if (index !== -1) pages.splice(index, 1)
+    },
+  },
+
   app: {
     head: {
       link: [
