@@ -94,7 +94,7 @@ useSeoMeta({
           <span>HTTP {{ statusCode }}</span>
         </div>
 
-        <div class="space-y-6">
+        <div class="min-w-0 space-y-6">
           <div class="space-y-3">
             <SectionHeading size="lg"> {{ title }} 😾 </SectionHeading>
             <p class="text-muted-foreground text-base sm:text-lg">
@@ -122,7 +122,7 @@ useSeoMeta({
             </summary>
             <div class="border-border/70 border-t p-4">
               <pre
-                class="bg-muted/40 max-h-64 overflow-auto rounded p-3 text-xs leading-relaxed"
+                class="bg-muted/40 max-h-64 max-w-full overflow-x-auto overflow-y-auto rounded p-3 font-mono text-xs leading-relaxed whitespace-pre"
                 >{{ technicalDetails }}</pre
               >
             </div>

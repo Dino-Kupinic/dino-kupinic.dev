@@ -18,7 +18,7 @@ watch(isInView, (v) => {
 </script>
 
 <template>
-  <AboutItem icon="i-ri-cake-2-fill">
+  <AboutItem icon="i-heroicons-cake">
     <template #header>Age</template>
     <template #content>
       <div class="flex h-full items-center justify-center">

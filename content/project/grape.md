@@ -14,7 +14,7 @@ date: 2024-01-27T00:00:00.000Z
 deployed:
   vendor: "Linode"
   url: "https://grape.comcrops.at/"
-  icon: "i-mdi-linode"
+  icon: "i-heroicons-cloud"
 repository:
   url: "https://github.com/comcrops/grape-client"
 ---

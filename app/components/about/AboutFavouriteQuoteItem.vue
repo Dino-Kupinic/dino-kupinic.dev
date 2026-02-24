@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <AboutItem icon="i-ri-double-quotes-l">
+  <AboutItem icon="i-ph-quotes">
     <template #header>Favorite Quote</template>
     <template #content>
       <div class="flex h-full flex-col">

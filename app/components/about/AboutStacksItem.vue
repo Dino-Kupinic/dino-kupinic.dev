@@ -5,14 +5,14 @@ type StackItem = {
 }
 
 const languages: StackItem[] = [
-  { tooltip: "HTML", icon: "i-ri-html5-fill" },
-  { tooltip: "CSS", icon: "i-ion-logo-css3" },
-  { tooltip: "TypeScript", icon: "i-akar-icons-typescript-fill" },
-  { tooltip: "JavaScript", icon: "i-akar-icons-javascript-fill" },
+  { tooltip: "HTML", icon: "i-simple-icons-html5" },
+  { tooltip: "CSS", icon: "i-simple-icons-css3" },
+  { tooltip: "TypeScript", icon: "i-simple-icons-typescript" },
+  { tooltip: "JavaScript", icon: "i-simple-icons-javascript" },
   { tooltip: "C++", icon: "i-simple-icons-cplusplus" },
-  { tooltip: "Java", icon: "i-ant-design-java-outlined" },
-  { tooltip: "PHP", icon: "i-akar-icons-php-fill" },
-  { tooltip: "Python", icon: "i-ion-logo-python" },
+  { tooltip: "Java", icon: "i-simple-icons-openjdk" },
+  { tooltip: "PHP", icon: "i-simple-icons-php" },
+  { tooltip: "Python", icon: "i-simple-icons-python" },
   { tooltip: "Swift", icon: "i-simple-icons-swift" },
   { tooltip: "Bash", icon: "i-codicon-terminal-bash" },
   { tooltip: "Markdown", icon: "i-simple-icons-markdown" },
@@ -31,25 +31,25 @@ const frameworks: StackItem[] = [
 ]
 
 const libraries: StackItem[] = [
-  { tooltip: "Node.js", icon: "i-mdi-nodejs" },
-  { tooltip: "Vite", icon: "i-file-icons-vite" },
+  { tooltip: "Node.js", icon: "i-simple-icons-nodedotjs" },
+  { tooltip: "Vite", icon: "i-simple-icons-vite" },
   { tooltip: "Vitest", icon: "i-simple-icons-vitest" },
-  { tooltip: "Tailwind", icon: "i-mdi-tailwind" },
+  { tooltip: "Tailwind", icon: "i-simple-icons-tailwindcss" },
   { tooltip: "Drizzle", icon: "i-simple-icons-drizzle" },
   { tooltip: "Prisma", icon: "i-simple-icons-prisma" },
-  { tooltip: "Supabase", icon: "i-ri-supabase-fill" },
+  { tooltip: "Supabase", icon: "i-simple-icons-supabase" },
   { tooltip: "FastAPI", icon: "i-simple-icons-fastapi" },
 ]
 
 const databases: StackItem[] = [
   { tooltip: "SQLite", icon: "i-simple-icons-sqlite" },
-  { tooltip: "Postgres", icon: "i-akar-icons-postgresql-fill" },
+  { tooltip: "Postgres", icon: "i-simple-icons-postgresql" },
   { tooltip: "MySQL", icon: "i-simple-icons-mysql" },
 ]
 
 const etc: StackItem[] = [
   { tooltip: "Docker", icon: "i-simple-icons-docker" },
-  { tooltip: "Git", icon: "i-bx-bxl-git" },
+  { tooltip: "Git", icon: "i-simple-icons-git" },
   { tooltip: "Figma", icon: "i-ph-figma-logo" },
 ]
 

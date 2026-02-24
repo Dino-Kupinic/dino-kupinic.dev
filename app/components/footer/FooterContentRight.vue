@@ -96,7 +96,7 @@ onMounted(() => {
           />
           <span>Star on</span>
           <span class="inline-flex items-center gap-1">
-            <Icon name="i-mdi-github" size="16" />
+            <Icon name="i-simple-icons-github" size="16" />
             <span>GitHub</span>
           </span>
         </NuxtLink>

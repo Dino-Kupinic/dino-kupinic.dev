@@ -25,7 +25,7 @@ definePageMeta({
               <a href="/feed.atom">
                 <DropdownMenuItem>
                   <div class="flex w-full items-center gap-3">
-                    <Icon name="i-tabler-file-type-xml" size="20" />
+                    <Icon name="i-heroicons-document-text" size="20" />
                     Atom
                   </div>
                 </DropdownMenuItem>
@@ -33,7 +33,7 @@ definePageMeta({
               <a href="/feed.xml">
                 <DropdownMenuItem>
                   <div class="flex w-full items-center gap-3">
-                    <Icon name="i-tabler-file-type-xml" size="20" />
+                    <Icon name="i-heroicons-document-text" size="20" />
                     RSS
                   </div>
                 </DropdownMenuItem>
@@ -41,7 +41,7 @@ definePageMeta({
               <a href="/feed.json">
                 <DropdownMenuItem>
                   <div class="flex w-full items-center gap-3">
-                    <Icon name="i-tabler-json" size="20" />
+                    <Icon name="i-heroicons-code-bracket" size="20" />
                     JSON
                   </div>
                 </DropdownMenuItem>

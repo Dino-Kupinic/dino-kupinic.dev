@@ -5,6 +5,7 @@
     "": {
       "name": "dinokupinic",
       "dependencies": {
+        "@iconify-json/ant-design": "^1.2.5",
         "@iconify-json/codicon": "^1.2.39",
         "@iconify-json/heroicons": "^1.2.3",
         "@iconify-json/ph": "^1.2.2",
@@ -281,6 +282,8 @@
     "@humanwhocodes/module-importer": ["@humanwhocodes/module-importer@1.0.1", "", {}, "sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA=="],
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.3", "", {}, "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="],
+
+    "@iconify-json/ant-design": ["@iconify-json/ant-design@1.2.5", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-SYxhrx1AFq2MBcXk77AERYz2mPhLQes1F0vtvG64+dJZWyge9studXo7MiR8PPeLjRjZdWRrReRbxiwdRMf70Q=="],
 
     "@iconify-json/codicon": ["@iconify-json/codicon@1.2.41", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-YYcNjfwPcUn51QZAkK7XJUFzM0h7oi6xkV0cQTbCd0hQ7vesDIZ7pv8894wl2iMIKOo+T/zS8sDDSMa3re2SMw=="],
 
