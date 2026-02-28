@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { toast } from "vue-sonner"
+
 type TocLink = {
   children?: TocLink[]
   depth?: number
@@ -6,15 +8,46 @@ type TocLink = {
   text: string
 }
 
+type SidebarAiLink = {
+  icon: string
+  text: string
+  to: string
+}
+
+const route = useRoute()
+const { siteUrl } = useSiteRuntimeConfig()
+
 const { data: page } = await useAsyncData("about-page", () => {
   return queryCollection("misc").path("/misc/about").first()
 })
+
+const canonicalUrl = new URL(route.path, siteUrl).toString()
 
 const tocLinks = computed(() => {
   return (
     (page.value as { body?: { toc?: { links?: TocLink[] } } } | null)?.body?.toc
       ?.links ?? []
   )
+})
+
+const sidebarAiLinks: SidebarAiLink[] = [
+  {
+    icon: "i-simple-icons-openai",
+    text: "ChatGPT",
+    to: `https://chatgpt.com/?q=${encodeURIComponent(canonicalUrl)}`,
+  },
+  {
+    icon: "i-simple-icons-anthropic",
+    text: "Claude",
+    to: `https://claude.ai/new?q=${encodeURIComponent(canonicalUrl)}`,
+  },
+]
+
+const aboutMarkdown = page.value?.rawbody
+
+const { copy, copied, isSupported } = useClipboard({
+  source: aboutMarkdown,
+  legacy: true,
 })
 
 const scrollToHeading = (event: MouseEvent, id: string) => {
@@ -30,29 +63,37 @@ const scrollToHeading = (event: MouseEvent, id: string) => {
   })
 }
 
-const getAge = () => {
-  const today = new Date()
-  const birthMonth = 4
-  const birthDay = 25
-
-  let age = today.getUTCFullYear() - 2006
-  const hasHadBirthday =
-    today.getUTCMonth() > birthMonth ||
-    (today.getUTCMonth() === birthMonth && today.getUTCDate() >= birthDay)
-
-  if (!hasHadBirthday) {
-    age -= 1
+async function copyMarkdown() {
+  if (!isSupported.value) {
+    toast.error("Clipboard is not available in this environment.", {
+      position: "bottom-right",
+    })
+    return
   }
 
-  return age
+  try {
+    await copy(aboutMarkdown)
+
+    if (!copied.value) {
+      toast.error("Could not copy markdown.", {
+        position: "bottom-right",
+      })
+      return
+    }
+
+    toast.success("Copied markdown to clipboard", {
+      position: "bottom-right",
+    })
+  } catch {
+    toast.error("Could not copy markdown.", {
+      position: "bottom-right",
+    })
+  }
 }
 </script>
 
 <template>
-  <ContentLayoutWrapper
-    content-class="!py-0"
-    wrapper-class="!p-0 sm:!p-0 lg:!p-0 mb-32"
-  >
+  <ContentLayoutWrapper content-class="!py-0">
     <section class="border-border mt-8 border-b pb-6 sm:mt-16 sm:pb-8">
       <p
         class="text-muted-foreground font-mono text-sm font-medium tracking-tight uppercase"
@@ -72,10 +113,6 @@ const getAge = () => {
             writing.
           </p>
         </div>
-
-        <div class="text-muted-foreground flex items-center gap-3 text-sm">
-          <span>Last revised on 28 February 2026</span>
-        </div>
       </div>
     </section>
 
@@ -87,11 +124,10 @@ const getAge = () => {
           class="text-muted-foreground dark:bg-background flex flex-wrap items-center gap-2 border-b px-4 py-3 text-sm sm:px-5"
         >
           <span
-            class="bg-muted text-foreground rounded-sm border px-2 py-1 font-medium"
+            class="rounded-sm border border-green-200 bg-green-50 px-2 py-1 font-medium text-green-700 dark:border-green-900/80 dark:bg-green-950/60 dark:text-green-300"
           >
             Biography
           </span>
-          <span>Independent entry</span>
         </div>
 
         <div class="p-4 sm:p-5">
@@ -143,7 +179,36 @@ const getAge = () => {
       </article>
 
       <aside class="order-1 lg:order-2">
-        <div class="space-y-4 lg:sticky lg:top-24">
+        <div class="mt-2 space-y-4 lg:sticky lg:top-24">
+          <div class="grid grid-cols-2 gap-2">
+            <Button
+              variant="outline"
+              class="col-span-2 w-full justify-center gap-2"
+              @click="copyMarkdown"
+            >
+              <Icon name="i-simple-icons-markdown" size="20" />
+              <span>Copy markdown</span>
+            </Button>
+
+            <NuxtLink
+              v-for="link in sidebarAiLinks"
+              :key="link.text"
+              :to="link.to"
+              class="block min-w-0"
+              external
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button
+                variant="outline"
+                class="w-full min-w-0 justify-center gap-1.5 px-2"
+              >
+                <Icon :name="link.icon" size="20" />
+                <span class="truncate text-xs sm:text-sm">{{ link.text }}</span>
+                <Icon name="i-solar-arrow-right-up-linear" size="14" />
+              </Button>
+            </NuxtLink>
+          </div>
           <section class="bg-card overflow-hidden rounded-lg border">
             <div class="dark:bg-background border-b px-4 py-3">
               <p
@@ -161,10 +226,10 @@ const getAge = () => {
             <div class="p-4">
               <NuxtImg
                 class="aspect-4/5 w-full rounded-md border object-cover"
-                src="/images/dino_kupinic.png"
+                src="/images/dino-kupinic.jpg"
                 alt="Portrait of Dino Kupinic"
-                width="1536"
-                height="1920"
+                width="2304"
+                height="3024"
                 sizes="(max-width: 1024px) 100vw, 320px"
               />
               <p

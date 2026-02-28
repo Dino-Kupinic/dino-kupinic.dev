@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     identity: {
       type: "Person",
       name: "Dino Kupinic",
-      image: "/images/dino_kupinic.png",
+      image: "/images/dino-kupinic.jpg",
       sameAs: [
         "https://x.com/DinoKupinic",
         "https://github.com/Dino-Kupinic",
@@ -274,6 +274,7 @@ export default defineNuxtConfig({
         "simple-icons:vuedotjs",
         "simple-icons:x",
         "simple-icons:youtube",
+        "simple-icons:markdown",
         "solar:arrow-right-up-linear",
         "ant-design:java-outlined",
       ],
