@@ -1,45 +1,59 @@
-## Early life and education
+**Dino Kupinic** (born May 25, 2006) is an Austrian software engineer known for [tourney](/project/tourney). Based in Steyr, Austria, he currently serves mandatory austrian civilian service from 1st September 2025 to 31st May 2026.
 
-Dino Kupinic is a software engineer from Austria who started programming at the age of 11 and has continued building
-software ever since.
+## Early Life and Background
 
-His approach to learning has largely been self-directed, with a continued focus on experimenting, shipping projects,
-and improving across the stack through practical work.
+Dino Kupinic was born on May 25, 2006 in Steyr, Austria. He grew up in [Enns](<https://en.wikipedia.org/wiki/Enns_(town)>) until 9 years old when his mother moved back with him to Steyr due to divorce.
+In both elementary and middle school, he attended after-school care, where he had the opportunity to explore various activities and interests.
+His mom bought him a laptop when he was 8 years old, which sparked his interest in technology and programming.
 
-## Business career
+In middle school he attended a optional programming course where he learned logic and programming basics, which further fueled his passion for software development.
+As an only child, Dino spent a lot of time on his computer, teaching himself various programming languages and working on small projects.
 
-He enjoys creating full-stack applications and working with modern technologies.
-He is currently working on several projects, many of which are published on
-[GitHub](https://github.com/Dino-Kupinic).
-Machine Learning and LLMs (Large Language Models) are a current area of focus, alongside ongoing web application work.
+## Education
 
-For web development, his day-to-day stack currently includes `React`, `Next.js`, `TypeScript`, and `Tailwind CSS`.
-He also writes blog posts about the things he learns and finds interesting.
+Dino Kupinic attended the [HTL Steyr](https://de.wikipedia.org/wiki/HTL_Steyr), graduating in 2025 in _Information Technology and Network technology_.
 
-### Website
+During his time at HTL Steyr, he developed a strong foundation in software development, networking, and IT systems. He tutored other students via the "LearNet"
+program in software engineering and was actively involved in various tech-related extracurricular activities,
+including multiple participations at the [Cloudflight Coding Contest](https://www.cloudflight.io/en/the-cloudflight-coding-contest/).
 
-This website was built as a central place to showcase projects, publish blog posts, and maintain a public profile on
-the internet.
-Building it was a useful learning exercise, and it continues to evolve over time as new ideas and improvements are
-added.
+He completed multiple internships during his education, including at [BMD](https://www.bmd.com) and [BitFactory](https://bitfactory.at/), where he gained practical experience in software development.
+A professor offered him a part time job at his company [Micro Epsilon](https://www.micro-epsilon.com/?sLang=en) as a software engineer, which he accepted and worked there for a few months.
 
-### Design inspiration
+Kupinic actively self studies and is always eager to learn new technologies and improve his skills. He has an especially strong interest in web development.
 
-The visual direction takes inspiration from [Vercel](https://vercel.com) and [Next.js](https://nextjs.org), with the
-goal of adapting that style into something more personal.
-[shadcn](https://ui.shadcn.com/) also served as a strong foundation for the component layer, while leaving room for a
-future custom component library.
+He participates in various online communities where he shares his knowledge and learns from others.
+Professionalism and a strong work ethic are important to him, and he is known for his dedication and commitment to his projects.
 
-## Personal life
+He is also passionate about open source software and has contributed to several open source projects on GitHub such as [Nuxt](https://nuxt.com), [Vercel](https://vercel.com) and [Rybbit](https://github.com/rybbit-io/rybbit). Reading books such as [Programming
+Principles and Practice Using C++](https://www.stroustrup.com/programming.html) by Bjarne Stroustrup, [Clean Code](https://www.amazon.de/-/en/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert C. Martin **(while he is skeptical with his own opinions)**, [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052) by Andy Hunt and Dave Thomas
+has also been instrumental in his development as a software engineer, providing him with valuable insights and best practices for writing clean, efficient, and maintainable code.
 
-Outside of programming, his interests include video games, music, films, television, and books.
+## Career
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec laoreet urna. Donec in arcu nisl. Etiam maximus pharetra fringilla. Maecenas auctor euismod erat, iaculis tincidunt justo. Etiam ac elit at magna viverra tempor. Phasellus a imperdiet ante. Sed sit amet nulla non augue aliquam dignissim. Pellentesque quis nulla sed purus viverra dapibus. Nullam accumsan commodo urna, vel convallis risus egestas vel. Quisque non euismod ligula. Fusce tincidunt egestas urna porta aliquam. Curabitur suscipit aliquet urna id luctus. Morbi eget fermentum est, sed efficitur odio.
+Dino Kupinic's career in software engineering began during his education, where he completed multiple internships and gained practical experience in the field. He has worked on various projects, both independently and as part of a team, showcasing his skills and dedication to software development.
+He is very entrepeneurial and has a strong drive to create impactful software solutions. He is always looking for new opportunities to learn and grow as a software engineer, and is open to collaborating on innovative projects.
 
-Suspendisse pharetra turpis id mollis condimentum. Suspendisse auctor, ipsum in commodo scelerisque, mi nunc volutpat nibh, sit amet venenatis lectus magna suscipit mauris. Vivamus ac risus arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse condimentum ligula ullamcorper, volutpat urna et, hendrerit massa. Curabitur ultrices hendrerit nunc eget ultrices. Quisque porttitor, lectus vel vulputate lacinia, felis dolor malesuada felis, sit amet consectetur felis arcu at ipsum. Integer viverra placerat velit, sed ultricies risus volutpat et. Nam fringilla faucibus mi. Pellentesque magna sapien, mollis a velit ac, semper venenatis neque.
+### Startups and Entrepreneurship
 
-Duis scelerisque, urna ut facilisis venenatis, metus dui maximus dui, vitae varius nibh nibh sit amet lectus. Aenean rhoncus ultricies elit ac tempus. Donec mattis, neque et accumsan laoreet, nisl purus convallis nisl, et placerat dolor purus non urna. Pellentesque arcu mi, mollis et est sed, rutrum scelerisque mi. Maecenas hendrerit enim eu leo ornare, sit amet vestibulum ex fringilla. Nullam eu ultricies nisl, ac aliquam diam. Pellentesque venenatis sagittis dui, sed molestie nulla lobortis ut. Morbi fringilla erat sit amet ante lacinia consectetur.
+At 15 he began studying about startups and entrepreneuership, and has been involved in the startup ecosystem since then. At 18 an online friend working at [Fillout](https://fillout.com/) (San Francisco, California) offered to recommend him for a job as a senior software engineer at the company, due to his "high competence".
+He got to the last interview stage but ultimately did not get the job, which was a valuable learning experience for him and motivated him to continue improving his skills and knowledge in software engineering.
 
-Maecenas ut enim nec lorem faucibus mattis at in quam. Praesent porta eros non malesuada pretium. Proin diam nisl, suscipit quis diam quis, ornare laoreet augue. Suspendisse et aliquam metus. Pellentesque id condimentum leo. Nulla facilisi. Etiam in purus massa. Ut viverra diam at purus feugiat elementum. Vestibulum vestibulum ultricies tempor. Praesent pellentesque, libero eu vestibulum scelerisque, orci libero bibendum metus, eget sodales dui diam vitae diam. Sed fringilla ex ligula, id bibendum lacus varius sit amet. Suspendisse luctus aliquet tristique.
+In January 2026, he got an offer for a part-time job at a startup working on a AI SaaS product for real estate agents. He accepted the offer and was promoted to technical co-founder just a week later after meeting for a coffee with the founder in [Vienna, Austria](https://en.wikipedia.org/wiki/Vienna). His cofounder was business-oriented and design focused, while Dino was responsible for the technical side of the product.
+He ultimately left the startup due to differences in vision and direction for the product, but it was a valuable experience that allowed him to gain insights into the startup world and further develop his skills as a software engineer.
 
-Phasellus eget consequat purus. Proin ultricies pulvinar sem id consectetur. Suspendisse dolor nisi, accumsan et urna a, fermentum ornare nulla. Phasellus eleifend tortor vitae facilisis laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam eleifend, lacus quis egestas lobortis, arcu ipsum viverra ante, eu imperdiet nibh mi a risus. Donec fermentum nulla vitae eros egestas, id imperdiet velit fringilla.
+### Freelancing and Contracting
+
+For his uncle's company, he built a website for a local painting company as a contractor, which is live at [df-malerei.at](/project/df-malerei). The project was a success and helped the company improve their online presence and massively reduce costs.
+
+### Mandatory Civilian Service
+
+He is currently in civilian service from 1st September 2025 to 31st May 2026, where he is working at a nursing home.
+
+## Personal Life and Interests
+
+## References
+
+1. [Source 1 — title, publication, date, URL]
+2. [Source 2]
+3. [Source 3 — your own website or portfolio is fine as a primary source]

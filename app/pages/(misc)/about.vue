@@ -108,9 +108,9 @@ async function copyMarkdown() {
           <p
             class="text-muted-foreground mt-3 max-w-2xl text-sm leading-6 sm:text-base sm:leading-7"
           >
-            Austrian software engineer building modern web products, exploring
-            machine learning, and documenting the process through projects and
-            writing.
+            Austrian software engineer and aspriring entrepenuer building modern
+            web products, exploring AI, and documenting the process through
+            projects and writing.
           </p>
         </div>
       </div>
@@ -166,20 +166,12 @@ async function copyMarkdown() {
             </nav>
           </section>
 
-          <p
-            class="text-muted-foreground border-border border-l-2 pl-3 text-sm leading-6"
-          >
-            This page presents a compact overview of Dino Kupinic&apos;s
-            background, current areas of interest, and the technologies behind
-            this website.
-          </p>
-
           <ContentRenderer :value="page" />
         </div>
       </article>
 
       <aside class="order-1 lg:order-2">
-        <div class="mt-2 space-y-4 lg:sticky lg:top-24">
+        <div class="space-y-4 lg:sticky lg:top-24">
           <div class="grid grid-cols-2 gap-2">
             <Button
               variant="outline"
