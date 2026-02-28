@@ -33,7 +33,7 @@ const profileFacts = [
 </script>
 
 <template>
-  <ContentLayoutWrapper>
+  <ContentLayoutWrapper class="px-0">
     <section class="border-border mt-8 border-b pb-6 sm:mt-16 sm:pb-8">
       <p
         class="text-muted-foreground font-mono text-sm font-medium tracking-tight uppercase"
