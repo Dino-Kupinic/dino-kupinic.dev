@@ -57,13 +57,13 @@ const parts = [
   },
   {
     component: "Mouse",
-    name: "Razer Deathadder Essential",
-    description: "1800 DPI (upto 6000), 2 Side-Buttons",
+    name: "Logitech G305 Lightspeed",
+    description: "1800 DPI (upto 12000), 2 Side-Buttons",
   },
   {
-    component: "Headset",
-    name: "Razer Kraken Pro v2",
-    description: "Analog 3.5mm, Retractable Mic, with USB Audio Controller",
+    component: "Headphones",
+    name: "MOONDROP CHU II IEMs",
+    description: "Analog 3.5mm with Apple USB-C to 3.5mm Adapter",
   },
   {
     component: "Controller",

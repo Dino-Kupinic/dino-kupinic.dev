@@ -284,6 +284,9 @@ export default defineNuxtConfig({
   image: {
     provider: "vercel",
     screens: {
+      "img-item": 160,
+      "img-item-2x": 320,
+      "img-cover": 512,
       sm: 640,
       md: 768,
       lg: 1024,

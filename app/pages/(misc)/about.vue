@@ -7,6 +7,7 @@ const { data: page } = await useAsyncData("about-page", () => {
 <template>
   <GenericLayoutWrapper>
     <GenericPageHeader title="About me" subtitle="Software Engineer" />
+    <ProseCodeInline>Last updated: 28.02.2026</ProseCodeInline>
     <main>
       <ContentRenderer v-if="page" :value="page" />
     </main>

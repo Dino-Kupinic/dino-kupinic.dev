@@ -20,12 +20,6 @@ little bit about myself on the internet.
 Building this website was a fun experience, and I learned a lot about web development in the process.
 Though it's not perfect, I'm happy with the result, and I'm looking forward to improving it in the future.
 
-## Future Plans
-
-In the future, I want to rewrite this website in Next.js and use a totally different design.
-I have a few ideas in mind, but I want to keep them a secret for now!
-Right now, I'm not sure when that will happen, but I want to do it sometime in 2025/26.
-
 ## Inspiration
 
 I got inspired by the design of [Vercel](https://vercel.com) and [Next.js](https://nextjs.org). I wanted to build
@@ -36,9 +30,6 @@ Though I would like to make my own component library in the future!
 ## Tech Stack
 
 While I'm not going to list every single package I used, I want to highlight a few that I found particularly useful.
-Fun fact: I actually removed a lot of packages that I initially used because I decided against using a server and
-database.
-This website is now completely static!
 
 ### Main Technologies:
 
@@ -53,6 +44,7 @@ This website is now completely static!
 - [Shiki](https://shiki.matsu.io/): syntax highlighting (included in `@nuxt/content`)
 - [TypeScript](https://www.typescriptlang.org/): for type safety
 - [Tailwind CSS](https://tailwindcss.com/): my preferred styling library
+- [Motion](https://motion.dev/): for animations
 - [shadcn-vue](https://www.shadcn-vue.com/): component library
 - [Vercel](https://vercel.com): free hosting
 - [Git](https://git-scm.com/)/[GitHub](https://github.com): source control

@@ -14,9 +14,24 @@ const os = [
 
 const dev = [
   {
-    title: "JetBrains IDE",
-    description: "IntelliJ, PHPStorm etc.",
+    title: "JetBrains IDEs",
+    description: "IntelliJ, Webstorm etc.",
     image: "/images/about/dev/intellij.png",
+  },
+  {
+    title: "Cursor",
+    description: "AI IDE",
+    image: "/images/about/dev/cursor.jpeg",
+  },
+  {
+    title: "Codex",
+    description: "Agentic Engineering",
+    image: "/images/about/dev/codex.jpeg",
+  },
+  {
+    title: "Linear",
+    description: "Project management",
+    image: "/images/about/dev/linear.jpeg",
   },
   {
     title: "Neovim",
@@ -29,8 +44,28 @@ const dev = [
     image: "/images/about/dev/docker.png",
   },
   {
+    title: "Cloudflare",
+    description: "DNS, CDN, Security etc.",
+    image: "/images/about/dev/cloudflare.jpeg",
+  },
+  {
+    title: "Netcup",
+    description: "VPS Hosting",
+    image: "/images/about/dev/netcup.jpeg",
+  },
+  {
+    title: "AWS",
+    description: "Cloud computing",
+    image: "/images/about/dev/aws.jpeg",
+  },
+  {
+    title: "Polar.sh",
+    description: "Payment processing",
+    image: "/images/about/dev/polar-sh.jpeg",
+  },
+  {
     title: "Postman",
-    description: "API testing",
+    description: "(Manual) API testing",
     image: "/images/about/dev/postman.webp",
   },
   {
@@ -62,19 +97,34 @@ const apps = [
     image: "/images/about/apps/apple-mail.png",
   },
   {
-    title: "Discord",
-    description: "Chat & Voice",
-    image: "/images/about/apps/discord-app.png",
-  },
-  {
     title: "Apple Notes",
     description: "Personal notes",
     image: "/images/about/apps/apple-notes.avif",
   },
   {
+    title: "Discord",
+    description: "Chat & Voice",
+    image: "/images/about/apps/discord-app.png",
+  },
+  {
+    title: "Spotify",
+    description: "Music",
+    image: "/images/about/apps/spotify.webp",
+  },
+  {
+    title: "Notion",
+    description: "Knowledge management",
+    image: "/images/about/apps/notion.png",
+  },
+  {
     title: "Figma",
     description: "Design",
     image: "/images/about/apps/figma.avif",
+  },
+  {
+    title: "Fillout",
+    description: "Form building",
+    image: "/images/about/apps/fillout.png",
   },
   {
     title: "Word",
@@ -92,6 +142,21 @@ const apps = [
     image: "/images/about/apps/powerpoint.avif",
   },
   {
+    title: "Google Docs",
+    description: "Text documents",
+    image: "/images/about/apps/google-docs.png",
+  },
+  {
+    title: "Google Sheets",
+    description: "Spreadsheets",
+    image: "/images/about/apps/google-sheets.png",
+  },
+  {
+    title: "Google Slides",
+    description: "Presentations",
+    image: "/images/about/apps/google-slides.png",
+  },
+  {
     title: "Final Cut Pro",
     description: "Video editing",
     image: "/images/about/apps/final-cut-pro.avif",
@@ -105,6 +170,11 @@ const apps = [
     title: "Photoshop",
     description: "Image editing",
     image: "/images/about/apps/photoshop.png",
+  },
+  {
+    title: "Canva",
+    description: "Design",
+    image: "/images/about/apps/canva.jpeg",
   },
   {
     title: "iStat Menus",
@@ -125,6 +195,16 @@ const apps = [
     title: "OBS",
     description: "Streaming, Recording",
     image: "/images/about/apps/obs.png",
+  },
+  {
+    title: "Screen Studio",
+    description: "Recording Clips",
+    image: "/images/about/apps/screen-studio.webp",
+  },
+  {
+    title: "Gifski",
+    description: "GIF Creation",
+    image: "/images/about/apps/gifski.png",
   },
   {
     title: "Blender",
