@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { useMotionValue, useTransform, animate, RowValue } from "motion-v"
 
-const birthday = +new Date(2006, 4, 25)
-const age = ~~((Date.now() - birthday) / 31557600000)
+const age = getAge()
 
 const count = useMotionValue(0)
 const rounded = useTransform(count, () => Math.round(count.get()))
