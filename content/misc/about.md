@@ -1,4 +1,5 @@
-**Dino Kupinic** (born May 25, 2006) is an Austrian software engineer known for [tourney](/project/tourney). Based in Steyr, Austria, he currently serves mandatory austrian civilian service from 1st September 2025 to 31st May 2026.
+\_**Dino Kupinic** (born May 25, 2006) is an Austrian software engineer known for [tourney](/project/tourney) :reference-cite{id="1"}.
+Based in Steyr, Austria, he currently serves mandatory austrian civilian service from 1st September 2025 to 31st May 2026 :reference-cite{id="2"}.
 
 ## Early Life and Background
 
@@ -11,11 +12,11 @@ As an only child, Dino spent a lot of time on his computer, teaching himself var
 
 ## Education
 
-Dino Kupinic attended the [HTL Steyr](https://de.wikipedia.org/wiki/HTL_Steyr), graduating in 2025 in _Information Technology and Network technology_.
+Dino Kupinic attended the [HTL Steyr](https://de.wikipedia.org/wiki/HTL_Steyr) :reference-cite{id="3"}, graduating in 2025 in _Information Technology and Network technology_.
 
 During his time at HTL Steyr, he developed a strong foundation in software development, networking, and IT systems. He tutored other students via the "LearNet"
 program in software engineering and was actively involved in various tech-related extracurricular activities,
-including multiple participations at the [Cloudflight Coding Contest](https://www.cloudflight.io/en/the-cloudflight-coding-contest/).
+including multiple participations at the [Cloudflight Coding Contest](https://www.cloudflight.io/en/the-cloudflight-coding-contest/) :reference-cite{id="4"}.
 
 He completed multiple internships during his education, including at [BMD](https://www.bmd.com) and [BitFactory](https://bitfactory.at/), where he gained practical experience in software development.
 A professor offered him a part time job at his company [Micro Epsilon](https://www.micro-epsilon.com/?sLang=en) as a software engineer, which he accepted and worked there for a few months.
@@ -25,7 +26,7 @@ Kupinic actively self studies and is always eager to learn new technologies and 
 He participates in various online communities where he shares his knowledge and learns from others.
 Professionalism and a strong work ethic are important to him, and he is known for his dedication and commitment to his projects.
 
-He is also passionate about open source software and has contributed to several open source projects on GitHub such as [Nuxt](https://nuxt.com), [Vercel](https://vercel.com) and [Rybbit](https://github.com/rybbit-io/rybbit). Reading books such as [Programming
+He is also passionate about open source software and has contributed to several open source projects on GitHub such as [Nuxt](https://nuxt.com), [Vercel](https://vercel.com) and [Rybbit](https://github.com/rybbit-io/rybbit) :reference-cite{id="5"}. Reading books such as [Programming
 Principles and Practice Using C++](https://www.stroustrup.com/programming.html) by Bjarne Stroustrup, [Clean Code](https://www.amazon.de/-/en/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) by Robert C. Martin **(while he is skeptical with his own opinions)**, [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052) by Andy Hunt and Dave Thomas
 has also been instrumental in his development as a software engineer, providing him with valuable insights and best practices for writing clean, efficient, and maintainable code.
 
@@ -44,16 +45,33 @@ He ultimately left the startup due to differences in vision and direction for th
 
 ### Freelancing and Contracting
 
-For his uncle's company, he built a website for a local painting company as a contractor, which is live at [df-malerei.at](/project/df-malerei). The project was a success and helped the company improve their online presence and massively reduce costs.
+For his uncle's company, he built a website for a local painting company as a contractor, which is live at [df-malerei.at](/project/df-malerei) :reference-cite{id="6"}. The project was a success and helped the company improve their online presence and massively reduce costs.
 
 ### Mandatory Civilian Service
 
-He is currently in civilian service from 1st September 2025 to 31st May 2026, where he is working at a nursing home.
+He is currently in civilian service from 1st September 2025 to 31st May 2026, where he is working at a nursing home :reference-cite{id="2"}.
 
 ## Personal Life and Interests
 
 ## References
 
-1. [Source 1 — title, publication, date, URL]
-2. [Source 2]
-3. [Source 3 — your own website or portfolio is fine as a primary source]
+::reference-list
+:::reference-item{id="1"}
+https://www.dino-kupinic.dev/project/tourney
+:::
+:::reference-item{id="2"}
+https://www.zivildienst.gv.at
+:::
+:::reference-item{id="3"}
+https://www.meinbezirk.at/steyr-steyr-land/c-wirtschaft/absolventen-und-maturafotos-der-htl-steyr_a7420742
+:::
+:::reference-item{id="4"}
+https://www.cloudflight.io/en/the-cloudflight-coding-contest/
+:::
+:::reference-item{id="5"}
+https://github.com/nuxt/image/pull/2074, https://github.com/rybbit-io/rybbit/issues/180, https://github.com/nuxt/hints/issues/196, https://github.com/vercel/examples/pull/1164
+:::
+:::reference-item{id="6"}
+https://df-malerei.at
+:::
+::
