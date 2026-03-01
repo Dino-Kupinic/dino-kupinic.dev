@@ -24,8 +24,10 @@ const isOpen = ref<boolean>(false)
           </DrawerTrigger>
           <DrawerContent class="px-4">
             <VisuallyHidden>
-              <DrawerTitle />
-              <DialogDescription />
+              <DrawerTitle>Navigation menu</DrawerTitle>
+              <DrawerDescription>
+                Browse site links and theme controls.
+              </DrawerDescription>
             </VisuallyHidden>
             <DrawerHeader>
               <div

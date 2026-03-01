@@ -295,6 +295,7 @@ export default defineNuxtConfig({
       lg: 1024,
       xl: 1280,
       "2xl": 1536,
+      desktop: 1600,
       song: 1200,
       "song-2x": 2400,
     },

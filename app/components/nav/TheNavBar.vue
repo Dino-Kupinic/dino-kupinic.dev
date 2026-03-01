@@ -18,6 +18,7 @@ const navigationItems = ref<NavigationItem[]>([
   {
     title: "About",
     href: "/about",
+    badge: "UPDATE",
   },
   {
     title: "Uses",
