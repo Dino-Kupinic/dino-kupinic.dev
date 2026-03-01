@@ -80,7 +80,7 @@ staff in various tasks.
 
 ## Personal Life and Interests
 
-Dino Kupinic has many interests and hobbies displayed in the table below, which he actively pursues in his free time.
+Dino Kupinic has many interests and hobbies displayed in the table below, which he pursues in his free time.
 
 ::about-hobbies-table
 ::
@@ -94,8 +94,8 @@ startup ecosystem and have more opportunities for networking and collaboration.
 He is an avid gamer with a particular interest in strategy and role-playing genres, including RTS, RPG, MMORPGs, and MOBAs.
 His favorite video games are:
 
-- [League of Legends](https://en.wikipedia.org/wiki/League_of_Legends) (Top 2.5%)
-- [Starcraft II](https://en.wikipedia.org/wiki/StarCraft_II) (Master rank)
+- [League of Legends](https://en.wikipedia.org/wiki/League_of_Legends) (Top 2.5%, Diamond rank)
+- [Starcraft II](https://en.wikipedia.org/wiki/StarCraft_II) (Top 2%, Master rank)
 - [Omori](<https://en.wikipedia.org/wiki/Omori_(video_game)>)
 - [Dark Souls 3](https://en.wikipedia.org/wiki/Dark_Souls_III)
 - [Terraria](https://en.wikipedia.org/wiki/Terraria)
@@ -105,6 +105,8 @@ His favorite video games are:
 
 He currently plays League of Legends competitively, having reached Diamond rank. His main roles are [Support](https://wiki.leagueoflegends.com/en-us/Position#Supports) and [Top](https://wiki.leagueoflegends.com/en-us/Position#Top-laners),
 and his main champions are [Janna](https://www.leagueoflegends.com/en-us/champions/janna/) and [Kayle](https://www.leagueoflegends.com/en-us/champions/kayle/).
+
+He retired from Starcraft II but used to play [Terran](https://starcraft.fandom.com/wiki/Terran) as his main race.
 
 ## References
 
