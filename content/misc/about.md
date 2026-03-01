@@ -105,27 +105,15 @@ the lives of others while also developing valuable skills such as empathy, commu
 
 Dino Kupinic has many interests and hobbies displayed in the table below, which he actively pursues in his free time.
 
-| Interest        | Status  | Current Focus                                                                                |
-| --------------- | ------- | -------------------------------------------------------------------------------------------- |
-| Programming     | Active  | `[[Redacted]]`                                                                               |
-| Gaming          | Active  | reaching Master in League of Legends                                                         |
-| Anime & Manga   | Paused  |                                                                                              |
-| TV & Movies     | Paused  |                                                                                              |
-| Music           | Active  | Exploring new genres and artists, thinking about learning an instrument (piano)              |
-| Books           | Active  | Reading non-fiction technical books                                                          |
-| Fitness         | Active  | Bulking and building muscle                                                                  |
-| Photography     | Active  | Enviroment photos, editorial photos and portraits                                            |
-| Video Editing   | Active  | Short form videos, small movies                                                              |
-| Makeup          | Active  | Nude makeup ("you but better")                                                               |
-| Fashion         | Active  | Rebuilding my whole wardrobe                                                                 |
-| Perfumes        | Active  | With my signature scent, trying to find scents for different occasions, testing new perfumes |
-| Digital Drawing | Paused  |                                                                                              |
-| Cooking         | Planned |                                                                                              |
+::about-hobbies-table
 
-Kupinic is also passionate about personal growth and self-improvement, and is always looking for new ways to challenge himself and expand his horizons. He values meaningful connections and relationships, and enjoys spending time with friends.
+Kupinic is also passionate about personal growth and self-improvement, and is always looking for new ways to challenge
+himself and expand his horizons. He values meaningful connections and relationships, and enjoys spending time with
+friends.
 He is currently single and looks forward to exploring romantic relationships in the future when the time is right.
 
-In 2026 he is moving to [Vienna, Austria](https://en.wikipedia.org/wiki/Vienna) to be closer to the austrian tech and startup ecosystem and have more opportunities for networking and collaboration.
+In 2026 he is moving to [Vienna, Austria](https://en.wikipedia.org/wiki/Vienna) to be closer to the austrian tech and
+startup ecosystem and have more opportunities for networking and collaboration.
 
 ## References
 
