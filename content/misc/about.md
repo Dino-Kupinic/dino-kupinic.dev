@@ -1,5 +1,5 @@
-**Dino Kupinic** (born May 25, 2006) is an Austrian software engineer known for [tourney](/project/tourney) :
-reference-cite{id="1"}.
+**Dino Kupinic** (born May 25, 2006) is an Austrian software engineer known for [tourney](/project/tourney)
+:reference-cite{id="1"}.
 Based in Steyr, Austria, he currently serves mandatory austrian civilian service from 1st September 2025 to 31st May
 2026 :reference-cite{id="2"}.
 
@@ -106,14 +106,22 @@ the lives of others while also developing valuable skills such as empathy, commu
 Dino Kupinic has many interests and hobbies displayed in the table below, which he actively pursues in his free time.
 
 ::about-hobbies-table
+::
 
 Kupinic is also passionate about personal growth and self-improvement, and is always looking for new ways to challenge
 himself and expand his horizons. He values meaningful connections and relationships, and enjoys spending time with
 friends.
+
 He is currently single and looks forward to exploring romantic relationships in the future when the time is right.
 
 In 2026 he is moving to [Vienna, Austria](https://en.wikipedia.org/wiki/Vienna) to be closer to the austrian tech and
 startup ecosystem and have more opportunities for networking and collaboration.
+
+He is also interested in traveling and exploring new cultures, and hopes to have the opportunity to do so more in the
+future.
+
+Personality wise, Dino is known for being ambitious, driven, and highly motivated. Though he is also humble and down to earth, and values authenticity and honesty in his interactions with others.
+He is also described as more introverted and reserved, but is open to meeting new people and forming meaningful connections.
 
 ## References
 

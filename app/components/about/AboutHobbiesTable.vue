@@ -96,7 +96,10 @@ const statusClassMap: Record<HobbyStatus, string> = {
           </TableCell>
 
           <TableCell class="px-4 py-2">
-            <Badge variant="outline" :class="statusClassMap[hobby.status]">
+            <Badge
+              variant="outline"
+              :class="`w-20 justify-center ${statusClassMap[hobby.status]}`"
+            >
               {{ hobby.status }}
             </Badge>
           </TableCell>
