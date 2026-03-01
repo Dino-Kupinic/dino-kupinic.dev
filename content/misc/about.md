@@ -99,8 +99,8 @@ His favorite video games are:
 - [Omori](<https://en.wikipedia.org/wiki/Omori_(video_game)>)
 - [Dark Souls 3](https://en.wikipedia.org/wiki/Dark_Souls_III)
 - [Terraria](https://en.wikipedia.org/wiki/Terraria)
+- [Factorio](https://en.wikipedia.org/wiki/Factorio)
 - [Metal Gear Rising: Revengeance](https://en.wikipedia.org/wiki/Metal_Gear_Rising:_Revengeance)
-- [Dead by Daylight](https://en.wikipedia.org/wiki/Dead_by_Daylight)
 - [Warframe](https://en.wikipedia.org/wiki/Warframe)
 
 He currently plays League of Legends competitively, having reached Diamond rank. His main roles are [Support](https://wiki.leagueoflegends.com/en-us/Position#Supports) and [Top](https://wiki.leagueoflegends.com/en-us/Position#Top-laners),
