@@ -8,11 +8,15 @@ type HobbyRow = {
 }
 
 const hobbies: HobbyRow[] = [
-  { interest: "Programming", status: "Active", focus: "[[Redacted]]" },
+  {
+    interest: "Programming",
+    status: "Active",
+    focus: "LLMs, Cloud, Observability",
+  },
   {
     interest: "Gaming",
     status: "Active",
-    focus: "Reaching Master in League of Legends",
+    focus: "Reaching Master (Top <1%) in League of Legends",
   },
   { interest: "Anime & Manga", status: "Paused" },
   { interest: "TV & Movies", status: "Paused" },
@@ -29,7 +33,7 @@ const hobbies: HobbyRow[] = [
   {
     interest: "Fitness",
     status: "Active",
-    focus: "Bulking and building muscle",
+    focus: "Strength training and muscle building",
   },
   {
     interest: "Photography",
@@ -44,7 +48,7 @@ const hobbies: HobbyRow[] = [
   {
     interest: "Makeup",
     status: "Active",
-    focus: 'Nude makeup ("you but better")',
+    focus: "Nude makeup",
   },
   {
     interest: "Fashion",

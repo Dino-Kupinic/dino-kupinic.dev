@@ -91,7 +91,20 @@ friends.
 In 2026 he is moving to [Vienna, Austria](https://en.wikipedia.org/wiki/Vienna) to be closer to the Austrian tech and
 startup ecosystem and have more opportunities for networking and collaboration.
 
-He is also interested in traveling and exploring new cultures.
+He is an avid gamer with a particular interest in strategy and role-playing genres, including RTS, RPG, MMORPGs, and MOBAs.
+His favorite video games are:
+
+- [League of Legends](https://en.wikipedia.org/wiki/League_of_Legends) (Top 2.5%)
+- [Starcraft II](https://en.wikipedia.org/wiki/StarCraft_II) (Master rank)
+- [Omori](<https://en.wikipedia.org/wiki/Omori_(video_game)>)
+- [Dark Souls 3](https://en.wikipedia.org/wiki/Dark_Souls_III)
+- [Terraria](https://en.wikipedia.org/wiki/Terraria)
+- [Metal Gear Rising: Revengeance](https://en.wikipedia.org/wiki/Metal_Gear_Rising:_Revengeance)
+- [Dead by Daylight](https://en.wikipedia.org/wiki/Dead_by_Daylight)
+- [Warframe](https://en.wikipedia.org/wiki/Warframe)
+
+He currently plays League of Legends competitively, having reached Diamond rank. His main roles are [Support](https://wiki.leagueoflegends.com/en-us/Position#Supports) and [Top](https://wiki.leagueoflegends.com/en-us/Position#Top-laners),
+and his main champions are [Janna](https://www.leagueoflegends.com/en-us/champions/janna/) and [Kayle](https://www.leagueoflegends.com/en-us/champions/kayle/).
 
 ## References
 
