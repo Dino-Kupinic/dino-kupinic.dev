@@ -65,7 +65,7 @@
     "resend": "^6.7.0",
     "shadcn-nuxt": "2.4.3",
     "sonda": "^0.10.1",
-    "tailwind-merge": "^3.4.0",
+    "tailwind-merge": "^3.5.0",
     "vaul-vue": "^0.4.1",
     "vue": "^3.5.26",
     "vue-router": "^5.0.3",
