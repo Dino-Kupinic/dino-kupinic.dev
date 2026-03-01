@@ -14,7 +14,12 @@ defineProps<{
         <CardDescription>{{ description }}</CardDescription>
       </CardHeader>
       <div class="flex h-40 w-full items-center justify-center">
-        <NuxtImg :src="image" class="max-h-full max-w-full object-contain" />
+        <NuxtImg
+          :src="image"
+          :width="160"
+          :height="160"
+          class="max-h-full max-w-full object-contain"
+        />
       </div>
     </div>
   </Card>

@@ -1,6 +1,7 @@
 import { defineContentConfig, defineCollection } from "@nuxt/content"
 import { blogFrontmatterSchema } from "./app/schemas/blogSchema"
 import { projectFrontmatterSchema } from "./app/schemas/projectSchema"
+import { z } from "zod"
 
 export default defineContentConfig({
   collections: {
@@ -24,6 +25,9 @@ export default defineContentConfig({
     misc: defineCollection({
       type: "page",
       source: "misc/*.md",
+      schema: z.object({
+        rawbody: z.string(),
+      }),
     }),
   },
 })

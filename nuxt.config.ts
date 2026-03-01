@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     identity: {
       type: "Person",
       name: "Dino Kupinic",
-      image: "/images/dino_kupinic.png",
+      image: "/images/dino-kupinic.jpg",
       sameAs: [
         "https://x.com/DinoKupinic",
         "https://github.com/Dino-Kupinic",
@@ -274,6 +274,7 @@ export default defineNuxtConfig({
         "simple-icons:vuedotjs",
         "simple-icons:x",
         "simple-icons:youtube",
+        "simple-icons:markdown",
         "solar:arrow-right-up-linear",
         "ant-design:java-outlined",
       ],
@@ -284,6 +285,11 @@ export default defineNuxtConfig({
   image: {
     provider: "vercel",
     screens: {
+      "img-item": 160,
+      "img-item-2x": 320,
+      "img-cover": 512,
+      "book-w": 800,
+      "book-h": 1200,
       sm: 640,
       md: 768,
       lg: 1024,
