@@ -14,6 +14,11 @@ type SidebarAiLink = {
   to: string
 }
 
+type BookRecommendation = {
+  image?: string
+  title: string
+}
+
 const route = useRoute()
 const { siteUrl } = useSiteRuntimeConfig()
 
@@ -50,6 +55,28 @@ const { copy, copied, isSupported } = useClipboard({
   legacy: true,
 })
 
+const bookRecommendations: BookRecommendation[] = [
+  {
+    title: "Zero to One",
+    image: "/images/books/zero-to-one.webp",
+  },
+  {
+    title: "The Pragmatic Programmer",
+    image: "/images/books/pragmatic-prog.jpg",
+  },
+  {
+    title: "The Hard Thing About Hard Things",
+    image: "/images/books/hard-things.jpg",
+  },
+  {
+    title: "The Almanack of Naval Ravikant",
+    image: "/images/books/almanack.jpg",
+  },
+  {
+    title: "Designing Data-Intensive Applications",
+  },
+]
+
 const scrollToHeading = (event: MouseEvent, id: string) => {
   const target = document.getElementById(id)
   if (!target) return
@@ -61,6 +88,24 @@ const scrollToHeading = (event: MouseEvent, id: string) => {
     behavior: "smooth",
     block: "center",
   })
+}
+
+const getAge = () => {
+  const today = new Date()
+  const birthYear = 2006
+  const birthMonth = 4
+  const birthDay = 25
+
+  let age = today.getUTCFullYear() - birthYear
+  const hasHadBirthday =
+    today.getUTCMonth() > birthMonth ||
+    (today.getUTCMonth() === birthMonth && today.getUTCDate() >= birthDay)
+
+  if (!hasHadBirthday) {
+    age -= 1
+  }
+
+  return age
 }
 
 async function copyMarkdown() {
@@ -93,7 +138,7 @@ async function copyMarkdown() {
 </script>
 
 <template>
-  <ContentLayoutWrapper content-class="!py-0">
+  <ContentLayoutWrapper content-class="!py-0 mb-16 sm:mb-64">
     <section class="border-border mt-8 border-b pb-6 sm:mt-16 sm:pb-8">
       <p
         class="text-muted-foreground font-mono text-sm font-medium tracking-tight uppercase"
@@ -167,6 +212,47 @@ async function copyMarkdown() {
           </section>
 
           <ContentRenderer :value="page" />
+
+          <section class="mt-8 border-t pt-6">
+            <h2 class="font-heading text-foreground text-2xl font-semibold">
+              Book Recommendations
+            </h2>
+            <p class="text-muted-foreground mt-2 text-sm leading-6">
+              I recommend these books to anyone interested in software
+              engineering, startups, or personal growth.
+            </p>
+
+            <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <article
+                v-for="book in bookRecommendations"
+                :key="book.title"
+                class="bg-card overflow-hidden rounded-lg border"
+              >
+                <div class="border-b p-3">
+                  <NuxtImg
+                    v-if="book.image"
+                    :src="book.image"
+                    :alt="book.title"
+                    class="aspect-3/4 w-full rounded-md object-cover"
+                    width="800"
+                    height="1200"
+                  />
+                  <div
+                    v-else
+                    class="bg-muted text-muted-foreground flex aspect-3/4 w-full items-center justify-center rounded-md border border-dashed text-xs font-medium uppercase"
+                  >
+                    Book cover
+                  </div>
+                </div>
+
+                <div class="p-3">
+                  <p class="text-foreground text-sm font-medium">
+                    {{ book.title }}
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       </article>
 
@@ -254,7 +340,9 @@ async function copyMarkdown() {
 
                 <div class="grid grid-cols-[88px_1fr] gap-3 border-t py-2">
                   <dt class="text-muted-foreground font-medium">Occupation</dt>
-                  <dd class="text-foreground leading-6">Software Engineer</dd>
+                  <dd class="text-foreground leading-6">
+                    Software Engineer, Founder
+                  </dd>
                 </div>
 
                 <div class="grid grid-cols-[88px_1fr] gap-3 border-t py-2">

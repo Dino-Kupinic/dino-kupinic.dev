@@ -288,6 +288,8 @@ export default defineNuxtConfig({
       "img-item": 160,
       "img-item-2x": 320,
       "img-cover": 512,
+      "book-w": 800,
+      "book-h": 1200,
       sm: 640,
       md: 768,
       lg: 1024,
