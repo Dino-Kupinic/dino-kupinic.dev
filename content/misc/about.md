@@ -60,6 +60,10 @@ founder in [Vienna, Austria](https://en.wikipedia.org/wiki/Vienna). His cofounde
 focused, while Dino was responsible for the technical side of the product.
 He ultimately left the startup due to differences in vision and direction for the product and company.
 
+[//]: # "#### Sniptide"
+[//]: #
+[//]: # 'In May 2025, a landing page for a product called "Sniptide" ([sniptide.com](https://sniptide.com)) was launched.'
+
 ### Freelancing and Personal Brand
 
 For his uncle's company, he built a website for a local painting company as a contractor, which is live at [`df-malerei.at`](/project/df-malerei) :reference-cite{id="6"}. The project was a success and helped the company improve
