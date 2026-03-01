@@ -74,6 +74,7 @@ const bookRecommendations: BookRecommendation[] = [
   },
   {
     title: "Designing Data-Intensive Applications",
+    image: "/images/books/ddia.jpeg",
   },
 ]
 
@@ -90,23 +91,7 @@ const scrollToHeading = (event: MouseEvent, id: string) => {
   })
 }
 
-const getAge = () => {
-  const today = new Date()
-  const birthYear = 2006
-  const birthMonth = 4
-  const birthDay = 25
-
-  let age = today.getUTCFullYear() - birthYear
-  const hasHadBirthday =
-    today.getUTCMonth() > birthMonth ||
-    (today.getUTCMonth() === birthMonth && today.getUTCDate() >= birthDay)
-
-  if (!hasHadBirthday) {
-    age -= 1
-  }
-
-  return age
-}
+const age = getAge()
 
 async function copyMarkdown() {
   if (!isSupported.value) {
@@ -169,7 +154,7 @@ async function copyMarkdown() {
           class="text-muted-foreground dark:bg-background flex flex-wrap items-center gap-2 border-b px-4 py-3 text-sm sm:px-5"
         >
           <span
-            class="rounded-sm border border-green-200 bg-green-50 px-2 py-1 font-medium text-green-700 dark:border-green-900/80 dark:bg-green-950/60 dark:text-green-300"
+            class="rounded-lg bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 dark:bg-green-900 dark:text-green-100"
           >
             Biography
           </span>
@@ -321,7 +306,7 @@ async function copyMarkdown() {
                   <dt class="text-muted-foreground font-medium">Born</dt>
                   <dd class="text-foreground leading-6">
                     <span class="block">Dino Kupinic</span>
-                    <span class="block">May 25, 2006 (age {{ getAge() }})</span>
+                    <span class="block">May 25, 2006 (age {{ age }})</span>
                     <span class="block">
                       <NuxtLink
                         to="https://en.wikipedia.org/wiki/Steyr"

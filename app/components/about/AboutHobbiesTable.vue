@@ -62,15 +62,13 @@ const hobbies: HobbyRow[] = [
   },
   { interest: "Digital Drawing", status: "Paused" },
   { interest: "Cooking", status: "Planned" },
+  { interest: "Interior Design", status: "Planned" },
 ]
 
 const statusClassMap: Record<HobbyStatus, string> = {
-  Active:
-    "border-green-200 bg-green-50 text-green-700 rounded-lg dark:border-green-900/80 dark:bg-green-950/50 dark:text-green-300",
-  Paused:
-    "border-amber-200 bg-amber-50 text-amber-700 rounded-lg dark:border-amber-900/80 dark:bg-amber-950/50 dark:text-amber-300",
-  Planned:
-    "border-blue-200 bg-blue-50 text-blue-700 rounded-lg dark:border-blue-900/80 dark:bg-blue-950/50 dark:text-blue-300",
+  Active: "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100",
+  Paused: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100",
+  Planned: "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-100",
 }
 </script>
 
@@ -100,12 +98,14 @@ const statusClassMap: Record<HobbyStatus, string> = {
           </TableCell>
 
           <TableCell class="px-4 py-2">
-            <Badge
-              variant="outline"
-              :class="`w-20 justify-center ${statusClassMap[hobby.status]}`"
+            <span
+              :class="[
+                'inline-flex w-20 items-center justify-center rounded-lg px-3 py-1 text-xs font-semibold',
+                statusClassMap[hobby.status],
+              ]"
             >
               {{ hobby.status }}
-            </Badge>
+            </span>
           </TableCell>
 
           <TableCell class="text-muted-foreground px-4 py-2">
