@@ -6,8 +6,7 @@ Based in Steyr, Austria, he currently serves mandatory Austrian civilian service
 ## Early Life and Background
 
 Dino Kupinic was born on May 25, 2006 in [Steyr, Austria](https://en.wikipedia.org/wiki/Steyr). He grew up
-in [Enns](<https://en.wikipedia.org/wiki/Enns_(town)>) until 9 years old when his mother moved back with him to Steyr
-due to divorce.
+in [Enns](<https://en.wikipedia.org/wiki/Enns_(town)>) until 9 years old when his mother moved back with him to Steyr.
 In both elementary and middle school, he attended after-school care, where he spent time drawing, helping classmates with their homework, and studying alongside peers.
 His mother bought him a laptop when he was 8 years old, which sparked his interest in technology and programming.
 
