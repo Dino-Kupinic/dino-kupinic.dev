@@ -5,7 +5,6 @@ const navigationItems = ref<NavigationItem[]>([
   {
     title: "Shop",
     href: "/shop",
-    badge: "NEW",
   },
   {
     title: "Projects",
@@ -18,7 +17,6 @@ const navigationItems = ref<NavigationItem[]>([
   {
     title: "About",
     href: "/about",
-    badge: "UPDATE",
   },
   {
     title: "Uses",

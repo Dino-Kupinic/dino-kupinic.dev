@@ -242,36 +242,36 @@ async function copyMarkdown() {
       </article>
 
       <aside class="order-1 lg:order-2">
-        <div class="space-y-4 lg:sticky lg:top-24">
-          <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-2 gap-2">
+          <Button
+            variant="outline"
+            class="col-span-2 w-full justify-center gap-2"
+            @click="copyMarkdown"
+          >
+            <Icon name="i-simple-icons-markdown" size="20" />
+            <span>Copy markdown</span>
+          </Button>
+
+          <NuxtLink
+            v-for="link in sidebarAiLinks"
+            :key="link.text"
+            :to="link.to"
+            class="block min-w-0"
+            external
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button
               variant="outline"
-              class="col-span-2 w-full justify-center gap-2"
-              @click="copyMarkdown"
+              class="w-full min-w-0 justify-center gap-1.5 px-2"
             >
-              <Icon name="i-simple-icons-markdown" size="20" />
-              <span>Copy markdown</span>
+              <Icon :name="link.icon" size="20" />
+              <span class="truncate text-xs sm:text-sm">{{ link.text }}</span>
+              <Icon name="i-solar-arrow-right-up-linear" size="14" />
             </Button>
-
-            <NuxtLink
-              v-for="link in sidebarAiLinks"
-              :key="link.text"
-              :to="link.to"
-              class="block min-w-0"
-              external
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button
-                variant="outline"
-                class="w-full min-w-0 justify-center gap-1.5 px-2"
-              >
-                <Icon :name="link.icon" size="20" />
-                <span class="truncate text-xs sm:text-sm">{{ link.text }}</span>
-                <Icon name="i-solar-arrow-right-up-linear" size="14" />
-              </Button>
-            </NuxtLink>
-          </div>
+          </NuxtLink>
+        </div>
+        <div class="mt-2 space-y-4 lg:sticky lg:top-20">
           <section class="bg-card overflow-hidden rounded-lg border">
             <div class="dark:bg-background border-b px-4 py-3">
               <p
