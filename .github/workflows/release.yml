@@ -17,15 +17,13 @@ jobs:
 
     steps:
       - name: checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           fetch-tags: true
 
       - name: set up node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22.14.0"
+        uses: actions/setup-node@v6
 
       - name: set up bun
         uses: oven-sh/setup-bun@v1
