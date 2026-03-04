@@ -37,7 +37,7 @@ const devices = [
         :title="laptop.title"
         :description="laptop.description"
         :image="laptop.image"
-        class="basis-3/5"
+        class="basis-4/7"
       />
       <div class="grid grid-cols-2 gap-4">
         <UsesItem

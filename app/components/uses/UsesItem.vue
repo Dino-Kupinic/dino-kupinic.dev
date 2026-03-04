@@ -7,7 +7,9 @@ defineProps<{
 </script>
 
 <template>
-  <Card class="hover:bg-accent p-0">
+  <Card
+    class="hover:bg-accent bg-neutral-50 bg-linear-180 to-neutral-100 p-0 dark:bg-neutral-900 dark:to-neutral-950"
+  >
     <div class="flex h-full flex-col justify-between gap-3 p-5">
       <CardHeader class="p-0">
         <CardTitle class="text-xl tracking-tighter">{{ title }}</CardTitle>

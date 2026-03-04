@@ -10,7 +10,7 @@ defineProps<{
   <Card class="p-0">
     <div class="flex h-full flex-col gap-3 p-5">
       <CardHeader class="p-0">
-        <CardTitle class="tracking-tighter">{{ title }}</CardTitle>
+        <CardTitle class="text-xl tracking-tighter">{{ title }}</CardTitle>
         <CardDescription>{{ description }}</CardDescription>
       </CardHeader>
       <div
