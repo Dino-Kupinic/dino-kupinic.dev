@@ -18,7 +18,7 @@ const hasProducts = computed(
       <ProductCatalog v-if="hasProducts" :products="data" />
       <section v-else>
         <div
-          class="border-border/80 bg-card/80 relative isolate overflow-hidden rounded-lg border p-6 shadow-xl sm:p-10"
+          class="border-border/80 bg-card/80 relative isolate overflow-hidden rounded-lg border p-6 sm:p-10"
         >
           <div
             class="relative mx-auto flex min-h-72 max-w-2xl flex-col items-center justify-center gap-5 text-center"
