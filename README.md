@@ -6,7 +6,7 @@ This site serves as a platform to showcase my projects, share my thoughts throug
 
 ![Video of the website](.github/website.gif)
 
-Version `1.2.0` in the video
+Version `1.19.0`
 
 ## 😄 Author
 
