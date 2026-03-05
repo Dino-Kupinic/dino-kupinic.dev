@@ -1,5 +1,5 @@
 ---
-title: "Peekaboo"
+title: "Logscope"
 description: "Easily analyze and view NGINX logs in real-time"
 icons:
   - "i-simple-icons-react"
