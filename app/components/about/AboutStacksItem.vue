@@ -10,7 +10,7 @@ const languages: StackItem[] = [
   { tooltip: "TypeScript", icon: "i-simple-icons-typescript" },
   { tooltip: "JavaScript", icon: "i-simple-icons-javascript" },
   { tooltip: "C++", icon: "i-simple-icons-cplusplus" },
-  { tooltip: "Java", icon: "i-simple-icons-openjdk" },
+  { tooltip: "Java", icon: "i-ant-design-java-outlined" },
   { tooltip: "PHP", icon: "i-simple-icons-php" },
   { tooltip: "Python", icon: "i-simple-icons-python" },
   { tooltip: "Swift", icon: "i-simple-icons-swift" },
@@ -27,6 +27,7 @@ const frameworks: StackItem[] = [
   { tooltip: "Spring Boot", icon: "i-simple-icons-spring" },
   { tooltip: "Symfony", icon: "i-simple-icons-symfony" },
   { tooltip: "Express", icon: "i-simple-icons-express" },
+  { tooltip: "Astro", icon: "i-simple-icons-astro" },
   { tooltip: "Bun", icon: "i-simple-icons-bun" },
 ]
 
@@ -37,8 +38,10 @@ const libraries: StackItem[] = [
   { tooltip: "Tailwind", icon: "i-simple-icons-tailwindcss" },
   { tooltip: "Drizzle", icon: "i-simple-icons-drizzle" },
   { tooltip: "Prisma", icon: "i-simple-icons-prisma" },
+  { tooltip: "Vercel", icon: "i-simple-icons-vercel" },
   { tooltip: "Supabase", icon: "i-simple-icons-supabase" },
   { tooltip: "FastAPI", icon: "i-simple-icons-fastapi" },
+  { tooltip: "Ollama", icon: "i-simple-icons-ollama" },
 ]
 
 const databases: StackItem[] = [
@@ -51,6 +54,14 @@ const etc: StackItem[] = [
   { tooltip: "Docker", icon: "i-simple-icons-docker" },
   { tooltip: "Git", icon: "i-simple-icons-git" },
   { tooltip: "Figma", icon: "i-ph-figma-logo" },
+  { tooltip: "n8n", icon: "i-simple-icons-n8n" },
+  { tooltip: "Coolify", icon: "i-simple-icons-coolify" },
+  { tooltip: "AWS", icon: "i-simple-icons-amazonwebservices" },
+  { tooltip: "Cloudflare", icon: "i-simple-icons-cloudflare" },
+  {
+    tooltip: "Google Search Console",
+    icon: "i-simple-icons-googlesearchconsole",
+  },
 ]
 
 const mix: StackItem[] = [...frameworks, ...libraries, ...databases, ...etc]

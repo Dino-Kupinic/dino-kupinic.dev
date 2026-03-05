@@ -95,6 +95,19 @@ export default defineNuxtConfig({
     "/feed.atom": { prerender: true },
     "/feed.json": { prerender: true },
     "/api/**": { cors: true },
+    // redirects
+    "/project/peekaboo/": {
+      redirect: {
+        to: "/project/logscope",
+        statusCode: 301,
+      },
+    },
+    "/de-DE/**": {
+      redirect: {
+        to: "/",
+        statusCode: 301,
+      },
+    },
   },
 
   // Remove the cookies page since we don't use it right now
@@ -251,7 +264,6 @@ export default defineNuxtConfig({
         "simple-icons:numpy",
         "simple-icons:nuxtdotjs",
         "simple-icons:openai",
-        "simple-icons:openjdk",
         "simple-icons:php",
         "simple-icons:pm2",
         "simple-icons:postgresql",
@@ -272,6 +284,14 @@ export default defineNuxtConfig({
         "simple-icons:vite",
         "simple-icons:vitest",
         "simple-icons:vuedotjs",
+        "simple-icons:n8n",
+        "simple-icons:cloudflare",
+        "simple-icons:amazonwebservices",
+        "simple-icons:googlesearchconsole",
+        "simple-icons:ollama",
+        "simple-icons:vercel",
+        "simple-icons:coolify",
+        "simple-icons:astro",
         "simple-icons:x",
         "simple-icons:youtube",
         "simple-icons:markdown",
