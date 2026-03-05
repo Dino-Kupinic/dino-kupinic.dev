@@ -27,7 +27,9 @@ DigiBon is a mobile app prototype for digitizing receipts, developed as part of 
 
 ### Video demo
 
-<video src="/images/project/digibon.mp4" controls></video>
+:::ProseVideo{src="/images/project/digibon.mp4"}
+Video preview is unavailable in this browser.
+:::
 
 ### Features
 

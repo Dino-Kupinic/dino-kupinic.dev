@@ -61,17 +61,21 @@ const refinedPoster = computed(() => {
 </script>
 
 <template>
-  <video
-    :src="refinedSrc"
-    :controls="controls"
-    :autoplay="autoplay"
-    :muted="muted"
-    :loop="loop"
-    :playsinline="playsinline"
-    :poster="refinedPoster || undefined"
-    :preload="preload"
-    class="my-6 w-full rounded-xl border"
+  <figure
+    class="bg-accent my-6 overflow-hidden rounded-xl border border-neutral-200/70 dark:border-neutral-800/80"
   >
-    <slot />
-  </video>
+    <video
+      :src="refinedSrc"
+      :controls="controls"
+      :autoplay="autoplay"
+      :muted="muted"
+      :loop="loop"
+      :playsinline="playsinline"
+      :poster="refinedPoster || undefined"
+      :preload="preload"
+      class="block w-full"
+    >
+      <slot />
+    </video>
+  </figure>
 </template>
