@@ -29,3 +29,14 @@ as well as rich internet applications (RIAs) that can run across a wide variety 
 
 The backend is built with Spring, a popular Java framework for building enterprise applications.
 Though in this case, it's used for CRUD operations on the MySQL database instead of a fully fledged REST-API.
+
+### Features
+
+- Inventory management for books and DVDs
+- Borrower management
+- Prize calculation for late returns
+- CRUD operations for customers, resources, categories and types
+
+### Development
+
+This project was a school project, where we had to implement a library management system with a JavaFX frontend and a Spring backend.

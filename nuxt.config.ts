@@ -95,6 +95,35 @@ export default defineNuxtConfig({
     "/feed.atom": { prerender: true },
     "/feed.json": { prerender: true },
     "/api/**": { cors: true },
+    // redirects
+    "/project/peekaboo/": {
+      redirect: {
+        to: "/project/logscope",
+        statusCode: 301,
+      },
+    },
+    "/project/aibackend": {
+      redirect: {
+        to: "/project/blackrose",
+        statusCode: 301,
+      },
+    },
+    "/de-DE/**": {
+      redirect: {
+        to: "/",
+        statusCode: 301,
+      },
+    },
+    "/yuzzuwo": {
+      redirect: {
+        to: "/",
+        statusCode: 301,
+      },
+    },
+  },
+
+  sitemap: {
+    zeroRuntime: true,
   },
 
   // Remove the cookies page since we don't use it right now
@@ -243,6 +272,7 @@ export default defineNuxtConfig({
         "simple-icons:javascript",
         "simple-icons:linkedin",
         "simple-icons:markdown",
+        "simple-icons:rss",
         "simple-icons:meta",
         "simple-icons:mysql",
         "simple-icons:nextdotjs",
@@ -251,7 +281,6 @@ export default defineNuxtConfig({
         "simple-icons:numpy",
         "simple-icons:nuxtdotjs",
         "simple-icons:openai",
-        "simple-icons:openjdk",
         "simple-icons:php",
         "simple-icons:pm2",
         "simple-icons:postgresql",
@@ -272,6 +301,14 @@ export default defineNuxtConfig({
         "simple-icons:vite",
         "simple-icons:vitest",
         "simple-icons:vuedotjs",
+        "simple-icons:n8n",
+        "simple-icons:cloudflare",
+        "simple-icons:amazonwebservices",
+        "simple-icons:googlesearchconsole",
+        "simple-icons:ollama",
+        "simple-icons:vercel",
+        "simple-icons:coolify",
+        "simple-icons:astro",
         "simple-icons:x",
         "simple-icons:youtube",
         "simple-icons:markdown",
@@ -304,10 +341,6 @@ export default defineNuxtConfig({
   sourcemap: {
     client: isDev && !isFastDev,
     server: isDev && !isFastDev,
-  },
-
-  sitemap: {
-    zeroRuntime: true,
   },
 
   llms: {

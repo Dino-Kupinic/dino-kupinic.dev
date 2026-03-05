@@ -64,7 +64,7 @@ He ultimately left the startup due to differences in vision and direction for th
 For his uncle's company, he built a website for a local painting company as a contractor, which is live at [`df-malerei.at`](/project/df-malerei) :reference-cite{id="6"}. The project was a success and helped the company improve
 their online presence and massively reduce costs.
 
-His personal site [`dino-kupinic.dev`](https://www.dino-kupinic.dev) serves as a portfolio for his projects and a
+His personal site [`dino-kupinic.dev`](/) serves as a portfolio for his projects and a
 platform to share his thoughts and insights on software engineering and technology. He regularly updates his blog with
 articles on various topics related to software development, entrepreneurship, and personal growth.
 In February 2026 he additionally acquired the domain [`dinokupinic.com`](https://dinokupinic.com) :reference-cite{id="

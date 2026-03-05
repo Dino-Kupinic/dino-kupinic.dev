@@ -6,7 +6,7 @@ const props = defineProps<{
 }>()
 
 const plugin = Autoscroll({
-  speed: 0.5,
+  speed: 0.75,
   direction: props.direction,
   startDelay: 200,
   stopOnMouseEnter: true,
