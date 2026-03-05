@@ -102,7 +102,19 @@ export default defineNuxtConfig({
         statusCode: 301,
       },
     },
+    "/project/aibackend/": {
+      redirect: {
+        to: "/project/blackrose",
+        statusCode: 301,
+      },
+    },
     "/de-DE/**": {
+      redirect: {
+        to: "/",
+        statusCode: 301,
+      },
+    },
+    "/yuzzuwo": {
       redirect: {
         to: "/",
         statusCode: 301,
@@ -256,6 +268,7 @@ export default defineNuxtConfig({
         "simple-icons:javascript",
         "simple-icons:linkedin",
         "simple-icons:markdown",
+        "simple-icons:rss",
         "simple-icons:meta",
         "simple-icons:mysql",
         "simple-icons:nextdotjs",

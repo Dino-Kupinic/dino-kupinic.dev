@@ -49,3 +49,9 @@ In order for that to work, minor one-time changes have to be made to the LDAP se
   schulbuchaktion makes use of [JWT Tokens](https://jwt.io/) and middleware on both the front- and backend to secure the app. Unauthenticated users do not have permission to access the API aswell.
 - **Extensive Documentation:**
   the documentation features both guides for users and developers. While the app is designed to be simple and intuitive, teachers can still look up on how to use certain features.
+
+### Development
+
+This school project was developed in a team of 5 people, where I lead the overall development and was responsible for coordinating and managing the project.
+
+I also contributed to both the frontend and backend development, as well as writing documentation and tests. The project was developed using an agile methodology, with regular sprints and meetings to ensure that we were on track and that everyone was aware of their tasks and responsibilities.
