@@ -102,7 +102,7 @@ export default defineNuxtConfig({
         statusCode: 301,
       },
     },
-    "/project/aibackend/": {
+    "/project/aibackend": {
       redirect: {
         to: "/project/blackrose",
         statusCode: 301,
@@ -120,6 +120,10 @@ export default defineNuxtConfig({
         statusCode: 301,
       },
     },
+  },
+
+  sitemap: {
+    zeroRuntime: true,
   },
 
   // Remove the cookies page since we don't use it right now
@@ -337,10 +341,6 @@ export default defineNuxtConfig({
   sourcemap: {
     client: isDev && !isFastDev,
     server: isDev && !isFastDev,
-  },
-
-  sitemap: {
-    zeroRuntime: true,
   },
 
   llms: {
