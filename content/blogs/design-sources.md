@@ -1,5 +1,5 @@
 ---
-title: "Top 10 Amazing Sources for Design Inspiration"
+title: "Amazing Sources for Design Inspiration"
 description: "Steal like an artist"
 date: 2025-2-3
 tags:

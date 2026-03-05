@@ -24,6 +24,12 @@ const props = defineProps({
 const isPreviewOpen = ref(false)
 const runtimeConfig = useRuntimeConfig()
 let previousBodyOverflow = ""
+const MIN_ZOOM = 1
+const MAX_ZOOM = 3
+const ZOOM_STEP = 0.25
+const previewScale = ref(MIN_ZOOM)
+const previewViewport = ref<HTMLElement | null>(null)
+const previewTransformOrigin = ref("50% 50%")
 
 const refinedSrc = computed(() => {
   if (props.src?.startsWith("/") && !props.src.startsWith("//")) {
@@ -42,12 +48,64 @@ const downloadFileName = computed(() => {
   return fileName || "image"
 })
 
+const setZoom = (value: number) => {
+  const clampedValue = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, value))
+  previewScale.value = Number(clampedValue.toFixed(2))
+}
+
+const zoomIn = () => {
+  setZoom(previewScale.value + ZOOM_STEP)
+}
+
+const zoomOut = () => {
+  setZoom(previewScale.value - ZOOM_STEP)
+}
+
+const updateTransformOrigin = (event: MouseEvent | WheelEvent) => {
+  const viewport = previewViewport.value
+  if (!viewport) return
+
+  const rect = viewport.getBoundingClientRect()
+  if (!rect.width || !rect.height) return
+
+  const x = ((event.clientX - rect.left) / rect.width) * 100
+  const y = ((event.clientY - rect.top) / rect.height) * 100
+
+  const clampedX = Math.min(100, Math.max(0, x))
+  const clampedY = Math.min(100, Math.max(0, y))
+
+  previewTransformOrigin.value = `${clampedX}% ${clampedY}%`
+}
+
+const onPreviewWheel = (event: WheelEvent) => {
+  updateTransformOrigin(event)
+
+  if (event.deltaY < 0) {
+    zoomIn()
+    return
+  }
+  zoomOut()
+}
+
+const onPreviewDoubleClick = (event: MouseEvent) => {
+  updateTransformOrigin(event)
+  if (previewScale.value === MIN_ZOOM) {
+    setZoom(2)
+    return
+  }
+  setZoom(MIN_ZOOM)
+}
+
 const openPreview = () => {
   if (!refinedSrc.value) return
+  setZoom(MIN_ZOOM)
+  previewTransformOrigin.value = "50% 50%"
   isPreviewOpen.value = true
 }
 
 const closePreview = () => {
+  setZoom(MIN_ZOOM)
+  previewTransformOrigin.value = "50% 50%"
   isPreviewOpen.value = false
 }
 
@@ -94,15 +152,25 @@ onBeforeUnmount(() => {
   <Teleport to="body">
     <div
       v-if="isPreviewOpen"
-      class="fixed inset-0 z-100 bg-black/80 p-4 backdrop-blur-sm sm:p-8"
+      class="fixed inset-0 z-[100] bg-black/80 p-4 backdrop-blur-sm sm:p-8"
       @click.self="closePreview"
     >
       <div class="mx-auto flex h-full max-w-7xl flex-col items-center">
-        <div class="flex min-h-0 flex-1 items-center justify-center">
+        <div
+          ref="previewViewport"
+          class="flex min-h-0 w-full flex-1 items-center justify-center overflow-hidden"
+          @wheel.prevent="onPreviewWheel"
+          @dblclick.prevent="onPreviewDoubleClick"
+        >
           <NuxtImg
             :src="refinedSrc"
             :alt="alt"
-            class="max-h-full max-w-full rounded-xl border border-white/20 object-contain"
+            :draggable="false"
+            class="max-h-full max-w-full rounded-xl border border-white/20 object-contain transition-transform duration-150 ease-out"
+            :style="{
+              transform: `scale(${previewScale})`,
+              transformOrigin: previewTransformOrigin,
+            }"
           />
         </div>
 
