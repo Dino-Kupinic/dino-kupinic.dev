@@ -37,7 +37,7 @@ I've compiled a list of AI tools I even use myself that I think are worth checki
 
 ### App
 
-The interface is simple and intuitive, allowing you to easily input your code and get suggestions. You can also customize the settings to fit your needs.
+The interface is simple and intuitive, which I like (My related post [Software should be beautiful](/blogs/software-should-be-beautiful) goes more into detail). You can also customize the settings to fit your needs.
 
 ![Codex interface](/images/blog/codex_preview_2.png)
 
