@@ -29,27 +29,53 @@ AI tools have become increasingly popular in recent years, and for good reason. 
 
 I've compiled a list of AI tools I even use myself that I think are worth checking out. Whether you're a developer, writer, or just someone looking to boost your productivity, there's something here for you.
 
+## Claude
+
+[Claude](https://claude.ai/) is one of the best LLMs currently. I usually reach for it when I need to turn a rough idea into something structured, whether that's a first draft, a plan, a summary, or a clearer explanation of something complex.
+
+What makes it stand out is that it usually feels measured. Instead of rushing to give you a flashy answer, it tends to do well with long-form writing, research-heavy prompts, and conversations where you want to explore the problem a bit before jumping into a solution.
+
+![Claude](/images/blog/claude_preview.png)
+
+### Claude Code
+
+[Claude Code](https://claude.ai/code) is where Claude becomes genuinely useful for developers. It is not just about generating snippets, it is much better used as a coding partner that can inspect a codebase, explain tradeoffs, help with refactors, and take care of boring but necessary work like tests, docs, and cleanup.
+
+I think it works best when you already know the direction and want a strong second brain. If you give it clear constraints and enough context, it can save a lot of time without pushing you into full-on vibe coding.
+
+![Claude Code](/images/blog/claude_preview_2.png)
+
+### Claude Cowork
+
+[Claude Cowork](https://claude.ai/cowork) is the part that makes Claude mindblowing. Context matters a lot and giving, and Cowork gives you a place where ideas, prompts, outputs, and decisions can live together instead of being scattered across chats and screenshots.
+
+![Claude Cowork](/images/blog/claude_preview_3.png)
+
+### How I use it
+
+Claude is strongest at the beginning of the process. I use it when the idea is still messy and when I need to turn notes into structure, or when I want to pressure-test a concept.
+
 ## Codex
 
 ![Codex](/images/blog/codex_preview.png)
 
-[Codex](https://openai.com/codex/) quickly became one of my favorite tools for coding. I tried "Agentic Engineering" before but wasn't satisfied with the results, but since December 2025, AI Agents truly feel like a game-changer now. I personally use Codex GPT 5.3 High/Very-High (March 2026)
+[Codex](https://openai.com/codex/) quickly became one of my favorite tools for coding because it feels like an actual workflow, not just a chatbot that happens to write code. Earlier waves of "agentic engineering" mostly felt impressive in demos but weak in day-to-day work. Codex is one of the first tools that made the whole idea click for me.
 
 ### App
 
-The interface is simple and intuitive, which I like (My related post [Software should be beautiful](/blogs/software-should-be-beautiful) goes more into detail). You can also customize the settings to fit your needs.
+The app is clean, focused, and pleasant to use, which matters more than people admit. If a tool is going to sit next to your editor every day, the interface cannot feel chaotic. Codex does a good job staying out of the way while still giving you the controls that matter. My related post [Software should be beautiful](/blogs/software-should-be-beautiful) goes deeper into why I care about that.
 
 ![Codex interface](/images/blog/codex_preview_2.png)
 
-The coolest part is probably the `Automations` feature which allows you to create custom workflows and automate repetitive tasks. For example, you can ask Codex to automatically summarize PRs every day.
+The standout feature for me is `Automations`. It turns repetitive work into something you can hand off on a schedule, which is exactly where these tools start becoming genuinely useful. Daily PR summaries, recurring maintenance checks, and routine project chores are a much better use of AI than asking it to pretend to be the lead engineer.
 
 ### Cloud & CLI
 
-Codex also has a cloud version and a CLI tool, which makes it even more versatile. If you prefer the terminal (or come from Claude Code) you can use the CLI to interact with Codex directly from your command line. The cloud version allows you to access Codex from anywhere, like your phone for example.
+The cloud version and the CLI make Codex feel like one system instead of separate toys. If you prefer the terminal, the CLI fits naturally into how you already work. If you want to kick something off while you are away from your desk, the cloud version is there. That flexibility matters a lot once the tool becomes part of your routine.
 
 ### Integrations
 
-MCPs for Figma, Linear, Notion and more are also available, and the list is growing. This makes it easy to integrate Codex into your existing workflows and get the most out of it.
+The integrations are also a big part of the appeal. MCP support for tools like Figma, Linear, and Notion means Codex can work with real project context instead of forcing you to copy paste everything into a prompt. That makes the output more useful and the workflow much less annoying.
 
 ### How I use it
 

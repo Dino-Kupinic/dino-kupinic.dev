@@ -2,10 +2,10 @@
 import type { NavigationItem } from "~/types/nav"
 
 const navigationItems = ref<NavigationItem[]>([
-  {
-    title: "Shop",
-    href: "/shop",
-  },
+  // {
+  //   title: "Shop",
+  //   href: "/shop",
+  // },
   {
     title: "Projects",
     href: "/projects",
