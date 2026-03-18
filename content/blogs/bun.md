@@ -59,4 +59,4 @@ The performance and tooling are genuinely impressive, and it could be a game-cha
 
 ---
 
-> UPDATE (04.03.2025): I'm using bun for all my projects now and I couldn't be happier. It's been a game-changer for my development workflow, and I highly recommend it to anyone looking for a fast, lightweight, and easy-to-use JavaScript runtime.
+> UPDATE (04.03.2026): I'm using bun for all my projects now and I couldn't be happier. It's been a game-changer for my development workflow, and I highly recommend it to anyone looking for a fast, lightweight, and easy-to-use JavaScript runtime.
