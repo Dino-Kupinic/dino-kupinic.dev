@@ -11,6 +11,10 @@ technologies:
   - "PM2"
 date: 2024-09-13T00:00:00.000Z
 featured: true
+deployed:
+  vendor: VPS
+  url: https://tourney.dino-kupinic.dev
+  icon: i-simple-icons-docker
 repository:
   url: "https://github.com/Dino-Kupinic/tourney"
 ---
