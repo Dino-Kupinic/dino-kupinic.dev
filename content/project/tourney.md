@@ -16,7 +16,7 @@ deployed:
   url: https://tourney.dino-kupinic.dev
   icon: i-simple-icons-docker
 repository:
-  url: "https://github.com/Dino-Kupinic/tourney"
+  url: "https://github.com/HTL-Steyr/tourney"
 ---
 
 ## Description
