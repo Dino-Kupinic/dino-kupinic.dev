@@ -45,7 +45,7 @@
     "@vueuse/nuxt": "^14.1.0",
     "baseline-browser-mapping": "^2.9.11",
     "better-sqlite3": "^12.6.2",
-    "c15t": "^1.8.3",
+    "c15t": "^1.8.5",
     "caniuse-lite": "^1.0.30001764",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
