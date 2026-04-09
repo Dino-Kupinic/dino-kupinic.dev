@@ -52,7 +52,7 @@ const heavyDevModules = [
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
 
-  devtools: { enabled: !isFastDev },
+  devtools: { enabled: true },
 
   site: {
     url: SITE_URL,
@@ -262,6 +262,8 @@ export default defineNuxtConfig({
         "ph:music-notes-simple-fill",
         "ph:quotes",
         "simple-icons:anthropic",
+        "simple-icons:amazondynamodb",
+        "simple-icons:amazonwebservices",
         "simple-icons:bun",
         "simple-icons:c",
         "simple-icons:cloudflare",
@@ -301,6 +303,7 @@ export default defineNuxtConfig({
         "simple-icons:spring",
         "simple-icons:sqlite",
         "simple-icons:supabase",
+        "simple-icons:sst",
         "simple-icons:svelte",
         "simple-icons:swift",
         "simple-icons:symfony",

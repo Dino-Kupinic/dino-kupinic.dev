@@ -1,16 +1,19 @@
 ---
 title: "Sniptide"
-description: "A bold, modern and self-hostable paste platform"
+description: "Code-sharing-platform with Workflows and AI Agents"
 icons:
-  - "i-simple-icons-reactrouter"
-  - "i-simple-icons-hono"
-  - "i-simple-icons-postgresql"
+  - "i-simple-icons-nextdotjs"
+  - "i-simple-icons-sst"
+  - "i-simple-icons-amazondynamodb"
 technologies:
-  - "React Router"
-  - "Hono"
-  - "PostgreSQL"
-  - "Redis"
-  - "Docker"
+  - "Next.js"
+  - "SST"
+  - "DynamoDB"
+  - "Neon"
 date: 2025-05-13T00:00:00.000Z
 featured: true
+deployed:
+  vendor: AWS
+  url: https://sniptide.com
+  icon: i-simple-icons-aws
 ---
